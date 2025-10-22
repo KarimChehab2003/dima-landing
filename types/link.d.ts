@@ -1,8 +1,7 @@
-import { IconType } from "react-icons";
-
-export type NavLink = {
+export type NavLinkType = {
     title: string;
     href: string;
+    children?: React.ReactNode
 }
 
 export type SolutionLink = {
@@ -10,9 +9,4 @@ export type SolutionLink = {
     title: string;
     subTitle: string;
     href: string
-}
-
-export type SocialMediaLink = {
-    href: string;
-    icon: IconType
 }

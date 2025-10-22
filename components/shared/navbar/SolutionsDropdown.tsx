@@ -5,12 +5,7 @@ import { solutionLinks } from "@/data/constants/links";
 import { ChevronUp } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
-type CustomDropdownProps = {
-    triggerName: string;
-    children: React.ReactNode
-}
-
-function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
+function SolutionsDropdown() {
     const { isOpen, handleMouseEnter, handleMouseLeave, closeDropdown } = useDropdownHoverDelay();
 
     return (
@@ -21,14 +16,14 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <span>{triggerName}</span>
+                <span>Solutions</span>
                 <ChevronUp size={14} className={`${isOpen ? "rotate-0" : "rotate-180"} transition-transform duration-300 mx-1`} />
 
                 {/* Menu Content */}
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            className="bg-white fixed top-[80px] left-0 p-8 w-full border-t shadow-xl"
+                            className="bg-white fixed top-[56px] lg:top-[68px] left-0 p-8 w-full border-t shadow-xl"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             initial={{
@@ -40,17 +35,18 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
                                 opacity: 1,
                                 transition: { duration: 0.2, ease: "easeOut" }
                             }}
+                            exit={{
+                                translateY: 5,
+                                opacity: 0
+                            }}
                         >
-                            <div onClick={closeDropdown}>
-                                {children}
-                            </div>
-                            {/* <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                                 {solutionLinks.map((link) => (
-                                    <li key={link.title} >
+                                    <li key={link.title} onClick={closeDropdown}>
                                         <SolutionNavLink {...link} />
                                     </li>
                                 ))}
-                            </ul> */}
+                            </ul>
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -59,4 +55,4 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
     );
 }
 
-export default NavigationDropdown;
+export default SolutionsDropdown;
