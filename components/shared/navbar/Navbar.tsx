@@ -1,22 +1,48 @@
 import { Button } from "../../ui/button";
 import Link from "next/link";
-import SolutionsDropdown from "./SolutionsDropdown";
 import NavDrawer from "./NavDrawer";
+import Image from "next/image";
+import NavigationDropdown from "./NavigationDropdown";
+import { solutionLinks } from "@/data/constants/links";
+import SolutionNavLink from "./SolutionNavLink";
+import { ArrowRight } from "lucide-react";
 
 
 function Navbar() {
     return (
         <header className="sticky top-0 z-50 shadow-md bg-white">
-            <div className="container mx-auto flex justify-between items-center p-4">
-                <figure className="order-2 lg:order-1">
-                    Logo
-                </figure>
+            <div className="container mx-auto max-h-20 flex justify-between items-center p-4">
+                <Link href="/" className="order-2 lg:order-1">
+                    <figure className="relative w-20 h-20  overflow-hidden">
+                        <Image
+                            src="/dima-logo.svg"
+                            alt="Dima logo"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </figure>
+                </Link>
 
                 {/* Navbar for desktop screens */}
                 <nav className="hidden lg:inline-flex items-center space-x-4 order-2">
-                    <Link href="/" className="cursor-pointer">Home</Link>
-                    <SolutionsDropdown />
+                    <NavigationDropdown triggerName="Solutions">
+                        <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            {solutionLinks.map((link) => (
+                                <li key={link.title}>
+                                    <SolutionNavLink {...link} />
+                                </li>
+                            ))}
+                        </ul>
+                    </NavigationDropdown>
+                    <NavigationDropdown triggerName="By Need">
+                        By need dropdown
+                    </NavigationDropdown>
+                    <NavigationDropdown triggerName="Resources">
+                        Resources dropdown
+                    </NavigationDropdown>
                     <Link href="/case-studies" className="cursor-pointer">Case Studies</Link>
+                    <Link href="/about" className="cursor-pointer">About</Link>
                 </nav>
 
                 {/* Drawer for mobile screens */}
@@ -25,10 +51,13 @@ function Navbar() {
                 </div>
 
                 <div className="inline-flex items-center space-x-1 order-1 lg:order-3">
-                    <Button className="bg-primary hidden lg:block">
+                    <Button className="bg-[#2C2C2C] hidden lg:flex items-center rounded-full py-5 shadow-">
                         <Link href="/request-demo">Request a Demo</Link>
+                        <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
+                            <ArrowRight color="black" />
+                        </div>
                     </Button>
-                    <p>change language</p>
+                    {/* <p>change language</p> */}
                 </div>
             </div>
         </header>

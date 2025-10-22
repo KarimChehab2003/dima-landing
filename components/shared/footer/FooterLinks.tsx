@@ -1,12 +1,21 @@
-import { getInTouchLinks, resourceLinks, solutionLinks } from "@/data/constants/links";
-import LinksList from "./LinksList";
+import { footerLinks } from "@/data/constants/links";
+import Link from "next/link";
+import { PiArrowBendDownRightLight } from "react-icons/pi";
 
 function FooterLinks() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-1 lg:px-8">
-            <LinksList title="Solutions" links={solutionLinks} />
-            <LinksList title="Resources" links={resourceLinks} />
-            <LinksList title="Get In Touch" links={getInTouchLinks} />
+        <div className="grid grid-cols-2 gap-8">
+            <p className="inline-flex">
+                <PiArrowBendDownRightLight size={18} />
+                <span className="ms-1">Pages</span>
+            </p>
+            <ul className="space-y-1">
+                {footerLinks.map(link => (
+                    <li key={link.href} className="hover:text-primary transition-colors duration-200 cursor-pointer">
+                        <Link href={link.href}>{link.title}</Link>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }

@@ -1,4 +1,6 @@
-import { NavLinkType, SolutionLink } from "@/types/link";
+import { NavLink, SocialMediaLink, SolutionLink } from "@/types/link";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const solutionLinks: SolutionLink[] = [
     {
@@ -33,29 +35,42 @@ export const solutionLinks: SolutionLink[] = [
     }
 ]
 
-export const resourceLinks: NavLinkType[] = [
+
+export const footerLinks: NavLink[] = [
     {
-        title: "Case Studies",
-        href: "/case-studies"
+        title: "Home",
+        href: "/"
     },
 
     {
-        title: "Customer Success Stories",
-        href: "/case-studies?stories"
+        title: "About",
+        href: "/about-us"
     },
     {
-        title: "Use Cases",
-        href: "/case-studies?cases"
+        title: "Blogs",
+        href: "/blogs"
+    },
+    {
+        title: "Resources",
+        href: "/resources"
+    },
+    {
+        title: "FAQs",
+        href: "/faqs"
     },
 ]
 
-export const getInTouchLinks: NavLinkType[] = [
+export const socialMediaLinks: SocialMediaLink[] = [
     {
-        title: "info@darwinz.ai",
-        href: "mailto:info@darwinz.ai"
+        href: "#twitter",
+        icon: FaXTwitter
     },
     {
-        title: "Privacy",
-        href: "/privacy-policy"
+        href: "#instagram",
+        icon: FaInstagram
+    },
+    {
+        href: "#linkedin",
+        icon: FaLinkedin
     }
 ]
