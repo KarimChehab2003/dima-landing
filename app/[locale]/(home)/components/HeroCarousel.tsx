@@ -18,7 +18,7 @@ type FeatureCarouselProps = {
 };
 
 export default function HeroCarousel({ slides, onSelectSlide, selectedIndex }: FeatureCarouselProps) {
-    const pluginRef = useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
+    const pluginRef = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
     const emblaRef = useRef<EmblaCarouselType | null>(null);
 
     const handleApi = (api: EmblaCarouselType | undefined) => {
@@ -40,6 +40,7 @@ export default function HeroCarousel({ slides, onSelectSlide, selectedIndex }: F
             opts={{
                 loop: true,
                 align: "center",
+                skipSnaps: false
             }}
             plugins={[pluginRef.current]}
             setApi={handleApi}
@@ -49,10 +50,10 @@ export default function HeroCarousel({ slides, onSelectSlide, selectedIndex }: F
                 {slides.map((slide, index) => (
                     <CarouselItem
                         key={index}
-                        className="flex-none basis-[50%] min-w-0 flex items-center justify-center"
+                        className="flex-none basis-[90%] sm:basis-[60%] md:basis-[50%] min-w-0 flex items-center justify-center"
                     >
                         <div
-                            className={`relative block h-[400px] rounded-3xl transition-all duration-600 transform ${index === selectedIndex ? "scale-105 translate-y-24" : "translate-y-0 scale-85"
+                            className={`relative block h-[220px] sm:h-[300px] md:h-[400px] rounded-3xl transition-all duration-600 transform ${index === selectedIndex ? "scale-105 translate-y-24" : "translate-y-0 scale-85"
                                 }`}
                         >
                             <Image

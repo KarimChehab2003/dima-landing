@@ -11,7 +11,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 function Navbar() {
     return (
-        <header className="sticky top-0 z-50 shadow-md bg-white">
+        <header className="sticky md:fixed top-0 z-50 shadow-md bg-white w-full">
             <div className="container mx-auto max-h-20 flex justify-between items-center p-4">
                 <Link href="/" className="order-2 lg:order-1">
                     <figure className="relative w-20 h-20  overflow-hidden">
