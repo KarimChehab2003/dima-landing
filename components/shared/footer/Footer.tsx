@@ -11,6 +11,7 @@ function Footer() {
             style={{ backgroundImage: "url('/footer-background.svg')" }}
         >
 
+            {/* Dimming background */}
             <div className="absolute inset-0 bg-black/60" />
 
             <div className="relative container mx-auto z-10">

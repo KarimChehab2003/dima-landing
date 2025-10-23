@@ -39,7 +39,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider>
-          <div className="min-h-dvh h-full flex flex-col justify-between">
+          <div className="min-h-dvh h-full flex flex-col justify-between" dir={locale === "ar" ? "rlt" : "ltr"}>
             <Navbar />
             <div className="flex-1">
               {children}

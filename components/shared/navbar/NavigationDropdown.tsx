@@ -1,7 +1,5 @@
 "use client";
 import useDropdownHoverDelay from "@/hooks/useDropdownHoverDelay";
-import SolutionNavLink from "./SolutionNavLink";
-import { solutionLinks } from "@/data/constants/links";
 import { ChevronUp } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
