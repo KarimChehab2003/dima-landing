@@ -6,6 +6,7 @@ import NavigationDropdown from "./NavigationDropdown";
 import { solutionLinks } from "@/data/constants/links";
 import SolutionNavLink from "./SolutionNavLink";
 import { ArrowRight } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 
 function Navbar() {
@@ -25,7 +26,7 @@ function Navbar() {
                 </Link>
 
                 {/* Navbar for desktop screens */}
-                <nav className="hidden lg:inline-flex items-center space-x-4 order-2">
+                <nav className="hidden lg:inline-flex items-center order-2">
                     <NavigationDropdown triggerName="Solutions">
                         <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                             {solutionLinks.map((link) => (
@@ -41,8 +42,8 @@ function Navbar() {
                     <NavigationDropdown triggerName="Resources">
                         Resources dropdown
                     </NavigationDropdown>
-                    <Link href="/case-studies" className="cursor-pointer">Case Studies</Link>
-                    <Link href="/about" className="cursor-pointer">About</Link>
+                    <Link href="/case-studies" className="cursor-pointer mx-2">Case Studies</Link>
+                    <Link href="/about-us" className="cursor-pointer mx-2">About</Link>
                 </nav>
 
                 {/* Drawer for mobile screens */}
@@ -57,7 +58,9 @@ function Navbar() {
                             <ArrowRight color="black" />
                         </div>
                     </Button>
-                    {/* <p>change language</p> */}
+
+                    {/* Language Switcher */}
+                    <LanguageSwitcher />
                 </div>
             </div>
         </header>
