@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import HeroSection from "./sections/HeroSection";
+import EmpoweringAgenciesSection from "./sections/EmpoweringAgenciesSection";
 
 
 function HomePage() {
@@ -7,6 +8,7 @@ function HomePage() {
   return (
     <main className="h-full">
       <HeroSection />
+      <EmpoweringAgenciesSection />
     </main>
   );
 }

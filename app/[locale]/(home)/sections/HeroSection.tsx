@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import HeroCarousel from "../components/HeroCarousel";
 import LogoCarousel from "../components/LogoCarousel";
+import SectionWrapper from "../components/SectionWrapper";
 
 const slides = [
     { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
@@ -56,7 +57,7 @@ export default function HeroSection() {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     return (
-        <section className="flex flex-col justify-between min-h-dvh">
+        <SectionWrapper className="flex-col justify-between">
             <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 md:py-0">
                 {/* Left Side: Dynamic Text */}
                 <div className="flex-1 space-y-6">
@@ -92,8 +93,7 @@ export default function HeroSection() {
                     <HeroCarousel slides={slides} selectedIndex={selectedIndex} onSelectSlide={setSelectedIndex} />
                 </div>
             </div>
-
             <LogoCarousel logos={logos} />
-        </section>
+        </SectionWrapper>
     );
 }
