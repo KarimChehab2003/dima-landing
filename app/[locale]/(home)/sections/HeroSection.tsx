@@ -57,7 +57,7 @@ export default function HeroSection() {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     return (
-        <SectionWrapper className="flex-col justify-between">
+        <SectionWrapper className="flex-col justify-between min-h-dvh">
             <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 md:py-0">
                 {/* Left Side: Dynamic Text */}
                 <div className="flex-1 space-y-6">
@@ -73,7 +73,7 @@ export default function HeroSection() {
                             {slides[selectedIndex].title}
                         </motion.span>
                     </h1>
-                    <Button size="lg">
+                    <Button size="2xl">
                         <LucideMonitor />
                         <span className="capitalize">Request a demo</span>
                     </Button>

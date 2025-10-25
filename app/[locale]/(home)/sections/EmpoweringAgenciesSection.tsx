@@ -1,4 +1,4 @@
-import { expandableCardInfo } from "@/data/constants/expandable-card-info";
+import { expandableCardInfo } from "@/data/constants/info";
 import ExpandableCard from "../components/ExpandableCard";
 import SectionWrapper from "../components/SectionWrapper";
 

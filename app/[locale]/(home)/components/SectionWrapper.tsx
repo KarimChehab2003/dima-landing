@@ -1,8 +1,23 @@
 import { cn } from "@/lib/utils";
 
-function SectionWrapper({ children, className }: { children: React.ReactNode, className?: string }) {
+function SectionWrapper({
+    children,
+    className,
+}: {
+    children: React.ReactNode;
+    className?: string;
+}) {
     return (
-        <section className={cn("min-h-dvh mb-8 flex", className)}>
+        <section
+            className={cn(
+                // Base layout
+                "relative flex flex-col justify-center items-center w-full",
+                // Visual separation
+                "py-16 px-6 md:px-16 mb-24 rounded-2xl",
+
+                className
+            )}
+        >
             {children}
         </section>
     );
