@@ -16,9 +16,10 @@ function SolutionCard({ logo, title, subTitle, href }: SolutionLink) {
             </figure>
             <h3 className="text-lg font-medium">{title}</h3>
             <p>{subTitle}</p>
-            <Button variant="outline">
-                <Link href={href}>Explore</Link>
-            </Button>
+            <Link href={href}>
+                <Button variant="outline">Explore</Button>
+            </Link>
+
         </article>
     );
 }
