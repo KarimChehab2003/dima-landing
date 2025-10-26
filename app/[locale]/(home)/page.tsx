@@ -5,6 +5,7 @@ import OwnConversationSection from "./sections/OwnConversationSection";
 import DimaAiSection from "./sections/DimaAiSection";
 import DimaSuiteSection from "./sections/DimaSuiteSection";
 import CaseStudiesSection from "./sections/CaseStudiesSection";
+import QuestionsAnsweredSection from "./sections/QuestionsAnsweredSection";
 
 
 function HomePage() {
@@ -17,6 +18,7 @@ function HomePage() {
       <DimaAiSection />
       <DimaSuiteSection />
       <CaseStudiesSection />
+      <QuestionsAnsweredSection />
     </main>
   );
 }

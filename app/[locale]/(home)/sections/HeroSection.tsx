@@ -7,6 +7,7 @@ import { useState } from "react";
 import HeroCarousel from "../components/HeroCarousel";
 import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../components/SectionWrapper";
+import { Link } from "@/i18n/navigation";
 
 const slides = [
     { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
@@ -73,10 +74,12 @@ export default function HeroSection() {
                             {slides[selectedIndex].title}
                         </motion.span>
                     </h1>
-                    <Button size="2xl">
-                        <LucideMonitor />
-                        <span className="capitalize">Request a demo</span>
-                    </Button>
+                    <Link href="/request-demo">
+                        <Button size="2xl">
+                            <LucideMonitor />
+                            <span className="capitalize">Request a demo</span>
+                        </Button>
+                    </Link>
                 </div>
 
                 {/* Right Side: Carousel*/}

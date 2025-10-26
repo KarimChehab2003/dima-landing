@@ -1,4 +1,4 @@
-import { CardInfo, CaseStudyInfo, ConversationInfo } from "@/types/info";
+import { CardInfo, CaseStudyInfo, ConversationInfo, QuestionAccordion } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
@@ -81,3 +81,19 @@ export const caseStudiesInfo: CaseStudyInfo[] = [
         description: "Partnered with VitaHealth to set up their first operations team from the ground up."
     },
 ]
+
+export const questionsAnsweredInfo: QuestionAccordion[] = [
+    {
+        question: "What platforms does dima cover?",
+        answer: "dima covers both traditional and social media platforms. Traditional includes: Online Publications, Print Publications, TV & Radio. Social Media includes: TikTok, X, Snapchat, Facebook, Instagram & LinkedIn. There are other sources covered by dima as well like Google Maps Reviews & others in the pipeline. If you don't see the platform you want in the list, contact us to see when it will be available, our team is probably working on it already!"
+    },
+    {
+        question: "What is the accuracy in Arabic? Does it detect slang, franco and dialects?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates facilis cupiditate blanditiis voluptatibus minus. Voluptate, asperiores nobis eum nam unde accusantium iusto, voluptas perferendis molestias quos excepturi nostrum itaque possimus?"
+    },
+    {
+        question: "How long does it take to set up an account?",
+        answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates facilis cupiditate blanditiis voluptatibus minus. Voluptate, asperiores nobis eum nam unde accusantium iusto, voluptas perferendis molestias quos excepturi nostrum itaque possimus?"
+    },
+]
+

@@ -2,6 +2,7 @@ import { caseStudiesInfo } from "@/data/constants/info";
 import SectionWrapper from "../components/SectionWrapper";
 import CaseStudyCard from "../components/CaseStudyCard";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 
 function CaseStudiesSection() {
     return (
@@ -19,7 +20,9 @@ function CaseStudiesSection() {
                     }
                 </ul>
                 <div className="flex justify-center items-center">
-                    <Button variant="outline" size="lg">Read More</Button>
+                    <Link href="/case-studies">
+                        <Button variant="outline" size="lg">Read More</Button>
+                    </Link>
                 </div>
             </div>
         </SectionWrapper>

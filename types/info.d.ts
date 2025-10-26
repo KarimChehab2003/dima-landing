@@ -19,3 +19,7 @@ export type CaseStudyInfo = {
     description: string;
 }
 
+export type QuestionAccordion = {
+    question: string;
+    answer: string;
+}

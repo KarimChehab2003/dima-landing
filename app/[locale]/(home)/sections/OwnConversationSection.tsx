@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ConversationInfo } from "@/types/info";
 import { PiUserList } from "react-icons/pi";
 import { FaDisplay } from "react-icons/fa6";
+import { Link } from "@/i18n/navigation";
 
 
 function OwnConversationSection() {
@@ -64,10 +65,12 @@ function OwnConversationSection() {
                                 {activeFeature.subTitle}
                             </p>
                         </div>
-                        <Button size="2xl" className="flex items-center gap-2">
-                            <FaDisplay className="size-5" />
-                            <span className="capitalize">Request a demo</span>
-                        </Button>
+                        <Link href="/request-demo">
+                            <Button size="2xl" className="flex items-center gap-2">
+                                <FaDisplay className="size-5" />
+                                <span className="capitalize">Request a demo</span>
+                            </Button>
+                        </Link>
                     </div>
                 </div>
 
