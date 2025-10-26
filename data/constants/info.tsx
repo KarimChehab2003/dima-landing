@@ -1,4 +1,4 @@
-import { CardInfo, ConversationInfo } from "@/types/info";
+import { CardInfo, CaseStudyInfo, ConversationInfo } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
@@ -56,5 +56,28 @@ export const ownConversationInfo: ConversationInfo[] = [
         subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam esse autem, beatae, iusto voluptatem accusamus aspernatur quae laborum placeat quibusdam ipsum vel consequatur ut quos repudiandae debitis. Assumenda, nam delectus.",
         icon: FaLayerGroup,
         image: "https://placehold.co/800x600"
+    },
+]
+
+export const caseStudiesInfo: CaseStudyInfo[] = [
+    {
+        image: "/case-studies/case-study-1.png",
+        companyName: "Company Name",
+        description: "Lumora Health partnered with Grovia to streamline their product launch process and cross-team coordination."
+    },
+    {
+        image: "/case-studies/case-study-2.png",
+        companyName: "Company Name",
+        description: "NaviAI, an emerging leader in AI-driven navigation systems, partnered with Grovia to scale their technical team."
+    },
+    {
+        image: "/case-studies/case-study-3.png",
+        companyName: "Company Name",
+        description: "Helped Pluto scale their product team and streamline onboarding as they expanded into new markets."
+    },
+    {
+        image: "/case-studies/case-study-4.png",
+        companyName: "Company Name",
+        description: "Partnered with VitaHealth to set up their first operations team from the ground up."
     },
 ]

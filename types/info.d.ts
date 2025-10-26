@@ -12,3 +12,10 @@ export type ConversationInfo = {
     icon: IconType;
     image: string;
 }
+
+export type CaseStudyInfo = {
+    image: string;
+    companyName: string;
+    description: string;
+}
+

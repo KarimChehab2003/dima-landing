@@ -4,6 +4,7 @@ import EmpoweringAgenciesSection from "./sections/EmpoweringAgenciesSection";
 import OwnConversationSection from "./sections/OwnConversationSection";
 import DimaAiSection from "./sections/DimaAiSection";
 import DimaSuiteSection from "./sections/DimaSuiteSection";
+import CaseStudiesSection from "./sections/CaseStudiesSection";
 
 
 function HomePage() {
@@ -15,6 +16,7 @@ function HomePage() {
       <OwnConversationSection />
       <DimaAiSection />
       <DimaSuiteSection />
+      <CaseStudiesSection />
     </main>
   );
 }

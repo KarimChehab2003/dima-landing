@@ -6,7 +6,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { ConversationInfo } from "@/types/info";
 import { PiUserList } from "react-icons/pi";
-import { LucideMonitor } from "lucide-react";
 import { FaDisplay } from "react-icons/fa6";
 
 
