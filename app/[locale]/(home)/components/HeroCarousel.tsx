@@ -63,7 +63,6 @@ export default function HeroCarousel({ slides, onSelectSlide, selectedIndex }: F
                                 height={0}
                                 sizes="100vw"
                                 className="w-auto h-[75%] object-contain"
-                                priority
                             />
                         </div>
                     </CarouselItem>

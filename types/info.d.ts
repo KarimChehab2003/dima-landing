@@ -23,3 +23,10 @@ export type QuestionAccordion = {
     question: string;
     answer: string;
 }
+
+export type TestimonialType = {
+    quote: string;
+    companyLogo: string;
+    name: string;
+    jobRole: string;
+}

@@ -1,4 +1,4 @@
-import { CardInfo, CaseStudyInfo, ConversationInfo, QuestionAccordion } from "@/types/info";
+import { CardInfo, CaseStudyInfo, ConversationInfo, QuestionAccordion, TestimonialType } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
@@ -94,6 +94,39 @@ export const questionsAnsweredInfo: QuestionAccordion[] = [
     {
         question: "How long does it take to set up an account?",
         answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates facilis cupiditate blanditiis voluptatibus minus. Voluptate, asperiores nobis eum nam unde accusantium iusto, voluptas perferendis molestias quos excepturi nostrum itaque possimus?"
+    },
+]
+
+export const testimonialsInfo: TestimonialType[] = [
+    {
+        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus vero voluptate voluptas sint ut repudiandae veritatis vel illum explicabo. Odit sed rerum quas velit quis provident beatae vel mollitia.",
+        name: "Jordan Johnson",
+        jobRole: "COO at Company",
+        companyLogo: "/testimonials/company-placeholder.png"
+    },
+    {
+        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus vero voluptate voluptas sint ut repudiandae veritatis vel illum explicabo. Odit sed rerum quas velit quis provident beatae vel mollitia.",
+        name: "Jordan Johnson",
+        jobRole: "COO at Company",
+        companyLogo: "/testimonials/company-placeholder.png"
+    },
+    {
+        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus vero voluptate voluptas sint ut repudiandae veritatis vel illum explicabo. Odit sed rerum quas velit quis provident beatae vel mollitia.",
+        name: "Jordan Johnson",
+        jobRole: "COO at Company",
+        companyLogo: "/testimonials/company-placeholder.png"
+    },
+    {
+        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus vero voluptate voluptas sint ut repudiandae veritatis vel illum explicabo. Odit sed rerum quas velit quis provident beatae vel mollitia.",
+        name: "Jordan Johnson",
+        jobRole: "COO at Company",
+        companyLogo: "/testimonials/company-placeholder.png"
+    },
+    {
+        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet natus vero voluptate voluptas sint ut repudiandae veritatis vel illum explicabo. Odit sed rerum quas velit quis provident beatae vel mollitia.",
+        name: "Jordan Johnson",
+        jobRole: "COO at Company",
+        companyLogo: "/testimonials/company-placeholder.png"
     },
 ]
 
