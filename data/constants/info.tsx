@@ -23,37 +23,43 @@ export const expandableCardInfo: CardInfo[] = [
 export const ownConversationInfo: ConversationInfo[] = [
     {
         title: "Listen, analyze & act",
-        subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam esse autem, beatae, iusto voluptatem accusamus aspernatur quae laborum placeat quibusdam ipsum vel consequatur ut quos repudiandae debitis. Assumenda, nam delectus.",
+        subTitle: "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI.",
         icon: FaLaptop,
         image: "https://placehold.co/800x600"
     },
     {
-        title: "Grow with the right partners",
-        subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam esse autem, beatae, iusto voluptatem accusamus aspernatur quae laborum placeat quibusdam ipsum vel consequatur ut quos repudiandae debitis. Assumenda, nam delectus.",
+        title: "Grow your brand with the right partners",
+        subTitle: "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
         icon: FaChartLine,
         image: "https://placehold.co/800x600"
     },
     {
-        title: "Daily monitoring Reports",
-        subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam esse autem, beatae, iusto voluptatem accusamus aspernatur quae laborum placeat quibusdam ipsum vel consequatur ut quos repudiandae debitis. Assumenda, nam delectus.",
+        title: "Daily monitoring & coverage reports for all your clients",
+        subTitle: "Stay in control of your brand narrative with proactive monitoring and reporting.",
         icon: FaLayerGroup,
         image: "https://placehold.co/800x600"
     },
     {
-        title: "Daily monitoring Reports 2",
-        subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam esse autem, beatae, iusto voluptatem accusamus aspernatur quae laborum placeat quibusdam ipsum vel consequatur ut quos repudiandae debitis. Assumenda, nam delectus.",
+        title: "Elevate your social presence",
+        subTitle: "Turn your owned channels into proof of impact with AI content performance tracking.",
         icon: FaLayerGroup,
         image: "https://placehold.co/800x600"
     },
     {
-        title: "Elevating Social Presence",
-        subTitle: "Cut through the noise of millions of unfilteredconversations to uncover the insights thatmatter most powered by AI.",
+        title: "Benchmark performance",
+        subTitle: "Outpace your competitors with insights that accelerate decisions and increases your share of voice",
         icon: PiUserList,
         image: "/elevating-social-presence.png"
     },
     {
-        title: "Benchmark Performance",
-        subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam esse autem, beatae, iusto voluptatem accusamus aspernatur quae laborum placeat quibusdam ipsum vel consequatur ut quos repudiandae debitis. Assumenda, nam delectus.",
+        title: "Understand your audience everywhere",
+        subTitle: "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact.",
+        icon: FaLayerGroup,
+        image: "https://placehold.co/800x600"
+    },
+    {
+        title: "Collect & analyze reviews",
+        subTitle: "Turn feedback into action to protect loyalty and increase customer satisfaction",
         icon: FaLayerGroup,
         image: "https://placehold.co/800x600"
     },

@@ -52,7 +52,7 @@ export default function HeroCarousel({ slides, onSelectSlide, selectedIndex }: F
                         key={index}
                         className="flex-none basis-[90%] sm:basis-[60%] md:basis-[50%] min-w-0 flex items-center justify-center"
                     >
-                        <div
+                        <figure
                             className={`relative block h-[220px] sm:h-[300px] md:h-[400px] rounded-3xl transition-all duration-600 transform ${index === selectedIndex ? "scale-105 translate-y-24" : "translate-y-0 scale-85"
                                 }`}
                         >
@@ -64,7 +64,7 @@ export default function HeroCarousel({ slides, onSelectSlide, selectedIndex }: F
                                 sizes="100vw"
                                 className="w-auto h-[75%] object-contain"
                             />
-                        </div>
+                        </figure>
                     </CarouselItem>
                 ))}
             </CarouselContent>

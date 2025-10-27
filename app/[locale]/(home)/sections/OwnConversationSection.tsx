@@ -7,10 +7,24 @@ import Image from "next/image";
 import { ConversationInfo } from "@/types/info";
 import { FaDisplay } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
+import { motion, AnimatePresence } from "motion/react";
 
 
 function OwnConversationSection() {
     const [activeFeature, setActiveFeature] = useState<ConversationInfo>(ownConversationInfo[4]);
+    const textVariants = {
+        hidden: { opacity: 0, x: 40 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: "easeOut" } },
+        exit: { opacity: 0, x: -40, transition: { duration: 0.2, ease: "easeIn" } },
+    };
+
+    const imageVariants = {
+        hidden: { opacity: 0, x: -40 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } },
+        exit: { opacity: 0, x: 40, transition: { duration: 0.3, ease: "easeIn" } },
+    };
+
+    // TODO: Continue working on animation for this section
 
     return (
         <SectionWrapper className="justify-center items-center px-20">
@@ -28,7 +42,7 @@ function OwnConversationSection() {
                             <Button
                                 key={info.title}
                                 variant={activeFeature?.title === info.title ? "default" : "ghost"}
-                                size="lg"
+                                size="sm"
                                 onClick={() => setActiveFeature(info)}
                                 className="flex items-center gap-2"
                             >
@@ -55,15 +69,25 @@ function OwnConversationSection() {
                     {/* Right side - Info & Button Stack */}
                     <div className="flex flex-col h-full bg-[linear-gradient(0,#11A8CF_0%,#5FC9E7_32%,#87DAF3_66%,#AEEBFF_100%)] rounded-t-4xl rounded-br-4xl">
                         {/* Info Box */}
-                        <div className="bg-white rounded-l-4xl rounded-tl-lg rounded-br-2xl ps-8 pe-16 max-w-lg flex-1 flex flex-col justify-center items-start">
-                            <h3 className="text-3xl font-bold text-foreground my-8">{activeFeature.title}</h3>
-                            <p className="text-medium leading-relaxed text-lg">
-                                {activeFeature.subTitle}
-                            </p>
+                        <div className="bg-white rounded-l-4xl rounded-tl-lg ps-8 pe-16 max-w-lg flex-1 flex flex-col justify-center items-start">
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={activeFeature.title}
+                                    exit={{ opacity: 0, x: -40, transition: { duration: 0.2, ease: "easeIn" } }}
+                                    initial="hidden"
+                                    animate="visible"
+                                    className="w-full"
+                                >
+                                    <h3 className="text-3xl font-bold text-foreground my-8">{activeFeature.title}</h3>
+                                    <p className="text-medium leading-relaxed text-lg">
+                                        {activeFeature.subTitle}
+                                    </p>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
 
                         {/* Button in transparent div */}
-                        <div className="w-full h-full flex flex-1 py-4">
+                        <div className="w-full h-full flex flex-1 py-8">
                             <Link href="/request-demo">
                                 <Button size="2xl" className="flex items-center gap-2">
                                     <FaDisplay className="size-5" />
@@ -77,7 +101,7 @@ function OwnConversationSection() {
 
 
             </div>
-        </SectionWrapper>
+        </SectionWrapper >
     );
 }
 

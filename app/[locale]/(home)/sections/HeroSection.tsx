@@ -8,6 +8,7 @@ import HeroCarousel from "../components/HeroCarousel";
 import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../components/SectionWrapper";
 import { Link } from "@/i18n/navigation";
+import HeroCarousel2 from "../components/hero-carousel-test";
 
 const slides = [
     { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
@@ -96,10 +97,14 @@ export default function HeroSection() {
                         height: "690px",
                     }}
                 >
-                    <HeroCarousel slides={slides} selectedIndex={selectedIndex} onSelectSlide={setSelectedIndex} />
+                    {/* <HeroCarousel slides={slides} selectedIndex={selectedIndex} onSelectSlide={setSelectedIndex} /> */}
+                    <HeroCarousel2 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
                 </div>
             </div>
-            <LogoCarousel logos={logos} />
+            <div className="flex flex-col">
+                <h2 className="text-2xl sm:text-3xl text-center">Trusted by 250+ leading agencies & enterprises in GCC & MENA</h2>
+                <LogoCarousel />
+            </div>
         </SectionWrapper>
     );
 }

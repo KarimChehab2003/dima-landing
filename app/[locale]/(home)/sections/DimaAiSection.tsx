@@ -1,23 +1,19 @@
-import { CircleSmall } from "lucide-react";
+import { LucideMonitor } from "lucide-react";
 import SectionWrapper from "../components/SectionWrapper";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 function DimaAiSection() {
     return (
         <SectionWrapper>
             <div
-                className="container mx-auto p-6 sm:p-8 text-white rounded-4xl bg-cover bg-no-repeat"
-                style={{
-                    backgroundImage: "url('/footer-background.svg')",
-                    backgroundPosition: "right center",
-                }}
-            >
+                className="container mx-auto p-6 sm:p-12 text-white rounded-4xl bg-[#043558]">
                 <p className="text-sm font-bold mb-4">DIMA AI</p>
 
                 <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-10 lg:gap-16">
                     {/* Text Section */}
                     <div className="flex-1 space-y-6 text-center lg:text-left">
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-linear-to-r from-[#95DDEE] to-primary bg-clip-text text-transparent leading-tight">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#95DDEE] leading-tight">
                             Your brand powered by Arabic-first AI
                         </h2>
 
@@ -29,9 +25,9 @@ function DimaAiSection() {
                     </div>
 
                     {/* Image Section */}
-                    <figure className="relative w-full lg:flex-1 h-[220px] sm:h-[300px] lg:h-[400px]">
+                    <figure className="relative w-full lg:flex-1 h-[220px] sm:h-[300px] lg:h-[500px]">
                         <Image
-                            src="/dima-ai.png"
+                            src="/dima-phone.png"
                             alt="stats"
                             fill
                             className="object-contain"
@@ -41,9 +37,10 @@ function DimaAiSection() {
                     </figure>
                 </div>
 
-                <p className="inline-flex items-center gap-2 mt-8 text-sm sm:text-base font-bold justify-center lg:justify-start">
-                    <CircleSmall /> <span>EXPLORE</span>
-                </p>
+                <Button size="2xl" className="bg-[#115687]!">
+                    <LucideMonitor />
+                    <span>Request a demo</span>
+                </Button>
             </div>
         </SectionWrapper>
     );

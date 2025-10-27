@@ -17,8 +17,9 @@ function HomePage() {
       <DimaAiSection />
       <DimaSuiteSection />
       <CaseStudiesSection />
-      <QuestionsAnsweredSection />
       <TestimonialSection />
+      {/* TODO: add section request a demo */}
+      <QuestionsAnsweredSection />
     </main>
   );
 }
