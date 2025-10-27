@@ -11,8 +11,8 @@ import { Link } from "@/i18n/navigation";
 
 const slides = [
     { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
-    { title: "Creativity", image: "/hero-carousel-item-2.png" },
-    { title: "Productivity", image: "/hero-carousel-item-3.png" },
+    { title: "Consumer & Business Insights", image: "/hero-carousel-item-2.png" },
+    { title: "Sentiment, Emotion & Topic Insights", image: "/hero-carousel-item-3.png" },
 ];
 
 const logos = [
@@ -62,7 +62,7 @@ export default function HeroSection() {
             <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 md:py-0">
                 {/* Left Side: Dynamic Text */}
                 <div className="flex-1 space-y-6">
-                    <h1 className="text-4xl sm:text-5xl font-bold">
+                    <h1 className="text-4xl sm:text-5xl font-bold mb-8">
                         The Arabic-First AI Copilot For&nbsp;
                         <motion.span
                             key={selectedIndex}

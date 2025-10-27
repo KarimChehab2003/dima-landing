@@ -32,16 +32,13 @@ export default function LanguageSwitcher() {
         languages.find((l) => l.locale === currentLocale)
     );
 
-
-
-
     return (
         <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
                 <Button
                     role="combobox"
                     aria-expanded={open}
-                    className="w-[180px] justify-between"
+                    className="flex justify-between"
                 >
                     <span className="flex items-center gap-2">
                         <span className="text-lg">{currentLanguage?.flag}</span>

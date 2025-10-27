@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import SolutionsDropdown from "./dropdowns/SolutionsDropdown";
 import ByNeedDropdown from "./dropdowns/ByNeedDropdown";
 import ResourcesDropdown from "./dropdowns/ResourcesDropdown";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 
 function Navbar() {
@@ -46,6 +47,7 @@ function Navbar() {
                 </div>
 
                 <div className="inline-flex items-center space-x-1 order-1 lg:order-3">
+                    <LanguageSwitcher />
                     <Button className="bg-[#2C2C2C] hidden lg:flex items-center rounded-full py-5 shadow-">
                         <Link href="/request-demo">Request a Demo</Link>
                         <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">

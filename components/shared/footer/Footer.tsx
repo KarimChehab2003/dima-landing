@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 import FooterLinks from "./FooterLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 function Footer() {
     return (

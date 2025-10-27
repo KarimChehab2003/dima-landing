@@ -30,6 +30,26 @@ function TestimonialCarousel() {
             <div className={`mt-4 w-3 h-3 rounded-full hover:bg-primary ${i === activeSlide ? "bg-primary" : "bg-primary/30"} transition-colors duration-300`} >
             </div>
         ),
+        responsive: [
+            {
+                breakpoint: 1024, // tablets 
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    swipe: true,
+                },
+            },
+            {
+                breakpoint: 480, // phones 
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    swipe: true,
+                },
+            },
+        ],
     };
 
     return (
