@@ -13,7 +13,7 @@ function SectionWrapper({
                 // Base layout
                 "relative flex flex-col justify-center items-center w-full",
                 // Visual separation
-                "py-16 px-6 md:px-16 mb-24 rounded-2xl",
+                "py-16 px-6 md:px-0 mb-24 rounded-2xl",
 
                 className
             )}

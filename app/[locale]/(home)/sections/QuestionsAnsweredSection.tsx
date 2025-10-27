@@ -10,11 +10,11 @@ function QuestionsAnsweredSection() {
     return (
         <SectionWrapper>
             <div className="container mx-auto max-w-6xl flex justify-between gap-12">
-                <div className="space-y-4">
+                <div className="space-y-6">
                     <h2 className="text-3xl sm:text-4xl font-bold text-primary">Your questions, answered</h2>
-                    <p className="text-muted-foreground">Get quick answers to the most common questions about our platform and services.</p>
+                    <p className="text-muted-foreground font-medium">Get quick answers to the most common questions about our platform and services.</p>
                     <Button size="lg">
-                        Contact Us
+                        Contact us
                         <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
                             <ArrowRight color="black" />
                         </div>

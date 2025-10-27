@@ -5,28 +5,22 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Image from "next/image";
 import { ConversationInfo } from "@/types/info";
-import { PiUserList } from "react-icons/pi";
 import { FaDisplay } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
 
 
 function OwnConversationSection() {
-    const [activeFeature, setActiveFeature] = useState<ConversationInfo>(
-        {
-            title: "Elevating social Presence",
-            subTitle: "Cut through the noise of millions of unfilteredconversations to uncover the insights thatmatter most powered by AI.",
-            icon: PiUserList,
-            image: "/elevating-social-presence.png"
-        }
-    );
+    const [activeFeature, setActiveFeature] = useState<ConversationInfo>(ownConversationInfo[4]);
+
     return (
         <SectionWrapper className="justify-center items-center px-20">
-            <div className="container mx-auto flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-8 w-full">
                 <div className="space-y-2 text-center">
-                    <h2 className="text-4xl sm:text-5xl">Own Every Conversation</h2>
+                    <h2 className="text-4xl sm:text-5xl my-4">Own Every Conversation</h2>
                     <p className="text-xl text-muted-foreground">Discover how our suite of AI powered solutions help you see, understand, and act with precision.</p>
                 </div>
 
+                {/* Buttons */}
                 <div className="inline-flex justify-center items-center gap-4">
                     {
                         ownConversationInfo.map((info) => (
@@ -44,24 +38,25 @@ function OwnConversationSection() {
                     }
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-muted rounded-2xl p-8 shadow-md w-full">
+                {/* Image + Text */}
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-linear-to-t from-[#AEEBFF] via-[#5FC9E7] to-primary rounded-[64px] w-full relative">
                     {/* Left side - Image */}
-                    <figure className="relative w-full md:w-2/3 h-112 shrink-0">
+                    <figure className="relative w-full md:w-2/3 h-[600px] shrink-0">
                         <Image
                             src={activeFeature?.image}
                             alt={activeFeature?.title}
                             fill
-                            className="object-contain rounded-2xl"
+                            className="object-contain rounded-2xl p-8"
                             priority
                         />
                     </figure>
 
 
                     {/* Right side - Text */}
-                    <div className="flex flex-col justify-center items-start w-full md:w-1/2 space-y-6">
-                        <div className="space-y-3 self-start">
-                            <h3 className="text-2xl font-bold text-foreground">{activeFeature.title}</h3>
-                            <p className="text-medium leading-relaxed">
+                    <div className="max-w-xl flex flex-col justify-start items-start space-y-8  absolute -top-1 right-0">
+                        <div className="space-y-3 self-start bg-white rounded-b-4xl rounded-tl-lg ps-8 pe-16 py-12">
+                            <h3 className="text-4xl font-bold text-foreground my-8">{activeFeature.title}</h3>
+                            <p className="text-medium leading-relaxed text-lg">
                                 {activeFeature.subTitle}
                             </p>
                         </div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function SolutionCard({ logo, title, subTitle, href }: SolutionLink) {
     return (
-        <article className="flex flex-col justify-start items-start gap-3">
+        <article className="flex flex-col justify-center items-start gap-3 shadow-[0_0_15px_rgba(0,0,0,0.1)]  rounded-3xl p-8 h-[280px]">
             <figure className="relative w-16 h-16">
                 <Image
                     src={logo}

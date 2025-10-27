@@ -12,7 +12,7 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
     const { isOpen, handleMouseEnter, handleMouseLeave, closeDropdown } = useDropdownHoverDelay();
 
     return (
-        <div className="hidden lg:block mx-2">
+        <div className="hidden lg:block mx-2 group">
             {/* Trigger */}
             <div
                 className="inline-flex items-center relative z-20"
@@ -26,7 +26,7 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            className="bg-white fixed top-[80px] left-0 p-8 w-full border-t shadow-xl"
+                            className="bg-white fixed top-[90px] left-0 p-8 w-full border-t shadow-xl"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             initial={{
@@ -42,13 +42,6 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
                             <div onClick={closeDropdown}>
                                 {children}
                             </div>
-                            {/* <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                                {solutionLinks.map((link) => (
-                                    <li key={link.title} >
-                                        <SolutionNavLink {...link} />
-                                    </li>
-                                ))}
-                            </ul> */}
                         </motion.div>
                     )}
                 </AnimatePresence>

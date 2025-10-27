@@ -1,10 +1,10 @@
-import { NavLink, SocialMediaLink, SolutionLink } from "@/types/link";
+import { LanguageLink, NavLink, SocialMediaLink, SolutionLink } from "@/types/link";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export const solutionLinks: SolutionLink[] = [
     {
-        logo: "/nav-links/social-listening.png",
+        logo: "/nav-links/sl.png",
         title: "Social listening & analytics",
         subTitle: "Listen, analyze & act",
         href: "/solution/social-listening-analytics/"
@@ -16,23 +16,71 @@ export const solutionLinks: SolutionLink[] = [
         href: "/solution/pr-comms/"
     },
     {
-        logo: "/nav-links/own-page-intelligence.png",
+        logo: "/nav-links/oi.png",
         title: "Own Page Intelligence",
         subTitle: "Elevate your social presence",
         href: "/solution/own-page-intelligence/"
     },
     {
-        logo: "/nav-links/consumer-insights.png",
+        logo: "/nav-links/ci.png",
         title: "Consumer Insights",
         subTitle: "Understand Your Audience",
         href: "/solution/consumer-insights/"
     },
     {
-        logo: "/nav-links/market-insights.png",
+        logo: "/nav-links/mi.png",
         title: "Market Insights",
         subTitle: "Benchmark performance",
         href: "/solution/market-insights/"
     }
+]
+
+export const byRoleLinks: NavLink[] = [
+    { title: "Finance", href: "/by-role/finance" },
+    { title: "Accounting", href: "/by-role/accounting" },
+    { title: "Production", href: "/by-role/production" },
+    { title: "Quality", href: "/by-role/quality" },
+    { title: "Software Services", href: "/by-role/software-services" },
+    { title: "Design House", href: "/by-role/design-house" },
+    { title: "Packaging", href: "/by-role/packaging" },
+    { title: "Distribution", href: "/by-role/distribution" },
+];
+
+export const byCompanyLinks: NavLink[] = [
+    { title: "Finance", href: "/by-company/finance" },
+    { title: "Accounting", href: "/by-company/accounting" },
+    { title: "Production", href: "/by-company/production" },
+    { title: "Quality", href: "/by-company/quality" },
+    { title: "Software Services", href: "/by-company/software-services" },
+    { title: "Design House", href: "/by-company/design-house" },
+    { title: "Packaging", href: "/by-company/packaging" },
+    { title: "Distribution", href: "/by-company/distribution" },
+];
+
+export const blogsLinks: NavLink[] = [
+    {
+        title: "Blog 1",
+        href: "/blogs/blog-1"
+    },
+    {
+        title: "Blog 2",
+        href: "/blogs/blog-2"
+    },
+    {
+        title: "Blog 3",
+        href: "/blogs/blog-3"
+    },
+]
+
+export const resourcesLinks: NavLink[] = [
+    {
+        title: "Videos",
+        href: "/videos"
+    },
+    {
+        title: "FAQs",
+        href: "/faqs"
+    },
 ]
 
 export const footerLinks: NavLink[] = [
@@ -120,3 +168,7 @@ export const dimaSolutions: SolutionLink[] = [
 ];
 
 
+export const languages: LanguageLink[] = [
+    { locale: "en", label: "English", flag: "🇬🇧" },
+    { locale: "ar", label: "العربية", flag: "🇸🇦" },
+];

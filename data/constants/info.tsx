@@ -46,7 +46,7 @@ export const ownConversationInfo: ConversationInfo[] = [
         image: "https://placehold.co/800x600"
     },
     {
-        title: "Elevating social Presence",
+        title: "Elevating Social Presence",
         subTitle: "Cut through the noise of millions of unfilteredconversations to uncover the insights thatmatter most powered by AI.",
         icon: PiUserList,
         image: "/elevating-social-presence.png"

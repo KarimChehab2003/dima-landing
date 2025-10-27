@@ -3,16 +3,16 @@ import Link from "next/link";
 import NavDrawer from "./NavDrawer";
 import Image from "next/image";
 import NavigationDropdown from "./NavigationDropdown";
-import { solutionLinks } from "@/data/constants/links";
-import SolutionNavLink from "./SolutionNavLink";
 import { ArrowRight } from "lucide-react";
-import LanguageSwitcher from "./LanguageSwitcher";
+import SolutionsDropdown from "./dropdowns/SolutionsDropdown";
+import ByNeedDropdown from "./dropdowns/ByNeedDropdown";
+import ResourcesDropdown from "./dropdowns/ResourcesDropdown";
 
 
 function Navbar() {
     return (
-        <header className="sticky md:fixed top-0 z-50 shadow-md bg-white w-full">
-            <div className="container mx-auto max-h-20 flex justify-between items-center p-4">
+        <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 shadow-[0_0_15px_rgba(0,0,0,0.12)] bg-white mt-4 rounded-full container">
+            <div className="mx-auto max-h-20 flex justify-between items-center p-4">
                 <Link href="/" className="order-2 lg:order-1">
                     <figure className="relative w-20 h-20  overflow-hidden">
                         <Image
@@ -28,19 +28,13 @@ function Navbar() {
                 {/* Navbar for desktop screens */}
                 <nav className="hidden lg:inline-flex items-center order-2">
                     <NavigationDropdown triggerName="Solutions">
-                        <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                            {solutionLinks.map((link) => (
-                                <li key={link.title}>
-                                    <SolutionNavLink {...link} />
-                                </li>
-                            ))}
-                        </ul>
+                        <SolutionsDropdown />
                     </NavigationDropdown>
                     <NavigationDropdown triggerName="By Need">
-                        By need dropdown
+                        <ByNeedDropdown />
                     </NavigationDropdown>
                     <NavigationDropdown triggerName="Resources">
-                        Resources dropdown
+                        <ResourcesDropdown />
                     </NavigationDropdown>
                     <Link href="/case-studies" className="cursor-pointer mx-2">Case Studies</Link>
                     <Link href="/about-us" className="cursor-pointer mx-2">About</Link>
@@ -58,9 +52,6 @@ function Navbar() {
                             <ArrowRight color="black" />
                         </div>
                     </Button>
-
-                    {/* Language Switcher */}
-                    <LanguageSwitcher />
                 </div>
             </div>
         </header>

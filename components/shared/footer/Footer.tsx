@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 
 import FooterLinks from "./FooterLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function Footer() {
     return (
@@ -48,6 +49,8 @@ function Footer() {
                             <span className="mx-1">copyrights@dima.ai</span>
                             <span className="mx-1">• All rights reserved</span>
                         </div>
+                        {/* Language Switcher */}
+                        <LanguageSwitcher />
                     </div>
                 </div>
 

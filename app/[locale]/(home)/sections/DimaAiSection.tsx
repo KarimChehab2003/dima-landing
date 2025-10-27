@@ -11,11 +11,11 @@ function DimaAiSection() {
                     backgroundPosition: "right center"
                 }}
             >
-                <p className="text-sm">DIMA AI</p>
+                <p className="text-sm font-bold">DIMA AI</p>
                 <div className="flex justify-between items-center gap-8">
                     <div className="flex-1 space-y-8">
                         <h2 className="text-4xl sm:text-5xl bg-linear-to-r from-[#95DDEE] to-primary bg-clip-text text-transparent">Your brand powered by Arabic-first AI</h2>
-                        <p className="text-xl">
+                        <p className="text-xl font-medium">
                             Meet dima AI — your copilot for turning data into clarit . With Arabic-first intelligence, it understands all dialects, slang, and Franco-Arabic, transforming raw data into instant insights and clear reports, giving you the full picture global tools miss.
                         </p>
                     </div>
@@ -29,7 +29,7 @@ function DimaAiSection() {
                     </figure>
                 </div>
                 <p className="inline-flex gap-2 ms-4">
-                    <CircleSmall /> <span>EXPLORE</span>
+                    <CircleSmall /> <span className="font-bold">EXPLORE</span>
                 </p>
             </div>
         </SectionWrapper>

@@ -15,7 +15,7 @@ function SolutionNavLink({ logo, title, subTitle, href }: SolutionLink) {
                 </figure>
                 <div className="space-y-1">
                     <p className="font-semibold group-hover:underline">{title}</p>
-                    <p className="text-gray-500 text-xs">{subTitle}</p>
+                    <p className="text-muted-foreground text-xs">{subTitle}</p>
                 </div>
             </article>
         </Link>

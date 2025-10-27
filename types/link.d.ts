@@ -16,3 +16,9 @@ export type SocialMediaLink = {
     href: string;
     icon: IconType
 }
+
+export type LanguageLink = {
+    locale: string;
+    label: string;
+    flag: string;
+}
