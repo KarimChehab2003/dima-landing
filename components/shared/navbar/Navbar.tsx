@@ -28,17 +28,23 @@ function Navbar() {
 
                 {/* Navbar for desktop screens */}
                 <nav className="hidden lg:inline-flex items-center order-2">
+                    <Link href="/" className="cursor-pointer mx-2 group relative">
+                        <span>Home</span>
+                        <div className="h-0.5 w-0 bg-primary group-hover:w-4 transition-all duration-200 absolute -bottom-0.5 left-1/2 -translate-x-1/2"></div>
+                    </Link>
                     <NavigationDropdown triggerName="Solutions">
                         <SolutionsDropdown />
                     </NavigationDropdown>
-                    <NavigationDropdown triggerName="By Need">
+                    {/* <NavigationDropdown triggerName="By Need">
                         <ByNeedDropdown />
-                    </NavigationDropdown>
+                    </NavigationDropdown> */}
                     <NavigationDropdown triggerName="Resources">
                         <ResourcesDropdown />
                     </NavigationDropdown>
-                    <Link href="/case-studies" className="cursor-pointer mx-2">Case Studies</Link>
-                    <Link href="/about-us" className="cursor-pointer mx-2">About</Link>
+                    <Link href="/case-studies" className="cursor-pointer mx-2 group relative">
+                        <span>Case Studies</span>
+                        <div className="h-0.5 w-0 bg-primary group-hover:w-4 transition-all duration-200 absolute -bottom-0.5 left-1/2 -translate-x-1/2"></div>
+                    </Link>
                 </nav>
 
                 {/* Drawer for mobile screens */}
@@ -46,7 +52,7 @@ function Navbar() {
                     <NavDrawer />
                 </div>
 
-                <div className="inline-flex items-center space-x-1 order-1 lg:order-3">
+                <div className="inline-flex items-center gap-2 order-1 lg:order-3">
                     <LanguageSwitcher />
                     <Button className="bg-[#2C2C2C] hidden lg:flex items-center rounded-full py-5 shadow-">
                         <Link href="/request-demo">Request a Demo</Link>

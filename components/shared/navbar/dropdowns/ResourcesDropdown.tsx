@@ -13,18 +13,19 @@ function ResourcesDropdown() {
                     <div className="w-8 h-0.5 bg-primary mb-4"></div>
                     <ul className="grid grid-cols-1 gap-x-8 gap-y-4">
                         {blogsLinks.map((link) => (
-                            <li key={link.href}>
+                            <li key={link.href} className="inline-flex items-center gap-2">
+                                <div className="h-15 w-20 rounded-lg bg-muted"></div>
                                 <Link href={link.href}>{link.title}</Link>
                             </li>
                         ))}
                     </ul>
-                    <Button className="bg-primary! mt-4 rounded-md px-6 py-4">
+                    <Button className="mt-4">
                         <Link href="/blogs">View all blogs</Link>
                     </Button>
                 </div>
 
                 {/* Vertical Separator */}
-                <div className="w-px h-40 bg-gray-300"></div>
+                <div className="w-px h-60 bg-gray-300"></div>
 
                 {/* More Resources Section */}
                 <div>
@@ -32,7 +33,14 @@ function ResourcesDropdown() {
                     <div className="w-8 h-0.5 bg-primary mb-4"></div>
                     <ul className="grid grid-cols-1 gap-y-4 gap-x-8">
                         {resourcesLinks.map((link) => (
-                            <li key={link.href}>
+                            <li key={link.href} className="inline-flex items-center gap-2">
+                                <Image
+                                    src={link.icon!}
+                                    alt={"icon"}
+                                    width={20}
+                                    height={20}
+
+                                />
                                 <Link href={link.href}>{link.title}</Link>
                             </li>
                         ))}

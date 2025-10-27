@@ -19,8 +19,19 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <span>{triggerName}</span>
-                <ChevronUp size={14} className={`${isOpen ? "rotate-0" : "rotate-180"} transition-transform duration-300 mx-1`} />
+                <div className="relative">
+                    <span>{triggerName}</span>
+                    <AnimatePresence>
+                        {isOpen && (
+                            <motion.div
+                                initial={{ width: 0 }}
+                                animate={{ width: 20, transition: { duration: 0.2, ease: "easeOut" } }}
+                                exit={{ width: 0 }}
+                                className="h-0.5 bg-primary absolute -bottom-0.5 left-1/2 -translate-x-1/2"></motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+                <ChevronUp size={14} className={`${isOpen ? "rotate-0 text-primary" : "rotate-180"} transition-all duration-300 mx-1`} />
 
                 {/* Menu Content */}
                 <AnimatePresence>

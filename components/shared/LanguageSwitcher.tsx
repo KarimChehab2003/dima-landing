@@ -19,13 +19,14 @@ import { Button } from "@/components/ui/button";
 import { Link, usePathname } from "@/i18n/navigation";
 import { languages } from "@/data/constants/links";
 import { LanguageLink } from "@/types/link";
+import { useLocale } from "next-intl";
 
 
 
 export default function LanguageSwitcher() {
     const pathname = usePathname();
-    const currentLocale =
-        pathname.startsWith("/ar") || pathname.includes("/ar") ? "ar" : "en";
+    const currentLocale = useLocale();
+    console.log(currentLocale)
 
     const [open, setOpen] = useState<boolean>(false);
     const [currentLanguage, setCurrentLanguage] = useState<LanguageLink | undefined>(
@@ -66,10 +67,11 @@ export default function LanguageSwitcher() {
                                         setOpen(false);
                                     }
                                 }}
+                                className="group"
                             >
                                 <Check
                                     className={cn(
-                                        "mr-2 h-4 w-4",
+                                        "mr-2 h-4 w-4 group-hover:text-white transition-colors duration-200",
                                         currentLanguage?.label === lang.label ? "opacity-100" : "opacity-0"
                                     )}
                                 />

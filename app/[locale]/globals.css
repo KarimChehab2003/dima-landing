@@ -46,17 +46,17 @@
   --radius: 0.625rem;
 
   /* Base colors */
-  --background: #FFFFFF;
-  --foreground: #222222;
+  --background: #FFFFFF; /* White base background */
+  --foreground: #2C2C2C; /* Dark Grey main text */
 
   /* Surfaces */
   --card: #FFFFFF;
-  --card-foreground: #222222;
+  --card-foreground: #2C2C2C;
   --popover: #FFFFFF;
-  --popover-foreground: #222222;
+  --popover-foreground: #2C2C2C;
 
   /* Brand colors */
-  --primary: #11A8CF;
+  --primary: #08A5CD; /* Very Soft Cyan for primary brand elements */
   --primary-foreground: #FFFFFF;
 
   --secondary: #AE3794;
@@ -65,7 +65,7 @@
   --accent: #F26329;
   --accent-foreground: #FFFFFF;
 
-  --muted: #F5F5F5;
+  --muted: #F5F5F5; /* Light Gray for subtle backgrounds and separators */
   --muted-foreground: #6D6D6D;
 
   /* Feedback colors */
@@ -75,7 +75,7 @@
   /* UI structure */
   --border: #E6E6E6;
   --input: #E6E6E6;
-  --ring: #11A8CF;
+  --ring: #08A5CD; /* Using very soft cyan for focus ring */
 
   /* Charts / extra colors */
   --chart-1: #00AAF6;
@@ -86,13 +86,13 @@
 
   /* Sidebar (if used) */
   --sidebar: #FFFFFF;
-  --sidebar-foreground: #222222;
-  --sidebar-primary: #11A8CF;
+  --sidebar-foreground: #2C2C2C;
+  --sidebar-primary: #08A5CD;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #F5F5F5;
-  --sidebar-accent-foreground: #222222;
+  --sidebar-accent-foreground: #2C2C2C;
   --sidebar-border: #E6E6E6;
-  --sidebar-ring: #11A8CF;
+  --sidebar-ring: #08A5CD;
 }
 
 @layer base {
@@ -108,4 +108,3 @@
     cursor: pointer;
   }
 }
-

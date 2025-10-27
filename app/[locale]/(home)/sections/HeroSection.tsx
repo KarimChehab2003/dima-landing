@@ -11,8 +11,11 @@ import { Link } from "@/i18n/navigation";
 
 const slides = [
     { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
-    { title: "Consumer & Business Insights", image: "/hero-carousel-item-2.png" },
+    { title: "Influencer Tracking", image: "/hero-carousel-item-2.png" },
     { title: "Sentiment, Emotion & Topic Insights", image: "/hero-carousel-item-3.png" },
+    { title: "Competitor Benchmarking", image: "/hero-carousel-item-3.png" },
+    { title: "Discovering Organic Creators", image: "/hero-carousel-item-3.png" },
+    { title: "Measuring Campaign ROI", image: "/hero-carousel-item-3.png" },
 ];
 
 const logos = [

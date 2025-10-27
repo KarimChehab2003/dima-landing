@@ -4,8 +4,8 @@ import Link from "next/link";
 
 function SolutionNavLink({ logo, title, subTitle, href }: SolutionLink) {
     return (
-        <Link href={href} className="group">
-            <article className="flex items-center py-2 space-x-2">
+        <Link href={href}>
+            <article className="flex items-center py-2 gap-2">
                 <figure className="min-w-18 min-h-18 relative">
                     <Image
                         src={logo}
@@ -14,7 +14,7 @@ function SolutionNavLink({ logo, title, subTitle, href }: SolutionLink) {
                         className="object-contain" />
                 </figure>
                 <div className="space-y-1">
-                    <p className="font-semibold group-hover:underline">{title}</p>
+                    <p className="font-semibold hover:underline">{title}</p>
                     <p className="text-muted-foreground text-xs">{subTitle}</p>
                 </div>
             </article>

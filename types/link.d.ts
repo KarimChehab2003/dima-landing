@@ -3,6 +3,7 @@ import { IconType } from "react-icons";
 export type NavLink = {
     title: string;
     href: string;
+    icon?: string;
 }
 
 export type SolutionLink = {

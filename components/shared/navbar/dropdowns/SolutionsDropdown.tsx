@@ -31,7 +31,7 @@ function SolutionsDropdown() {
                 </Link>
 
                 {/* Links list */}
-                <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     {dimaSolutions.filter((s) => s.title !== "Consumer Insights").map((link) => (
                         <li key={link.title}>
                             <SolutionNavLink {...link} />
@@ -40,7 +40,7 @@ function SolutionsDropdown() {
                 </ul>
             </div>
 
-            <Button className="py-3 px-6 rounded-sm! bg-primary! w-fit">Dima AI</Button>
+            {/* <Button className="py-3 px-6 rounded-sm! bg-primary! w-fit">Dima AI</Button> */}
         </div>
     );
 }

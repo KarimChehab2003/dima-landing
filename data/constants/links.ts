@@ -75,11 +75,13 @@ export const blogsLinks: NavLink[] = [
 export const resourcesLinks: NavLink[] = [
     {
         title: "Videos",
-        href: "/videos"
+        href: "/videos",
+        icon: "/camera.png"
     },
     {
         title: "FAQs",
-        href: "/faqs"
+        href: "/faqs",
+        icon: "/qa.png"
     },
 ]
 
@@ -124,28 +126,22 @@ export const socialMediaLinks: SocialMediaLink[] = [
 
 export const dimaSolutions: SolutionLink[] = [
     {
-        logo: "/nav-links/pr.png",
-        title: "PR & Comms",
-        subTitle: "Daily monitoring & coverage reports",
-        href: "/solutions/pr-and-comms"
-    },
-    {
-        logo: "/nav-links/mi.png",
-        title: "Market Insights",
-        subTitle: "Benchmark performance",
-        href: "/solutions/market-insights"
-    },
-    {
         logo: "/nav-links/sl.png",
         title: "Social Listening & Analytics",
         subTitle: "Listen, analyze & act",
         href: "/solutions/social-listening-analytics"
     },
     {
-        logo: "/nav-links/ci.png",
-        title: "Consumer Insights",
-        subTitle: "Understand your audience everywhere",
-        href: "/solutions/consumer-insights"
+        logo: "/nav-links/pr.png",
+        title: "PR & Comms",
+        subTitle: "Daily monitoring & coverage reports",
+        href: "/solutions/pr-and-comms"
+    },
+    {
+        logo: "/nav-links/im.png",
+        title: "Influencer Marketing",
+        subTitle: "Find the right partners for your brand",
+        href: "/solutions/influencer-marketing"
     },
     {
         logo: "/nav-links/oi.png",
@@ -154,10 +150,16 @@ export const dimaSolutions: SolutionLink[] = [
         href: "/solutions/own-page-intelligence"
     },
     {
-        logo: "/nav-links/im.png",
-        title: "Influencer Marketing",
-        subTitle: "Find the right partners for your brand",
-        href: "/solutions/influencer-marketing"
+        logo: "/nav-links/mi.png",
+        title: "Market Insights",
+        subTitle: "Benchmark performance",
+        href: "/solutions/market-insights"
+    },
+    {
+        logo: "/nav-links/ci.png",
+        title: "Consumer Insights",
+        subTitle: "Understand your audience everywhere",
+        href: "/solutions/consumer-insights"
     },
     {
         logo: "/nav-links/ce.png",
