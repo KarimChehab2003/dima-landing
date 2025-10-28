@@ -1,25 +1,67 @@
+"use client";
+import { motion, useMotionValue, animate } from "motion/react";
+import React, { useEffect, useState } from "react";
+
 type RadialGradientProgressProps = {
     size?: number;
     strokeWidth?: number;
     progress?: number;
-    innerColor?: string; /* Inner gradient color */
-    outerColor?: string; /* Outer gradient color */
-    trackColor?: string;  /** Background track color */
+    innerColor?: string;
+    outerColor?: string;
+    trackColor?: string;
     textColor?: string;
+    duration?: number;
+    suffix?: string;
+    maxValue?: number;
+};
+
+const formatNumber = (num: number, suffix?: string | React.ReactNode) => {
+    if (suffix === "M") {
+        return `${(num / 1_000_000).toFixed(0)}M`; // e.g., 50M
+    }
+    if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1)}M`;
+    if (num >= 1_000) return `${(num / 1_000).toFixed(1)}K`;
+    return Math.round(num).toString() + "%";
 };
 
 const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
-    size = 150,
+    size = 120,
     strokeWidth = 20,
     progress = 75,
-    innerColor = "#000000",
+    innerColor = "#95DDEE",
     outerColor = "#11A8CF",
     trackColor = "#e5e7eb",
     textColor = "#1f2937",
+    duration = 1.5,
+    suffix = "%",
+    maxValue = 100,
 }) => {
     const radius = (size - strokeWidth) / 2;
     const circumference = 2 * Math.PI * radius;
-    const offset = circumference - (progress / 100) * circumference;
+
+    const offset = useMotionValue(circumference);
+    const number = useMotionValue(0);
+    const [displayValue, setDisplayValue] = useState(0);
+
+    useEffect(() => {
+        const targetOffset = circumference - (progress / maxValue) * circumference;
+
+        const offsetAnimation = animate(offset, targetOffset, {
+            duration,
+            ease: "easeInOut",
+        });
+
+        const numberAnimation = animate(number, progress, {
+            duration,
+            ease: "easeInOut",
+            onUpdate: (latest) => setDisplayValue(latest),
+        });
+
+        return () => {
+            offsetAnimation.stop();
+            numberAnimation.stop();
+        };
+    }, [progress, circumference, duration, offset, number, maxValue]);
 
     return (
         <div
@@ -29,12 +71,12 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
             <svg width={size} height={size} className="-rotate-90">
                 <defs>
                     <radialGradient id="radialGradient" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" stopColor={innerColor} />
-                        <stop offset="100%" stopColor={outerColor} />
+                        <stop offset="80%" stopColor={outerColor} />
+                        <stop offset="100%" stopColor={innerColor} />
                     </radialGradient>
                 </defs>
 
-                {/* Background Track */}
+                {/* Track */}
                 <circle
                     cx={size / 2}
                     cy={size / 2}
@@ -44,8 +86,8 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
                     fill="none"
                 />
 
-                {/* Progress Arc */}
-                <circle
+                {/* Animated Progress */}
+                <motion.circle
                     cx={size / 2}
                     cy={size / 2}
                     r={radius}
@@ -55,19 +97,16 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
                     strokeDasharray={circumference}
                     strokeDashoffset={offset}
                     strokeLinecap="round"
-                    style={{
-                        transition: "stroke-dashoffset 0.5s ease, stroke 0.5s ease",
-                    }}
                 />
             </svg>
 
-            {/* Percentage Text */}
-            <span
-                className="absolute font-bold text-xl"
+            {/* Animated Text */}
+            <motion.span
+                className="absolute font-bold text-xl inline-flex items-center gap-1"
                 style={{ color: textColor }}
             >
-                {progress}%
-            </span>
+                {formatNumber(displayValue, suffix)}
+            </motion.span>
         </div>
     );
 };

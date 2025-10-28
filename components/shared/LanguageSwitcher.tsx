@@ -43,7 +43,7 @@ export default function LanguageSwitcher() {
                 >
                     <span className="flex items-center gap-2">
                         <span className="text-lg">{currentLanguage?.flag}</span>
-                        {currentLanguage ? currentLanguage.label : "Select language"}
+                        {/* {currentLanguage ? currentLanguage.label : "Select language"} */}
                     </span>
                     <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                 </Button>

@@ -1,7 +1,8 @@
-import { CardInfo, CaseStudyInfo, ConversationInfo, QuestionAccordion, TestimonialType } from "@/types/info";
+import { CardInfo, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, QuestionAccordion, TestimonialType } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
+// Might delete
 export const expandableCardInfo: CardInfo[] = [
     {
         title: "FULL TRACKING",
@@ -17,6 +18,28 @@ export const expandableCardInfo: CardInfo[] = [
         title: "Trusted by +250 leading agencies",
         highlight: "+250",
         variant: "text-only"
+    },
+]
+
+export const empoweringAgenciesInfo: EmpoweringAgenciesInfo[] = [
+    {
+        title: "Full Coverage",
+        description: "Track tagged, untagged and misspelled mentions of your brand across social, communities and media",
+        value: 100,
+        suffix: "%"
+    },
+    {
+        title: "Accurate Arabic Analysis",
+        description: "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic",
+        value: 97,
+        suffix: "%"
+    },
+    {
+        title: "Mentions Captured",
+        description: "Scale without constraints, unlimited users, keywords and reports at enterprise scale",
+        value: 50_000_000,
+        maxValue: 50_000_000,
+        suffix: "M"
     },
 ]
 

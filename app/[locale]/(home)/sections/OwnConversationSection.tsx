@@ -9,20 +9,21 @@ import { FaDisplay } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "motion/react";
 
+// Animation variants
+const textVariants = {
+    hidden: { opacity: 0, x: 40 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: "easeOut" } },
+    exit: { opacity: 0, x: -40, transition: { duration: 0.2, ease: "easeIn" } }
+};
+
+const imageVariants = {
+    hidden: { opacity: 0, x: -40 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } },
+    exit: { opacity: 0, x: 40, transition: { duration: 0.3, ease: "easeIn" } },
+};
 
 function OwnConversationSection() {
     const [activeFeature, setActiveFeature] = useState<ConversationInfo>(ownConversationInfo[4]);
-    const textVariants = {
-        hidden: { opacity: 0, x: 40 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: "easeOut" } },
-        exit: { opacity: 0, x: -40, transition: { duration: 0.2, ease: "easeIn" } },
-    };
-
-    const imageVariants = {
-        hidden: { opacity: 0, x: -40 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } },
-        exit: { opacity: 0, x: 40, transition: { duration: 0.3, ease: "easeIn" } },
-    };
 
     // TODO: Continue working on animation for this section
 
@@ -73,7 +74,8 @@ function OwnConversationSection() {
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeFeature.title}
-                                    exit={{ opacity: 0, x: -40, transition: { duration: 0.2, ease: "easeIn" } }}
+                                    variants={textVariants}
+                                    exit="exit"
                                     initial="hidden"
                                     animate="visible"
                                     className="w-full"

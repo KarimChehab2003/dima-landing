@@ -1,9 +1,18 @@
 import { IconType } from "react-icons";
 
+// Might delete
 export type CardInfo = {
     title: string;
     highlight: string;
     variant: "text-left-content-right" | "text-image" | "text-only"
+}
+
+export type EmpoweringAgenciesInfo = {
+    title: string;
+    description: string;
+    value: number;
+    suffix?: string;
+    maxValue?: number;
 }
 
 export type ConversationInfo = {
