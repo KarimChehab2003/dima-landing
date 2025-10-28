@@ -108,3 +108,7 @@
     cursor: pointer;
   }
 }
+
+.slick-slider {
+  overflow: hidden !important;
+}

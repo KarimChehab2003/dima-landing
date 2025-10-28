@@ -9,7 +9,7 @@ import { Link } from "@/i18n/navigation";
 
 function Footer() {
     return (
-        <footer className="bg-[#2C2C2C] text-white rounded-t-[64px]">
+        <footer className="bg-[#2C2C2C] text-white rounded-t-4xl">
             <div className="container mx-auto flex flex-col px-6 py-12 space-y-8">
                 {/* Dima & Footer Links */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

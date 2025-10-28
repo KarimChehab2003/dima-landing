@@ -29,63 +29,59 @@ export default function HeroCarousel2({
         arrows: false,
         responsive: [
             {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    centerMode: true,
+                },
+            },
+            {
                 breakpoint: 768,
-                settings: { slidesToShow: 1, swipe: true, centerMode: true },
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                },
             },
         ],
     };
 
     return (
         <div
-            className="w-full relative"
-            style={{
-                perspective: "1200px",
-                transformStyle: "preserve-3d",
-            }}
+            className="relative w-full px-2 sm:px-4 md:px-8 overflow-hidden"
         >
-            <Slider
-                {...settings}
-                className="[&_.slick-slide]:px-2!"
-            >
+            <Slider {...settings} className="[&_.slick-slide]:px-2!">
                 {slides.map((slide, index) => {
                     const total = slides.length;
                     let distance = index - activeSlide;
                     if (distance < -Math.floor(total / 2)) distance += total;
                     if (distance > Math.floor(total / 2)) distance -= total;
 
-                    let transform = "", zIndex = 1, opacity = 0.7;
+                    let transform = "", zIndex = 1
 
+                    // Simplify 3D transform for mobile
                     if (distance === 0) {
-                        // Active (center)
-                        transform = "translateZ(120px) rotateY(0deg) scale(1.2)";
+                        transform = "translateZ(100px) scale(1.2)";
                         zIndex = 3;
-                        opacity = 1;
-                    } else if (distance === -1) {
-                        // Left (slightly behind & left)
-                        transform = "translateX(-10px) rotateY(8deg) translateZ(-20px) scale(0.85)";
+
+                    } else if (Math.abs(distance) === 1) {
+                        transform = "translateZ(-30px) scale(0.9)";
                         zIndex = 2;
-                        opacity = 0.9;
-                    } else if (distance === 1) {
-                        // Right (slightly behind & right)
-                        transform = "translateX(10px) rotateY(-8deg) translateZ(-30px) scale(0.85)";
-                        zIndex = 2;
-                        opacity = 0.9;
+
                     } else {
-                        // hidden slides
-                        transform = "translateZ(-200px) scale(0.8)";
-                        zIndex = 0;
-                        opacity = 0;
+                        transform = "translateZ(-150px) scale(0.8)";
+                        zIndex = 1;
+
                     }
 
                     return (
                         <motion.div
                             key={index}
-                            animate={{ transform, opacity, zIndex }}
+                            animate={{ transform, zIndex }}
                             transition={{ duration: 0.6, ease: "easeInOut" }}
                             className="flex justify-center items-center"
                             style={{ transformOrigin: "center center" }}
                         >
-                            <div className="relative w-full h-[500px] flex justify-center items-center">
+                            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] flex justify-center items-center">
                                 <Image
                                     src={slide.image}
                                     alt={slide.title}

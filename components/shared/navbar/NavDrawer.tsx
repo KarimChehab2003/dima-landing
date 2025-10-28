@@ -1,56 +1,123 @@
 "use client";
 
+import { useState } from "react";
+import Link from "next/link";
+import { Menu } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
-import { solutionLinks } from "@/data/constants/links";
-import Link from "next/link";
+import { blogsLinks, resourcesLinks, dimaSolutions } from "@/data/constants/links";
 import SolutionNavLink from "./SolutionNavLink";
-import { Menu } from "lucide-react";
-import { useState } from "react";
+import Image from "next/image";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 function NavDrawer() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    return (
 
+    return (
         <Drawer direction="right" open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger asChild>
                 <Menu />
             </DrawerTrigger>
+
             <DrawerContent>
                 <DrawerTitle className="hidden">Navigation Drawer</DrawerTitle>
-                {/* Content */}
+
                 <div className="flex flex-col justify-between h-full">
-                    <nav className="p-4">
+                    <nav className="p-4 space-y-4">
+                        {/* Home Link */}
                         <Link
                             href="/"
-                            onClick={() => setIsOpen(false)}>Home</Link>
-                        {/* Accordion Solution */}
+                            onClick={() => setIsOpen(false)}
+                            className="block text-base font-medium hover:text-sky-500 transition"
+                        >
+                            Home
+                        </Link>
+
+                        {/* Solutions Accordion */}
                         <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1">
-                                <AccordionTrigger className="text-base">
+                            <AccordionItem value="solutions">
+                                <AccordionTrigger className="text-base font-medium">
                                     Solutions
                                 </AccordionTrigger>
                                 <AccordionContent>
-                                    <ul>
-                                        {
-                                            solutionLinks.map((link) => (
-                                                <li key={link.title} onClick={() => setIsOpen(false)}>
-                                                    <SolutionNavLink {...link} />
-                                                </li>
-                                            ))
-                                        }
+                                    <ul className="space-y-2 pl-3">
+                                        {dimaSolutions.map((link) => (
+                                            <li key={link.title} onClick={() => setIsOpen(false)}>
+                                                <SolutionNavLink {...link} />
+                                            </li>
+                                        ))}
                                     </ul>
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
 
+                        {/* Blogs Accordion */}
+                        <Accordion type="single" collapsible>
+                            <AccordionItem value="blogs">
+                                <AccordionTrigger className="text-base font-medium">
+                                    Blogs
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <ul className="space-y-4 p-3">
+                                        {blogsLinks.map((link) => (
+                                            <li key={link.title}>
+                                                <Link
+                                                    href={link.href}
+                                                    onClick={() => setIsOpen(false)}
+                                                    className="block text-sm text-muted-foreground hover:text-sky-500 transition"
+                                                >
+                                                    {link.title}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+
+                        {/* Resources Accordion */}
+                        <Accordion type="single" collapsible>
+                            <AccordionItem value="resources">
+                                <AccordionTrigger className="text-base font-medium">
+                                    More Resources
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <ul className="space-y-4 p-3">
+                                        {resourcesLinks.map((link) => (
+                                            <li key={link.title}>
+                                                <Link
+                                                    href={link.href}
+                                                    onClick={() => setIsOpen(false)}
+                                                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-sky-500 transition"
+                                                >
+                                                    {link.icon && (
+                                                        <Image
+                                                            src={link.icon}
+                                                            alt={link.title}
+                                                            width={18}
+                                                            height={18}
+                                                        />
+                                                    )}
+                                                    {link.title}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+
+                        {/* Case Studies */}
                         <Link
                             href="/case-studies"
-                            onClick={() => setIsOpen(false)}>Case Studies</Link>
+                            onClick={() => setIsOpen(false)}
+                            className="block text-base font-medium hover:text-sky-500 transition"
+                        >
+                            Case Studies
+                        </Link>
+                        <LanguageSwitcher />
                     </nav>
-                    <div className="bg-sky-500">
-                        LinkedIn
-                    </div>
+
                 </div>
             </DrawerContent>
         </Drawer>

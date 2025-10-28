@@ -8,7 +8,7 @@ import HeroCarousel from "../components/HeroCarousel";
 import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../components/SectionWrapper";
 import { Link } from "@/i18n/navigation";
-import HeroCarousel2 from "../components/hero-carousel-test";
+import HeroCarousel2 from "../components/HeroCarousel2";
 
 const slides = [
     { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
@@ -18,45 +18,6 @@ const slides = [
     { title: "Discovering Organic Creators", image: "/hero-carousel-item-3.png" },
     { title: "Measuring Campaign ROI", image: "/hero-carousel-item-3.png" },
 ];
-
-const logos = [
-    {
-        image: "/logos-carousel/ooredoo.png"
-    },
-    {
-        image: "/logos-carousel/benchmark.png"
-    },
-    {
-        image: "/logos-carousel/juhayna.png"
-    },
-    {
-        image: "/logos-carousel/wadi-degla.png"
-    },
-    {
-        image: "/logos-carousel/exxon-mobil.png"
-    },
-    {
-        image: "/logos-carousel/coca-cola.png"
-    },
-    {
-        image: "/logos-carousel/ooredoo.png"
-    },
-    {
-        image: "/logos-carousel/benchmark.png"
-    },
-    {
-        image: "/logos-carousel/juhayna.png"
-    },
-    {
-        image: "/logos-carousel/wadi-degla.png"
-    },
-    {
-        image: "/logos-carousel/exxon-mobil.png"
-    },
-    {
-        image: "/logos-carousel/coca-cola.png"
-    },
-]
 
 export default function HeroSection() {
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -88,20 +49,19 @@ export default function HeroSection() {
 
                 {/* Right Side: Carousel*/}
                 <div
-                    className="flex-1 mt-12 lg:mt-0 overflow-hidden max-w-4xl mx-auto flex items-center"
+                    className="flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
                     style={{
-                        backgroundImage: "url('dima-carousel-background.png')",
+                        backgroundImage: "url('/dima-carousel-background.png')",
                         backgroundSize: "contain",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
-                        height: "690px",
                     }}
                 >
-                    {/* <HeroCarousel slides={slides} selectedIndex={selectedIndex} onSelectSlide={setSelectedIndex} /> */}
                     <HeroCarousel2 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
                 </div>
+
             </div>
-            <div className="flex flex-col">
+            <div className="container mx-auto">
                 <h2 className="text-2xl sm:text-3xl text-center">Trusted by 250+ leading agencies & enterprises in GCC & MENA</h2>
                 <LogoCarousel />
             </div>
