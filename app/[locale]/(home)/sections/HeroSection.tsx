@@ -19,44 +19,6 @@ const slides = [
     { title: "Measuring Campaign ROI", image: "/hero-carousel-item-3.png" },
 ];
 
-const logos = [
-    {
-        image: "/logos-carousel/ooredoo.png"
-    },
-    {
-        image: "/logos-carousel/benchmark.png"
-    },
-    {
-        image: "/logos-carousel/juhayna.png"
-    },
-    {
-        image: "/logos-carousel/wadi-degla.png"
-    },
-    {
-        image: "/logos-carousel/exxon-mobil.png"
-    },
-    {
-        image: "/logos-carousel/coca-cola.png"
-    },
-    {
-        image: "/logos-carousel/ooredoo.png"
-    },
-    {
-        image: "/logos-carousel/benchmark.png"
-    },
-    {
-        image: "/logos-carousel/juhayna.png"
-    },
-    {
-        image: "/logos-carousel/wadi-degla.png"
-    },
-    {
-        image: "/logos-carousel/exxon-mobil.png"
-    },
-    {
-        image: "/logos-carousel/coca-cola.png"
-    },
-]
 
 export default function HeroSection() {
     const [selectedIndex, setSelectedIndex] = useState(0);
