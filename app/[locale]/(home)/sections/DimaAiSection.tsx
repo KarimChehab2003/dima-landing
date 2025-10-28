@@ -7,10 +7,10 @@ function DimaAiSection() {
     return (
         <SectionWrapper>
             <div
-                className="container mx-auto p-6 sm:p-12 text-white rounded-4xl bg-[#043558]">
+                className="container mx-auto p-6 sm:p-12 lg:px-20 text-white rounded-4xl bg-[#043558]">
                 <p className="text-sm font-bold mb-4">DIMA AI</p>
 
-                <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-10 lg:gap-16">
+                <div className="flex flex-col-reverse lg:flex-row justify-between items-center ">
                     {/* Text Section */}
                     <div className="flex-1 space-y-6 text-center lg:text-left">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#95DDEE] leading-tight">
@@ -37,7 +37,7 @@ function DimaAiSection() {
                     </figure>
                 </div>
 
-                <Button size="2xl" className="bg-[#115687]!">
+                <Button size="2xl" className="bg-[#115687]! hover:bg-[#115687]/80! transition-colors duration-200 w-full sm:w-fit mt-4">
                     <LucideMonitor />
                     <span>Request a demo</span>
                 </Button>

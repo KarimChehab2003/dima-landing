@@ -7,19 +7,19 @@ import Image from "next/image";
 import { ConversationInfo } from "@/types/info";
 import { FaDisplay } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 
 // Animation variants
 const textVariants = {
     hidden: { opacity: 0, x: 40 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: "easeOut" } },
-    exit: { opacity: 0, x: -40, transition: { duration: 0.2, ease: "easeIn" } }
+    visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: easeOut } },
+    exit: { opacity: 0, x: -40, transition: { duration: 0.2, ease: easeIn } }
 };
 
 const imageVariants = {
     hidden: { opacity: 0, x: -40 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } },
-    exit: { opacity: 0, x: 40, transition: { duration: 0.3, ease: "easeIn" } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: easeOut } },
+    exit: { opacity: 0, x: 40, transition: { duration: 0.3, ease: easeIn } },
 };
 
 function OwnConversationSection() {
@@ -55,25 +55,31 @@ function OwnConversationSection() {
                 </div>
 
                 {/* Image + Text */}
-                <div className="flex flex-col md:flex-row items-center justify-center  w-full relative h-[600px] ">
+                <div
+                    className="flex flex-col md:flex-row items-center justify-center w-full relative h-[600px] bg-contain bg-center bg-no-repeat gap-28"
+                    style={{
+                        backgroundImage: "url('/bg-vector.png')",
+                    }}
+                >
                     {/* Left side - Image */}
-                    <figure className="relative w-full md:w-2/3 min-w-[500px] h-[600px] shrink-0 z-20">
+                    <figure className="relative w-full md:w-2/3 max-w-[900px] h-[600px] shrink-0 z-20">
                         <Image
                             src={activeFeature?.image}
                             alt={activeFeature?.title}
                             fill
-                            className="object-contain rounded-t-4xl rounded-bl-4xl bg-[linear-gradient(0,#11A8CF_0%,#5FC9E7_32%,#87DAF3_66%,#AEEBFF_100%)] p-8"
+                            className="object-contain  py-8"
                             priority
                         />
                     </figure>
 
                     {/* Right side - Info & Button Stack */}
-                    <div className="flex flex-col h-full bg-[linear-gradient(0,#11A8CF_0%,#5FC9E7_32%,#87DAF3_66%,#AEEBFF_100%)] rounded-t-4xl rounded-br-4xl">
+                    <div className="flex flex-col h-full max-w-sm xl:me-4 me-4">
                         {/* Info Box */}
-                        <div className="bg-white rounded-l-4xl rounded-tl-lg ps-8 pe-16 max-w-lg flex-1 flex flex-col justify-center items-start">
+                        <div className="bg-white max-w-lg flex-1 flex flex-col justify-center items-start rounded-l-4xl">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeFeature.title}
+
                                     variants={textVariants}
                                     exit="exit"
                                     initial="hidden"
@@ -89,7 +95,7 @@ function OwnConversationSection() {
                         </div>
 
                         {/* Button in transparent div */}
-                        <div className="w-full h-full flex flex-1 py-8">
+                        <div className="w-full h-full flex flex-1 py-8 ">
                             <Link href="/request-demo">
                                 <Button size="2xl" className="flex items-center gap-2">
                                     <FaDisplay className="size-5" />
