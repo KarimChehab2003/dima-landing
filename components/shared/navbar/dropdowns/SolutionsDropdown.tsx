@@ -1,6 +1,5 @@
 import { dimaSolutions } from "@/data/constants/links";
 import SolutionNavLink from "../SolutionNavLink";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 
@@ -16,12 +15,12 @@ function SolutionsDropdown() {
             <div className="flex justify-center items-center space-y-4">
                 {/* Customer Insights */}
                 <Link href="/solutions/consumer-insights" className="flex justify-center items-center gap-4 ">
-                    <figure className="flex justify-center items-center border border-black rounded-md shadow-md shadow-primary p-8">
+                    <figure className="flex justify-center items-center">
                         <Image
-                            src="/nav-links/ci.png"
+                            src="/nav-links/ci-desktop.png"
                             alt="customer insights"
-                            width={170}
-                            height={170}
+                            width={200}
+                            height={200}
                         />
                     </figure>
                     <div>

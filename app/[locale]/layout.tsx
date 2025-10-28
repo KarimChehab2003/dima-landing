@@ -2,10 +2,10 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/shared/navbar/Navbar";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import Footer from "@/components/shared/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +39,7 @@ export default async function RootLayout({
             <div className="flex-1">
               {children}
             </div>
+            {/* <Footer /> */}
             <Footer />
           </div>
         </NextIntlClientProvider>

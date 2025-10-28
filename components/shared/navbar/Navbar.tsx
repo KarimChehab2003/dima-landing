@@ -13,15 +13,14 @@ import LanguageSwitcher from "../LanguageSwitcher";
 function Navbar() {
     return (
         <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 shadow-[0_0_15px_rgba(0,0,0,0.12)] bg-white mt-4 rounded-full container">
-            <div className="mx-auto max-h-20 flex justify-between items-center p-4">
+            <div className="max-h-20 flex justify-between items-center p-4 mx-8">
                 <Link href="/" className="order-2 lg:order-1">
-                    <figure className="relative w-20 h-20  overflow-hidden">
+                    <figure>
                         <Image
-                            src="/dima-logo.svg"
+                            src="/dima-logo.png"
                             alt="Dima logo"
-                            fill
-                            className="object-cover"
-                            priority
+                            width={74}
+                            height={30}
                         />
                     </figure>
                 </Link>

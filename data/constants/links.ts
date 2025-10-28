@@ -1,4 +1,5 @@
 import { LanguageLink, NavLink, SocialMediaLink, SolutionLink } from "@/types/link";
+import { title } from "process";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -82,6 +83,21 @@ export const resourcesLinks: NavLink[] = [
         title: "FAQs",
         href: "/faqs",
         icon: "/qa.png"
+    },
+]
+
+export const footerResourcesLinks: NavLink[] = [
+    {
+        title: "Case Studies",
+        href: "/case-studies"
+    },
+    {
+        title: "Blogs",
+        href: "/blogs"
+    },
+    {
+        title: "FAQs",
+        href: "/faqs"
     },
 ]
 
@@ -174,3 +190,4 @@ export const languages: LanguageLink[] = [
     { locale: "en", label: "English", flag: "🇬🇧" },
     { locale: "ar", label: "العربية", flag: "🇸🇦" },
 ];
+

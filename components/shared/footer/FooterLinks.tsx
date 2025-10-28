@@ -1,18 +1,19 @@
-import { footerLinks } from "@/data/constants/links";
-import Link from "next/link";
-import { PiArrowBendDownRightLight } from "react-icons/pi";
+import { Link } from "@/i18n/navigation";
+import { NavLink, SolutionLink } from "@/types/link";
 
-function FooterLinks() {
+type FooterLinksProps = {
+    title: string;
+    links: (NavLink | SolutionLink)[]
+}
+
+function FooterLinks({ title, links }: FooterLinksProps) {
     return (
-        <div className="grid grid-cols-2 gap-8">
-            <p className="inline-flex">
-                <PiArrowBendDownRightLight size={18} />
-                <span className="ms-1">Pages</span>
-            </p>
+        <div>
+            <h3 className="text-xl font-medium mb-4">{title}</h3>
             <ul className="space-y-1">
-                {footerLinks.map(link => (
-                    <li key={link.href} className="hover:text-primary transition-colors duration-200 cursor-pointer">
-                        <Link href={link.href}>{link.title}</Link>
+                {links.map(link => (
+                    <li key={link.href} className="hover:text-primary transition-colors duration-200 cursor-pointer my-2">
+                        <Link className="font-light" href={link.href}>{link.title}</Link>
                     </li>
                 ))}
             </ul>
