@@ -9,17 +9,10 @@ import { FaDisplay } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 
-// Animation variants
 const textVariants = {
     hidden: { opacity: 0, x: 40 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: easeOut } },
     exit: { opacity: 0, x: -40, transition: { duration: 0.2, ease: easeIn } },
-};
-
-const imageVariants = {
-    hidden: { opacity: 0, x: -40 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: easeOut } },
-    exit: { opacity: 0, x: 40, transition: { duration: 0.3, ease: easeIn } },
 };
 
 function OwnConversationSection() {
@@ -56,49 +49,44 @@ function OwnConversationSection() {
 
                 {/* Image + Text */}
                 <div
-                    className=" flex flex-col-reverse md:flex-row items-center justify-center w-full relative bg-gradient-to-b from-blue-500 to-purple-600 md:bg-contain md:bg-center md:bg-no-repeat gap-12 md:gap-20 lg:gap-28 mt-6"
-                    style={{
-                        backgroundImage: "url('/bg-vector.png')",
-                    }}
+                    className=" flex flex-col lg:flex-row items-center justify-center w-full relative bg-none sm:bg-none lg:bg-[url('/bg-vector.png')] bg-contain bg-center bg-no-repeat gap-0 lg:gap-20 xl:gap-28 mt-6 h-auto lg:h-[600px]
+  "
                 >
-                    {/* Left side - Image */}
-                    <figure className="relative w-full md:w-2/3 max-w-[900px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] shrink-0 z-20">
+                    {/* Image Section */}
+                    <div className="relative w-full lg:w-2/3 max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden">
+                        {/* Image */}
                         <Image
                             src={activeFeature?.image}
                             alt={activeFeature?.title}
                             fill
-                            className="object-contain py-8"
+                            className="object-contain z-10 px-6"
                             priority
                         />
-                    </figure>
+                    </div>
 
-                    {/* Right side - Info & Button Stack */}
-                    <div className="flex flex-col h-full w-full md:max-w-sm px-4 sm:px-6">
-                        {/* Info Box */}
-                        <div className="bg-white w-full flex-1 flex flex-col justify-center items-start rounded-xl shadow-sm p-6 sm:p-8">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={activeFeature.title}
-                                    variants={textVariants}
-                                    exit="exit"
-                                    initial="hidden"
-                                    animate="visible"
-                                    className="w-full"
-                                >
-                                    <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 sm:mb-6">
-                                        {activeFeature.title}
-                                    </h3>
-                                    <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-                                        {activeFeature.subTitle}
-                                    </p>
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
+                    {/* Info + Button (White background below image on mobile/tablet) */}
+                    <div className="flex flex-col justify-center items-center lg:items-start h-full w-full max-w-md px-6 py-8 lg:py-0 bg-white lg:bg-transparent z-30">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeFeature.title}
+                                variants={textVariants}
+                                exit="exit"
+                                initial="hidden"
+                                animate="visible"
+                                className="w-full text-left"
+                            >
+                                <h3 className="text-xl xl:text-2xl font-bold text-foreground mb-4 sm:mb-6">
+                                    {activeFeature.title}
+                                </h3>
+                                <p className="text-sm sm:text-base md:text-lg leading-relaxed">
+                                    {activeFeature.subTitle}
+                                </p>
+                            </motion.div>
+                        </AnimatePresence>
 
-                        {/* Button */}
-                        <div className="w-full flex justify-start sm:justify-center py-6">
+                        <div className="mt-6">
                             <Link href="/request-demo">
-                                <Button size="lg" className="flex items-center gap-2 text-sm sm:text-base">
+                                <Button size="2xl" className="flex items-center gap-2 text-sm sm:text-base">
                                     <FaDisplay className="size-4 sm:size-5" />
                                     <span>Request a demo</span>
                                 </Button>

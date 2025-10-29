@@ -21,7 +21,7 @@ const slides = [
 ];
 
 export default function HeroSection() {
-    const [selectedIndex, setSelectedIndex] = useState(1);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
 
     return (
@@ -51,7 +51,7 @@ export default function HeroSection() {
 
                 {/* Right Side: Carousel*/}
                 <div
-                    className="flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
+                    className="flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-[320px] md:h-[500px] lg:h-[600px]"
                     style={{
                         backgroundImage: "url('/dima-carousel-background.png')",
                         backgroundSize: "contain",
@@ -59,8 +59,9 @@ export default function HeroSection() {
                         backgroundRepeat: "no-repeat",
                     }}
                 >
-                    {/* <HeroCarousel2 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} /> */}
-                    <Herocarousel3 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
+                    {/* <HeroCarousel slides={slides} onSelectSlide={setSelectedIndex} selectedIndex={selectedIndex} /> */}
+                    <HeroCarousel2 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
+                    {/* <Herocarousel3 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} /> */}
                 </div>
 
             </div>
