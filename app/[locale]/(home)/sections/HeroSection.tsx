@@ -3,12 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { LucideMonitor } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import HeroCarousel from "../components/HeroCarousel";
 import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../components/SectionWrapper";
 import { Link } from "@/i18n/navigation";
 import HeroCarousel2 from "../components/HeroCarousel2";
+import Herocarousel3 from "../components/HeroCarousel3";
 
 const slides = [
     { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
@@ -20,7 +21,8 @@ const slides = [
 ];
 
 export default function HeroSection() {
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedIndex, setSelectedIndex] = useState(1);
+
 
     return (
         <SectionWrapper className="flex-col justify-between min-h-dvh">
@@ -57,7 +59,8 @@ export default function HeroSection() {
                         backgroundRepeat: "no-repeat",
                     }}
                 >
-                    <HeroCarousel2 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
+                    {/* <HeroCarousel2 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} /> */}
+                    <Herocarousel3 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
                 </div>
 
             </div>
