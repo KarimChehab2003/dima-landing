@@ -26,7 +26,7 @@ export default function HeroSection() {
 
     return (
         <SectionWrapper className="flex-col justify-between min-h-dvh">
-            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 md:py-0">
+            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8">
                 {/* Left Side: Dynamic Text */}
                 <div className="flex-1 space-y-6">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-8">

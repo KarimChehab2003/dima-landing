@@ -12,8 +12,8 @@ import LanguageSwitcher from "../LanguageSwitcher";
 
 function Navbar() {
     return (
-        <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 shadow-[0_0_15px_rgba(0,0,0,0.12)] bg-white lg:mt-4 lg:rounded-full container">
-            <div className="max-h-20 flex justify-between items-center p-4 lg:mx-8">
+        <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 shadow-[0_0_15px_rgba(0,0,0,0.12)] bg-white md:mt-4 md:rounded-full container">
+            <div className="max-h-20 flex justify-between items-center p-4 md:mx-8">
                 <Link href="/" className="order-1">
                     <figure>
                         <Image

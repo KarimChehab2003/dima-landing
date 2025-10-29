@@ -31,41 +31,44 @@ function OwnConversationSection() {
                     </p>
                 </div>
 
-                {/* Buttons */}
-                <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 w-full max-w-4xl">
-                    {ownConversationInfo.map((info) => (
-                        <Button
-                            key={info.title}
-                            variant={activeFeature?.title === info.title ? "default" : "ghost"}
-                            size="sm"
-                            onClick={() => setActiveFeature(info)}
-                            className="flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6"
-                        >
-                            <info.icon size={16} className="sm:size-5" />
-                            <span>{info.title}</span>
-                        </Button>
-                    ))}
+                {/* Scrollable Buttons */}
+                <div className="w-full max-w-4xl overflow-x-auto  py-4">
+                    <div className="flex justify-start items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap">
+                        {ownConversationInfo.map((info) => (
+                            <Button
+                                key={info.title}
+                                variant={activeFeature?.title === info.title ? "default" : "ghost"}
+                                size="sm"
+                                onClick={() => setActiveFeature(info)}
+                                className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 flex-shrink-0"
+                            >
+                                <info.icon size={16} className="sm:size-5" />
+                                <span>{info.title}</span>
+                            </Button>
+                        ))}
+                    </div>
                 </div>
+
+
 
                 {/* Image + Text */}
                 <div
-                    className=" flex flex-col lg:flex-row items-center justify-center w-full relative bg-none sm:bg-none lg:bg-[url('/bg-vector.png')] bg-contain bg-center bg-no-repeat gap-0 lg:gap-20 xl:gap-28 mt-6 h-auto lg:h-[600px]
-  "
+                    className="flex flex-col lg:flex-row items-start lg:items-center justify-center w-full relative bg-none sm:bg-none lg:bg-linear-to-b from-[#AEEBFF] to-primary rounded-4xl mt-6 h-auto"
                 >
                     {/* Image Section */}
-                    <div className="relative w-full lg:w-2/3 max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden">
+                    <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-t lg:bg-none from-[#AEEBFF] to-primary rounded-2xl">
                         {/* Image */}
                         <Image
                             src={activeFeature?.image}
                             alt={activeFeature?.title}
                             fill
-                            className="object-contain z-10 px-6"
+                            className="object-contain z-10 p-6"
                             priority
                         />
-                    </div>
+                    </figure>
 
-                    {/* Info + Button (White background below image on mobile/tablet) */}
-                    <div className="flex flex-col justify-center items-center lg:items-start h-full w-full max-w-md px-6 py-8 lg:py-0 bg-white lg:bg-transparent z-30">
+                    {/* Info + Button  */}
+                    <div className="flex flex-col justify-between items-start lg:items-start h-full w-full lg:max-w-md p-8 bg-white lg:bg-transparent z-30">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeFeature.title}
@@ -73,7 +76,7 @@ function OwnConversationSection() {
                                 exit="exit"
                                 initial="hidden"
                                 animate="visible"
-                                className="w-full text-left"
+                                className="w-full text-left flex-1"
                             >
                                 <h3 className="text-xl xl:text-2xl font-bold text-foreground mb-4 sm:mb-6">
                                     {activeFeature.title}
@@ -84,7 +87,7 @@ function OwnConversationSection() {
                             </motion.div>
                         </AnimatePresence>
 
-                        <div className="mt-6">
+                        <div className="mt-6 flex-1">
                             <Link href="/request-demo">
                                 <Button size="2xl" className="flex items-center gap-2 text-sm sm:text-base">
                                     <FaDisplay className="size-4 sm:size-5" />
