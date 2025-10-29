@@ -1,80 +1,61 @@
 "use client";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { testimonialsInfo } from "@/data/constants/info";
 import TestimonialCard from "./TestimonialCard";
 import { useState } from "react";
 
 const scaleOpacityClasses = [
-    "scale-110 opacity-100 z-20 relative", // active slide
+    "scale-110 opacity-100 z-20 relative", // active
     "scale-90 opacity-75 z-10 relative",
-    "scale-75 opacity-50 z-5 relative",
+    "scale-75 opacity-50 z-0 relative",
 ];
 
-function TestimonialCarousel() {
-    const [activeSlide, setActiveSlide] = useState<number>(0);
+type TestimonialCarouselProps = {
+    slidesToShow: number;
+    setSlidesToShow: React.Dispatch<React.SetStateAction<number>>;
+};
+
+export default function TestimonialCarousel({
+    slidesToShow,
+}: TestimonialCarouselProps) {
+    const [activeSlide, setActiveSlide] = useState(0);
 
     const settings = {
         className: "center",
         centerMode: true,
         infinite: true,
-        slidesToShow: 5,
+        slidesToShow,
         slidesToScroll: 1,
-        swipe: false,
+        swipe: true,
         autoplay: true,
-        speed: 500,
+        speed: 600,
         dots: true,
+        arrows: false,
+        adaptiveHeight: true,
         beforeChange: (_: number, next: number) => setActiveSlide(next),
-        customPaging: (i: number) => (
-            <div className={`mt-4 w-3 h-3 rounded-full hover:bg-primary ${i === activeSlide ? "bg-primary" : "bg-primary/30"} transition-colors duration-300`} >
-            </div>
-        ),
-        responsive: [
-            {
-                breakpoint: 1024, // tablets 
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    swipe: true,
-                },
-            },
-            {
-                breakpoint: 480, // phones 
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    swipe: true,
-                },
-            },
-        ],
     };
 
     return (
-        <Slider {...settings}>
-            {testimonialsInfo.concat(testimonialsInfo).map((info, index) => {
-                const total = testimonialsInfo.concat(testimonialsInfo).length;
+        <div className="w-full px-4 md:px-8 lg:px-12">
+            <Slider {...settings}>
+                {testimonialsInfo.concat(testimonialsInfo).map((info, index) => {
+                    const total = testimonialsInfo.concat(testimonialsInfo).length;
+                    let distance = Math.abs(index - activeSlide);
+                    if (distance > total / 2) distance = total - distance;
+                    const classIndex = Math.min(distance, scaleOpacityClasses.length - 1);
 
-                // Calculate shortest distance in infinite loop
-                let distance = Math.abs(index - activeSlide);
-                if (distance > total / 2) distance = total - distance;
-
-                // Dynamic scaling and opacity class based on distance
-                const classIndex = Math.min(distance, scaleOpacityClasses.length - 1);
-
-                return (
-                    <div
-                        key={index}
-                        className={`flex justify-center transition-all duration-500 ${scaleOpacityClasses[classIndex]}`}
-                    >
-                        <TestimonialCard {...info} />
-                    </div>
-                );
-            })}
-        </Slider>
+                    return (
+                        <div
+                            key={index}
+                            className={`flex justify-center transition-all duration-500 ease-in-out ${scaleOpacityClasses[classIndex]}`}
+                        >
+                            <TestimonialCard {...info} />
+                        </div>
+                    );
+                })}
+            </Slider>
+        </div>
     );
 }
-
-export default TestimonialCarousel;

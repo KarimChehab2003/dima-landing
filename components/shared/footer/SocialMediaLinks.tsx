@@ -1,6 +1,6 @@
 import { socialMediaLinks } from "@/data/constants/links";
 
-function SocialMediaLinks() {
+function SocialMediaLinksList() {
     return (
         <ul className="inline-flex items-center">
             {socialMediaLinks.map(link => (
@@ -14,4 +14,4 @@ function SocialMediaLinks() {
     );
 }
 
-export default SocialMediaLinks;
+export default SocialMediaLinksList;

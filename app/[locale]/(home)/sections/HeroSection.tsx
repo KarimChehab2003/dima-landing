@@ -3,12 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { LucideMonitor } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import HeroCarousel from "../components/HeroCarousel";
 import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../components/SectionWrapper";
 import { Link } from "@/i18n/navigation";
-import HeroCarousel2 from "../components/hero-carousel-test";
+import HeroCarousel2 from "../components/HeroCarousel2";
+import Herocarousel3 from "../components/HeroCarousel3";
 
 const slides = [
     { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
@@ -23,9 +24,10 @@ const slides = [
 export default function HeroSection() {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
+
     return (
         <SectionWrapper className="flex-col justify-between min-h-dvh">
-            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 md:py-0">
+            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8">
                 {/* Left Side: Dynamic Text */}
                 <div className="flex-1 space-y-6">
                     <h1 className="text-4xl sm:text-5xl font-bold mb-8">
@@ -50,20 +52,21 @@ export default function HeroSection() {
 
                 {/* Right Side: Carousel*/}
                 <div
-                    className="flex-1 mt-12 lg:mt-0 overflow-hidden max-w-4xl mx-auto flex items-center"
+                    className="flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-[320px] md:h-[500px] lg:h-[600px]"
                     style={{
-                        backgroundImage: "url('dima-carousel-background.png')",
+                        backgroundImage: "url('/dima-carousel-background.png')",
                         backgroundSize: "contain",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
-                        height: "690px",
                     }}
                 >
-                    {/* <HeroCarousel slides={slides} selectedIndex={selectedIndex} onSelectSlide={setSelectedIndex} /> */}
+                    {/* <HeroCarousel slides={slides} onSelectSlide={setSelectedIndex} selectedIndex={selectedIndex} /> */}
                     <HeroCarousel2 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
+                    {/* <Herocarousel3 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} /> */}
                 </div>
+
             </div>
-            <div className="flex flex-col">
+            <div className="container mx-auto">
                 <h2 className="text-2xl sm:text-3xl text-center">Trusted by 250+ leading agencies & enterprises in GCC & MENA</h2>
                 <LogoCarousel />
             </div>

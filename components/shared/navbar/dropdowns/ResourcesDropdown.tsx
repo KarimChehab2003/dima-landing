@@ -2,25 +2,27 @@ import { Button } from "@/components/ui/button";
 import { blogsLinks, resourcesLinks } from "@/data/constants/links";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function ResourcesDropdown() {
+    const t = useTranslations("Navbar");
     return (
         <div className="flex justify-between items-center">
             <div className="flex-1 flex justify-center items-start gap-8">
                 {/* Blogs Section */}
                 <div>
-                    <h2 className="text-3xl font-semibold">Blogs</h2>
+                    <h2 className="text-3xl font-semibold">{t("resources.links.blogs.title")}</h2>
                     <div className="w-8 h-0.5 bg-primary mb-4"></div>
                     <ul className="grid grid-cols-1 gap-x-8 gap-y-4">
                         {blogsLinks.map((link) => (
                             <li key={link.href} className="inline-flex items-center gap-2">
                                 <div className="h-15 w-20 rounded-lg bg-muted"></div>
-                                <Link href={link.href}>{link.title}</Link>
+                                <Link href={link.href}>{link.titleKey ? t(link.titleKey) : link.title}</Link>
                             </li>
                         ))}
                     </ul>
                     <Button className="mt-4">
-                        <Link href="/blogs">View all blogs</Link>
+                        <Link href="/blogs">{t("resources.links.blogs.viewAllBlogs")}</Link>
                     </Button>
                 </div>
 
@@ -29,7 +31,7 @@ function ResourcesDropdown() {
 
                 {/* More Resources Section */}
                 <div>
-                    <h2 className="text-3xl font-semibold">More Resources</h2>
+                    <h2 className="text-3xl font-semibold">{t("resources.links.moreResources.title")}</h2>
                     <div className="w-8 h-0.5 bg-primary mb-4"></div>
                     <ul className="grid grid-cols-1 gap-y-4 gap-x-8">
                         {resourcesLinks.map((link) => (
@@ -41,7 +43,7 @@ function ResourcesDropdown() {
                                     height={20}
 
                                 />
-                                <Link href={link.href}>{link.title}</Link>
+                                <Link href={link.href}>{link.titleKey ? t(link.titleKey) : link.title}</Link>
                             </li>
                         ))}
                     </ul>
