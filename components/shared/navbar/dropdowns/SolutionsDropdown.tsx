@@ -2,13 +2,15 @@ import { dimaSolutions } from "@/data/constants/links";
 import SolutionNavLink from "../SolutionNavLink";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 function SolutionsDropdown() {
+    const t = useTranslations("Navbar");
     return (
         <div className="flex flex-col space-y-4">
             {/* Header */}
             <div>
-                <h2 className="text-3xl font-semibold">Solutions</h2>
+                <h2 className="text-3xl font-semibold">{t("solutions.title")}</h2>
                 <div className="w-8 h-0.5 bg-primary mb-4"></div>
             </div>
 
@@ -24,18 +26,20 @@ function SolutionsDropdown() {
                         />
                     </figure>
                     <div>
-                        <p className="font-semibold hover:underline">Customer Insights</p>
-                        <p className="text-muted-foreground text-xs">Understand your audience everywhere</p>
+                        <p className="font-semibold hover:underline">{t("solutions.links.consumerInsights.title")}</p>
+                        <p className="text-muted-foreground text-xs">{t("solutions.links.consumerInsights.description")}</p>
                     </div>
                 </Link>
 
                 {/* Links list */}
                 <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {dimaSolutions.filter((s) => s.title !== "Consumer Insights").map((link) => (
-                        <li key={link.title}>
-                            <SolutionNavLink {...link} />
-                        </li>
-                    ))}
+                    {dimaSolutions
+                        .filter((s) => s.href !== "/solutions/consumer-insights")
+                        .map((link) => (
+                            <li key={link.title}>
+                                <SolutionNavLink {...link} />
+                            </li>
+                        ))}
                 </ul>
             </div>
 

@@ -1,9 +1,62 @@
 {
-    "Home":{
-        "title":"مرحبًا بكم في موقعنا",
-        "description":"هذا هو الإصدار العربي."
+  "Navbar": {
+    "home": "الرئيسية",
+    "solutions": {
+      "title": "الحلول",
+      "links": {
+        "consumerInsights": {
+          "title": "رؤى المستهلكين",
+          "description": "افهم جمهورك في كل مكان"
+        },
+        "socialListening": {
+          "title": "رصد وتحليل وسائل التواصل الاجتماعي",
+          "description": "استمع، حلّل وتصرّف"
+        },
+        "prComms": {
+          "title": "العلاقات العامة والاتصالات",
+          "description": "رصد يومي وتقارير تغطية لجميع عملائك"
+        },
+        "ownPageIntelligence": {
+          "title": "تحليل الصفحة الرئيسية",
+          "description": "ارفع تواجدك في وسائل التواصل الاجتماعي"
+        },
+        "marketInsights": {
+          "title": "رؤى السوق",
+          "description": "قياس الاداء ومقارنته"
+        },
+        "customerExperience": {
+          "title": "تجربة العملاء",
+          "description": "جمع وتحليل التقييمات"
+        },
+        "influencerMarketing": {
+          "title": "تسويق المؤثرين",
+          "description": "اختر الشركاء المناسبين لعلامتك التجارية ودع عائدك من الاستثمار أكبر"
+        }
+      }
     },
-    "About":{
-        "title":"صفحة عنا"
-    }
+    "resources": {
+      "title": "الموارد",
+      "links": {
+        "blogs": {
+          "title": "المدونات",
+          "blog1": "المدونة 1",
+          "blog2": "المدونة 2",
+          "blog3": "المدونة 3",
+          "viewAllBlogs": "عرض جميع المدونات"
+        },
+        "moreResources": {
+          "title": "مزيد من الموارد",
+          "faqs": "الأسئلة الشائعة",
+          "videos": "الفيديوهات"
+        }
+      },
+      "caseStudies": "دراسات الحالة"
+    },
+    "requestDemo": "طلب توضيح"
+  },
+  "Home": {
+    "title": "مرحبًا بكم في موقعنا!",
+    "description": "هذا هو الإصدار العربي."
+  },
+  "About": { "title": "صفحة عنا" }
 }

@@ -1,9 +1,61 @@
 {
-  "Home": {
-    "title": "Welcome to our website!",
-    "description": "THis is the english version"
+  "Navbar": {
+    "home": "Home",
+    "solutions": {
+      "title": "Solutions",
+      "links": {
+        "consumerInsights": {
+          "title": "Consumer Insights",
+          "description": "Understand your audience everywhere"
+        },
+        "socialListening": {
+          "title": "Social Listening & Analytics",
+          "description": "Listen, analyze & act"
+        },
+        "prComms": {
+          "title": "PR & Comms",
+          "description": "Daily monitoring & coverage reports for all your clients"
+        },
+        "ownPageIntelligence": {
+          "title": "Own Page Intelligence",
+          "description": "Elevate your social presence"
+        },
+        "marketInsights": {
+          "title": "Market Insights",
+          "description": "Benchmark performance"
+        },
+        "customerExperience": {
+          "title": "Customer Experience",
+          "description": "Collect & analyze reviews"
+        },
+        "influencerMarketing": {
+          "title": "Influencer Marketing",
+          "description": "Find the right partners for your brand"
+        }
+      }
+    },
+    "resources": {
+      "title": "Resources",
+      "links": {
+        "blogs": {
+          "title": "Blogs",
+          "blog1": "Blog 1",
+          "blog2": "Blog 2",
+          "blog3": "Blog 3",
+          "viewAllBlogs": "View all blogs"
+        },
+        "moreResources": {
+          "title": "More Resources",
+          "faqs": "FAQs",
+          "videos": "Videos"
+        }
+      },
+      "caseStudies": "Case Studies"
+    },
+    "requestDemo": "Request a Demo"
   },
-  "About": {
-    "title": "about page"
-  }
+  "Home": {
+    "HeroSection": {
+  },
+  "About": { "title": "about page" }
 }
