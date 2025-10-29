@@ -1,73 +1,99 @@
 "use client";
-
-import { useRef } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import type { EmblaCarouselType } from "embla-carousel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import Image from "next/image";
+import { easeInOut, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-type Slide = {
-    title: string;
-    image: string;
-};
-
-type FeatureCarouselProps = {
+type Slide = { title: string; image: string };
+type HeroCarousel2Props = {
     slides: Slide[];
-    onSelectSlide: (index: number) => void;
-    selectedIndex: number;
+    activeSlide: number;
+    setActiveSlide: (index: number) => void;
 };
 
-export default function HeroCarousel({ slides, onSelectSlide, selectedIndex }: FeatureCarouselProps) {
-    const pluginRef = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
-    const emblaRef = useRef<EmblaCarouselType | null>(null);
+export default function HeroCarousel({
+    slides,
+    activeSlide,
+    setActiveSlide,
+}: HeroCarousel2Props) {
+    const [slidesToScroll, setSlidesToScroll] = useState(1);
 
-    const handleApi = (api: EmblaCarouselType | undefined) => {
-        if (!api) return;
-        emblaRef.current = api;
-
-        const onSelect = () => {
-            const selected = api.selectedScrollSnap();
-            onSelectSlide(selected);
-            api.scrollTo(selected);
+    // Detect window width and adjust slidesToScroll
+    useEffect(() => {
+        const updateSlidesToScroll = () => {
+            const width = window.innerWidth;
+            if (width < 768) {
+                setSlidesToScroll(1); // mobile
+            } else {
+                setSlidesToScroll(3); // desktop
+            }
         };
 
-        api.on("select", onSelect);
-        onSelect();
+        updateSlidesToScroll();
+        window.addEventListener("resize", updateSlidesToScroll);
+        return () => window.removeEventListener("resize", updateSlidesToScroll);
+    }, []);
+
+    const settings = {
+        centerMode: true,
+        centerPadding: "0px",
+        infinite: true,
+        slidesToShow: slidesToScroll,
+        slidesToScroll,
+        autoplay: true,
+        speed: 600,
+        beforeChange: (_: number, next: number) => setActiveSlide(next),
+        arrows: false,
     };
 
     return (
-        <Carousel
-            opts={{
-                loop: true,
-                align: "center",
-                skipSnaps: false
-            }}
-            plugins={[pluginRef.current]}
-            setApi={handleApi}
-            className="w-full"
-        >
-            <CarouselContent className="flex items-center">
-                {slides.map((slide, index) => (
-                    <CarouselItem
-                        key={index}
-                        className="flex-none basis-[90%] sm:basis-[60%] md:basis-[50%] min-w-0 flex items-center justify-center"
-                    >
-                        <figure
-                            className={`relative block h-[220px] sm:h-[300px] md:h-[400px] rounded-3xl transition-all duration-600 transform ${index === selectedIndex ? "scale-105 translate-y-24" : "translate-y-0 scale-85"
-                                }`}
+        <div className="relative w-full px-2 sm:px-4 md:px-8 overflow-visible">
+            <Slider
+                {...settings}
+                className="[&_.slick-list]:overflow-visible [&_.slick-track]:overflow-visible [&_.slick-slide]:px-2!"
+            >
+                {slides.map((slide, index) => {
+                    const total = slides.length;
+                    let distance = index - activeSlide;
+                    if (distance < -Math.floor(total / 2)) distance += total;
+                    if (distance > Math.floor(total / 2)) distance -= total;
+
+                    let transform = "";
+                    let zIndex = 1;
+
+                    if (distance === 0) {
+                        transform = "scale(1)";
+                        zIndex = 3;
+                    } else if (Math.abs(distance) === 1) {
+                        transform = "scale(0.9)";
+                        zIndex = 2;
+                    } else {
+                        transform = "scale(0.8)";
+                        zIndex = 1;
+                    }
+
+                    return (
+                        <motion.div
+                            key={index}
+                            animate={{ transform, zIndex }}
+                            transition={{ duration: 0.3, ease: easeInOut }}
+                            className="flex justify-center items-center"
+                            style={{ transformOrigin: "center center" }}
                         >
-                            <Image
-                                src={slide.image}
-                                alt={`Slide ${index}`}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                className="w-auto h-[75%] object-contain"
-                            />
-                        </figure>
-                    </CarouselItem>
-                ))}
-            </CarouselContent>
-        </Carousel>
+                            <div className="relative w-full h-[320px] sm:h-[400px] md:h-[500px] flex justify-center items-center">
+                                <Image
+                                    src={slide.image}
+                                    alt={slide.title}
+                                    fill
+                                    className="object-contain drop-shadow-xl"
+                                />
+                            </div>
+                        </motion.div>
+                    );
+                })}
+            </Slider>
+        </div>
     );
 }

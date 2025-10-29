@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { testimonialsInfo } from "@/data/constants/info";
 import TestimonialCard from "./TestimonialCard";
 import { useState } from "react";
+import { TestimonialType } from "@/types/info";
 
 const scaleOpacityClasses = [
     "scale-110 opacity-100 z-20 relative", // active
@@ -15,10 +16,12 @@ const scaleOpacityClasses = [
 type TestimonialCarouselProps = {
     slidesToShow: number;
     setSlidesToShow: React.Dispatch<React.SetStateAction<number>>;
+    items?: TestimonialType[];
 };
 
 export default function TestimonialCarousel({
     slidesToShow,
+    items,
 }: TestimonialCarouselProps) {
     const [activeSlide, setActiveSlide] = useState(0);
 
@@ -31,17 +34,21 @@ export default function TestimonialCarousel({
         swipe: true,
         autoplay: true,
         speed: 600,
-        dots: true,
+        dots: false,
         arrows: false,
         adaptiveHeight: true,
         beforeChange: (_: number, next: number) => setActiveSlide(next),
     };
 
+    const source = (items && items.length ? items : testimonialsInfo).concat(
+        items && items.length ? items : testimonialsInfo
+    );
+
     return (
         <div className="w-full px-4 md:px-8 lg:px-12">
             <Slider {...settings}>
-                {testimonialsInfo.concat(testimonialsInfo).map((info, index) => {
-                    const total = testimonialsInfo.concat(testimonialsInfo).length;
+                {source.map((info, index) => {
+                    const total = source.length;
                     let distance = Math.abs(index - activeSlide);
                     if (distance > total / 2) distance = total - distance;
                     const classIndex = Math.min(distance, scaleOpacityClasses.length - 1);

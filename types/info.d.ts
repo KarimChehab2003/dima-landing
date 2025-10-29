@@ -35,7 +35,6 @@ export type QuestionAccordion = {
 
 export type TestimonialType = {
     quote: string;
-    companyLogo: string;
     name: string;
     jobRole: string;
 }

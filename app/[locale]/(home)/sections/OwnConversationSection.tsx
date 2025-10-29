@@ -8,6 +8,7 @@ import { ConversationInfo } from "@/types/info";
 import { FaDisplay } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
+import { useTranslations } from "next-intl";
 
 const textVariants = {
     hidden: { opacity: 0, x: 40 },
@@ -16,7 +17,9 @@ const textVariants = {
 };
 
 function OwnConversationSection() {
-    const [activeFeature, setActiveFeature] = useState<ConversationInfo>(ownConversationInfo[4]);
+    const t = useTranslations("Home.ownConversation");
+    const [activeIndex, setActiveIndex] = useState<number>(4);
+    const activeFeature: ConversationInfo = ownConversationInfo[activeIndex];
 
     return (
         <SectionWrapper className="justify-center items-center px-6 sm:px-10 lg:px-20 py-12">
@@ -24,28 +27,40 @@ function OwnConversationSection() {
                 {/* Header */}
                 <div className="space-y-3 text-center max-w-3xl">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold my-4">
-                        Own Every Conversation
+                        {t("title")}
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
-                        Discover how our suite of AI powered solutions help you see, understand, and act with precision.
+                        {t("description")}
                     </p>
                 </div>
 
                 {/* Scrollable Buttons */}
                 <div className="w-full max-w-4xl overflow-x-auto  py-4">
                     <div className="flex justify-start items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap">
-                        {ownConversationInfo.map((info) => (
+                        {ownConversationInfo.map((info, idx) => {
+                            const keys = [
+                                "listenAnalyzeAct",
+                                "growYourBrandWithTheRightPartners",
+                                "dailyMonitoringCoverageReportsForAllYourClients",
+                                "elevateYourSocialPresence",
+                                "benchmarkPerformance",
+                                "understandYourAudienceEverywhere",
+                                "collectAnalyzeReviews",
+                            ] as const;
+                            const k = keys[idx];
+                            const localizedTitle = t(`features.${k}.title`);
+                            return (
                             <Button
                                 key={info.title}
-                                variant={activeFeature?.title === info.title ? "default" : "ghost"}
+                                variant={activeIndex === idx ? "default" : "ghost"}
                                 size="sm"
-                                onClick={() => setActiveFeature(info)}
+                                onClick={() => setActiveIndex(idx)}
                                 className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 flex-shrink-0"
                             >
                                 <info.icon size={16} className="sm:size-5" />
-                                <span>{info.title}</span>
+                                <span>{localizedTitle}</span>
                             </Button>
-                        ))}
+                        );})}
                     </div>
                 </div>
 
@@ -79,10 +94,26 @@ function OwnConversationSection() {
                                 className="w-full text-left flex-1"
                             >
                                 <h3 className="text-xl xl:text-2xl font-bold text-foreground mb-4 sm:mb-6">
-                                    {activeFeature.title}
+                                    {t(`features.${[
+                                        "listenAnalyzeAct",
+                                        "growYourBrandWithTheRightPartners",
+                                        "dailyMonitoringCoverageReportsForAllYourClients",
+                                        "elevateYourSocialPresence",
+                                        "benchmarkPerformance",
+                                        "understandYourAudienceEverywhere",
+                                        "collectAnalyzeReviews",
+                                    ][activeIndex]}.title`)}
                                 </h3>
                                 <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-                                    {activeFeature.subTitle}
+                                    {t(`features.${[
+                                        "listenAnalyzeAct",
+                                        "growYourBrandWithTheRightPartners",
+                                        "dailyMonitoringCoverageReportsForAllYourClients",
+                                        "elevateYourSocialPresence",
+                                        "benchmarkPerformance",
+                                        "understandYourAudienceEverywhere",
+                                        "collectAnalyzeReviews",
+                                    ][activeIndex]}.description`)}
                                 </p>
                             </motion.div>
                         </AnimatePresence>
@@ -91,7 +122,7 @@ function OwnConversationSection() {
                             <Link href="/request-demo">
                                 <Button size="2xl" className="flex items-center gap-2 text-sm sm:text-base">
                                     <FaDisplay className="size-4 sm:size-5" />
-                                    <span>Request a demo</span>
+                                    <span>{t("features.requestDemo")}</span>
                                 </Button>
                             </Link>
                         </div>

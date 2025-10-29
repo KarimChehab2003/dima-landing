@@ -55,7 +55,170 @@
     "requestDemo": "Request a Demo"
   },
   "Home": {
-    "HeroSection": {
-  },
-  "About": { "title": "about page" }
+    "hero": {
+      "titlePrefix": "The Arabic-First AI Copilot For",
+      "slides": {
+        "socialListening": "Social Listening & Media Monitoring",
+        "influencerTracking": "Influencer Tracking",
+        "sentimentInsights": "Sentiment, Emotion & Topic Insights",
+        "competitorBenchmarking": "Competitor Benchmarking",
+        "discoverCreators": "Discovering Organic Creators",
+        "campaignRoi": "Measuring Campaign ROI"
+      },
+      "cta": "Request a demo",
+      "trustedBy": "Trusted by 250+ leading agencies & enterprises in GCC & MENA"
+    },
+    "empoweringAgencies": {
+      "titlePrefix": "Empowering Agencies with AI-Powered Insights",
+      "titleSuffix": "Arabic-First Intelligence",
+      "cards": {
+        "fullCoverage": {
+          "title": "Full Coverage",
+          "description": "Track tagged, untagged and misspelled mentions of your brand across social, communities and media"
+        },
+        "accurateArabicAnalysis": {
+          "title": "Accurate Arabic Analysis",
+          "description": "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic"
+        },
+        "mentionsCaptured": {
+          "title": "Mentions Captured",
+          "description": "Scale without constraints, unlimited users, keywords and reports at enterprise scale"
+        }
+      }
+    },
+    "ownConversation": {
+      "title": "Own Every Conversation",
+      "description": "Discover how our suite of AI powered solutions help you see, understand, and act with precision.",
+      "features": {
+        "listenAnalyzeAct": {
+          "title": "Listen, analyze & act",
+          "description": "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI."
+        },
+        "growYourBrandWithTheRightPartners": {
+          "title": "Grow your brand with the right partners",
+          "description": "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI."
+        },
+        "dailyMonitoringCoverageReportsForAllYourClients": {
+          "title": "Daily monitoring & coverage reports for all your clients",
+          "description": "Stay in control of your brand narrative with proactive monitoring and reporting."
+        },
+        "elevateYourSocialPresence": {
+          "title": "Elevate your social presence",
+          "description": "Turn your owned channels into proof of impact with AI content performance tracking."
+        },
+        "benchmarkPerformance": {
+          "title": "Benchmark performance",
+          "description": "Outpace your competitors with insights that accelerate decisions and increases your share of voice"
+        },
+        "understandYourAudienceEverywhere": {
+          "title": "Understand your audience everywhere",
+          "description": "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact."
+        },
+        "collectAnalyzeReviews": {
+          "title": "Collect & analyze reviews",
+          "description": "Turn feedback into action to protect loyalty and increase customer satisfaction"
+        },
+        "requestDemo": "Request a demo"
+      }
+    },
+    "dimaAi": {
+      "badge": "DIMA AI",
+      "title": "Your brand powered by Arabic-first AI",
+      "description": "Meet dima AI — your copilot for turning data into clarity. With Arabic-first intelligence, it understands all dialects, slang, and Franco-Arabic, transforming raw data into instant insights and clear reports, giving you the full picture global tools miss.",
+      "cta": "Request a demo"
+    },
+    "dimaSuite": {
+      "title": "Discover dima&apos;s suite of AI-powered solutions",
+      "cta": "Request a demo",
+      "solutions": {
+        "consumerInsights": {
+          "title": "Consumer Insights",
+          "description": "Understand your audience everywhere"
+        },
+        "socialListening": {
+          "title": "Social Listening & Analytics",
+          "description": "Listen, analyze & act"
+        },
+        "prComms": {
+          "title": "PR & Comms",
+          "description": "Daily monitoring & coverage reports for all your clients"
+        },
+        "ownPageIntelligence": {
+          "title": "Own Page Intelligence",
+          "description": "Elevate your social presence"
+        },
+        "marketInsights": {
+          "title": "Market Insights",
+          "description": "Benchmark performance"
+        },
+        "customerExperience": {
+          "title": "Customer Experience",
+          "description": "Collect & analyze reviews"
+        },
+        "influencerMarketing": {
+          "title": "Influencer Marketing",
+          "description": "Find the right partners for your brand"
+        }
+      },
+      "explore": "Explore"
+    },
+    "caseStudies": {
+      "title": "How Leading Brands Use dima",
+      "description": "Real-world stories of growth, crisis management, consumer insights & more powered by dima.",
+      "cards": {
+        "card1": {
+          "title": "Company Name",
+          "description": "Lumora Health partnered with Grovia to streamline their product launch process and cross-team coordination."
+        },
+        "card2": {
+          "title": "Company Name",
+          "description": "NaviAI, an emerging leader in AI-driven navigation systems, partnered with Grovia to scale their technical team."
+        },
+        "card3": {
+          "title": "Company Name",
+          "description": "Helped Pluto scale their product team and streamline onboarding as they expanded into new markets."
+        },
+        "card4": {
+          "title": "Company Name",
+          "description": "Partnered with VitaHealth to set up their first operations team from the ground up."
+        }
+      },
+      "cta": "Read More"
+    },
+    "testimonials": {
+      "title": "Hear It From Our Clients",
+      "items": [
+        {
+          "quote": "dima should be the go-to partner for any business serious about customer satisfaction and brand perception. Their ability to blend data, creativity and strategy makes a real difference",
+          "name": "Samer Yassa",
+          "jobRole": "Business Development Manager at Wadi Degla"
+        },
+        {
+          "quote": "For over 30 years, we've been working closely with our clients to offer them the state-of-the-art PR solutions across different industries and verticals. dima has enabled our media monitoring PR experts to offer easier, faster & more accurate media coverage & analysis",
+          "name": "Dina El Sewefy",
+          "jobRole": "CEO at MountPR"
+        },
+        {
+          "quote": "Working with the team at dima has helped us with understanding the drivers of engagement on our pages and to build an effective strategy across all social platforms through a true understanding of our audience's reactions and comments to everything we post!",
+          "name": "Omar Al Masry",
+          "jobRole": "Senior Brand Manager at Mori International"
+        },
+        {
+          "quote": "Being top of mind in the F&B market is difficult, everyday we see new players & trends…dima helps us to truly monitor where we stand in the market at all times and to maintain market leadership by staying in tune with the next big thing",
+          "name": "Mohamed Osman",
+          "jobRole": "Chariman at Tico Group"
+        },
+        {
+          "quote": "Managing over 50 locations in 3 different continents is not easy, but dima makes it easier by providing tailored business insights to our different audiences 24/7 so that we can provide a tailored marketing strategy that targets our various audience segments",
+          "name": "Mostafa AlSagheer",
+          "jobRole": "Vice Chairman at AlSagheer Group"
+        }
+      ]
+    },
+    "questionsAnswered":{
+      "title":"Your Questions, Answered",
+      "description":"Get quick answers to the most common questions about our platform and services."
+      "request a demo"
+    }
+  }
 }

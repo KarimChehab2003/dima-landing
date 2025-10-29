@@ -1,8 +1,23 @@
-import { empoweringAgenciesInfo } from "@/data/constants/info";
 import SectionWrapper from "../components/SectionWrapper";
 import EmpoweringAgenciesCard from "../components/EmpoweringAgenciesCard";
+import { useTranslations } from "next-intl";
+import { EmpoweringAgenciesInfo } from "@/types/info";
+import { empoweringAgenciesInfo } from "@/data/constants/info";
 
 function EmpoweringAgenciesSection() {
+    const t = useTranslations("Home.empoweringAgencies");
+
+    const cardKeys = ["fullCoverage", "accurateArabicAnalysis", "mentionsCaptured"] as const;
+
+    const cards: EmpoweringAgenciesInfo[] = empoweringAgenciesInfo.map((info, idx) => {
+        const key = cardKeys[idx];
+        return {
+            ...info,
+            title: t(`cards.${key}.title`),
+            description: t(`cards.${key}.description`),
+        };
+    });
+
     return (
         <SectionWrapper className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-16 py-10 md:py-16">
             <div
@@ -14,13 +29,13 @@ function EmpoweringAgenciesSection() {
             >
                 {/* Heading */}
                 <h2 className="text-2xl sm:text-4xl md:text-5xl text-center font-bold leading-tight">
-                    Empowering Agencies & Enterprises with&nbsp;
-                    <span className="block text-primary">Arabic-First Intelligence</span>
+                    {t("titlePrefix")} &nbsp;
+                    <span className="block text-primary">{t("titleSuffix")}</span>
                 </h2>
 
                 {/* Cards Grid */}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                    {empoweringAgenciesInfo.map((info) => (
+                    {cards.map((info) => (
                         <li key={info.title}>
                             <EmpoweringAgenciesCard {...info} />
                         </li>

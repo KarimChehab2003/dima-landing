@@ -36,7 +36,7 @@ function RequestDemoSection() {
 
                         </form>
                     </div>
-                    <figure className="flex-1 flex justify-center items-center bg-[linear-gradient(90deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] rounded-4xl">
+                    <figure className="flex-1 hidden lg:flex justify-center items-center bg-[linear-gradient(90deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] rounded-4xl">
                         <Image
                             src="/dima-phone.png"
                             alt="dima phone"

@@ -3,35 +3,43 @@
 import { Button } from "@/components/ui/button";
 import { LucideMonitor } from "lucide-react";
 import { motion } from "framer-motion";
-import { useCallback, useState } from "react";
-import HeroCarousel from "../components/HeroCarousel";
+import { useState } from "react";
 import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../components/SectionWrapper";
 import { Link } from "@/i18n/navigation";
-import HeroCarousel2 from "../components/HeroCarousel2";
-import Herocarousel3 from "../components/HeroCarousel3";
+import HeroCarousel from "../components/HeroCarousel";
+import { useTranslations } from "next-intl";
 
-const slides = [
-    { title: "Social Listening & Media Monitoring", image: "/hero-carousel-item-1.png" },
-    { title: "Influencer Tracking", image: "/hero-carousel-item-2.png" },
-    { title: "Sentiment, Emotion & Topic Insights", image: "/hero-carousel-item-3.png" },
-    { title: "Competitor Benchmarking", image: "/hero-carousel-item-3.png" },
-    { title: "Discovering Organic Creators", image: "/hero-carousel-item-3.png" },
-    { title: "Measuring Campaign ROI", image: "/hero-carousel-item-3.png" },
+const slidesImages = [
+    "/hero-carousel-item-1.png",
+    "/hero-carousel-item-2.png",
+    "/hero-carousel-item-3.png",
+    "/hero-carousel-item-3.png",
+    "/hero-carousel-item-3.png",
+    "/hero-carousel-item-3.png",
 ];
 
 
 export default function HeroSection() {
     const [selectedIndex, setSelectedIndex] = useState(0);
-
+    const t = useTranslations("Home.hero");
+    const slideTitles = [
+        t("slides.socialListening"),
+        t("slides.influencerTracking"),
+        t("slides.sentimentInsights"),
+        t("slides.competitorBenchmarking"),
+        t("slides.discoverCreators"),
+        t("slides.campaignRoi"),
+    ];
+    const slides = slideTitles.map((title, idx) => ({ title, image: slidesImages[idx] }));
 
     return (
         <SectionWrapper className="flex-col justify-between min-h-dvh">
             <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8">
                 {/* Left Side: Dynamic Text */}
                 <div className="flex-1 space-y-6">
-                    <h1 className="text-4xl sm:text-5xl font-bold mb-8">
-                        The Arabic-First AI Copilot For&nbsp;
+                    <h1 className="text-4xl sm:text-5xl font-normal mb-8">
+                        {t("titlePrefix")} &nbsp;
                         <motion.span
                             key={selectedIndex}
                             initial={{ x: -40, opacity: 0 }}
@@ -45,7 +53,7 @@ export default function HeroSection() {
                     <Link href="/request-demo">
                         <Button size="2xl">
                             <LucideMonitor />
-                            <span className="capitalize">Request a demo</span>
+                            <span className="capitalize">{t("cta")}</span>
                         </Button>
                     </Link>
                 </div>
@@ -60,14 +68,12 @@ export default function HeroSection() {
                         backgroundRepeat: "no-repeat",
                     }}
                 >
-                    {/* <HeroCarousel slides={slides} onSelectSlide={setSelectedIndex} selectedIndex={selectedIndex} /> */}
-                    <HeroCarousel2 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
-                    {/* <Herocarousel3 slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} /> */}
+                    <HeroCarousel slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
                 </div>
 
             </div>
             <div className="container mx-auto">
-                <h2 className="text-2xl sm:text-3xl text-center">Trusted by 250+ leading agencies & enterprises in GCC & MENA</h2>
+                <h2 className="text-2xl sm:text-3xl text-center">{t("trustedBy")}</h2>
                 <LogoCarousel />
             </div>
         </SectionWrapper>
