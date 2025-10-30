@@ -258,5 +258,31 @@
         }
       }
     }
+  },
+  "Footer": {
+    "dima": {
+      "description": "Your Media Monitoring AI Copilot",
+      "requestDemo": "Request a Demo"
+    },
+    "solutions": {
+      "title": "Solutions",
+      "consumerInsights": "Consumer Insights",
+      "socialListening": "Social Listening & Analytics",
+      "prComms": "PR & Comms",
+      "ownPageIntelligence": "Own Page Intelligence",
+      "marketInsights": "Market Insights"
+    },
+    "resources": {
+      "title": "Resources",
+      "blogs": "Blogs",
+      "faqs": "FAQs",
+      "caseStudies": "Case Studies"
+    },
+    "getInTouch": {
+      "title": "Get In Touch",
+      "mail": "info@darwinz.ai"
+    },
+    "copyright": "© The Dar.AI. All Rights Reserved.",
+    "privacyPolicy": "Privacy Policy"
   }
 }
