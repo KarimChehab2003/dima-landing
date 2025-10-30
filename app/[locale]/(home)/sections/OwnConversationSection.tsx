@@ -8,21 +8,24 @@ import { ConversationInfo } from "@/types/info";
 import { FaDisplay } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import RequestDemoButton from "../components/RequestDemoButton";
 
 const textVariants = {
-    hidden: { opacity: 0, x: 40 },
+    hidden: { opacity: 0, x: 20 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: easeOut } },
-    exit: { opacity: 0, x: -40, transition: { duration: 0.2, ease: easeIn } },
+    exit: { opacity: 0, x: -20, transition: { duration: 0.2, ease: easeIn } },
 };
 
 function OwnConversationSection() {
     const t = useTranslations("Home.ownConversation");
     const [activeIndex, setActiveIndex] = useState<number>(4);
     const activeFeature: ConversationInfo = ownConversationInfo[activeIndex];
+    const locale = useLocale();
+    const isRTL = locale === "ar";
 
     return (
-        <SectionWrapper className="justify-center items-center px-6 sm:px-10 lg:px-20 py-12">
+        <SectionWrapper>
             <div className="flex flex-col items-center gap-8 w-full">
                 {/* Header */}
                 <div className="space-y-3 text-center max-w-3xl">
@@ -35,7 +38,7 @@ function OwnConversationSection() {
                 </div>
 
                 {/* Scrollable Buttons */}
-                <div className="w-full max-w-4xl overflow-x-auto  py-4">
+                <div className="w-full max-w-4xl overflow-x-auto py-4">
                     <div className="flex justify-start items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap">
                         {ownConversationInfo.map((info, idx) => {
                             const keys = [
@@ -53,9 +56,9 @@ function OwnConversationSection() {
                             <Button
                                 key={info.title}
                                 variant={activeIndex === idx ? "default" : "ghost"}
-                                size="sm"
+                                
                                 onClick={() => setActiveIndex(idx)}
-                                className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 flex-shrink-0"
+                                className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0"
                             >
                                 <info.icon size={16} className="sm:size-5" />
                                 <span>{localizedTitle}</span>
@@ -68,16 +71,16 @@ function OwnConversationSection() {
 
                 {/* Image + Text */}
                 <div
-                    className="flex flex-col lg:flex-row items-start lg:items-center justify-center w-full relative bg-none sm:bg-none rounded-4xl mt-6 h-auto bg-no-repeat"
-                    style={
-                        {
-                            backgroundImage: "url('/bg-vector.png')",
-                            backgroundPosition: "center"
-                        }
-                    }
+                    className="flex flex-col xl:flex-row items-center justify-between xl:justify-center w-full rounded-4xl mt-6 bg-no-repeat xl:bg-[url(/bg-vector.png)] bg-center"
+                    // style={
+                    //     {
+                    //         backgroundImage: "url('/bg-vector.png')",
+                    //         backgroundPosition: "center"
+                    //     }
+                    // }
                 >
                     {/* Image Section */}
-                    <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-t  rounded-2xl">
+                    <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-b xl:bg-none from-primary via-[#5FC9E7] to-[#AEEBFF] rounded-2xl">
                         {/* Image */}
                         <Image
                             src={activeFeature?.image}
@@ -89,7 +92,7 @@ function OwnConversationSection() {
                     </figure>
 
                     {/* Info + Button  */}
-                    <div className="flex flex-col justify-end text-center items-start lg:items-start h-full w-full lg:max-w-md p-8 bg-white lg:bg-transparent z-30">
+                    <div className={`flex flex-col justify-end text-center w-full xl:max-w-md  z-30 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] ${isRTL ? 'text-right items-end xl:pr-34' : 'items-start text-left xl:pl-34'}`}>
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeFeature.title}
@@ -97,9 +100,9 @@ function OwnConversationSection() {
                                 exit="exit"
                                 initial="hidden"
                                 animate="visible"
-                                className="w-full text-left flex-1"
+                                className={`w-full flex-1 flex flex-col justify-center ${isRTL ? 'items-end text-right' : 'items-start text-left'}`}
                             >
-                                <h3 className="text-xl xl:text-2xl font-bold text-foreground mb-4 sm:mb-6">
+                                <h3 className="text-2xl font-semibold my-4 sm:mb-6">
                                     {t(`features.${[
                                         "listenAnalyzeAct",
                                         "growYourBrandWithTheRightPartners",
@@ -124,13 +127,8 @@ function OwnConversationSection() {
                             </motion.div>
                         </AnimatePresence>
 
-                        <div className="mt-6 flex-1">
-                            <Link href="/request-demo">
-                                <Button size="2xl" className="flex items-center gap-2 text-sm sm:text-base">
-                                    <FaDisplay className="size-4 sm:size-5" />
-                                    <span>{t("features.requestDemo")}</span>
-                                </Button>
-                            </Link>
+                        <div className="mt-6 w-full flex-1 flex justify-center xl:justify-start">
+                           <RequestDemoButton />
                         </div>
                     </div>
                 </div>
