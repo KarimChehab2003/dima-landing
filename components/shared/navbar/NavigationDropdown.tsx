@@ -12,7 +12,7 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
     const { isOpen, handleMouseEnter, handleMouseLeave, closeDropdown } = useDropdownHoverDelay();
 
     return (
-        <div className="hidden xl:block mx-2 group">
+        <div className="hidden lg:block mx-2 group">
             {/* Trigger */}
             <div
                 className="inline-flex items-center relative z-20"

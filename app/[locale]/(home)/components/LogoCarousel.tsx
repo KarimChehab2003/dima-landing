@@ -22,7 +22,7 @@ export default function LogoCarousel() {
                 {Array.from({ length: 14 }).map((_, index) => (
                     <CarouselItem
                         key={index}
-                        className="flex-none basis-[30%] sm:basis-[20%] md:basis-[12%] xl:basis-[10%]"
+                        className="flex-none basis-[30%] sm:basis-[20%] md:basis-[12%] lg:basis-[10%]"
                     >
                         <div className="flex items-center justify-center h-[80px] sm:h-[100px] md:h-[120px]">
                             <Image

@@ -12,20 +12,20 @@ function DimaAiSection() {
                 className="container mx-auto p-6 sm:p-12  text-white rounded-4xl bg-[#043558]">
                 <p className="text-sm font-bold mb-4">{t("badge")}</p>
 
-                <div className="flex flex-col-reverse xl:flex-row justify-between items-center ">
+                <div className="flex flex-col-reverse lg:flex-row justify-between items-center ">
                     {/* Text Section */}
-                    <div className="flex-1 space-y-6 text-center xl:text-left">
-                        <h2 className="text-3xl sm:text-4xl xl:text-5xl text-[#95DDEE] leading-tight">
+                    <div className="flex-1 space-y-6 text-center lg:text-left">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#95DDEE] leading-tight">
                             {t("title")}
                         </h2>
 
-                        <p className="text-base sm:text-lg xl:text-xl font-medium max-w-2xl mx-auto xl:mx-0">
+                        <p className="text-base sm:text-lg lg:text-xl font-medium max-w-2xl mx-auto lg:mx-0">
                             {t("description")}
                         </p>
                     </div>
 
                     {/* Image Section */}
-                    <figure className="relative w-full xl:flex-1 h-[220px] sm:h-[300px] xl:h-[500px]">
+                    <figure className="relative w-full lg:flex-1 h-[220px] sm:h-[300px] lg:h-[500px]">
                         <Image
                             src="/dima-phone.png"
                             alt="stats"

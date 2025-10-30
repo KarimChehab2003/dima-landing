@@ -22,11 +22,11 @@ function OwnConversationSection() {
     const activeFeature: ConversationInfo = ownConversationInfo[activeIndex];
 
     return (
-        <SectionWrapper className="justify-center items-center px-6 sm:px-10 xl:px-20 py-12">
+        <SectionWrapper className="justify-center items-center px-6 sm:px-10 lg:px-20 py-12">
             <div className="flex flex-col items-center gap-8 w-full">
                 {/* Header */}
                 <div className="space-y-3 text-center max-w-3xl">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold my-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold my-4">
                         {t("title")}
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
@@ -68,7 +68,7 @@ function OwnConversationSection() {
 
                 {/* Image + Text */}
                 <div
-                    className="flex flex-col xl:flex-row items-start xl:items-center justify-center w-full relative bg-none sm:bg-none rounded-4xl mt-6 h-auto bg-no-repeat"
+                    className="flex flex-col lg:flex-row items-start lg:items-center justify-center w-full relative bg-none sm:bg-none rounded-4xl mt-6 h-auto bg-no-repeat"
                     style={
                         {
                             backgroundImage: "url('/bg-vector.png')",
@@ -77,7 +77,7 @@ function OwnConversationSection() {
                     }
                 >
                     {/* Image Section */}
-                    <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] xl:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-t  rounded-2xl">
+                    <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-t  rounded-2xl">
                         {/* Image */}
                         <Image
                             src={activeFeature?.image}
@@ -89,7 +89,7 @@ function OwnConversationSection() {
                     </figure>
 
                     {/* Info + Button  */}
-                    <div className="flex flex-col justify-end text-center items-start xl:items-start h-full w-full xl:max-w-md p-8 bg-white xl:bg-transparent z-30">
+                    <div className="flex flex-col justify-end text-center items-start lg:items-start h-full w-full lg:max-w-md p-8 bg-white lg:bg-transparent z-30">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeFeature.title}
