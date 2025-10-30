@@ -9,7 +9,7 @@ function DimaAiSection() {
     return (
         <SectionWrapper>
             <div
-                className="container mx-auto p-6 sm:p-12 lg:px-20 text-white rounded-4xl bg-[#043558]">
+                className="container mx-auto p-6 sm:p-12  text-white rounded-4xl bg-[#043558]">
                 <p className="text-sm font-bold mb-4">{t("badge")}</p>
 
                 <div className="flex flex-col-reverse lg:flex-row justify-between items-center ">

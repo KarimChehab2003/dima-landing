@@ -68,10 +68,16 @@ function OwnConversationSection() {
 
                 {/* Image + Text */}
                 <div
-                    className="flex flex-col lg:flex-row items-start lg:items-center justify-center w-full relative bg-none sm:bg-none lg:bg-linear-to-b from-[#AEEBFF] to-primary rounded-4xl mt-6 h-auto"
+                    className="flex flex-col lg:flex-row items-start lg:items-center justify-center w-full relative bg-none sm:bg-none rounded-4xl mt-6 h-auto bg-no-repeat"
+                    style={
+                        {
+                            backgroundImage: "url('/bg-vector.png')",
+                            backgroundPosition: "center"
+                        }
+                    }
                 >
                     {/* Image Section */}
-                    <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-t lg:bg-none from-[#AEEBFF] to-primary rounded-2xl">
+                    <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-t  rounded-2xl">
                         {/* Image */}
                         <Image
                             src={activeFeature?.image}
@@ -83,7 +89,7 @@ function OwnConversationSection() {
                     </figure>
 
                     {/* Info + Button  */}
-                    <div className="flex flex-col justify-between items-start lg:items-start h-full w-full lg:max-w-md p-8 bg-white lg:bg-transparent z-30">
+                    <div className="flex flex-col justify-end text-center items-start lg:items-start h-full w-full lg:max-w-md p-8 bg-white lg:bg-transparent z-30">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeFeature.title}

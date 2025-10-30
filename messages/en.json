@@ -215,10 +215,10 @@
         }
       ]
     },
-    "questionsAnswered":{
-      "title":"Your Questions, Answered",
-      "description":"Get quick answers to the most common questions about our platform and services."
-      "request a demo"
+    "questionsAnswered": {
+      "title": "Your Questions, Answered",
+      "description": "Get quick answers to the most common questions about our platform and services.",
+      "request a demo": "request a demo"
     }
   }
 }

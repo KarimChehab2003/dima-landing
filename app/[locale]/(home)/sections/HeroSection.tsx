@@ -9,6 +9,7 @@ import SectionWrapper from "../components/SectionWrapper";
 import { Link } from "@/i18n/navigation";
 import HeroCarousel from "../components/HeroCarousel";
 import { useTranslations } from "next-intl";
+import CyclicSwapCards from "../components/CyclicSwapCards";
 
 const slidesImages = [
     "/hero-carousel-item-1.png",
@@ -60,7 +61,7 @@ export default function HeroSection() {
 
                 {/* Right Side: Carousel*/}
                 <div
-                    className="flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-[320px] md:h-[500px] lg:h-[600px]"
+                    className="flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] lg:h-[600px]"
                     style={{
                         backgroundImage: "url('/dima-carousel-background.png')",
                         backgroundSize: "contain",
@@ -68,7 +69,8 @@ export default function HeroSection() {
                         backgroundRepeat: "no-repeat",
                     }}
                 >
-                    <HeroCarousel slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} />
+                    {/* <HeroCarousel slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} /> */}
+                    <CyclicSwapCards cards={slides} selectedIndex={selectedIndex} onIndexChange={setSelectedIndex} />
                 </div>
 
             </div>
