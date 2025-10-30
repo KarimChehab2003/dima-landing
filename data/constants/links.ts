@@ -190,8 +190,8 @@ export const dimaSolutions: SolutionLink[] = [
         logo: "/nav-links/ci.png",
         title: "Consumer Insights",
         subTitle: "Understand your audience everywhere",
-        titleKey: "solutions.links.customerInsights.title",
-        subTitleKey: "solutions.links.customerInsights.description",
+        titleKey: "solutions.links.consumerInsights.title",
+        subTitleKey: "solutions.links.consumerInsights.description",
         href: "/solutions/consumer-insights"
     },
     {
@@ -206,7 +206,7 @@ export const dimaSolutions: SolutionLink[] = [
 
 
 export const languages: LanguageLink[] = [
-    { locale: "en", label: "English", flag: "🇬🇧" },
-    { locale: "ar", label: "العربية", flag: "🇸🇦" },
+    { locale: "en", label: "English", flag: "/flags/ar.png" },
+    { locale: "ar", label: "العربية", flag: "/flags/ar.png" },
 ];
 

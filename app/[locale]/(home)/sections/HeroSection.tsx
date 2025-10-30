@@ -43,15 +43,7 @@ export default function HeroSection() {
                 <div className="flex-1 space-y-6">
                     <h1 className="text-2xl xl:text-5xl mb-8 ">
                         {t("titlePrefix")}
-                        {/* <motion.span
-                            key={selectedIndex}
-                            initial={{ x: -40, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.6 }}
-                            className="inline-block text-primary"
-                        >
-                            {slides[selectedIndex].title}
-                        </motion.span> */}
+
                         <Typewriter
                             options={{
                                 strings: [slides[selectedIndex].title],
@@ -86,7 +78,6 @@ export default function HeroSection() {
                         backgroundRepeat: "no-repeat",
                     }}
                 >
-                    {/* <HeroCarousel slides={slides} activeSlide={selectedIndex} setActiveSlide={setSelectedIndex} /> */}
                     <CyclicSwapCards cards={slides} selectedIndex={selectedIndex} onIndexChange={setSelectedIndex} />
                 </div>
 

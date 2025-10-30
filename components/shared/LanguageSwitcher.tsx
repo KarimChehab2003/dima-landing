@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, ChevronsUpDown } from "lucide-react";
+import { Check, ChevronDown, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
     Popover,
@@ -20,6 +20,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { languages } from "@/data/constants/links";
 import { LanguageLink } from "@/types/link";
 import { useLocale } from "next-intl";
+import Image from "next/image";
 
 
 
@@ -36,17 +37,20 @@ export default function LanguageSwitcher() {
     return (
         <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
-                <Button
-                    role="combobox"
+                <div
                     aria-expanded={open}
-                    className="flex justify-between"
+                    className="w-fit flex justify-between items-center cursor-pointer px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
                 >
-                    <span className="flex items-center gap-2">
-                        <span className="text-lg">{currentLanguage?.flag}</span>
-                        {currentLanguage ? currentLanguage.label : "Select language"}
-                    </span>
-                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-                </Button>
+                    <figure className="flex items-center gap-2">
+                        <Image
+                            src={currentLanguage?.flag || "/flags/en.png"}
+                            alt="current language flag"
+                            width={29}
+                            height={29}
+                        />
+                    </figure>
+                    <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                </div>
             </PopoverTrigger>
 
             <PopoverContent className="w-[180px] p-0">

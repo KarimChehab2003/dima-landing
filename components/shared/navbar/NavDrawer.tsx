@@ -9,41 +9,44 @@ import { blogsLinks, resourcesLinks, dimaSolutions } from "@/data/constants/link
 import SolutionNavLink from "./SolutionNavLink";
 import Image from "next/image";
 import LanguageSwitcher from "../LanguageSwitcher";
+import { useLocale, useTranslations } from "next-intl";
 
 function NavDrawer() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-
+    const t = useTranslations("Navbar");
+    const locale = useLocale();
+    const isRTL = locale === "ar";
     return (
         <Drawer direction="right" open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger asChild>
                 <Menu />
             </DrawerTrigger>
 
-            <DrawerContent>
+            <DrawerContent >
                 <DrawerTitle className="hidden">Navigation Drawer</DrawerTitle>
 
                 <div className="flex flex-col justify-between h-full">
-                    <nav className="p-4 space-y-4">
+                    <nav className="p-4 space-y-4 overflow-y-auto max-h-screen">
                         {/* Home Link */}
                         <Link
                             href="/"
                             onClick={() => setIsOpen(false)}
-                            className="block text-base font-medium hover:text-sky-500 transition"
+                            className={`block text-base font-medium hover:text-sky-500 transition ${isRTL ? "text-right" : "text-left"}`}
                         >
-                            Home
+                            {t("home")}
                         </Link>
 
                         {/* Solutions Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="solutions">
-                                <AccordionTrigger className="text-base font-medium">
-                                    Solutions
+                                <AccordionTrigger className={isRTL ? "flex-row-reverse" : "flex-row"}>
+                                    {t("solutions.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="space-y-2 pl-3">
                                         {dimaSolutions.map((link) => (
                                             <li key={link.title} onClick={() => setIsOpen(false)}>
-                                                <SolutionNavLink {...link} />
+                                                <SolutionNavLink {...link} isRTL={isRTL} />
                                             </li>
                                         ))}
                                     </ul>
@@ -54,8 +57,8 @@ function NavDrawer() {
                         {/* Blogs Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="blogs">
-                                <AccordionTrigger className="text-base font-medium">
-                                    Blogs
+                                <AccordionTrigger className={isRTL ? "flex-row-reverse" : "flex-row"}>
+                                    {t("resources.links.blogs.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="space-y-4 p-3">
@@ -64,9 +67,9 @@ function NavDrawer() {
                                                 <Link
                                                     href={link.href}
                                                     onClick={() => setIsOpen(false)}
-                                                    className="block text-sm text-muted-foreground hover:text-sky-500 transition"
+                                                    className={`block text-sm text-muted-foreground hover:text-sky-500 transition ${isRTL ? 'text-right' : 'text-left'}`}
                                                 >
-                                                    {link.title}
+                                                    {link.titleKey ? t(link.titleKey) : link.title}
                                                 </Link>
                                             </li>
                                         ))}
@@ -78,8 +81,8 @@ function NavDrawer() {
                         {/* Resources Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="resources">
-                                <AccordionTrigger className="text-base font-medium">
-                                    More Resources
+                                <AccordionTrigger className={isRTL ? "flex-row-reverse" : "flex-row"}>
+                                    {t("resources.links.moreResources.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="space-y-4 p-3">
@@ -88,7 +91,7 @@ function NavDrawer() {
                                                 <Link
                                                     href={link.href}
                                                     onClick={() => setIsOpen(false)}
-                                                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-sky-500 transition"
+                                                    className={`flex items-center gap-2 text-sm text-muted-foreground hover:text-sky-500 transition ${isRTL ? 'flex-row-reverse text-right' : 'flex-row text-left'}`}
                                                 >
                                                     {link.icon && (
                                                         <Image
@@ -98,7 +101,7 @@ function NavDrawer() {
                                                             height={18}
                                                         />
                                                     )}
-                                                    {link.title}
+                                                    {link.titleKey ? t(link.titleKey) : link.title}
                                                 </Link>
                                             </li>
                                         ))}
@@ -111,9 +114,9 @@ function NavDrawer() {
                         <Link
                             href="/case-studies"
                             onClick={() => setIsOpen(false)}
-                            className="block text-base font-medium hover:text-sky-500 transition"
+                            className={`block text-base font-medium hover:text-sky-500 transition ${isRTL ? "text-right" : "text-left"}`}
                         >
-                            Case Studies
+                            {t("caseStudies")}
                         </Link>
                         <LanguageSwitcher />
                     </nav>

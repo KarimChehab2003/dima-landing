@@ -3,13 +3,13 @@ import { SolutionLink } from "@/types/link";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-function SolutionNavLink({ logo, title, subTitle, titleKey, subTitleKey, href }: SolutionLink) {
+function SolutionNavLink({ logo, title, subTitle, titleKey, subTitleKey, href, isRTL }: SolutionLink & { isRTL?: boolean }) {
     const t = useTranslations("Navbar");
     const resolvedTitle = titleKey ? t(titleKey) : title;
     const resolvedSubTitle = subTitleKey ? t(subTitleKey) : subTitle;
     return (
         <Link href={href}>
-            <article className="flex items-center py-2 gap-2">
+            <article className={`flex items-center py-2 gap-2 ${isRTL ? 'flex-row-reverse text-right' : 'text-left'}`}>
                 <figure className="min-w-18 min-h-18 relative">
                     <Image
                         src={logo}
