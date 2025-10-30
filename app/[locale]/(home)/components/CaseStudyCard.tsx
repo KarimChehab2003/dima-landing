@@ -4,7 +4,7 @@ import Image from "next/image";
 function CaseStudyCard({ image, companyName, description }: CaseStudyInfo) {
     return (
         <article className="flex flex-col justify-between items-center rounded-xl bg-white shadow-md transition-transform hover:scale-[1.02] duration-300 p-3 sm:p-4 md:p-6">
-            <figure className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[330px]">
+            <figure className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] xl:h-[330px]">
                 <Image
                     src={image}
                     fill

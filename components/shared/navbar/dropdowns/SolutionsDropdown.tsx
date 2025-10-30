@@ -34,7 +34,7 @@ function SolutionsDropdown() {
                 </Link>
 
                 {/* Links list */}
-                <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
                     {dimaSolutions
                         .filter((s) => s.href !== "/solutions/consumer-insights")
                         .map((link) => (

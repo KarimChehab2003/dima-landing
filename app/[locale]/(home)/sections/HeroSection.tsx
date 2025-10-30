@@ -41,7 +41,7 @@ export default function HeroSection() {
 
     return (
         <SectionWrapper className="flex-col justify-between min-h-dvh">
-            <div className={`container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <div className={`container mx-auto flex flex-col xl:flex-row items-center justify-between overflow-hidden grow px-4 py-8 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 {/* Left Side: Dynamic Text */}
                 <div className={`flex-1 space-y-6 ${isRTL ? 'text-right order-2' : 'order-1'}`}>
                     <h1 className="text-2xl xl:text-5xl mb-8 ">
@@ -62,7 +62,7 @@ export default function HeroSection() {
 
                 {/* Right Side: Carousel*/}
                 <div
-                    className={`flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] lg:h-[600px] ${isRTL ? 'order-1' : 'order-2'}`}
+                    className={`flex-1 mt-12 xl:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] xl:h-[600px] ${isRTL ? 'order-1' : 'order-2'}`}
                     style={{
                         backgroundImage: "url('/dima-carousel-background.png')",
                         backgroundSize: "contain",

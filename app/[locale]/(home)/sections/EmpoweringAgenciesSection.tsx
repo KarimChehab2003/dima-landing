@@ -34,7 +34,7 @@ function EmpoweringAgenciesSection() {
                 </h2>
 
                 {/* Cards Grid */}
-                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
                     {cards.map((info) => (
                         <li key={info.title}>
                             <EmpoweringAgenciesCard {...info} />

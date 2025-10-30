@@ -39,7 +39,7 @@ function Navbar() {
                 </Link>
 
                 {/* Navbar for desktop screens */}
-                <nav className="hidden lg:inline-flex items-center order-2">
+                <nav className="hidden xl:inline-flex items-center order-2">
                     {orderedNavbarItems.map((item, index) => (
                         <div key={index} className="cursor-pointer mx-2 group relative">
                             {item.href ? (
@@ -60,13 +60,13 @@ function Navbar() {
 
                 <div className="inline-flex items-center gap-4 order-3">
                     {/* Drawer for mobile screens */}
-                    <div className="block lg:hidden order-3">
+                    <div className="block xl:hidden order-3">
                         <NavDrawer />
                     </div>
 
                     {/*  Language Switcher and Request a Demo */}
-                    <div className="inline-flex items-center gap-2 order-1 lg:order-3">
-                        <div className="hidden lg:flex">
+                    <div className="inline-flex items-center gap-2 order-1 xl:order-3">
+                        <div className="hidden xl:flex">
                             <LanguageSwitcher />
                         </div>
                         <Button>
