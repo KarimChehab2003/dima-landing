@@ -29,10 +29,12 @@ function OwnConversationSection() {
             <div className="flex flex-col items-center gap-8 w-full">
                 {/* Header */}
                 <div className="space-y-3 text-center max-w-3xl">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold my-4">
+                    {/* Title per spec */}
+                    <h2 className="text-[24px] lg:text-[44px] font-normal my-4">
                         {t("title")}
                     </h2>
-                    <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
+                    {/* Body text per spec */}
+                    <p className="text-base sm:text-lg lg:text-[24px] lg:font-light text-muted-foreground">
                         {t("description")}
                     </p>
                 </div>
@@ -128,7 +130,9 @@ function OwnConversationSection() {
                         </AnimatePresence>
 
                         <div className="mt-6 w-full flex-1 flex justify-center xl:justify-start">
-                           <RequestDemoButton />
+                           <div className="[&_button]:font-normal [&_button]:lg:py-4 [&_button]:lg:px-8 [&_button]:py-[14px] [&_button]:px-[24px] [&_button]:text-[16px]">
+                               <RequestDemoButton />
+                           </div>
                         </div>
                     </div>
                 </div>

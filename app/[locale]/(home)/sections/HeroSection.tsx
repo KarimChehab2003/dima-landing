@@ -52,7 +52,8 @@ export default function HeroSection() {
             isRTL ? "text-right lg:order-2" : "lg:order-1"
           }`}
         >
-          <h1 className="text-2xl xl:text-5xl mb-8 ">
+          {/* Title typography: mobile 24px, desktop 44px; weight 400 */}
+          <h1 className="text-[24px] lg:text-[44px] font-normal mb-8 ">
             {t("titlePrefix")}
             <Typewriter
               options={{
@@ -65,7 +66,10 @@ export default function HeroSection() {
               }}
             />
           </h1>
-          <RequestDemoButton />
+          {/* Button: desktop py-4 px-8, mobile py-[14px] px-[24px], weight 400, size 16px on mobile */}
+          <div className="[&_button]:font-normal [&_button]:lg:py-4 [&_button]:lg:px-8 [&_button]:py-[14px] [&_button]:px-[24px] [&_button]:text-[16px]">
+            <RequestDemoButton />
+          </div>
         </div>
 
         {/* Right Side: Carousel*/}

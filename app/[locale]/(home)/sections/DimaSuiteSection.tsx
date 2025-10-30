@@ -9,8 +9,10 @@ function DimaSuiteSection() {
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center gap-12">
-                <h2 className="text-4xl sm:text-5xl text-center">{t("title")}</h2>
-                <RequestDemoButton />
+                <h2 className="text-[24px] lg:text-[44px] font-normal text-center">{t("title")}</h2>
+                <div className="[&_button]:font-normal [&_button]:lg:py-4 [&_button]:lg:px-8 [&_button]:py-[14px] [&_button]:px-[24px] [&_button]:text-[16px]">
+                    <RequestDemoButton />
+                </div>
 
                 <ul className="flex flex-wrap justify-center gap-12">
                     {

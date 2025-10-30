@@ -19,7 +19,7 @@ function EmpoweringAgenciesSection() {
     });
 
     return (
-        <SectionWrapper className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-16 py-10 md:py-16">
+        <SectionWrapper className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-16">
             <div
                 className="container mx-auto space-y-10 md:space-y-14 bg-no-repeat bg-contain"
                 style={{
@@ -27,8 +27,8 @@ function EmpoweringAgenciesSection() {
                     backgroundPosition: "right center",
                 }}
             >
-                {/* Heading */}
-                <h2 className="text-2xl sm:text-4xl md:text-5xl text-center font-bold leading-tight">
+                {/* Heading per spec */}
+                <h2 className="text-[24px] lg:text-[44px] font-normal text-center leading-tight">
                     {t("titlePrefix")} &nbsp;
                     <span className="block text-primary">{t("titleSuffix")}</span>
                 </h2>
