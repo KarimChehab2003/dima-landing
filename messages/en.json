@@ -216,11 +216,6 @@
         }
       ]
     },
-    "questionsAnswered": {
-      "title": "Your Questions, Answered",
-      "description": "Get quick answers to the most common questions about our platform and services.",
-      "request a demo": "request a demo"
-    },
     "requestDemo": {
       "title": "Request a Demo",
       "description": "Discover how dima's arabic-first AI empowers your team with unparalleled monitoring, real-time insights, and competitive benchmarking",
@@ -242,6 +237,25 @@
           "placeholder": "Your company name"
         },
         "submit": "Submit"
+      }
+    },
+    "questionsAnswered": {
+      "title": "Your Questions, Answered",
+      "description": "Get quick answers to the most common questions about our platform and services.",
+      "request a demo": "request a demo",
+      "faqs": {
+        "faq1": {
+          "question": "What platforms does dima cover?",
+          "answer": "dima covers both traditional and social media platforms. Traditional includes: Online Publications, Print Publications, TV & Radio. Social Media includes: TikTok, X, Snapchat, Facebook, Instagram & LinkedIn. There are other sources covered by dima as well like Google Maps Reviews & others in the pipeline. If you don't see the platform you want in the list, contact us to see when it will be available, our team is probably working on it already!"
+        },
+        "faq2": {
+          "question": "What is the accuracy in Arabic? Does it detect slang, franco and dialects?",
+          "answer": "97% and improving! dima is the first regionally built monitoring platform dedicated to leading agencies and enterprises in the region. As such, it is built to handle Arabic written posts, images and videos at its core"
+        },
+        "faq3": {
+          "question": "How long does it take to set up an account?",
+          "answer": "Once you book a demo, if you like dima, you can be up & running in less than 48 hours, during the demo our team will give you a live tour of dima, answering any questions you may have and then providing you with access to dima where you control users, keywords, topics of interest and reporting 24/7. "
+        }
       }
     }
   }
