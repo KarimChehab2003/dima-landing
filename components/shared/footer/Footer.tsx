@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { FaDisplay } from "react-icons/fa6";
 import FooterLinks from "./FooterLinks";
 import { dimaSolutions, footerResourcesLinks } from "@/data/constants/links";
 import SocialMediaLinks from "./SocialMediaLinks";
@@ -19,9 +17,7 @@ function Footer() {
   const translatedSolutions = dimaSolutions.map((link) => ({
     ...link,
     title:
-      "titleKey" in link && link.titleKey
-        ? tNav(link.titleKey as unknown as any)
-        : link.title,
+      "titleKey" in link && link.titleKey ? tNav(link.titleKey) : link.title,
   }));
 
   // Translate footer resources using Footer namespace
@@ -34,7 +30,7 @@ function Footer() {
     const key = keyMap[link.title as string];
     return {
       ...link,
-      title: key ? t(key as unknown as any) : link.title,
+      title: key ? t(key) : link.title,
     };
   });
 

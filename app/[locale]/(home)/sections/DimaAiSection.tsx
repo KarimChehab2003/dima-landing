@@ -1,7 +1,5 @@
-import { LucideMonitor } from "lucide-react";
 import SectionWrapper from "../components/SectionWrapper";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { useTranslations, useLocale } from "next-intl";
 import RequestDemoButton from "../components/RequestDemoButton";
 

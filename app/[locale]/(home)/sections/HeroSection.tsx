@@ -1,13 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { LucideMonitor } from "lucide-react";
-import { motion } from "framer-motion";
 import { useState } from "react";
 import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../components/SectionWrapper";
-import { Link } from "@/i18n/navigation";
-import HeroCarousel from "../components/HeroCarousel";
 import { useTranslations, useLocale } from "next-intl";
 import CyclicSwapCards from "../components/CyclicSwapCards";
 import Typewriter from "typewriter-effect";
