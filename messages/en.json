@@ -128,7 +128,7 @@
       "cta": "Request a demo"
     },
     "dimaSuite": {
-      "title": "Discover dima&apos;s suite of AI-powered solutions",
+      "title": "Discover dima's suite of AI-powered solutions",
       "cta": "Request a demo",
       "solutions": {
         "consumerInsights": {
@@ -160,7 +160,8 @@
           "description": "Find the right partners for your brand"
         }
       },
-      "explore": "Explore"
+      "explore": "Explore",
+      "comingSoon": "Coming Soon"
     },
     "caseStudies": {
       "title": "How Leading Brands Use dima",

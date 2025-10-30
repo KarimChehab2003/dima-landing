@@ -147,36 +147,12 @@ export const socialMediaLinks: SocialMediaLink[] = [
 
 export const dimaSolutions: SolutionLink[] = [
     {
-        logo: "/nav-links/sl.png",
-        title: "Social Listening & Analytics",
-        subTitle: "Listen, analyze & act",
-        titleKey: "solutions.links.socialListening.title",
-        subTitleKey: "solutions.links.socialListening.description",
-        href: "/solutions/social-listening-analytics"
-    },
-    {
         logo: "/nav-links/pr.png",
         title: "PR & Comms",
         subTitle: "Daily monitoring & coverage reports",
         titleKey: "solutions.links.prComms.title",
         subTitleKey: "solutions.links.prComms.description",
         href: "/solutions/pr-and-comms"
-    },
-    {
-        logo: "/nav-links/im.png",
-        title: "Influencer Marketing",
-        subTitle: "Find the right partners for your brand",
-        titleKey: "solutions.links.influencerMarketing.title",
-        subTitleKey: "solutions.links.influencerMarketing.description",
-        href: "/solutions/influencer-marketing"
-    },
-    {
-        logo: "/nav-links/oi.png",
-        title: "Own Page Intelligence",
-        subTitle: "Elevate your social presence",
-        titleKey: "solutions.links.ownPageIntelligence.title",
-        subTitleKey: "solutions.links.ownPageIntelligence.description",
-        href: "/solutions/own-page-intelligence"
     },
     {
         logo: "/nav-links/mi.png",
@@ -187,12 +163,36 @@ export const dimaSolutions: SolutionLink[] = [
         href: "/solutions/market-insights"
     },
     {
+        logo: "/nav-links/sl.png",
+        title: "Social Listening & Analytics",
+        subTitle: "Listen, analyze & act",
+        titleKey: "solutions.links.socialListening.title",
+        subTitleKey: "solutions.links.socialListening.description",
+        href: "/solutions/social-listening-analytics"
+    },
+    {
         logo: "/nav-links/ci.png",
         title: "Consumer Insights",
         subTitle: "Understand your audience everywhere",
         titleKey: "solutions.links.consumerInsights.title",
         subTitleKey: "solutions.links.consumerInsights.description",
         href: "/solutions/consumer-insights"
+    },
+    {
+        logo: "/nav-links/oi.png",
+        title: "Own Page Intelligence",
+        subTitle: "Elevate your social presence",
+        titleKey: "solutions.links.ownPageIntelligence.title",
+        subTitleKey: "solutions.links.ownPageIntelligence.description",
+        href: "/solutions/own-page-intelligence"
+    },
+    {
+        logo: "/nav-links/im.png",
+        title: "Influencer Marketing",
+        subTitle: "Find the right partners for your brand",
+        titleKey: "solutions.links.influencerMarketing.title",
+        subTitleKey: "solutions.links.influencerMarketing.description",
+        href: "/solutions/influencer-marketing"
     },
     {
         logo: "/nav-links/ce.png",

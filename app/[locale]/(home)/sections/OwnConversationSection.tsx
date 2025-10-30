@@ -92,7 +92,7 @@ function OwnConversationSection() {
                     </figure>
 
                     {/* Info + Button  */}
-                    <div className={`flex flex-col justify-end text-center w-full xl:max-w-md  z-30 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] ${isRTL ? 'text-right items-end xl:pr-34' : 'items-start text-left xl:pl-34'}`}>
+                    <div className={`flex flex-col justify-end text-center w-full xl:max-w-md  z-30 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] xl:pl-34 ${isRTL ? 'text-right items-end ' : 'items-start text-left '}`}>
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeFeature.title}

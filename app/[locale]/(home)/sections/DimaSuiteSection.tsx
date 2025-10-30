@@ -1,9 +1,8 @@
-import { Button } from "@/components/ui/button";
 import SectionWrapper from "../components/SectionWrapper";
 import { dimaSolutions } from "@/data/constants/links";
 import SolutionCard from "../components/SolutionCard";
-import { FaDisplay } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
+import RequestDemoButton from "../components/RequestDemoButton";
 
 function DimaSuiteSection() {
     const t = useTranslations("Home.dimaSuite");
@@ -11,10 +10,7 @@ function DimaSuiteSection() {
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center gap-12">
                 <h2 className="text-4xl sm:text-5xl text-center">{t("title")}</h2>
-                <Button size="2xl" className="flex items-center gap-2">
-                    <FaDisplay className="size-5" />
-                    <span>{t("cta")}</span>
-                </Button>
+                <RequestDemoButton />
 
                 <ul className="flex flex-wrap justify-center gap-12">
                     {
