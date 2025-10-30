@@ -215,6 +215,34 @@
           "jobRole": "نائب رئيس مجلس الإدارة في AlSagheer Group"
         }
       ]
+    },
+    "questionsAnswered": {
+      "title": "إجابات على أسئلتك",
+      "description": "احصل على إجابات سريعة لأكثر الأسئلة شيوعاً حول منصتنا وخدماتنا",
+      "request a demo": "احجز تجربتك"
+    },
+    "requestDemo": {
+      "title": "احجز تجربتك",
+      "description": "اكتشف كيف يمكن للذكاء الاصطناعي المتخصص في اللغة العربية من ديما أن يدعم فريقك برصد لا مثيل له ورؤى فورية ومقارنات تنافسية",
+      "form": {
+        "name": {
+          "title": "الاسم",
+          "placeholder": "جين سميث"
+        },
+        "email": {
+          "title": "البريد الإلكتروني",
+          "placeholder": "jane@framer.com"
+        },
+        "phoneNumber": {
+          "title": "رقم الهاتف",
+          "placeholder": "أضف رمز البلد هنا"
+        },
+        "companyName": {
+          "title": "اسم الشركة",
+          "placeholder": "اسم شركتك"
+        },
+        "submit": "إرسال"
+      }
     }
   },
   "About": { "title": "صفحة عنا" }
