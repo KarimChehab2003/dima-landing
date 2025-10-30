@@ -11,7 +11,7 @@ import RequestDemoSection from "./sections/RequestDemoSection";
 
 function HomePage() {
   return (
-    <main className="h-full">
+    <main className="h-full font-light text-2xl">
       <HeroSection />
       <EmpoweringAgenciesSection />
       <OwnConversationSection />

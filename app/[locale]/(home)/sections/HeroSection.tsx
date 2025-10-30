@@ -11,6 +11,7 @@ import HeroCarousel from "../components/HeroCarousel";
 import { useTranslations } from "next-intl";
 import CyclicSwapCards from "../components/CyclicSwapCards";
 import Typewriter from "typewriter-effect"
+import Image from "next/image";
 
 const slidesImages = [
     "/hero-carousel-item-1.png",
@@ -40,7 +41,7 @@ export default function HeroSection() {
             <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8">
                 {/* Left Side: Dynamic Text */}
                 <div className="flex-1 space-y-6">
-                    <h1 className="text-4xl sm:text-5xl font-normal mb-8">
+                    <h1 className="text-2xl xl:text-5xl mb-8 ">
                         {t("titlePrefix")}
                         {/* <motion.span
                             key={selectedIndex}
@@ -63,8 +64,13 @@ export default function HeroSection() {
                         />
                     </h1>
                     <Link href="/request-demo">
-                        <Button size="2xl">
-                            <LucideMonitor />
+                        <Button>
+                            <Image
+                                src="/computer.png"
+                                alt="monitor icon"
+                                width={30}
+                                height={30}
+                            />
                             <span className="capitalize">{t("cta")}</span>
                         </Button>
                     </Link>
