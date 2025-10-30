@@ -2,6 +2,7 @@
 
 import { EmpoweringAgenciesInfo } from "@/types/info";
 import RadialGradientProgress from "./RadialGradientProgress";
+import { useLocale } from "next-intl";
 
 export default function EmpoweringAgenciesCard({
     value,
@@ -10,11 +11,13 @@ export default function EmpoweringAgenciesCard({
     suffix,
     maxValue,
 }: EmpoweringAgenciesInfo) {
+    const locale = useLocale();
+    const isRTL = locale === "ar";
     return (
         <article className="w-full max-w-sm mx-auto h-full rounded-3xl shadow-md shadow-primary flex flex-col items-center gap-4 p-4 sm:p-6 bg-muted transition-transform duration-300 hover:scale-[1.02]">
             {/* Top section */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 bg-muted-foreground/10 rounded-xl px-4 sm:px-5 py-4 w-full">
-                <div className="flex justify-center sm:justify-start">
+            <div className={`flex flex-col sm:flex-row items-center gap-4 bg-muted-foreground/10 rounded-xl px-4 sm:px-5 py-4 w-full ${isRTL ? 'sm:flex-row-reverse text-right' : ''}`}>
+                <div className={`flex justify-center ${isRTL ? 'sm:justify-end' : 'sm:justify-start'}`}>
                     <RadialGradientProgress
                         progress={value}
                         size={100}
@@ -23,7 +26,7 @@ export default function EmpoweringAgenciesCard({
                         maxValue={maxValue}
                     />
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold capitalize tracking-wide text-center sm:text-left">
+                <h3 className={`text-lg sm:text-xl md:text-2xl font-semibold capitalize tracking-wide text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
                     {title}
                 </h3>
             </div>
