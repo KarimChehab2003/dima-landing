@@ -10,6 +10,7 @@ import { Link } from "@/i18n/navigation";
 import HeroCarousel from "../components/HeroCarousel";
 import { useTranslations } from "next-intl";
 import CyclicSwapCards from "../components/CyclicSwapCards";
+import Typewriter from "typewriter-effect"
 
 const slidesImages = [
     "/hero-carousel-item-1.png",
@@ -40,8 +41,8 @@ export default function HeroSection() {
                 {/* Left Side: Dynamic Text */}
                 <div className="flex-1 space-y-6">
                     <h1 className="text-4xl sm:text-5xl font-normal mb-8">
-                        {t("titlePrefix")} &nbsp;
-                        <motion.span
+                        {t("titlePrefix")}
+                        {/* <motion.span
                             key={selectedIndex}
                             initial={{ x: -40, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
@@ -49,7 +50,17 @@ export default function HeroSection() {
                             className="inline-block text-primary"
                         >
                             {slides[selectedIndex].title}
-                        </motion.span>
+                        </motion.span> */}
+                        <Typewriter
+                            options={{
+                                strings: [slides[selectedIndex].title],
+                                autoStart: true,
+                                delay: 35,
+                                deleteSpeed: 25,
+                                wrapperClassName: "text-primary",
+
+                            }}
+                        />
                     </h1>
                     <Link href="/request-demo">
                         <Button size="2xl">
