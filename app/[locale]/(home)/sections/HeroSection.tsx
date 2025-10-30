@@ -8,10 +8,11 @@ import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../components/SectionWrapper";
 import { Link } from "@/i18n/navigation";
 import HeroCarousel from "../components/HeroCarousel";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import CyclicSwapCards from "../components/CyclicSwapCards";
 import Typewriter from "typewriter-effect"
 import Image from "next/image";
+import RequestDemoButton from "../components/RequestDemoButton";
 
 const slidesImages = [
     "/hero-carousel-item-1.png",
@@ -26,6 +27,8 @@ const slidesImages = [
 export default function HeroSection() {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const t = useTranslations("Home.hero");
+    const locale = useLocale();
+    const isRTL = locale === "ar";
     const slideTitles = [
         t("slides.socialListening"),
         t("slides.influencerTracking"),
@@ -38,12 +41,11 @@ export default function HeroSection() {
 
     return (
         <SectionWrapper className="flex-col justify-between min-h-dvh">
-            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8">
+            <div className={`container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 {/* Left Side: Dynamic Text */}
-                <div className="flex-1 space-y-6">
+                <div className={`flex-1 space-y-6 ${isRTL ? 'text-right order-2' : 'order-1'}`}>
                     <h1 className="text-2xl xl:text-5xl mb-8 ">
                         {t("titlePrefix")}
-
                         <Typewriter
                             options={{
                                 strings: [slides[selectedIndex].title],
@@ -51,26 +53,16 @@ export default function HeroSection() {
                                 delay: 35,
                                 deleteSpeed: 25,
                                 wrapperClassName: "text-primary",
-
+                                cursor: isRTL ? "" : "|"
                             }}
                         />
                     </h1>
-                    <Link href="/request-demo">
-                        <Button>
-                            <Image
-                                src="/computer.png"
-                                alt="monitor icon"
-                                width={30}
-                                height={30}
-                            />
-                            <span className="capitalize">{t("cta")}</span>
-                        </Button>
-                    </Link>
+                    <RequestDemoButton />
                 </div>
 
                 {/* Right Side: Carousel*/}
                 <div
-                    className="flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] lg:h-[600px]"
+                    className={`flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] lg:h-[600px] ${isRTL ? 'order-1' : 'order-2'}`}
                     style={{
                         backgroundImage: "url('/dima-carousel-background.png')",
                         backgroundSize: "contain",

@@ -84,7 +84,12 @@ export default function LanguageSwitcher() {
                                     locale={lang.locale}
                                     className="flex items-center gap-2 flex-1"
                                 >
-                                    <span className="text-lg">{lang.flag}</span>
+                                    <Image 
+                                    src={lang.flag}
+                                    alt="language flag"
+                                    width={29}
+                                    height={29}
+                                    />
                                     {lang.label}
                                 </Link>
                             </CommandItem>
