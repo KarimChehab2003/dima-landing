@@ -4,6 +4,7 @@ import SectionWrapper from "../components/SectionWrapper";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import { useTranslations } from "next-intl";
 import { TestimonialType } from "@/types/info";
+import { testimonialsInfo } from "@/data/constants/info";
 
 export default function TestimonialSection() {
     const t = useTranslations("Home.testimonials");
@@ -31,16 +32,17 @@ export default function TestimonialSection() {
     if (!mounted) return null;
 
     return (
-        <SectionWrapper>
+        <SectionWrapper className="px-0 lg:px-6">
             <div className="container mx-auto">
-                <h2 className="text-4xl sm:text-5xl text-center mb-8">{t("title", { default: "Hear It From Our Clients" })}</h2>
+                <h2 className="text-4xl sm:text-5xl text-center mb-8">{t("title")}</h2>
                 <TestimonialCarousel
                     slidesToShow={slidesToShow}
                     setSlidesToShow={setSlidesToShow}
-                    items={[0,1,2,3,4].map((i) => ({
+                    items={[0, 1, 2, 3, 4].map((i) => ({
                         quote: t(`items.${i}.quote`),
                         name: t(`items.${i}.name`),
                         jobRole: t(`items.${i}.jobRole`),
+                        companyLogo: testimonialsInfo[i].companyLogo,
                     }) as TestimonialType)}
                 />
             </div>

@@ -37,4 +37,5 @@ export type TestimonialType = {
     quote: string;
     name: string;
     jobRole: string;
+    companyLogo: string;
 }

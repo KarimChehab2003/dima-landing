@@ -220,6 +220,29 @@
       "title": "Your Questions, Answered",
       "description": "Get quick answers to the most common questions about our platform and services.",
       "request a demo": "request a demo"
+    },
+    "requestDemo": {
+      "title": "Request a Demo",
+      "description": "Discover how dima's arabic-first AI empowers your team with unparalleled monitoring, real-time insights, and competitive benchmarking",
+      "form": {
+        "name": {
+          "title": "Name",
+          "placeholder": "Jane Smith"
+        },
+        "email": {
+          "title": "Email",
+          "placeholder": "jane@framer.com"
+        },
+        "phoneNumber": {
+          "title": "Phone Number",
+          "placeholder": "Add here country code"
+        },
+        "companyName": {
+          "title": "Company Name",
+          "placeholder": "Your company name"
+        },
+        "submit": "Submit"
+      }
     }
   }
 }

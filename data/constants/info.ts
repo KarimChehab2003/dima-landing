@@ -114,27 +114,32 @@ export const testimonialsInfo: TestimonialType[] = [
         quote: "dima should be the go-to partner for any business serious about customer satisfaction and brand perception. Their ability to blend data, creativity and strategy makes a real difference",
         name: "Samer Yassa",
         jobRole: "Business Development Manager at Wadi Degla",
+        companyLogo: "/testimonial-logos/wadi-degla.png",
     },
     {
-        quote: "For over 30 years, we’ve been working closely with our clients to offer them the state-of-the-art PR solutions across different industries and verticals. dima has enabled our media monitoring PR experts to offer easier, faster & more accurate media coverage & analysis",
-        name:"Dina El Sewefy",
+        quote: "For over 30 years, we've been working closely with our clients to offer them the state-of-the-art PR solutions across different industries and verticals. dima has enabled our media monitoring PR experts to offer easier, faster & more accurate media coverage & analysis",
+        name: "Dina El Sewefy",
         jobRole: "CEO at MountPR",
+        companyLogo: "/testimonial-logos/mountpr.png",
     },
     {
         quote: "Working with the team at dima has helped us with understanding the drivers of engagement on our pages and to build an effective strategy across all social platforms through a true understanding of our audience's reactions and comments to everything we post!",
-        name:"Omar Al Masry",
-        jobRole:"Senior Brand Manager at Mori International"
+        name: "Omar Al Masry",
+        jobRole: "Senior Brand Manager at Mori International",
+        companyLogo: "/testimonial-logos/mori-int.png",
 
     },
     {
         quote: "Being top of mind in the F&B market is difficult, everyday we see new players & trends…dima helps us to truly monitor where we stand in the market at all times and to maintain market leadership by staying in tune with the next big thing",
         name: "Mohamed Osman",
         jobRole: "Chariman at Tico Group",
+        companyLogo: "/testimonial-logos/tico.png",
     },
     {
         quote: "Managing over 50 locations in 3 different continents is not easy, but dima makes it easier by providing tailored business insights to our different audiences 24/7 so that we can provide a tailored marketing strategy that targets our various audience segments",
         name: "Mostafa AlSagheer",
         jobRole: "Vice Chairman at AlSagheer Group",
+        companyLogo: "/testimonial-logos/alsagheer.png",
     },
 ]
 
