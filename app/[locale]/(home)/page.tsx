@@ -11,7 +11,7 @@ import RequestDemoSection from "./sections/RequestDemoSection";
 
 function HomePage() {
   return (
-    <main className="h-full font-light text-2xl">
+    <main className="h-full">
       <HeroSection />
       <EmpoweringAgenciesSection />
       <OwnConversationSection />
@@ -19,7 +19,6 @@ function HomePage() {
       <DimaSuiteSection />
       <CaseStudiesSection />
       <TestimonialSection />
-      {/* TODO: add section request a demo */}
       <RequestDemoSection />
       <QuestionsAnsweredSection />
     </main>
