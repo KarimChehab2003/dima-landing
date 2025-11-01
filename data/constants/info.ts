@@ -1,4 +1,4 @@
-import { CardInfo, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, QuestionAccordion, TestimonialType } from "@/types/info";
+import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, QuestionAccordion, TestimonialType } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
@@ -143,3 +143,20 @@ export const testimonialsInfo: TestimonialType[] = [
     },
 ]
 
+export const actionableInsightsCardsInfo: CardType[] = [
+    {
+        title: "Full Coverage",
+        description: "Track and analyze coverage across online publications, social media, print, TV, radio & closed communities, so you can get the full picture.",
+        highighted: "online publications, social media, print, TV, radio & closed communities"
+    },
+    {
+        title: "Arabic First AI Copilot",
+        description: "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic.",
+        highighted: "dialects, slang and Franco-Arabic."
+    },
+    {
+        title: "Built for Agencies",
+        description: "Scale without constraints, Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
+        highighted: "Unlimited keywords, reports & users."
+    },
+]

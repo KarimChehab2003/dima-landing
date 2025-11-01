@@ -1,3 +1,4 @@
+import ActionableInsightsSection from "../sections/ActionableInsightsSection";
 import HeroSection from "../sections/HeroSection";
 
 type SolutionPageProps = {
@@ -9,6 +10,7 @@ async function SolutionPage({ params }: SolutionPageProps) {
     return (
         <main>
             <HeroSection />
+            <ActionableInsightsSection />
         </main>
     );
 }
