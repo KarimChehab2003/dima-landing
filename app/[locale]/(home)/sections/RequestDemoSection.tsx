@@ -12,7 +12,7 @@ function RequestDemoSection() {
 
   return (
     <SectionWrapper>
-      <div className="container mx-auto max-w-5xl flex flex-col gap-4">
+      <div className="container mx-auto max-w-7xl flex flex-col gap-4">
         {/* Title/body per spec */}
         <h2 className="text-[24px] lg:text-[44px] font-normal text-center">
           {t("title")}
@@ -21,12 +21,11 @@ function RequestDemoSection() {
           {t("description")}
         </p>
         <div
-          className={`flex justify-between items-stretch gap-6  ${
-            isRTL ? "flex-row-reverse" : ""
-          }`}
+          className={`flex justify-between items-stretch gap-6  ${isRTL ? "flex-row-reverse" : ""
+            }`}
         >
-          <div className="lg:basis-3/5 basis-5/5 bg-[linear-gradient(90deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] p-5 rounded-4xl h-full">
-            <form className="space-y-6 rounded-2xl p-8 bg-white h-full flex flex-col">
+          <div className="lg:basis-3/5 basis-5/5 bg-[linear-gradient(90deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] p-5 rounded-4xl min-h-[600px]">
+            <form className="space-y-6 rounded-2xl p-8 bg-white h-full flex flex-col justify-between">
               <div className="grid w-full items-center gap-3">
                 <Label
                   htmlFor="formNameInput"
