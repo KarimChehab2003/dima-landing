@@ -52,7 +52,7 @@
       }
     },
     "caseStudies": "Case Studies",
-    "requestDemo": "Request a Demo"
+    "requestDemo": "Request a demo"
   },
   "Home": {
     "hero": {
@@ -242,7 +242,7 @@
     "questionsAnswered": {
       "title": "Your Questions, Answered",
       "description": "Get quick answers to the most common questions about our platform and services.",
-      "request a demo": "request a demo",
+      "request a demo": "Request a demo",
       "faqs": {
         "faq1": {
           "question": "What platforms does dima cover?",

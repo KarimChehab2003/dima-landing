@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Image from "next/image";
 import { ConversationInfo } from "@/types/info";
-import { FaDisplay } from "react-icons/fa6";
-import { Link } from "@/i18n/navigation";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 import { useTranslations, useLocale } from "next-intl";
 import RequestDemoButton from "../components/RequestDemoButton";
@@ -24,17 +22,18 @@ function OwnConversationSection() {
     const locale = useLocale();
     const isRTL = locale === "ar";
 
+    // TODO: Refactor this component
+
     return (
         <SectionWrapper>
             <div className="flex flex-col items-center gap-8 w-full">
                 {/* Header */}
                 <div className="space-y-3 text-center max-w-3xl">
-                    {/* Title per spec */}
                     <h2 className="text-[24px] lg:text-[44px] font-normal my-4">
                         {t("title")}
                     </h2>
-                    {/* Body text per spec */}
-                    <p className="text-base sm:text-lg lg:text-[24px] lg:font-light text-muted-foreground">
+
+                    <p className="text-base lg:text-lg lg:font-light text-muted-foreground">
                         {t("description")}
                     </p>
                 </div>
@@ -55,17 +54,18 @@ function OwnConversationSection() {
                             const k = keys[idx];
                             const localizedTitle = t(`features.${k}.title`);
                             return (
-                            <Button
-                                key={info.title}
-                                variant={activeIndex === idx ? "default" : "ghost"}
-                                
-                                onClick={() => setActiveIndex(idx)}
-                                className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0"
-                            >
-                                <info.icon size={16} className="sm:size-5" />
-                                <span>{localizedTitle}</span>
-                            </Button>
-                        );})}
+                                <Button
+                                    key={info.title}
+                                    variant={activeIndex === idx ? "default" : "ghost"}
+
+                                    onClick={() => setActiveIndex(idx)}
+                                    className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0"
+                                >
+                                    <info.icon size={16} className="sm:size-5" />
+                                    <span>{localizedTitle}</span>
+                                </Button>
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -74,12 +74,7 @@ function OwnConversationSection() {
                 {/* Image + Text */}
                 <div
                     className="flex flex-col xl:flex-row items-center justify-between xl:justify-center w-full rounded-4xl mt-6 bg-no-repeat xl:bg-[url(/bg-vector.png)] bg-center"
-                    // style={
-                    //     {
-                    //         backgroundImage: "url('/bg-vector.png')",
-                    //         backgroundPosition: "center"
-                    //     }
-                    // }
+                    dir="ltr"
                 >
                     {/* Image Section */}
                     <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-b xl:bg-none from-primary via-[#5FC9E7] to-[#AEEBFF] rounded-2xl">
@@ -130,9 +125,7 @@ function OwnConversationSection() {
                         </AnimatePresence>
 
                         <div className="mt-6 w-full flex-1 flex justify-center xl:justify-start">
-                           <div className="[&_button]:font-normal [&_button]:lg:py-4 [&_button]:lg:px-8 [&_button]:py-[14px] [&_button]:px-[24px] [&_button]:text-[16px]">
-                               <RequestDemoButton />
-                           </div>
+                            <RequestDemoButton size={"xl"} />
                         </div>
                     </div>
                 </div>

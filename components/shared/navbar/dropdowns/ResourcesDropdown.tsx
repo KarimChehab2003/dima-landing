@@ -14,7 +14,7 @@ function ResourcesDropdown() {
                 {/* Blogs Section */}
                 <div>
                     <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("resources.links.blogs.title")}</h2>
-                    <div className="w-8 h-0.5 bg-primary mb-4"></div>
+                    <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     <ul className={`grid grid-cols-1 gap-x-8 gap-y-4 ${isRTL ? 'text-right' : ''}`}>
                         {blogsLinks.map((link) => (
                             <li key={link.href} className={`inline-flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
@@ -34,7 +34,7 @@ function ResourcesDropdown() {
                 {/* More Resources Section */}
                 <div>
                     <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("resources.links.moreResources.title")}</h2>
-                    <div className="w-8 h-0.5 bg-primary mb-4"></div>
+                    <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     <ul className={`grid grid-cols-1 gap-y-4 gap-x-8 ${isRTL ? 'text-right' : ''}`}>
                         {resourcesLinks.map((link) => (
                             <li key={link.href} className={`inline-flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>

@@ -4,20 +4,20 @@ import { Button } from "@/components/ui/button";
 import SectionWrapper from "../components/SectionWrapper";
 import { ArrowRight } from "lucide-react";
 import QuestionsAccordion from "../components/QuestionsAccordion";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 function QuestionsAnsweredSection() {
     const t = useTranslations("Home.questionsAnswered");
-    const locale = useLocale();
-    const isRTL = locale === "ar";
+
     return (
         <SectionWrapper>
-            <div className={`container mx-auto max-w-6xl flex flex-col lg:flex-row justify-between gap-12 ${isRTL ? 'lg:flex-row-reverse text-right' : ' text-left'}`}>
+            <div className={`container mx-auto max-w-6xl flex flex-col lg:flex-row justify-between gap-12`}>
                 <div className="space-y-6">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-primary capitalize">{t("title")}</h2>
-                    <p className="text-muted-foreground font-medium">{t("description")}</p>
-                    <Button size="lg">
-                        {t("request a demo")}
+                    <h2 className="text-2xl lg:text-4xl font-bold text-primary capitalize">{t("title")}</h2>
+                    <p className="text-muted-foreground text-lg font-medium">{t("description")}</p>
+                    <Button dir="ltr">
+                        <Link href="/request-demo">{t("request a demo")}</Link>
                         <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
                             <ArrowRight color="black" />
                         </div>

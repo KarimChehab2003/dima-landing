@@ -1,7 +1,6 @@
 import SectionWrapper from "../components/SectionWrapper";
 import EmpoweringAgenciesCard from "../components/EmpoweringAgenciesCard";
 import { useTranslations } from "next-intl";
-import { EmpoweringAgenciesInfo } from "@/types/info";
 import { empoweringAgenciesInfo } from "@/data/constants/info";
 
 function EmpoweringAgenciesSection() {
@@ -9,7 +8,7 @@ function EmpoweringAgenciesSection() {
 
     const cardKeys = ["fullCoverage", "accurateArabicAnalysis", "mentionsCaptured"] as const;
 
-    const cards: EmpoweringAgenciesInfo[] = empoweringAgenciesInfo.map((info, idx) => {
+    const cards = empoweringAgenciesInfo.map((info, idx) => {
         const key = cardKeys[idx];
         return {
             ...info,
@@ -26,15 +25,16 @@ function EmpoweringAgenciesSection() {
                     backgroundImage: "url('/empowering-agencies-bg.png')",
                     backgroundPosition: "right center",
                 }}
+                dir="ltr"
             >
-                {/* Heading per spec */}
+                {/* Heading */}
                 <h2 className="text-[24px] lg:text-[44px] font-normal text-center leading-tight">
                     {t("titlePrefix")} &nbsp;
                     <span className="block text-primary">{t("titleSuffix")}</span>
                 </h2>
 
                 {/* Cards Grid */}
-                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
                     {cards.map((info) => (
                         <li key={info.title}>
                             <EmpoweringAgenciesCard {...info} />

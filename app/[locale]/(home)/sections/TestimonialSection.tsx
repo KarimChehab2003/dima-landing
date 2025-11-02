@@ -43,12 +43,12 @@ export default function TestimonialSection() {
           setSlidesToShow={setSlidesToShow}
           items={[0, 1, 2, 3, 4].map(
             (i) =>
-              ({
-                quote: t(`items.${i}.quote`),
-                name: t(`items.${i}.name`),
-                jobRole: t(`items.${i}.jobRole`),
-                companyLogo: testimonialsInfo[i].companyLogo,
-              } as TestimonialType)
+            ({
+              quote: t(`items.${i}.quote`),
+              name: t(`items.${i}.name`),
+              jobRole: t(`items.${i}.jobRole`),
+              companyLogo: testimonialsInfo[i].companyLogo,
+            } as TestimonialType)
           )}
         />
       </div>

@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { FaDisplay } from "react-icons/fa6";
 import FooterLinks from "./FooterLinks";
 import { dimaSolutions, footerResourcesLinks } from "@/data/constants/links";
 import SocialMediaLinks from "./SocialMediaLinks";
@@ -20,7 +18,7 @@ function Footer() {
     ...link,
     title:
       "titleKey" in link && link.titleKey
-        ? tNav(link.titleKey as unknown as any)
+        ? tNav(link.titleKey)
         : link.title,
   }));
 
@@ -34,7 +32,7 @@ function Footer() {
     const key = keyMap[link.title as string];
     return {
       ...link,
-      title: key ? t(key as unknown as any) : link.title,
+      title: key ? t(key) : link.title,
     };
   });
 
@@ -46,9 +44,8 @@ function Footer() {
       <div className="container mx-auto flex flex-col px-6 py-12 space-y-8">
         {/* Dima & Footer Links */}
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ${
-            isRTL ? "text-right" : "text-left"
-          }`}
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ${isRTL ? "text-right" : "text-left"
+            }`}
         >
           <div className="flex flex-col gap-4">
             <figure>
@@ -64,6 +61,7 @@ function Footer() {
               <RequestDemoButton
                 className="bg-white! text-black!"
                 computerVariant="black"
+                size={"xl"}
               />
             </div>
           </div>
@@ -95,9 +93,7 @@ function Footer() {
 
         {/* Language Switch & Copyright */}
         <div
-          className={`flex flex-col sm:flex-row justify-between items-center gap-4 text-sm ${
-            isRTL ? "text-right" : "text-left"
-          }`}
+          className={`flex flex-col sm:flex-row justify-between items-center gap-4 text-sm ${isRTL ? "text-right" : "text-left"}`}
         >
           <LanguageSwitcher />
           <p className="text-gray-300">{t("copyright")}</p>

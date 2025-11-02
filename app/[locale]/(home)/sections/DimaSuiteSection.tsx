@@ -6,13 +6,14 @@ import RequestDemoButton from "../components/RequestDemoButton";
 
 function DimaSuiteSection() {
     const t = useTranslations("Home.dimaSuite");
+
+    // Refactor this cimponent
+
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center gap-12">
                 <h2 className="text-[24px] lg:text-[44px] font-normal text-center">{t("title")}</h2>
-                <div className="[&_button]:font-normal [&_button]:lg:py-4 [&_button]:lg:px-8 [&_button]:py-[14px] [&_button]:px-[24px] [&_button]:text-[16px]">
-                    <RequestDemoButton />
-                </div>
+                <RequestDemoButton size={"xl"} />
 
                 <ul className="flex flex-wrap justify-center gap-12">
                     {

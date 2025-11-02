@@ -11,7 +11,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 function Navbar() {
     const t = useTranslations("Navbar");
-    const locale = useLocale(); // Get the current locale
+    const locale = useLocale();
 
     // Define the order of navbar items based on locale
     const navbarItems = [
@@ -25,7 +25,7 @@ function Navbar() {
     const orderedNavbarItems = locale === "ar" ? [...navbarItems].reverse() : navbarItems;
 
     return (
-        <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 shadow-[0_0_15px_rgba(0,0,0,0.12)] bg-white md:mt-4 md:rounded-full container">
+        <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 shadow-[0_0_15px_rgba(0,0,0,0.12)] bg-white md:mt-4 md:rounded-full container" dir="ltr">
             <div className="max-h-20 flex justify-between items-center p-4 md:mx-8">
                 <Link href="/" className="order-1">
                     <figure>

@@ -12,9 +12,14 @@ function SolutionsDropdown() {
         <div className="flex flex-col space-y-4">
             {/* Header */}
             <div>
-                <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("solutions.title")}</h2>
-                <div className="w-8 h-0.5 bg-primary mb-4"></div>
+                <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>
+                    {t("solutions.title")}
+                </h2>
+                <div
+                    className={`w-8 h-0.5 bg-primary mb-4 ${isRTL ? 'ml-auto' : 'mr-auto'}`}
+                ></div>
             </div>
+
 
             <div className={`flex justify-center items-center space-y-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 {/* Customer Insights */}
@@ -45,7 +50,6 @@ function SolutionsDropdown() {
                 </ul>
             </div>
 
-            {/* <Button className="py-3 px-6 rounded-sm! bg-primary! w-fit">Dima AI</Button> */}
         </div>
     );
 }

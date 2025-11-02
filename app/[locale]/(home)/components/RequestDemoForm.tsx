@@ -1,3 +1,4 @@
+"use client";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -12,7 +13,7 @@ function RequestDemoForm() {
             <div className="grid w-full items-center gap-3">
                 <Label
                     htmlFor="formNameInput"
-                    className={isRTL ? "text-right justify-end" : ""}
+                    className={isRTL ? "text-right " : ""}
                 >
                     {t("form.name.title")}
                 </Label>
@@ -27,7 +28,7 @@ function RequestDemoForm() {
             <div className="grid w-full items-center gap-3">
                 <Label
                     htmlFor="formEmailInput"
-                    className={isRTL ? "text-right justify-end" : ""}
+                    className={isRTL ? "text-right " : ""}
                 >
                     {t("form.email.title")}
                 </Label>
@@ -41,7 +42,7 @@ function RequestDemoForm() {
             <div className="grid w-full items-center gap-3">
                 <Label
                     htmlFor="formPhoneNumInput"
-                    className={isRTL ? "text-right justify-end" : ""}
+                    className={isRTL ? "text-right " : ""}
                 >
                     {t("form.phoneNumber.title")}
                 </Label>
@@ -69,7 +70,7 @@ function RequestDemoForm() {
             </div>
 
             <div className="flex justify-center items-center">
-                <Button className="bg-linear-to-r from-black to-[#6D6D6D] w-full max-w-xs font-normal lg:py-4 lg:px-8 py-3.5 px-6 text-[16px]">
+                <Button className="bg-linear-to-r from-black to-[#6D6D6D] w-full max-w-xs" >
                     {t("form.submit")}
                 </Button>
             </div>
