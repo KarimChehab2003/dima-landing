@@ -39,3 +39,9 @@ export type CardType = {
     description: string;
     highighted?: string;
 }
+
+export type EnterpriseType = {
+    icon: string;
+    title: string;
+    description: string;
+}

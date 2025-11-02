@@ -1,4 +1,5 @@
 import ActionableInsightsSection from "../sections/ActionableInsightsSection";
+import BuiltEntreprisesSection from "../sections/BuiltEntreprisesSection";
 import HeroSection from "../sections/HeroSection";
 import StayAheadSection from "../sections/StayAheadSection";
 
@@ -13,6 +14,7 @@ async function SolutionPage({ params }: SolutionPageProps) {
             <HeroSection />
             <ActionableInsightsSection />
             <StayAheadSection />
+            <BuiltEntreprisesSection />
         </main>
     );
 }

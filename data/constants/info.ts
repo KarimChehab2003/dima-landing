@@ -1,4 +1,4 @@
-import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, QuestionAccordion, TestimonialType } from "@/types/info";
+import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, EnterpriseType, QuestionAccordion, TestimonialType } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
@@ -183,3 +183,46 @@ export const scrollingCards: CardType[] = [
         description: "Seamlessly track sentiment, emotion, topics & more to uncover the true context behind conversations"
     }
 ]
+
+export const enterpriseFeaturesCards: EnterpriseType[] = [
+    {
+        icon: "/enterprise-icons/360.png",
+        title: "360° Conversation Coverage",
+        description: "Track tagged, untagged, and misspelled mentions across all social media platforms and private groups"
+    },
+    {
+        icon: "/enterprise-icons/arabic.png",
+        title: "Arabic-First Engine",
+        description: "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance"
+    },
+    {
+        icon: "/enterprise-icons/crisis-alert.png",
+        title: "Crisis Alerts",
+        description: "You're the first to know, before the public sees it grow. Get early crisis alerts via whatsapp and app notifications"
+    },
+    {
+        icon: "/enterprise-icons/custom.png",
+        title: "Customizable White-Label Reports",
+        description: "Generate unlimited reports in branded templates (PPT, PDF, Excel), ready to share instantly"
+    },
+    {
+        icon: "/enterprise-icons/dima.png",
+        title: "dima AI Assistant",
+        description: "Ask plain-language questions about your brand and get instant, actionable answers"
+    },
+    {
+        icon: "/enterprise-icons/users.png",
+        title: "Unlimited Users & Keywords",
+        description: "No caps on team members or keywords"
+    },
+    {
+        icon: "/enterprise-icons/visual.png",
+        title: "Visual Listening",
+        description: "Spot your brand in images, videos and audio to capture the full picture."
+    },
+    {
+        icon: "/enterprise-icons/historical-data.png",
+        title: "Capture Historical Data",
+        description: "dima provides full historical coverage to see the full picture."
+    },
+] 
