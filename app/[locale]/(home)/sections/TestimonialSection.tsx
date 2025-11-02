@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import { useTranslations } from "next-intl";
 import { TestimonialType } from "@/types/info";

@@ -1,7 +1,7 @@
 "use client";
 
 import { actionableInsightsCardsInfo } from "@/data/constants/info";
-import SectionWrapper from "../../(home)/components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import ExpandingCard from "../components/ExpandingCard";
 import { useState } from "react";
 

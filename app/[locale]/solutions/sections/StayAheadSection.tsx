@@ -1,5 +1,5 @@
 import { scrollingCards } from "@/data/constants/info";
-import SectionWrapper from "../../(home)/components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import PinnedScrollSection from "../components/PinnedScrollSection";
 import ScrollingCard from "../components/ScrollingCard";
 import RequestDemoButton from "../../(home)/components/RequestDemoButton";

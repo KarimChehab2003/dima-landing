@@ -1,5 +1,5 @@
 import { caseStudiesInfo } from "@/data/constants/info";
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import CaseStudyCard from "../components/CaseStudyCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";

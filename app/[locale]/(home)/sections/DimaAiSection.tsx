@@ -1,4 +1,4 @@
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import RequestDemoButton from "../components/RequestDemoButton";

@@ -1,6 +1,6 @@
 "use client";
 import { ownConversationInfo } from "@/data/constants/info";
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Image from "next/image";

@@ -1,4 +1,4 @@
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import EmpoweringAgenciesCard from "../components/EmpoweringAgenciesCard";
 import { useTranslations } from "next-intl";
 import { empoweringAgenciesInfo } from "@/data/constants/info";

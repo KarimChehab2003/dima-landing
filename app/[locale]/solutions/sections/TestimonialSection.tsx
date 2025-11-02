@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionWrapper from "../../(home)/components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 
 function TestimonialSection() {
     return (

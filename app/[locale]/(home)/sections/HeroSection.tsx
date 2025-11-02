@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import LogoCarousel from "../components/LogoCarousel";
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import { useTranslations, useLocale } from "next-intl";
 import CyclicSwapCards from "../components/CyclicSwapCards";
 import Typewriter from "typewriter-effect";

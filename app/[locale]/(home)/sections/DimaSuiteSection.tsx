@@ -1,4 +1,4 @@
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import { dimaSolutions } from "@/data/constants/links";
 import SolutionCard from "../components/SolutionCard";
 import { useTranslations } from "next-intl";

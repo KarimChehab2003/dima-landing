@@ -1,5 +1,5 @@
 import { enterpriseFeaturesCards } from "@/data/constants/info";
-import SectionWrapper from "../../(home)/components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import EntrepriseCard from "../components/EnterpriseCard";
 
 function BuiltEntreprisesSection() {
