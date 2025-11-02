@@ -20,7 +20,6 @@ type TestimonialCarouselProps = {
     items?: TestimonialType[];
 };
 
-// TODO: Refactor this component
 
 export default function TestimonialCarousel({
     slidesToShow,

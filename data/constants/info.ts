@@ -31,43 +31,43 @@ export const ownConversationInfo: ConversationInfo[] = [
         title: "Listen, analyze & act",
         subTitle: "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI.",
         icon: FaLaptop,
-        image: "https://placehold.co/800x600"
+        image: "/elevating-social-presence.svg"
     },
     {
         title: "Grow your brand with the right partners",
         subTitle: "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
         icon: FaChartLine,
-        image: "https://placehold.co/800x600"
+        image: "/elevating-social-presence.svg"
     },
     {
         title: "Daily monitoring & coverage reports for all your clients",
         subTitle: "Stay in control of your brand narrative with proactive monitoring and reporting.",
         icon: FaLayerGroup,
-        image: "https://placehold.co/800x600"
+        image: "/elevating-social-presence.svg"
     },
     {
         title: "Elevate your social presence",
         subTitle: "Turn your owned channels into proof of impact with AI content performance tracking.",
         icon: FaLayerGroup,
-        image: "https://placehold.co/800x600"
+        image: "/elevating-social-presence.svg"
     },
     {
         title: "Benchmark performance",
         subTitle: "Outpace your competitors with insights that accelerate decisions and increases your share of voice",
         icon: PiUserList,
-        image: "/elevating-social-presence.png"
+        image: "/elevating-social-presence.svg"
     },
     {
         title: "Understand your audience everywhere",
         subTitle: "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact.",
         icon: FaLayerGroup,
-        image: "https://placehold.co/800x600"
+        image: "/elevating-social-presence.svg"
     },
     {
         title: "Collect & analyze reviews",
         subTitle: "Turn feedback into action to protect loyalty and increase customer satisfaction",
         icon: FaLayerGroup,
-        image: "https://placehold.co/800x600"
+        image: "/elevating-social-presence.svg"
     },
 ]
 

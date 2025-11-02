@@ -27,9 +27,9 @@ export default function LogoCarousel() {
                         key={index}
                         className="flex-none basis-[30%] sm:basis-[20%] md:basis-[12%] lg:basis-[10%]"
                     >
-                        <div className="flex items-center justify-center h-[80px] sm:h-[100px] md:h-[120px]">
+                        <div className="flex items-center justify-center h-20 sm:h-[100px] md:h-[120px]">
                             <Image
-                                src={`/logo-slider/${index + 1}.png`}
+                                src={`/logo-slider/${index + 1}.svg`}
                                 alt={`Logo ${index}`}
                                 width={200}
                                 height={100}

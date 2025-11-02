@@ -9,12 +9,12 @@ import Typewriter from "typewriter-effect";
 import RequestDemoButton from "../components/RequestDemoButton";
 
 const slidesImages = [
-  "/hero-carousel-item-1.png",
-  "/hero-carousel-item-2.png",
-  "/hero-carousel-item-3.png",
-  "/hero-carousel-item-3.png",
-  "/hero-carousel-item-3.png",
-  "/hero-carousel-item-3.png",
+  "/hero-carousel-item-1.svg",
+  "/hero-carousel-item-2.svg",
+  "/hero-carousel-item-3.svg",
+  "/hero-carousel-item-3.svg",
+  "/hero-carousel-item-3.svg",
+  "/hero-carousel-item-3.svg",
 ];
 
 export default function HeroSection() {
@@ -65,7 +65,7 @@ export default function HeroSection() {
           className={`flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] lg:h-[600px] ${isRTL ? "lg:order-1" : "lg:order-2"
             }`}
           style={{
-            backgroundImage: "url('/dima-carousel-background.png')",
+            backgroundImage: "url('/dima-carousel-background.svg')",
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

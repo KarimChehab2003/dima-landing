@@ -26,7 +26,7 @@ function SolutionsDropdown() {
                 <Link href="/solutions/consumer-insights" className={`flex justify-center items-center gap-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                     <figure className="flex justify-center items-center">
                         <Image
-                            src="/nav-links/ci-desktop.png"
+                            src="/nav-links/ci-desktop.svg"
                             alt="customer insights"
                             width={200}
                             height={200}

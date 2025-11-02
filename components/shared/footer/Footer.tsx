@@ -13,6 +13,8 @@ function Footer() {
   const locale = useLocale();
   const isRTL = locale === "ar";
 
+  // TODO: Refactor this component
+
   // Translate solutions using available titleKey on dimaSolutions; fallback to original title
   const translatedSolutions = dimaSolutions.map((link) => ({
     ...link,
@@ -50,7 +52,7 @@ function Footer() {
           <div className="flex flex-col gap-4">
             <figure>
               <Image
-                src="/dima-logo-white.png"
+                src="/dima-logo-white.svg"
                 alt="dima logo white"
                 width={120}
                 height={50}

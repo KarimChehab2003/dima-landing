@@ -6,7 +6,7 @@ import Image from "next/image";
 import { scrollingCards } from "@/data/constants/info";
 
 export default function PinnedScrollSection() {
-    const [currentStepIndex, setCurrentStepIndex] = useState<number | null>(null);
+    const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);
     const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
     const handleStepEnter = ({ data }: { data: number }) => {
@@ -29,13 +29,19 @@ export default function PinnedScrollSection() {
             <div className="sticky top-0 h-screen w-1/2 flex justify-center items-center">
                 <figure className="px-4 py-32 rounded-4xl bg-[linear-gradient(-125deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)]">
                     {currentStepIndex === 0 && (
-                        <Image src="/scroll-image-1.png" width={540} height={340} alt="Step 1" priority />
+                        <Image src="/scroll-image-1.svg" width={540} height={340} alt="Step 1" priority />
                     )}
                     {currentStepIndex === 1 && (
-                        <Image src="/scroll-image-2.png" width={540} height={340} alt="Step 2" />
+                        <Image src="/scroll-image-2.svg" width={540} height={340} alt="Step 2" />
                     )}
                     {currentStepIndex === 2 && (
-                        <Image src="/scroll-image-3.png" width={540} height={340} alt="Step 3" />
+                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 3" />
+                    )}
+                    {currentStepIndex === 3 && (
+                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 4" />
+                    )}
+                    {currentStepIndex === 4 && (
+                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 5" />
                     )}
                 </figure>
             </div>

@@ -30,7 +30,7 @@ function Navbar() {
                 <Link href="/" className="order-1">
                     <figure>
                         <Image
-                            src="/dima-logo.png"
+                            src="/dima-logo.svg"
                             alt="Dima logo"
                             width={74}
                             height={30}

@@ -28,7 +28,7 @@ function RequestDemoSection() {
           {/* Phone Image */}
           <figure className="lg:basis-2/5 hidden lg:flex justify-center items-center bg-[linear-gradient(90deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] rounded-4xl flex-1">
             <Image
-              src="/dima-phone.png"
+              src="/dima-phone.svg"
               alt="dima phone"
               width={400}
               height={500}

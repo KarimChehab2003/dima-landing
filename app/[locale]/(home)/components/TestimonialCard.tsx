@@ -11,7 +11,7 @@ function TestimonialCard({ quote, name, jobRole, companyLogo }: TestimonialType)
             <div className={`flex gap-4 items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <figure className="relative w-6 h-6 shrink-0">
                     <Image
-                        src="/openQuote.png"
+                        src="/open-quote.svg"
                         alt="open quotes"
                         fill
                         className={`object-contain ${isRTL ? 'rotate-180' : ''}`}

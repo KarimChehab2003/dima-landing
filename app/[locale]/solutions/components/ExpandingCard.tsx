@@ -22,10 +22,21 @@ function ExpandingCard({ title, description, highighted, isExpanded, onClick }: 
       `}
         >
             <div className="bg-white transition-colors duration-300 px-6 py-3 rounded-[20px] h-full w-full flex flex-col justify-center">
+                {/* For desktop */}
+                <motion.h3
+                    layout
+                    animate={{ textAlign: isExpanded ? "left" : "center" }}
+                    className={`hidden md:block text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
+                        } transition-colors duration-300`}
+                >
+                    {title}
+                </motion.h3>
+
+                {/* For mobile */}
                 <motion.h3
                     layout="size"
                     animate={{ textAlign: isExpanded ? "left" : "center" }}
-                    className={`text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
+                    className={`md:hidden text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
                         } transition-colors duration-300`}
                 >
                     {title}

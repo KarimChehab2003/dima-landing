@@ -26,8 +26,8 @@ function RequestDemoButton({
         <Image
           src={
             computerVariant === "white"
-              ? "/computer.png"
-              : "/computer-black.png"
+              ? "/computer.svg"
+              : "/computer-black.svg"
           }
           alt="monitor icon"
           width={30}

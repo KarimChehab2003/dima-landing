@@ -5,31 +5,31 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export const solutionLinks: SolutionLink[] = [
     {
-        logo: "/nav-links/sl.png",
+        logo: "/nav-links/sl.svg",
         title: "Social listening & analytics",
         subTitle: "Listen, analyze & act",
         href: "/solution/social-listening-analytics/"
     },
     {
-        logo: "/nav-links/pr.png",
+        logo: "/nav-links/pr.svg",
         title: "PR & Comms",
         subTitle: "Daily monitoring & coverage reports for all your clients",
         href: "/solution/pr-comms/"
     },
     {
-        logo: "/nav-links/oi.png",
+        logo: "/nav-links/oi.svg",
         title: "Own Page Intelligence",
         subTitle: "Elevate your social presence",
         href: "/solution/own-page-intelligence/"
     },
     {
-        logo: "/nav-links/ci.png",
+        logo: "/nav-links/ci.svg",
         title: "Consumer Insights",
         subTitle: "Understand Your Audience",
         href: "/solution/consumer-insights/"
     },
     {
-        logo: "/nav-links/mi.png",
+        logo: "/nav-links/mi.svg",
         title: "Market Insights",
         subTitle: "Benchmark performance",
         href: "/solution/market-insights/"
@@ -81,13 +81,13 @@ export const resourcesLinks: NavLink[] = [
         title: "Videos",
         titleKey: "resources.links.moreResources.videos",
         href: "/videos",
-        icon: "/camera.png"
+        icon: "/camera.svg"
     },
     {
         title: "FAQs",
         titleKey: "resources.links.moreResources.faqs",
         href: "/faqs",
-        icon: "/qa.png"
+        icon: "/qa.svg"
     },
 ]
 
@@ -131,23 +131,23 @@ export const footerLinks: NavLink[] = [
 ]
 
 export const socialMediaLinks: SocialMediaLink[] = [
+    // {
+    //     href: "#twitter",
+    //     icon: FaXTwitter
+    // },
+    // {
+    //     href: "#instagram",
+    //     icon: FaInstagram
+    // },
     {
-        href: "#twitter",
-        icon: FaXTwitter
-    },
-    {
-        href: "#instagram",
-        icon: FaInstagram
-    },
-    {
-        href: "#linkedin",
+        href: "https://www.linkedin.com/company/darwinz-ai",
         icon: FaLinkedin
     }
 ]
 
 export const dimaSolutions: SolutionLink[] = [
     {
-        logo: "/nav-links/pr.png",
+        logo: "/nav-links/pr.svg",
         title: "PR & Comms",
         subTitle: "Daily monitoring & coverage reports",
         titleKey: "solutions.links.prComms.title",
@@ -155,7 +155,7 @@ export const dimaSolutions: SolutionLink[] = [
         href: "/solutions/pr-and-comms"
     },
     {
-        logo: "/nav-links/mi.png",
+        logo: "/nav-links/mi.svg",
         title: "Market Insights",
         subTitle: "Benchmark performance",
         titleKey: "solutions.links.marketInsights.title",
@@ -163,7 +163,7 @@ export const dimaSolutions: SolutionLink[] = [
         href: "/solutions/market-insights"
     },
     {
-        logo: "/nav-links/sl.png",
+        logo: "/nav-links/sl.svg",
         title: "Social Listening & Analytics",
         subTitle: "Listen, analyze & act",
         titleKey: "solutions.links.socialListening.title",
@@ -171,7 +171,7 @@ export const dimaSolutions: SolutionLink[] = [
         href: "/solutions/social-listening-analytics"
     },
     {
-        logo: "/nav-links/ci.png",
+        logo: "/nav-links/ci.svg",
         title: "Consumer Insights",
         subTitle: "Understand your audience everywhere",
         titleKey: "solutions.links.consumerInsights.title",
@@ -179,7 +179,7 @@ export const dimaSolutions: SolutionLink[] = [
         href: "/solutions/consumer-insights"
     },
     {
-        logo: "/nav-links/oi.png",
+        logo: "/nav-links/oi.svg",
         title: "Own Page Intelligence",
         subTitle: "Elevate your social presence",
         titleKey: "solutions.links.ownPageIntelligence.title",
@@ -187,7 +187,7 @@ export const dimaSolutions: SolutionLink[] = [
         href: "/solutions/own-page-intelligence"
     },
     {
-        logo: "/nav-links/im.png",
+        logo: "/nav-links/im.svg",
         title: "Influencer Marketing",
         subTitle: "Find the right partners for your brand",
         titleKey: "solutions.links.influencerMarketing.title",
@@ -195,7 +195,7 @@ export const dimaSolutions: SolutionLink[] = [
         href: "/solutions/influencer-marketing"
     },
     {
-        logo: "/nav-links/ce.png",
+        logo: "/nav-links/ce.svg",
         title: "Customer Experience",
         subTitle: "Collect & analyze reviews",
         titleKey: "solutions.links.customerExperience.title",
@@ -206,7 +206,7 @@ export const dimaSolutions: SolutionLink[] = [
 
 
 export const languages: LanguageLink[] = [
-    { locale: "en", label: "English", flag: "/flags/ar.png" },
-    { locale: "ar", label: "العربية", flag: "/flags/ar.png" },
+    { locale: "en", label: "English", flag: "/flags/ar.svg" },
+    { locale: "ar", label: "العربية", flag: "/flags/ar.svg" },
 ];
 

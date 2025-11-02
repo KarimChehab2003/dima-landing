@@ -73,7 +73,7 @@ function OwnConversationSection() {
 
         {/* Image + Text */}
         <div
-          className="flex flex-col xl:flex-row items-center justify-between xl:justify-center w-full rounded-4xl mt-6 bg-no-repeat xl:bg-[url(/bg-vector.png)] bg-center"
+          className="flex flex-col xl:flex-row items-center justify-between xl:justify-center w-full rounded-4xl mt-6 bg-no-repeat xl:bg-[url(/bg-vector.svg)] bg-center"
           dir="ltr"
         >
           {/* Image Section */}

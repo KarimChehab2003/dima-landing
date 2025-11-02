@@ -30,7 +30,7 @@ function DimaAiSection() {
             className={`relative w-full lg:flex-1 h-[220px] sm:h-[300px] lg:h-[500px]`}
           >
             <Image
-              src="/dima-phone.png"
+              src="/dima-phone.svg"
               alt="stats"
               fill
               className="object-contain"

@@ -11,8 +11,6 @@ export default function TestimonialSection() {
   const [slidesToShow, setSlidesToShow] = useState(1);
   const [mounted, setMounted] = useState(false);
 
-  // TODO: Extract this logic into a hook to reuse it in hero section
-
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -34,7 +32,6 @@ export default function TestimonialSection() {
   return (
     <SectionWrapper className="px-0 lg:px-6">
       <div className="container mx-auto">
-        {/* Title typography: mobile 24px, desktop 44px; weight 400 */}
         <h2 className="text-[24px] lg:text-[44px] font-normal text-center mb-8">
           {t("title")}
         </h2>

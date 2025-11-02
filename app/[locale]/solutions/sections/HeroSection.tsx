@@ -15,7 +15,7 @@ function HeroSection() {
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
                     <figure className="p-1 rounded-lg bg-muted/50">
                         <Image
-                            src={"/social-listening/hero-image-1.png"}
+                            src={"/social-listening/hero-image-1.svg"}
                             alt="Hero Image 1"
                             width={322}
                             height={322}
@@ -23,7 +23,7 @@ function HeroSection() {
                     </figure>
                     <figure className="p-1 rounded-lg bg-muted/50">
                         <Image
-                            src={"/social-listening/hero-image-2.png"}
+                            src={"/social-listening/hero-image-2.svg"}
                             alt="Hero Image 2"
                             width={322}
                             height={322}
