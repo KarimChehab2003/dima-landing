@@ -13,7 +13,7 @@ function HeroSection() {
 
                 {/* Images */}
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
-                    <figure className="p-1 rounded-lg bg-muted">
+                    <figure className="p-1 rounded-lg bg-muted/50">
                         <Image
                             src={"/social-listening/hero-image-1.png"}
                             alt="Hero Image 1"
@@ -21,7 +21,7 @@ function HeroSection() {
                             height={322}
                         />
                     </figure>
-                    <figure className="p-1 rounded-lg bg-muted">
+                    <figure className="p-1 rounded-lg bg-muted/50">
                         <Image
                             src={"/social-listening/hero-image-2.png"}
                             alt="Hero Image 2"
@@ -34,7 +34,7 @@ function HeroSection() {
                 <LogoCarousel />
 
                 {/* Percentages */}
-                <div className="flex flex-col sm:flex-row justify-between items-center gap-8 w-full max-w-5xl">
+                <div className="flex flex-col sm:flex-row justify-around items-center gap-12 w-full max-w-5xl">
                     <CounterPercentage number={100} text="Full Coverage" />
                     <CounterPercentage number={97} text="Arabic Accuracy" />
                     <CounterPercentage number={44} text="Faster Time-to-Insight" />

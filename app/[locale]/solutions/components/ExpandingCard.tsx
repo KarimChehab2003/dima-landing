@@ -2,33 +2,37 @@
 import { renderHighlightedText } from "@/lib/helpers";
 import { CardType } from "@/types/info";
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
 
-function ExpandingCard({ title, description, highighted }: CardType) {
-    const [isHovered, setIsHovered] = useState(false);
+type ExpandingCardProps = CardType & {
+    isExpanded: boolean;
+    onClick: () => void;
+};
 
+function ExpandingCard({ title, description, highighted, isExpanded, onClick }: ExpandingCardProps) {
     const variants = {
         hidden: { opacity: 0, y: 20, transition: { duration: 0.5 } },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
 
     return (
         <div
-            className="bg-linear-to-b from-primary to-[#8A38F5] p-1 basis-1/3 hover:basis-2/3 transition-all duration-500 rounded-3xl cursor-pointer min-h-48 group"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onClick={onClick}
+            className={`bg-linear-to-b from-primary to-[#8A38F5] p-1 transition-all duration-500 rounded-3xl cursor-pointer lg:min-h-48
+      ${isExpanded ? "basis-2/3" : "basis-1/3"}
+      `}
         >
-            <div className="bg-white transition-colors duration-300 px-6 py-3 rounded-[20px] h-full flex flex-col justify-center">
+            <div className="bg-white transition-colors duration-300 px-6 py-3 rounded-[20px] h-full w-full flex flex-col justify-center">
                 <motion.h3
-                    layout
-                    animate={{ textAlign: isHovered ? "left" : "center" }}
-                    className={`text-2xl font-semibold mb-2 ${isHovered && "text-primary"} transition-colors duration-300`}
+                    layout="size"
+                    animate={{ textAlign: isExpanded ? "left" : "center" }}
+                    className={`text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
+                        } transition-colors duration-300`}
                 >
                     {title}
                 </motion.h3>
 
-                <AnimatePresence mode="popLayout" >
-                    {isHovered && (
+                <AnimatePresence mode="popLayout">
+                    {isExpanded && (
                         <motion.p
                             variants={variants}
                             initial="hidden"
@@ -40,7 +44,7 @@ function ExpandingCard({ title, description, highighted }: CardType) {
                     )}
                 </AnimatePresence>
             </div>
-        </div >
+        </div>
     );
 }
 

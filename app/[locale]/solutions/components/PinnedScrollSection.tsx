@@ -41,7 +41,7 @@ export default function PinnedScrollSection() {
             </div>
 
             {/* Scroll text section */}
-            <div className="w-1/2">
+            <div className="w-1/2 px-4">
                 <Scrollama onStepEnter={handleStepEnter} offset={0.6}>
                     {scrollingCards.map((card, i) => (
                         <Step data={i} key={card.title}>

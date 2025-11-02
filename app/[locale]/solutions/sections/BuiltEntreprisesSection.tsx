@@ -10,7 +10,7 @@ function BuiltEntreprisesSection() {
                 <h2 className="text-2xl lg:text-[44px] text-center mb-8">Built for entreprises</h2>
 
                 {/* Cards */}
-                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
                     {enterpriseFeaturesCards.map((card) => (
                         <li key={card.title}>
                             <EntrepriseCard {...card} />
