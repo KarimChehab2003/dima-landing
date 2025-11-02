@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, ChevronDown, ChevronsUpDown } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Popover,
@@ -15,7 +15,6 @@ import {
   CommandInput,
   CommandItem,
 } from "@/components/ui/command";
-import { Button } from "@/components/ui/button";
 import { Link, usePathname } from "@/i18n/navigation";
 import { languages } from "@/data/constants/links";
 import { LanguageLink } from "@/types/link";
