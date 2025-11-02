@@ -6,6 +6,7 @@ import { testimonialsInfo } from "@/data/constants/info";
 import TestimonialCard from "./TestimonialCard";
 import { useState } from "react";
 import { TestimonialType } from "@/types/info";
+import { useLocale } from "next-intl";
 
 const scaleOpacityClasses = [
     "scale-110 opacity-100 z-20 relative", // active
@@ -19,12 +20,14 @@ type TestimonialCarouselProps = {
     items?: TestimonialType[];
 };
 
+// TODO: Refactor this component
+
 export default function TestimonialCarousel({
     slidesToShow,
     items,
 }: TestimonialCarouselProps) {
     const [activeSlide, setActiveSlide] = useState(0);
-
+    const isRTL = useLocale() === "ar"
     const settings = {
         className: "center",
         centerMode: true,
@@ -37,6 +40,7 @@ export default function TestimonialCarousel({
         dots: false,
         arrows: false,
         adaptiveHeight: true,
+        rtl: isRTL,
         beforeChange: (_: number, next: number) => setActiveSlide(next),
     };
 

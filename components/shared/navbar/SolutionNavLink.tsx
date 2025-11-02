@@ -9,7 +9,7 @@ function SolutionNavLink({ logo, title, subTitle, titleKey, subTitleKey, href, i
     const resolvedSubTitle = subTitleKey ? t(subTitleKey) : subTitle;
     return (
         <Link href={href}>
-            <article className={`flex items-center py-2 gap-2 ${isRTL ? 'flex-row-reverse text-right' : 'text-left'}`}>
+            <article className={`flex items-center py-2 gap-4 ${isRTL ? 'flex-row-reverse text-right' : 'text-left'}`}>
                 <figure className="min-w-18 min-h-18 relative">
                     <Image
                         src={logo}

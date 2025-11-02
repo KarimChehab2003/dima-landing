@@ -26,7 +26,7 @@ export default function EmpoweringAgenciesCard({
                         maxValue={maxValue}
                     />
                 </div>
-                <h3 className={`text-lg sm:text-xl md:text-2xl font-semibold capitalize tracking-wide text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
+                <h3 className={`text-lg md:text-2xl capitalize tracking-wide text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
                     {title}
                 </h3>
             </div>

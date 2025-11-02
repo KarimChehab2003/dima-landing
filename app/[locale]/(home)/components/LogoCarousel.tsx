@@ -1,3 +1,5 @@
+"use client";
+
 
 import AutoScroll from "embla-carousel-auto-scroll";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -17,6 +19,7 @@ export default function LogoCarousel() {
             }}
             plugins={[autoScrollPlugin]}
             className="w-full overflow-hidden my-4"
+            dir="ltr"
         >
             <CarouselContent className="flex items-center gap-12 sm:gap-16 md:gap-20">
                 {Array.from({ length: 14 }).map((_, index) => (

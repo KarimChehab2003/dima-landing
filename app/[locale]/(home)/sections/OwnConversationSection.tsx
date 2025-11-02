@@ -1,6 +1,6 @@
 "use client";
 import { ownConversationInfo } from "@/data/constants/info";
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Image from "next/image";
@@ -22,17 +22,18 @@ function OwnConversationSection() {
   const locale = useLocale();
   const isRTL = locale === "ar";
 
+  // TODO: Refactor this component
+
   return (
     <SectionWrapper>
       <div className="flex flex-col items-center gap-8 w-full">
         {/* Header */}
         <div className="space-y-3 text-center max-w-3xl">
-          {/* Title per spec */}
           <h2 className="text-[24px] lg:text-[44px] font-normal my-4">
             {t("title")}
           </h2>
-          {/* Body text per spec */}
-          <p className="text-base sm:text-lg lg:text-[24px] lg:font-light text-muted-foreground">
+
+          <p className="text-base lg:text-lg lg:font-light text-muted-foreground">
             {t("description")}
           </p>
         </div>
@@ -56,6 +57,7 @@ function OwnConversationSection() {
                 <Button
                   key={info.title}
                   variant={activeIndex === idx ? "default" : "ghost"}
+
                   onClick={() => setActiveIndex(idx)}
                   className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0"
                 >
@@ -67,15 +69,12 @@ function OwnConversationSection() {
           </div>
         </div>
 
+
+
         {/* Image + Text */}
         <div
           className="flex flex-col xl:flex-row items-center justify-between xl:justify-center w-full rounded-4xl mt-6 bg-no-repeat xl:bg-[url(/bg-vector.png)] bg-center"
-          // style={
-          //     {
-          //         backgroundImage: "url('/bg-vector.png')",
-          //         backgroundPosition: "center"
-          //     }
-          // }
+          dir="ltr"
         >
           {/* Image Section */}
           <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-b xl:bg-none from-primary via-[#5FC9E7] to-[#AEEBFF] rounded-2xl">
@@ -91,9 +90,8 @@ function OwnConversationSection() {
 
           {/* Info + Button  */}
           <div
-            className={`flex flex-col justify-end text-center w-full xl:max-w-md  z-30 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] xl:pl-34 ${
-              isRTL ? "text-right items-end " : "items-start text-left "
-            }`}
+            className={`flex flex-col justify-end text-center w-full xl:max-w-md  z-30 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] xl:pl-34 ${isRTL ? "text-right items-end " : "items-start text-left "
+              }`}
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -102,37 +100,34 @@ function OwnConversationSection() {
                 exit="exit"
                 initial="hidden"
                 animate="visible"
-                className={`w-full flex-1 flex flex-col justify-center ${
-                  isRTL ? "items-end text-right" : "items-start text-left"
-                }`}
+                className={`w-full flex-1 flex flex-col justify-center ${isRTL ? "items-end text-right" : "items-start text-left"
+                  }`}
               >
                 <h3 className="text-2xl font-semibold my-4 sm:mb-6">
                   {t(
-                    `features.${
-                      [
-                        "listenAnalyzeAct",
-                        "growYourBrandWithTheRightPartners",
-                        "dailyMonitoringCoverageReportsForAllYourClients",
-                        "elevateYourSocialPresence",
-                        "benchmarkPerformance",
-                        "understandYourAudienceEverywhere",
-                        "collectAnalyzeReviews",
-                      ][activeIndex]
+                    `features.${[
+                      "listenAnalyzeAct",
+                      "growYourBrandWithTheRightPartners",
+                      "dailyMonitoringCoverageReportsForAllYourClients",
+                      "elevateYourSocialPresence",
+                      "benchmarkPerformance",
+                      "understandYourAudienceEverywhere",
+                      "collectAnalyzeReviews",
+                    ][activeIndex]
                     }.title`
                   )}
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg leading-relaxed">
                   {t(
-                    `features.${
-                      [
-                        "listenAnalyzeAct",
-                        "growYourBrandWithTheRightPartners",
-                        "dailyMonitoringCoverageReportsForAllYourClients",
-                        "elevateYourSocialPresence",
-                        "benchmarkPerformance",
-                        "understandYourAudienceEverywhere",
-                        "collectAnalyzeReviews",
-                      ][activeIndex]
+                    `features.${[
+                      "listenAnalyzeAct",
+                      "growYourBrandWithTheRightPartners",
+                      "dailyMonitoringCoverageReportsForAllYourClients",
+                      "elevateYourSocialPresence",
+                      "benchmarkPerformance",
+                      "understandYourAudienceEverywhere",
+                      "collectAnalyzeReviews",
+                    ][activeIndex]
                     }.description`
                   )}
                 </p>
@@ -140,9 +135,7 @@ function OwnConversationSection() {
             </AnimatePresence>
 
             <div className="mt-6 w-full flex-1 flex justify-center xl:justify-start">
-              <div className="[&_button]:font-normal [&_button]:lg:py-4 [&_button]:lg:px-8 [&_button]:py-[14px] [&_button]:px-[24px] [&_button]:text-[16px]">
-                <RequestDemoButton />
-              </div>
+              <RequestDemoButton size={"xl"} />
             </div>
           </div>
         </div>

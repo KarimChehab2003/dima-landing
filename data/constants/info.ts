@@ -1,4 +1,4 @@
-import { CardInfo, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, QuestionAccordion, TestimonialType } from "@/types/info";
+import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, EnterpriseType, QuestionAccordion, TestimonialType } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
@@ -143,3 +143,86 @@ export const testimonialsInfo: TestimonialType[] = [
     },
 ]
 
+export const actionableInsightsCardsInfo: CardType[] = [
+    {
+        title: "Full Coverage",
+        description: "Track and analyze coverage across online publications, social media, print, TV, radio & closed communities, so you can get the full picture.",
+        highighted: "online publications, social media, print, TV, radio & closed communities"
+    },
+    {
+        title: "Arabic First AI Copilot",
+        description: "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic.",
+        highighted: "dialects, slang and Franco-Arabic."
+    },
+    {
+        title: "Built for Agencies",
+        description: "Scale without constraints, Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
+        highighted: "Unlimited keywords, reports & users."
+    },
+]
+
+export const scrollingCards: CardType[] = [
+    {
+        title: "Trend Dectection",
+        description: "Identify emerging trends before they gain momentum, giving you the edge to act first"
+    },
+    {
+        title: "Communities",
+        description: "Track communities conversations to expand coverage and visibility"
+    },
+    {
+        title: "Posts Vs Comments analysis",
+        description: "Separate post and comment section analysis for deeper, more accurate insights."
+    },
+    {
+        title: "Be First to Know, First to Act",
+        description: "Act instantly on real-time alerts to prevent crises, seize opportunities, and accelerate response times."
+    },
+    {
+        title: "Go beyond mentions",
+        description: "Seamlessly track sentiment, emotion, topics & more to uncover the true context behind conversations"
+    }
+]
+
+export const enterpriseFeaturesCards: EnterpriseType[] = [
+    {
+        icon: "/enterprise-icons/360.png",
+        title: "360° Conversation Coverage",
+        description: "Track tagged, untagged, and misspelled mentions across all social media platforms and private groups"
+    },
+    {
+        icon: "/enterprise-icons/arabic.png",
+        title: "Arabic-First Engine",
+        description: "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance"
+    },
+    {
+        icon: "/enterprise-icons/crisis-alert.png",
+        title: "Crisis Alerts",
+        description: "You're the first to know, before the public sees it grow. Get early crisis alerts via whatsapp and app notifications"
+    },
+    {
+        icon: "/enterprise-icons/custom.png",
+        title: "Customizable White-Label Reports",
+        description: "Generate unlimited reports in branded templates (PPT, PDF, Excel), ready to share instantly"
+    },
+    {
+        icon: "/enterprise-icons/dima.png",
+        title: "dima AI Assistant",
+        description: "Ask plain-language questions about your brand and get instant, actionable answers"
+    },
+    {
+        icon: "/enterprise-icons/users.png",
+        title: "Unlimited Users & Keywords",
+        description: "No caps on team members or keywords"
+    },
+    {
+        icon: "/enterprise-icons/visual.png",
+        title: "Visual Listening",
+        description: "Spot your brand in images, videos and audio to capture the full picture."
+    },
+    {
+        icon: "/enterprise-icons/historical-data.png",
+        title: "Capture Historical Data",
+        description: "dima provides full historical coverage to see the full picture."
+    },
+] 

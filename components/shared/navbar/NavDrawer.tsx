@@ -31,7 +31,7 @@ function NavDrawer() {
                         <Link
                             href="/"
                             onClick={() => setIsOpen(false)}
-                            className={`block text-base font-medium hover:text-sky-500 transition ${isRTL ? "text-right" : "text-left"}`}
+                            className={`block text-base font-medium hover:text-sky-500 transition `}
                         >
                             {t("home")}
                         </Link>
@@ -39,7 +39,7 @@ function NavDrawer() {
                         {/* Solutions Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="solutions">
-                                <AccordionTrigger className={isRTL ? "flex-row-reverse" : "flex-row"}>
+                                <AccordionTrigger >
                                     {t("solutions.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
@@ -57,7 +57,7 @@ function NavDrawer() {
                         {/* Blogs Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="blogs">
-                                <AccordionTrigger className={isRTL ? "flex-row-reverse" : "flex-row"}>
+                                <AccordionTrigger>
                                     {t("resources.links.blogs.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
@@ -81,7 +81,7 @@ function NavDrawer() {
                         {/* Resources Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="resources">
-                                <AccordionTrigger className={isRTL ? "flex-row-reverse" : "flex-row"}>
+                                <AccordionTrigger >
                                     {t("resources.links.moreResources.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
@@ -91,7 +91,7 @@ function NavDrawer() {
                                                 <Link
                                                     href={link.href}
                                                     onClick={() => setIsOpen(false)}
-                                                    className={`flex items-center gap-2 text-sm text-muted-foreground hover:text-sky-500 transition ${isRTL ? 'flex-row-reverse text-right' : 'flex-row text-left'}`}
+                                                    className={`flex items-center gap-2 text-sm text-muted-foreground hover:text-sky-500 transition ${isRTL ? 'text-right' : 'text-left'}`}
                                                 >
                                                     {link.icon && (
                                                         <Image
@@ -114,7 +114,7 @@ function NavDrawer() {
                         <Link
                             href="/case-studies"
                             onClick={() => setIsOpen(false)}
-                            className={`block text-base font-medium hover:text-sky-500 transition ${isRTL ? "text-right" : "text-left"}`}
+                            className={`block text-base font-medium hover:text-sky-500 transition `}
                         >
                             {t("caseStudies")}
                         </Link>

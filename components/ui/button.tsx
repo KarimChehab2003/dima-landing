@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all duration-200 ease-out active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 rounded-full",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all duration-200 ease-out active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 rounded-full font-extralight",
   {
     variants: {
       variant: {
@@ -26,10 +26,10 @@ const buttonVariants = cva(
           "backdrop-blur-md bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-colors",
       },
       size: {
-        default: "py-4 px-6 xl:py-4 xl:px-8 font-extralight",
+        default: "py-4 px-6 xl:p-2 xl:pl-4",
         sm: "h-8 rounded-full gap-1.5 px-3 has-[>svg]:px-2.5 text-xs",
         lg: "h-11 rounded-full px-6 has-[>svg]:px-4 text-base",
-        xl: "h-14 rounded-full px-8 text-lg font-semibold has-[>svg]:px-6",
+        xl: "h-14 rounded-full p-8 font-normal tracking-widest has-[>svg]:px-6",
         "2xl": "h-16 rounded-full px-10 text-xl font-bold has-[>svg]:px-8",
         icon: "size-9 rounded-full",
         "icon-sm": "size-8 rounded-full",

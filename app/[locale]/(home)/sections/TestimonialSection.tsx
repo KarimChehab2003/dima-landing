@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import SectionWrapper from "../components/SectionWrapper";
+import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import { useTranslations } from "next-intl";
 import { TestimonialType } from "@/types/info";
@@ -43,12 +43,12 @@ export default function TestimonialSection() {
           setSlidesToShow={setSlidesToShow}
           items={[0, 1, 2, 3, 4].map(
             (i) =>
-              ({
-                quote: t(`items.${i}.quote`),
-                name: t(`items.${i}.name`),
-                jobRole: t(`items.${i}.jobRole`),
-                companyLogo: testimonialsInfo[i].companyLogo,
-              } as TestimonialType)
+            ({
+              quote: t(`items.${i}.quote`),
+              name: t(`items.${i}.name`),
+              jobRole: t(`items.${i}.jobRole`),
+              companyLogo: testimonialsInfo[i].companyLogo,
+            } as TestimonialType)
           )}
         />
       </div>

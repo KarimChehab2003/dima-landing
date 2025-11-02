@@ -1,25 +1,27 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/dist/client/link";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 type RequestDemoButtonProps = {
   className?: string;
   computerVariant?: "black" | "white";
+  size?: "sm" | "lg" | "xl" | "default" | "2xl" | "icon" | "icon-sm" | "icon-lg" | "icon-xl" | null | undefined;
 };
 
 function RequestDemoButton({
   className,
   computerVariant = "white",
+  size = "default"
 }: RequestDemoButtonProps) {
   const t = useTranslations("Home.hero");
-  const locale = useLocale();
-  const isRTL = locale === "ar";
+
   return (
     <Link href="/request-demo">
       <Button
-        className={cn(isRTL ? "flex-row-reverse" : "flex-row", className)}
+        className={cn(className)}
+        size={size}
       >
         <Image
           src={

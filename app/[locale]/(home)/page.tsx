@@ -4,14 +4,14 @@ import OwnConversationSection from "./sections/OwnConversationSection";
 import DimaAiSection from "./sections/DimaAiSection";
 import DimaSuiteSection from "./sections/DimaSuiteSection";
 import CaseStudiesSection from "./sections/CaseStudiesSection";
-import QuestionsAnsweredSection from "./sections/QuestionsAnsweredSection";
 import TestimonialSection from "./sections/TestimonialSection";
-import RequestDemoSection from "./sections/RequestDemoSection";
+import RequestDemoSection from "@/components/shared/RequestDemoSection";
+import QuestionsAnsweredSection from "@/components/shared/QuestionsAnsweredSection";
 
 
 function HomePage() {
   return (
-    <main className="h-full font-light text-2xl">
+    <main className="h-full">
       <HeroSection />
       <EmpoweringAgenciesSection />
       <OwnConversationSection />
@@ -19,7 +19,6 @@ function HomePage() {
       <DimaSuiteSection />
       <CaseStudiesSection />
       <TestimonialSection />
-      {/* TODO: add section request a demo */}
       <RequestDemoSection />
       <QuestionsAnsweredSection />
     </main>

@@ -29,7 +29,7 @@ export default async function RootLayout({
     notFound()
   }
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
         className={`${geistSans.className} antialiased`}
       >
@@ -39,7 +39,6 @@ export default async function RootLayout({
             <div className="flex-1">
               {children}
             </div>
-            {/* <Footer /> */}
             <Footer />
           </div>
         </NextIntlClientProvider>
