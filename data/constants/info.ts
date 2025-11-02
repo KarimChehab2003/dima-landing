@@ -160,3 +160,26 @@ export const actionableInsightsCardsInfo: CardType[] = [
         highighted: "Unlimited keywords, reports & users."
     },
 ]
+
+export const scrollingCards: CardType[] = [
+    {
+        title: "Trend Dectection",
+        description: "Identify emerging trends before they gain momentum, giving you the edge to act first"
+    },
+    {
+        title: "Communities",
+        description: "Track communities conversations to expand coverage and visibility"
+    },
+    {
+        title: "Posts Vs Comments analysis",
+        description: "Separate post and comment section analysis for deeper, more accurate insights."
+    },
+    {
+        title: "Be First to Know, First to Act",
+        description: "Act instantly on real-time alerts to prevent crises, seize opportunities, and accelerate response times."
+    },
+    {
+        title: "Go beyond mentions",
+        description: "Seamlessly track sentiment, emotion, topics & more to uncover the true context behind conversations"
+    }
+]

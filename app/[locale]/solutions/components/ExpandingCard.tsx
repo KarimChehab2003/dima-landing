@@ -8,8 +8,8 @@ function ExpandingCard({ title, description, highighted }: CardType) {
     const [isHovered, setIsHovered] = useState(false);
 
     const variants = {
-        hidden: { opacity: 0, y: 20, transition: { duration: 0.3 } },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
+        hidden: { opacity: 0, y: 20, transition: { duration: 0.5 } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
     };
 
     return (
@@ -33,7 +33,6 @@ function ExpandingCard({ title, description, highighted }: CardType) {
                             variants={variants}
                             initial="hidden"
                             animate="visible"
-                            exit="hidden"
                             className="mt-2"
                         >
                             {renderHighlightedText(description, highighted)}
