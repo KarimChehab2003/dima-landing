@@ -29,7 +29,7 @@ export default function PinnedScrollSection() {
             <div className="sticky top-0 h-screen w-1/2 flex justify-center items-center">
                 <figure className="px-4 py-32 rounded-4xl bg-[linear-gradient(-125deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)]">
                     {currentStepIndex === 0 && (
-                        <Image src="/scroll-image-1.png" width={540} height={340} alt="Step 1" />
+                        <Image src="/scroll-image-1.png" width={540} height={340} alt="Step 1" priority />
                     )}
                     {currentStepIndex === 1 && (
                         <Image src="/scroll-image-2.png" width={540} height={340} alt="Step 2" />

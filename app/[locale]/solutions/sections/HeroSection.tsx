@@ -9,7 +9,7 @@ function HeroSection() {
             <div className="container mx-auto flex flex-col justify-center items-center gap-8 my-12">
                 {/* Heading */}
                 <h2 className="bg-black text-white uppercase w-fit p-1 rounded-sm italic tracking-wide">Social Listening & Analytics</h2>
-                <h1 className="text-2xl lg:text-[44px] font-normal text-center">Arabic-First Copilot for Social Listening & Analytics</h1>
+                <h1 className="text-2xl lg:text-[48px] font-normal text-center">Arabic-First Copilot for Social Listening & Analytics</h1>
 
                 {/* Images */}
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
@@ -34,7 +34,7 @@ function HeroSection() {
                 <LogoCarousel />
 
                 {/* Percentages */}
-                <div className="flex flex-col sm:flex-row justify-around items-center gap-12 w-full max-w-5xl">
+                <div className="flex flex-col sm:flex-row justify-around items-center gap-12 w-full ">
                     <CounterPercentage number={100} text="Full Coverage" />
                     <CounterPercentage number={97} text="Arabic Accuracy" />
                     <CounterPercentage number={44} text="Faster Time-to-Insight" />

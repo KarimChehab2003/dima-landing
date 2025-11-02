@@ -39,7 +39,6 @@ export default async function RootLayout({
             <div className="flex-1">
               {children}
             </div>
-            {/* <Footer /> */}
             <Footer />
           </div>
         </NextIntlClientProvider>

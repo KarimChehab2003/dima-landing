@@ -20,16 +20,16 @@ function TestimonialSection() {
 
                     {/* Text */}
                     <div className="flex-1 flex flex-col justify-between">
-                        <div>
-                            <h2 className="text-2xl sm:text-3xl lg:text-[44px] font-semibold capitalize mb-4 leading-snug">
-                                hear it from our clients
-                            </h2>
-                            <p className="text-base sm:text-lg lg:text-2xl leading-relaxed">
-                                “dima should be the go-to partner for any business serious about
-                                customer satisfaction and brand perception. Their ability to
-                                blend data, creativity and strategy makes a real difference.”
-                            </p>
-                        </div>
+
+                        <h2 className="text-4xl sm:text-3xl lg:text-[44px] font-semibold capitalize mb-4 leading-snug">
+                            hear it from our clients
+                        </h2>
+                        <p className="text-base sm:text-lg font-medium leading-relaxed">
+                            “dima should be the go-to partner for any business serious about
+                            customer satisfaction and brand perception. Their ability to
+                            blend data, creativity and strategy makes a real difference.”
+                        </p>
+
 
                         <div
                             className="flex flex-col sm:flex-row items-center sm:items-start sm:gap-4 mt-6 sm:mt-8">
@@ -43,10 +43,10 @@ function TestimonialSection() {
                             </figure>
 
                             <div>
-                                <p className="font-semibold text-lg sm:text-xl lg:text-2xl">
+                                <p className="font-medium text-lg sm:text-xl">
                                     Samer Yassa
                                 </p>
-                                <p className="text-primary text-sm sm:text-base">
+                                <p className="text-primary text-sm font-bold">
                                     Business Development Manager, Wadi Degla
                                 </p>
                             </div>

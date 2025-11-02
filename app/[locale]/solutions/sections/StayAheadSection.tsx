@@ -6,11 +6,11 @@ import RequestDemoButton from "../../(home)/components/RequestDemoButton";
 
 function StayAheadSection() {
     return (
-        <SectionWrapper>
+        <SectionWrapper className="mb-0">
             <div className="container mx-auto flex flex-col justify-center items-center gap-4 my-12">
                 {/* Heading */}
-                <h2 className="text-2xl lg:text-[44px] text-center font-medium">Stay ahead of the conversation</h2>
-                <p className="text-xl text-center">Get to the heart of millions of mentions with AI powered insights that drive smarter & faster decisions</p>
+                <h2 className="text-2xl lg:text-[44px] text-center ">Stay ahead of the conversation</h2>
+                <p className="text-3xl font-light text-center">Get to the heart of millions of mentions with AI powered insights that drive smarter & faster decisions</p>
 
                 {/* Pinned Scroll Section for desktop */}
                 <div className="hidden lg:block">
