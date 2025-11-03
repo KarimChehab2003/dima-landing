@@ -45,7 +45,7 @@ function SolutionsDropdown() {
                     {solutions
                         .filter((s) => s.href !== "/solutions/consumer-insights")
                         .map((link) => (
-                            <li key={link.title}>
+                            <li key={link.href}>
                                 <SolutionNavLink {...link} isRTL={isRTL} />
                             </li>
                         ))}

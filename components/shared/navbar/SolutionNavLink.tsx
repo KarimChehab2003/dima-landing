@@ -3,10 +3,11 @@ import Link from "next/link";
 import { SolutionLink } from "@/types/link";
 
 function SolutionNavLink({ logo, title, description, href, isRTL }: SolutionLink & { isRTL?: boolean }) {
+    console.log(title, description, isRTL);
     return (
         <Link href={href}>
             <article
-                className={`flex items-center py-2 gap-4 transition-colors hover:text-primary ${isRTL ? "flex-row-reverse text-right" : "text-left"
+                className={`flex items-center py-2 gap-4 transition-colors hover:text-primary ${isRTL ? "text-right" : "text-left"
                     }`}
             >
                 <figure className="relative min-w-18 min-h-18 shrink-0">
