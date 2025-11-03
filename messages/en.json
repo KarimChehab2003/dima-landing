@@ -266,17 +266,67 @@
     },
     "solutions": {
       "title": "Solutions",
-      "consumerInsights": "Consumer Insights",
-      "socialListening": "Social Listening & Analytics",
-      "prComms": "PR & Comms",
-      "ownPageIntelligence": "Own Page Intelligence",
-      "marketInsights": "Market Insights"
+      "links": [
+        {
+          "title": "PR & Comms",
+          "description": "Daily monitoring & coverage reports",
+          "logo": "/nav-links/pr.svg",
+          "href": "/solutions/pr-and-comms"
+        },
+        {
+          "title": "Market Insights",
+          "description": "Benchmark performance",
+          "logo": "/nav-links/mi.svg",
+          "href": "/solutions/market-insights"
+        },
+        {
+          "title": "Social Listening & Analytics",
+          "description": "Listen, analyze & act",
+          "logo": "/nav-links/sl.svg",
+          "href": "/solutions/social-listening-analytics"
+        },
+        {
+          "title": "Consumer Insights",
+          "description": "Understand your audience everywhere",
+          "logo": "/nav-links/ci.svg",
+          "href": "/solutions/consumer-insights"
+        },
+        {
+          "title": "Own Page Intelligence",
+          "description": "Elevate your social presence",
+          "logo": "/nav-links/oi.svg",
+          "href": "/solutions/own-page-intelligence"
+        },
+        {
+          "title": "Influencer Marketing",
+          "description": "Find the right partners for your brand",
+          "logo": "/nav-links/im.svg",
+          "href": "/solutions/influencer-marketing"
+        },
+        {
+          "title": "Customer Experience",
+          "description": "Collect & analyze reviews",
+          "logo": "/nav-links/ce.svg",
+          "href": "/solutions/customer-experience"
+        }
+      ]
     },
     "resources": {
       "title": "Resources",
-      "blogs": "Blogs",
-      "faqs": "FAQs",
-      "caseStudies": "Case Studies"
+      "links": [
+        {
+          "title": "Case Studies",
+          "href": "/case-studies"
+        },
+        {
+          "title": "Blogs",
+          "href": "/blogs"
+        },
+        {
+          "title": "FAQs",
+          "href": "/faqs"
+        }
+      ]
     },
     "getInTouch": {
       "title": "Get In Touch",

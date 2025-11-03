@@ -1,40 +1,7 @@
 import { LanguageLink, NavLink, SocialMediaLink, SolutionLink } from "@/types/link";
-import { title } from "process";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
-export const solutionLinks: SolutionLink[] = [
-    {
-        logo: "/nav-links/sl.svg",
-        title: "Social listening & analytics",
-        subTitle: "Listen, analyze & act",
-        href: "/solution/social-listening-analytics/"
-    },
-    {
-        logo: "/nav-links/pr.svg",
-        title: "PR & Comms",
-        subTitle: "Daily monitoring & coverage reports for all your clients",
-        href: "/solution/pr-comms/"
-    },
-    {
-        logo: "/nav-links/oi.svg",
-        title: "Own Page Intelligence",
-        subTitle: "Elevate your social presence",
-        href: "/solution/own-page-intelligence/"
-    },
-    {
-        logo: "/nav-links/ci.svg",
-        title: "Consumer Insights",
-        subTitle: "Understand Your Audience",
-        href: "/solution/consumer-insights/"
-    },
-    {
-        logo: "/nav-links/mi.svg",
-        title: "Market Insights",
-        subTitle: "Benchmark performance",
-        href: "/solution/market-insights/"
-    }
-]
+
 
 export const byRoleLinks: NavLink[] = [
     { title: "Finance", href: "/by-role/finance" },
@@ -61,17 +28,14 @@ export const byCompanyLinks: NavLink[] = [
 export const blogsLinks: NavLink[] = [
     {
         title: "Blog 1",
-        titleKey: "resources.links.blogs.blog1",
         href: "/blogs/blog-1"
     },
     {
         title: "Blog 2",
-        titleKey: "resources.links.blogs.blog2",
         href: "/blogs/blog-2"
     },
     {
         title: "Blog 3",
-        titleKey: "resources.links.blogs.blog3",
         href: "/blogs/blog-3"
     },
 ]
@@ -79,13 +43,11 @@ export const blogsLinks: NavLink[] = [
 export const resourcesLinks: NavLink[] = [
     {
         title: "Videos",
-        titleKey: "resources.links.moreResources.videos",
         href: "/videos",
         icon: "/camera.svg"
     },
     {
         title: "FAQs",
-        titleKey: "resources.links.moreResources.faqs",
         href: "/faqs",
         icon: "/qa.svg"
     },
@@ -149,57 +111,43 @@ export const dimaSolutions: SolutionLink[] = [
     {
         logo: "/nav-links/pr.svg",
         title: "PR & Comms",
-        subTitle: "Daily monitoring & coverage reports",
-        titleKey: "solutions.links.prComms.title",
-        subTitleKey: "solutions.links.prComms.description",
+        description: "Daily monitoring & coverage reports",
         href: "/solutions/pr-and-comms"
     },
     {
         logo: "/nav-links/mi.svg",
         title: "Market Insights",
-        subTitle: "Benchmark performance",
-        titleKey: "solutions.links.marketInsights.title",
-        subTitleKey: "solutions.links.marketInsights.description",
+        description: "Benchmark performance",
         href: "/solutions/market-insights"
     },
     {
         logo: "/nav-links/sl.svg",
         title: "Social Listening & Analytics",
-        subTitle: "Listen, analyze & act",
-        titleKey: "solutions.links.socialListening.title",
-        subTitleKey: "solutions.links.socialListening.description",
+        description: "Listen, analyze & act",
         href: "/solutions/social-listening-analytics"
     },
     {
         logo: "/nav-links/ci.svg",
         title: "Consumer Insights",
-        subTitle: "Understand your audience everywhere",
-        titleKey: "solutions.links.consumerInsights.title",
-        subTitleKey: "solutions.links.consumerInsights.description",
+        description: "Understand your audience everywhere",
         href: "/solutions/consumer-insights"
     },
     {
         logo: "/nav-links/oi.svg",
         title: "Own Page Intelligence",
-        subTitle: "Elevate your social presence",
-        titleKey: "solutions.links.ownPageIntelligence.title",
-        subTitleKey: "solutions.links.ownPageIntelligence.description",
+        description: "Elevate your social presence",
         href: "/solutions/own-page-intelligence"
     },
     {
         logo: "/nav-links/im.svg",
         title: "Influencer Marketing",
-        subTitle: "Find the right partners for your brand",
-        titleKey: "solutions.links.influencerMarketing.title",
-        subTitleKey: "solutions.links.influencerMarketing.description",
+        description: "Find the right partners for your brand",
         href: "/solutions/influencer-marketing"
     },
     {
         logo: "/nav-links/ce.svg",
         title: "Customer Experience",
-        subTitle: "Collect & analyze reviews",
-        titleKey: "solutions.links.customerExperience.title",
-        subTitleKey: "solutions.links.customerExperience.description",
+        description: "Collect & analyze reviews",
         href: "/solutions/customer-experience"
     }
 ];

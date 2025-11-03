@@ -2,17 +2,14 @@ import { IconType } from "react-icons";
 
 export type NavLink = {
     title: string;
-    titleKey?: string; // i18n key to resolve title
     href: string;
     icon?: string;
 }
 
 export type SolutionLink = {
+    title: string;
+    description: string;
     logo: string;
-    title: string; // default/fallback label
-    subTitle: string; // default/fallback subtitle
-    titleKey?: string; // i18n key to resolve title
-    subTitleKey?: string; // i18n key to resolve subtitle
     href: string
 }
 
