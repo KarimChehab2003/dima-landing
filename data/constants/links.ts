@@ -154,7 +154,7 @@ export const dimaSolutions: SolutionLink[] = [
 
 
 export const languages: LanguageLink[] = [
-    { locale: "en", label: "English", flag: "/flags/ar.svg" },
+    { locale: "en", label: "English", flag: "/flags/en.svg" },
     { locale: "ar", label: "العربية", flag: "/flags/ar.svg" },
 ];
 
