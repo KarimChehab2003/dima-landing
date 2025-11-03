@@ -1,29 +1,29 @@
 import Image from "next/image";
-import { SolutionLink } from "@/types/link";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { SolutionLink } from "@/types/link";
 
-function SolutionNavLink({ logo, title, subTitle, titleKey, subTitleKey, href, isRTL }: SolutionLink & { isRTL?: boolean }) {
-    const t = useTranslations("Navbar");
-    const resolvedTitle = titleKey ? t(titleKey) : title;
-    const resolvedSubTitle = subTitleKey ? t(subTitleKey) : subTitle;
+function SolutionNavLink({ logo, title, description, href, isRTL }: SolutionLink & { isRTL?: boolean }) {
     return (
         <Link href={href}>
-            <article className={`flex items-center py-2 gap-4 ${isRTL ? 'flex-row-reverse text-right' : 'text-left'}`}>
-                <figure className="min-w-18 min-h-18 relative">
+            <article
+                className={`flex items-center py-2 gap-4 transition-colors hover:text-primary ${isRTL ? "flex-row-reverse text-right" : "text-left"
+                    }`}
+            >
+                <figure className="relative min-w-18 min-h-18 shrink-0">
                     <Image
                         src={logo}
-                        alt={(resolvedTitle || title) + " link"}
+                        alt={`${title} link`}
                         fill
-                        className="object-contain" />
+                        className="object-contain"
+                    />
                 </figure>
+
                 <div className="space-y-1">
-                    <p className="font-semibold hover:underline">{resolvedTitle}</p>
-                    <p className="text-muted-foreground text-xs">{resolvedSubTitle}</p>
+                    <p className="font-semibold hover:underline">{title}</p>
+                    <p className="text-muted-foreground text-xs">{description}</p>
                 </div>
             </article>
         </Link>
-
     );
 }
 

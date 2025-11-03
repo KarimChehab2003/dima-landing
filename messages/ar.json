@@ -3,36 +3,50 @@
     "home": "الرئيسية",
     "solutions": {
       "title": "الحلول",
-      "links": {
-        "consumerInsights": {
-          "title": "رؤى المستهلكين",
-          "description": "افهم جمهورك في كل مكان"
-        },
-        "socialListening": {
-          "title": "رصد وتحليل وسائل التواصل الاجتماعي",
-          "description": "استمع، حلّل وتصرّف"
-        },
-        "prComms": {
+      "links": [
+        {
           "title": "العلاقات العامة والاتصالات",
-          "description": "رصد يومي وتقارير تغطية لجميع عملائك"
+          "description": "مراقبة وتقارير يومية للتغطية الإعلامية",
+          "logo": "/nav-links/pr.svg",
+          "href": "/solutions/pr-and-comms"
         },
-        "ownPageIntelligence": {
-          "title": "تحليل الصفحة الرئيسية",
-          "description": "ارفع تواجدك في وسائل التواصل الاجتماعي"
-        },
-        "marketInsights": {
+        {
           "title": "رؤى السوق",
-          "description": "قياس الاداء ومقارنته"
+          "description": "قياس الأداء والمقارنة مع المنافسين",
+          "logo": "/nav-links/mi.svg",
+          "href": "/solutions/market-insights"
         },
-        "customerExperience": {
+        {
+          "title": "رصد وتحليل وسائل التواصل الاجتماعي",
+          "description": "استمع، حلّل، واتخذ القرار",
+          "logo": "/nav-links/sl.svg",
+          "href": "/solutions/social-listening-analytics"
+        },
+        {
+          "title": "رؤى المستهلكين",
+          "description": "افهم جمهورك في كل مكان",
+          "logo": "/nav-links/ci.svg",
+          "href": "/solutions/consumer-insights"
+        },
+        {
+          "title": "تحليل الصفحة الرئيسية",
+          "description": "ارتقِ بحضورك على وسائل التواصل الاجتماعي",
+          "logo": "/nav-links/oi.svg",
+          "href": "/solutions/own-page-intelligence"
+        },
+        {
+          "title": "التسويق عبر المؤثرين",
+          "description": "اعثر على الشركاء المناسبين لعلامتك التجارية",
+          "logo": "/nav-links/im.svg",
+          "href": "/solutions/influencer-marketing"
+        },
+        {
           "title": "تجربة العملاء",
-          "description": "جمع وتحليل التقييمات"
-        },
-        "influencerMarketing": {
-          "title": "تسويق المؤثرين",
-          "description": "اختر الشركاء المناسبين لعلامتك التجارية ودع عائدك من الاستثمار أكبر"
+          "description": "جمع وتحليل المراجعات لتطوير الأداء",
+          "logo": "/nav-links/ce.svg",
+          "href": "/solutions/customer-experience"
         }
-      }
+      ]
     },
     "resources": {
       "title": "الموارد",

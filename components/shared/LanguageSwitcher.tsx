@@ -24,7 +24,6 @@ import Image from "next/image";
 export default function LanguageSwitcher() {
   const pathname = usePathname();
   const currentLocale = useLocale();
-  console.log(currentLocale);
 
   const [open, setOpen] = useState<boolean>(false);
   const [currentLanguage, setCurrentLanguage] = useState<

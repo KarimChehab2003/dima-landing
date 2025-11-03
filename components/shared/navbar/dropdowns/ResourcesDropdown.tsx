@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 
 function ResourcesDropdown() {
-    const t = useTranslations("Navbar");
+    const t = useTranslations("Navbar.resources.links");
     const locale = useLocale();
     const isRTL = locale === "ar";
     return (
@@ -13,18 +13,18 @@ function ResourcesDropdown() {
             <div className={`flex-1 flex justify-center items-start gap-8 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 {/* Blogs Section */}
                 <div>
-                    <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("resources.links.blogs.title")}</h2>
+                    <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("blogs.title")}</h2>
                     <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     <ul className={`grid grid-cols-1 gap-x-8 gap-y-4 ${isRTL ? 'text-right' : ''}`}>
                         {blogsLinks.map((link) => (
                             <li key={link.href} className={`inline-flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                                 <div className="h-15 w-20 rounded-lg bg-muted"></div>
-                                <Link href={link.href}>{link.titleKey ? t(link.titleKey) : link.title}</Link>
+                                <Link href={link.href}>{link.key ? t(`blogs.${link.key}`) : link.title}</Link>
                             </li>
                         ))}
                     </ul>
                     <Button className="mt-4">
-                        <Link href="/blogs">{t("resources.links.blogs.viewAllBlogs")}</Link>
+                        <Link href="/blogs">{t("blogs.viewAllBlogs")}</Link>
                     </Button>
                 </div>
 
@@ -33,7 +33,7 @@ function ResourcesDropdown() {
 
                 {/* More Resources Section */}
                 <div>
-                    <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("resources.links.moreResources.title")}</h2>
+                    <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("moreResources.title")}</h2>
                     <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     <ul className={`grid grid-cols-1 gap-y-4 gap-x-8 ${isRTL ? 'text-right' : ''}`}>
                         {resourcesLinks.map((link) => (
@@ -44,7 +44,7 @@ function ResourcesDropdown() {
                                     width={20}
                                     height={20}
                                 />
-                                <Link href={link.href}>{link.titleKey ? t(link.titleKey) : link.title}</Link>
+                                <Link href={link.href}>{link.key ? t(`moreResources.${link.key}`) : link.title}</Link>
                             </li>
                         ))}
                     </ul>

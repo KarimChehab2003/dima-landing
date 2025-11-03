@@ -1,13 +1,15 @@
-import { dimaSolutions } from "@/data/constants/links";
 import SolutionNavLink from "../SolutionNavLink";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
+import { SolutionLink } from "@/types/link";
 
 function SolutionsDropdown() {
     const t = useTranslations("Navbar");
     const locale = useLocale();
     const isRTL = locale === "ar";
+    const solutions = t.raw("solutions.links") as SolutionLink[];
+
     return (
         <div className="flex flex-col space-y-4">
             {/* Header */}
@@ -33,14 +35,14 @@ function SolutionsDropdown() {
                         />
                     </figure>
                     <div>
-                        <p className={`font-semibold hover:underline ${isRTL ? 'text-right' : ''}`}>{t("solutions.links.consumerInsights.title")}</p>
-                        <p className={`text-muted-foreground text-xs ${isRTL ? 'text-right' : ''}`}>{t("solutions.links.consumerInsights.description")}</p>
+                        <p className={`font-semibold hover:underline ${isRTL ? 'text-right' : ''}`}>{solutions[3].title}</p>
+                        <p className={`text-muted-foreground text-xs ${isRTL ? 'text-right' : ''}`}>{solutions[3].description}</p>
                     </div>
                 </Link>
 
                 {/* Links list */}
                 <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {dimaSolutions
+                    {solutions
                         .filter((s) => s.href !== "/solutions/consumer-insights")
                         .map((link) => (
                             <li key={link.title}>

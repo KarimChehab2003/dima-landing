@@ -4,6 +4,7 @@ export type NavLink = {
     title: string;
     href: string;
     icon?: string;
+    key?: string;
 }
 
 export type SolutionLink = {

@@ -3,36 +3,50 @@
     "home": "Home",
     "solutions": {
       "title": "Solutions",
-      "links": {
-        "consumerInsights": {
-          "title": "Consumer Insights",
-          "description": "Understand your audience everywhere"
-        },
-        "socialListening": {
-          "title": "Social Listening & Analytics",
-          "description": "Listen, analyze & act"
-        },
-        "prComms": {
+      "links": [
+        {
           "title": "PR & Comms",
-          "description": "Daily monitoring & coverage reports for all your clients"
+          "description": "Daily monitoring & coverage reports",
+          "logo": "/nav-links/pr.svg",
+          "href": "/solutions/pr-and-comms"
         },
-        "ownPageIntelligence": {
-          "title": "Own Page Intelligence",
-          "description": "Elevate your social presence"
-        },
-        "marketInsights": {
+        {
           "title": "Market Insights",
-          "description": "Benchmark performance"
+          "description": "Benchmark performance",
+          "logo": "/nav-links/mi.svg",
+          "href": "/solutions/market-insights"
         },
-        "customerExperience": {
-          "title": "Customer Experience",
-          "description": "Collect & analyze reviews"
+        {
+          "title": "Social Listening & Analytics",
+          "description": "Listen, analyze & act",
+          "logo": "/nav-links/sl.svg",
+          "href": "/solutions/social-listening-analytics"
         },
-        "influencerMarketing": {
+        {
+          "title": "Consumer Insights",
+          "description": "Understand your audience everywhere",
+          "logo": "/nav-links/ci.svg",
+          "href": "/solutions/consumer-insights"
+        },
+        {
+          "title": "Own Page Intelligence",
+          "description": "Elevate your social presence",
+          "logo": "/nav-links/oi.svg",
+          "href": "/solutions/own-page-intelligence"
+        },
+        {
           "title": "Influencer Marketing",
-          "description": "Find the right partners for your brand"
+          "description": "Find the right partners for your brand",
+          "logo": "/nav-links/im.svg",
+          "href": "/solutions/influencer-marketing"
+        },
+        {
+          "title": "Customer Experience",
+          "description": "Collect & analyze reviews",
+          "logo": "/nav-links/ce.svg",
+          "href": "/solutions/customer-experience"
         }
-      }
+      ]
     },
     "resources": {
       "title": "Resources",

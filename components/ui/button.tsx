@@ -26,7 +26,7 @@ const buttonVariants = cva(
           "backdrop-blur-md bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-colors",
       },
       size: {
-        default: "py-4 px-6 xl:p-2 xl:pl-4",
+        default: "py-4 px-6 p-2 pl-4",
         sm: "h-8 rounded-full gap-1.5 px-3 has-[>svg]:px-2.5 text-xs",
         lg: "h-11 rounded-full px-6 has-[>svg]:px-4 text-base",
         xl: "h-14 rounded-full p-8 font-normal tracking-widest has-[>svg]:px-6",

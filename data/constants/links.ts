@@ -28,15 +28,18 @@ export const byCompanyLinks: NavLink[] = [
 export const blogsLinks: NavLink[] = [
     {
         title: "Blog 1",
-        href: "/blogs/blog-1"
+        href: "/blogs/blog-1",
+        key: "blog1"
     },
     {
         title: "Blog 2",
-        href: "/blogs/blog-2"
+        href: "/blogs/blog-2",
+        key: "blog2"
     },
     {
         title: "Blog 3",
-        href: "/blogs/blog-3"
+        href: "/blogs/blog-3",
+        key: "blog3"
     },
 ]
 
@@ -44,12 +47,14 @@ export const resourcesLinks: NavLink[] = [
     {
         title: "Videos",
         href: "/videos",
-        icon: "/camera.svg"
+        icon: "/camera.svg",
+        key: "videos"
     },
     {
         title: "FAQs",
         href: "/faqs",
-        icon: "/qa.svg"
+        icon: "/qa.svg",
+        key: "faqs"
     },
 ]
 
