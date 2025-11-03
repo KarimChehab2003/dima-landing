@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 
-function SolutionCard({ logo, title, subTitle, href }: SolutionLink) {
+function SolutionCard({ logo, title, description, href }: SolutionLink) {
   const locale = useLocale();
   const t = useTranslations("Home.dimaSuite");
   const isRTL = locale === "ar";
@@ -21,7 +21,7 @@ function SolutionCard({ logo, title, subTitle, href }: SolutionLink) {
 
         {/* Heading */}
         <h3 className="text-2xl">{title}</h3>
-        <p className="text-sm">{subTitle}</p>
+        <p className="text-sm">{description}</p>
       </div>
 
       {/* Explore/Coming soon button */}

@@ -82,7 +82,7 @@ export default function HeroCarousel({
                             className="flex justify-center items-center"
                             style={{ transformOrigin: "center center" }}
                         >
-                            <div className="relative w-full h-[320px] sm:h-[400px] md:h-[500px] flex justify-center items-center">
+                            <div className="relative w-full h-80 sm:h-[400px] md:h-[500px] flex justify-center items-center">
                                 <Image
                                     src={slide.image}
                                     alt={slide.title}

@@ -103,37 +103,50 @@
     "ownConversation": {
       "title": "Own Every Conversation",
       "description": "Discover how our suite of AI powered solutions help you see, understand, and act with precision.",
-      "features": {
-        "listenAnalyzeAct": {
+      "features": [
+        {
           "title": "Listen, analyze & act",
-          "description": "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI."
+          "description": "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI.",
+          "icon": "FaLaptop",
+          "image": "/elevating-social-presence.svg"
         },
-        "growYourBrandWithTheRightPartners": {
+        {
           "title": "Grow your brand with the right partners",
-          "description": "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI."
+          "description": "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
+          "icon": "FaChartLine",
+          "image": "/elevating-social-presence.svg"
         },
-        "dailyMonitoringCoverageReportsForAllYourClients": {
+        {
           "title": "Daily monitoring & coverage reports for all your clients",
-          "description": "Stay in control of your brand narrative with proactive monitoring and reporting."
+          "description": "Stay in control of your brand narrative with proactive monitoring and reporting.",
+          "icon": "FaLayerGroup",
+          "image": "/elevating-social-presence.svg"
         },
-        "elevateYourSocialPresence": {
+        {
           "title": "Elevate your social presence",
-          "description": "Turn your owned channels into proof of impact with AI content performance tracking."
+          "description": "Turn your owned channels into proof of impact with AI content performance tracking.",
+          "icon": "FaLayerGroup",
+          "image": "/elevating-social-presence.svg"
         },
-        "benchmarkPerformance": {
+        {
           "title": "Benchmark performance",
-          "description": "Outpace your competitors with insights that accelerate decisions and increases your share of voice"
+          "description": "Outpace your competitors with insights that accelerate decisions and increase your share of voice.",
+          "icon": "PiUserList",
+          "image": "/elevating-social-presence.svg"
         },
-        "understandYourAudienceEverywhere": {
+        {
           "title": "Understand your audience everywhere",
-          "description": "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact."
+          "description": "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact.",
+          "icon": "FaLayerGroup",
+          "image": "/elevating-social-presence.svg"
         },
-        "collectAnalyzeReviews": {
+        {
           "title": "Collect & analyze reviews",
-          "description": "Turn feedback into action to protect loyalty and increase customer satisfaction"
-        },
-        "requestDemo": "Request a demo"
-      }
+          "description": "Turn feedback into action to protect loyalty and increase customer satisfaction.",
+          "icon": "FaLayerGroup",
+          "image": "/elevating-social-presence.svg"
+        }
+      ]
     },
     "dimaAi": {
       "badge": "DIMA AI",
@@ -144,36 +157,50 @@
     "dimaSuite": {
       "title": "Discover dima's suite of AI-powered solutions",
       "cta": "Request a demo",
-      "solutions": {
-        "consumerInsights": {
+      "solutions": [
+        {
           "title": "Consumer Insights",
-          "description": "Understand your audience everywhere"
+          "description": "Understand your audience everywhere",
+          "href": "/solutions/consumer-insights",
+          "logo": "/nav-links/ci.svg"
         },
-        "socialListening": {
+        {
           "title": "Social Listening & Analytics",
-          "description": "Listen, analyze & act"
+          "description": "Listen, analyze & act",
+          "href": "/solutions/social-listening-analytics",
+          "logo": "/nav-links/sl.svg"
         },
-        "prComms": {
+        {
           "title": "PR & Comms",
-          "description": "Daily monitoring & coverage reports for all your clients"
+          "description": "Daily monitoring & coverage reports for all your clients",
+          "href": "/solutions/pr-and-comms",
+          "logo": "/nav-links/pr.svg"
         },
-        "ownPageIntelligence": {
+        {
           "title": "Own Page Intelligence",
-          "description": "Elevate your social presence"
+          "description": "Elevate your social presence",
+          "href": "/solutions/own-page-intelligence",
+          "logo": "/nav-links/oi.svg"
         },
-        "marketInsights": {
+        {
           "title": "Market Insights",
-          "description": "Benchmark performance"
+          "description": "Benchmark performance",
+          "href": "/solutions/market-insights",
+          "logo": "/nav-links/mi.svg"
         },
-        "customerExperience": {
+        {
           "title": "Customer Experience",
-          "description": "Collect & analyze reviews"
+          "description": "Collect & analyze reviews",
+          "href": "/solutions/customer-experience",
+          "logo": "/nav-links/ce.svg"
         },
-        "influencerMarketing": {
+        {
           "title": "Influencer Marketing",
-          "description": "Find the right partners for your brand"
+          "description": "Find the right partners for your brand",
+          "href": "/solutions/influencer-marketing",
+          "logo": "/nav-links/im.svg"
         }
-      },
+      ],
       "explore": "Explore",
       "comingSoon": "Coming Soon"
     },

@@ -103,37 +103,50 @@
     "ownConversation": {
       "title": "تحكّم بكل محادثة تخص علامتك",
       "description": "اكتشف كيف حلولنا المدعومة بالذكاء الاصطناعي تساعدك تشوف الصورة بوضوح، وتفهمها بدقة، وتتصرف بثقة.",
-      "features": {
-        "listenAnalyzeAct": {
-          "title": "استمع وحلل وتصرّف",
-          "description": "وسط زحمة الملايين من الكلام، دع الذكاء الاصطناعي يوصلك للرؤى اللتي تهمك"
+      "features": [
+        {
+          "title": "استمع، حلّل وتصرّف",
+          "description": "تميّز من خلال الضجيج الناتج عن ملايين المحادثات واكتشف الرؤى التي تهمك أكثر بمساعدة الذكاء الاصطناعي.",
+          "icon": "FaLaptop",
+          "image": "/elevating-social-presence.svg"
         },
-        "growYourBrandWithTheRightPartners": {
-          "title": "نمِ علامتك التجارية مع الشركاء المناسبين",
-          "description": "اسنثمر في المبدعين الذين يعززون مدى وصولك، ويحفزون التفاعل الحقيقي، ويحققون عائدا "
+        {
+          "title": "نمِّ علامتك التجارية مع الشركاء المناسبين",
+          "description": "استثمر في المؤثرين الذين يوسّعون مدى وصولك ويحققون تفاعلاً حقيقياً وعائداً قابلاً للقياس.",
+          "icon": "FaChartLine",
+          "image": "/elevating-social-presence.svg"
         },
-        "dailyMonitoringCoverageReportsForAllYourClients": {
-          "title": "تقارير رصد وتغطيه يوميه لجميع عملائك",
-          "description": "خلك دايم متحكم بصورة علامتك بتقارير تحمل هوية علامتك، ومتابعة دقيقة لكل خبر أو منشور"
+        {
+          "title": "رصد يومي وتقارير تغطية لجميع عملائك",
+          "description": "ابقَ على دراية بسرد علامتك التجارية من خلال المراقبة الاستباقية والتقارير الشاملة.",
+          "icon": "FaLayerGroup",
+          "image": "/elevating-social-presence.svg"
         },
-        "elevateYourSocialPresence": {
-          "title": "ارفع حضورك على وسائل التواصل الاجتماعي",
-          "description": "استفد من قنواتك الخاصة لتعزيز تأثيرك عبر رصد أداء المحتوى بواسطة الذكاء الاصطناعي"
+        {
+          "title": "عزّز حضورك على وسائل التواصل",
+          "description": "حوّل قنواتك الخاصة إلى دليل على التأثير من خلال تتبع أداء المحتوى المدعوم بالذكاء الاصطناعي.",
+          "icon": "FaLayerGroup",
+          "image": "/elevating-social-presence.svg"
         },
-        "benchmarkPerformance": {
-          "title": "قياس الاداء ومقارنته",
-          "description": "تفوق على منافسيك برؤى ذكية تسرع قراراتك وتعزز حضور علامتك في السوق "
+        {
+          "title": "قِس الأداء وقارنه",
+          "description": "تفوق على منافسيك بالرؤى التي تسرّع القرارات وتزيد من حصتك في السوق.",
+          "icon": "PiUserList",
+          "image": "/elevating-social-presence.svg"
         },
-        "understandYourAudienceEverywhere": {
-          "title": "فهم شامل لجمهورك في كل مكان",
-          "description": "افهم جمهورك بعمق من خلال ما يحرك اهتماماتهم فعليًا، واستثمر هذه الرؤى لتحقيق نتائج واضحة ومؤثرة."
+        {
+          "title": "افهم جمهورك في كل مكان",
+          "description": "تجاوز الحدود الديموغرافية واكتشف ما يحفّز جمهورك حقًا وحوّل تلك الرؤى إلى تأثير ملموس.",
+          "icon": "FaLayerGroup",
+          "image": "/elevating-social-presence.svg"
         },
-        "collectAnalyzeReviews": {
-          "title": "اجمع وحلّل المراجعات",
-          "description": "حوّل الملاحظات إلى إجراءات لحماية الولاء وزيادة رضا العملاء."
-        },
-        "requestDemo": "احجز تجربتك"
-      }
+        {
+          "title": "اجمع التقييمات وحللها",
+          "description": "حوّل التعليقات إلى قرارات لتعزيز الولاء وزيادة رضا العملاء.",
+          "icon": "FaLayerGroup",
+          "image": "/elevating-social-presence.svg"
+        }
+      ]
     },
     "dimaAi": {
       "badge": "الذكاء الاصطناعي ديما",
@@ -144,36 +157,50 @@
     "dimaSuite": {
       "title": "اكتشف مجموعة الحلول الذكية التي تعزز علامتك التجارية",
       "cta": "احجز تجربتك",
-      "solutions": {
-        "consumerInsights": {
+      "solutions": [
+        {
           "title": "رؤى المستهلكين",
-          "description": "افهم جمهورك في كل مكان"
+          "description": "افهم جمهورك في كل مكان",
+          "href": "/solutions/consumer-insights",
+          "logo": "/nav-links/ci.svg"
         },
-        "socialListening": {
+        {
           "title": "رصد وتحليل وسائل التواصل الاجتماعي",
-          "description": "استمع، حلّل وتصرّف"
+          "description": "استمع، حلّل وتصرّف",
+          "href": "/solutions/social-listening-analytics",
+          "logo": "/nav-links/sl.svg"
         },
-        "prComms": {
+        {
           "title": "العلاقات العامة والاتصالات",
-          "description": "رصد يومي وتقارير تغطية لجميع عملائك"
+          "description": "رصد يومي وتقارير تغطية لجميع عملائك",
+          "href": "/solutions/pr-and-comms",
+          "logo": "/nav-links/pr.svg"
         },
-        "ownPageIntelligence": {
+        {
           "title": "تحليل الصفحة الرئيسية",
-          "description": "ارفع تواجدك في وسائل التواصل الاجتماعي"
+          "description": "ارفع تواجدك في وسائل التواصل الاجتماعي",
+          "href": "/solutions/own-page-intelligence",
+          "logo": "/nav-links/oi.svg"
         },
-        "marketInsights": {
+        {
           "title": "رؤى السوق",
-          "description": "قياس الاداء ومقارنته"
+          "description": "قياس الأداء ومقارنته",
+          "href": "/solutions/market-insights",
+          "logo": "/nav-links/mi.svg"
         },
-        "customerExperience": {
+        {
           "title": "تجربة العملاء",
-          "description": "جمع وتحليل التقييمات"
+          "description": "جمع وتحليل التقييمات",
+          "href": "/solutions/customer-experience",
+          "logo": "/nav-links/ce.svg"
         },
-        "influencerMarketing": {
+        {
           "title": "تسويق المؤثرين",
-          "description": "اختر الشركاء المناسبين لعلامتك التجارية ودع عائدك من الاستثمار أكبر"
+          "description": "اختر الشركاء المناسبين لعلامتك التجارية ودع عائدك من الاستثمار أكبر",
+          "href": "/solutions/influencer-marketing",
+          "logo": "/nav-links/im.svg"
         }
-      },
+      ],
       "explore": "استكشف",
       "comingSoon": "قريباً"
     },

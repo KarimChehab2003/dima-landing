@@ -17,6 +17,8 @@ const slidesImages = [
   "/hero-carousel-item-3.svg",
 ];
 
+// TODO: Refactor this component
+
 export default function HeroSection() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const t = useTranslations("Home.hero");
@@ -41,11 +43,9 @@ export default function HeroSection() {
         className={`container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8`}
       >
         {/* Left Side: Dynamic Text */}
-        <div
-          className="flex-1 space-y-6"
-        >
-          {/* Title typography: mobile 24px, desktop 44px; weight 400 */}
-          <h1 className="text-[24px] lg:text-[44px] font-normal mb-8 ">
+        <div className="flex-1 space-y-6">
+
+          <h1 className="text-2xl lg:text-[44px] mb-8 ">
             {t("titlePrefix")}
             <Typewriter
               options={{
@@ -61,9 +61,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Side: Carousel*/}
-        <div
-          className={`flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] lg:h-[600px] ${isRTL ? "lg:order-1" : "lg:order-2"
-            }`}
+        <div className={`flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] lg:h-[600px] ${isRTL ? "lg:order-1" : "lg:order-2"}`}
           style={{
             backgroundImage: "url('/dima-carousel-background.svg')",
             backgroundSize: "contain",
