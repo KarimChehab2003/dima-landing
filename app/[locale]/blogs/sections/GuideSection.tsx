@@ -3,7 +3,7 @@ import BlogCard from "../components/BlogCard";
 
 function GuideSection() {
     return (
-        <div className="container mx-auto flex flex-col lg:flex-row justify-center items-start gap-8 my-12">
+        <div className="container mx-auto flex flex-col xl:flex-row justify-center items-start gap-8 my-12">
             <ContentSection title="Guides">
                 <ul className="grid grid-cols-1 gap-8">
                     {Array.from({ length: 2 }).map((_, i) => (
