@@ -32,16 +32,16 @@ export default function PinnedScrollSection() {
                         <Image src="/scroll-image-1.svg" width={540} height={340} alt="Step 1" priority />
                     )}
                     {currentStepIndex === 1 && (
-                        <Image src="/scroll-image-2.svg" width={540} height={340} alt="Step 2" />
+                        <Image src="/scroll-image-2.svg" width={540} height={340} alt="Step 2" priority />
                     )}
                     {currentStepIndex === 2 && (
-                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 3" />
+                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 3" priority />
                     )}
                     {currentStepIndex === 3 && (
-                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 4" />
+                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 4" priority />
                     )}
                     {currentStepIndex === 4 && (
-                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 5" />
+                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 5" priority />
                     )}
                 </figure>
             </div>

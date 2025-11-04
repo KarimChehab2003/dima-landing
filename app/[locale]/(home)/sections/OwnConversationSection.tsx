@@ -57,7 +57,7 @@ function OwnConversationSection() {
 
         {/* Scrollable Buttons */}
         <div className="w-full overflow-x-auto py-4">
-          <div className="flex justify-start items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap">
+          <div className="flex justify-center items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap">
             {features.map((feature, idx) => {
               const Icon = iconMap[feature.icon] || FaLayerGroup;
               return (
@@ -95,7 +95,7 @@ function OwnConversationSection() {
           {/* Info + Button */}
           <div
             className={`flex flex-col justify-end text-center w-full xl:max-w-md z-30 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] xl:pl-22 ${isRTL
-              ? "text-right items-end"
+              ? "text-right items-end xl:pr-6"
               : "items-start text-left"
               }`}
           >
@@ -120,7 +120,7 @@ function OwnConversationSection() {
               </motion.div>
             </AnimatePresence>
 
-            <div className="mt-6 w-full flex-1 flex justify-center xl:justify-start">
+            <div className={`mt-6 w-full flex-1 flex justify-center ${isRTL ? "xl:justify-end" : "xl:justify-start"}`}>
               <RequestDemoButton size={"xl"} />
             </div>
           </div>

@@ -35,7 +35,7 @@ export default function TestimonialCarousel({
         slidesToScroll: 1,
         swipe: true,
         autoplay: true,
-        speed: 600,
+        speed: 500,
         dots: false,
         arrows: false,
         adaptiveHeight: true,
