@@ -35,7 +35,7 @@ function RequestDemoPage() {
                             <Input type="text" placeholder="Company" />
                             <Input type="text" placeholder="Country" />
                             <Input type="text" placeholder="Phone Number" />
-                            <RequestDemoButton className="w-full mt-4" size="xl" />
+                            <RequestDemoButton className="w-full mt-4 capitalize" size="xl" />
                         </form>
                     </div>
 

@@ -23,7 +23,7 @@ function ResourcesDropdown() {
                             </li>
                         ))}
                     </ul>
-                    <Button className="mt-4">
+                    <Button className="mt-4" size={"xl"}>
                         <Link href="/blogs">{t("blogs.viewAllBlogs")}</Link>
                     </Button>
                 </div>

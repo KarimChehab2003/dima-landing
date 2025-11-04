@@ -1,9 +1,8 @@
 import ContentSection from "../components/ContentSection";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import BlogCard from "../components/BlogCard";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { ChevronDown, SearchIcon } from "lucide-react";
+import CaseStudyCard from "@/components/shared/CaseStudyCard";
 
 function HeroSection() {
     return (
@@ -34,27 +33,7 @@ function HeroSection() {
             <div className="flex flex-col lg:flex-row gap-8 w-full">
                 {/* Featured Card */}
                 <ContentSection title="Featured Research" className="flex-1 w-full" includeViewAll={false}>
-                    <article className="bg-[#00C7EC]/9 py-4 px-6 rounded-3xl shadow-md">
-                        {/* Image */}
-                        <figure className="flex justify-center items-center">
-                            <Image
-                                src="/featured-research.svg"
-                                alt="featured card"
-                                width={600}
-                                height={300}
-                            />
-                        </figure>
-
-                        {/* Text and Actions */}
-                        <div className="flex flex-col">
-                            <h3 className="text-2xl font-medium my-6 sm:my-8">
-                                How an Agency based in Egypt uses dima to deliver 5x more accurate media coverage for clients
-                            </h3>
-                            <Button size="xl" className="bg-primary! hover:bg-primary/90! w-fit mb-4 text-sm sm:text-base">
-                                Read Full Story
-                            </Button>
-                        </div>
-                    </article>
+                    <CaseStudyCard />
                 </ContentSection>
 
                 {/* Editor's Picks */}
