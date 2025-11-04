@@ -1,6 +1,6 @@
 "use client";
-import { motion, useMotionValue, animate } from "motion/react";
-import React, { useEffect, useState } from "react";
+import { motion, useMotionValue, animate, useInView } from "motion/react";
+import React, { useEffect, useState, useRef } from "react";
 
 type RadialGradientProgressProps = {
     size?: number;
@@ -16,9 +16,7 @@ type RadialGradientProgressProps = {
 };
 
 const formatNumber = (num: number, suffix?: string | React.ReactNode) => {
-    if (suffix === "M") {
-        return `${(num / 1_000_000).toFixed(0)}M`; // e.g., 50M
-    }
+    if (suffix === "M") return `${(num / 1_000_000).toFixed(0)}M`;
     if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1)}M`;
     if (num >= 1_000) return `${(num / 1_000).toFixed(1)}K`;
     return Math.round(num).toString() + "%";
@@ -43,7 +41,12 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
     const number = useMotionValue(0);
     const [displayValue, setDisplayValue] = useState(0);
 
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, { once: true, margin: "-50px" });
+
     useEffect(() => {
+        if (!isInView) return;
+
         const targetOffset = circumference - (progress / maxValue) * circumference;
 
         const offsetAnimation = animate(offset, targetOffset, {
@@ -61,10 +64,11 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
             offsetAnimation.stop();
             numberAnimation.stop();
         };
-    }, [progress, circumference, duration, offset, number, maxValue]);
+    }, [isInView, progress, circumference, duration, offset, number, maxValue]);
 
     return (
         <div
+            ref={ref}
             className="relative flex items-center justify-center"
             style={{ width: size, height: size }}
         >
@@ -76,7 +80,6 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
                     </radialGradient>
                 </defs>
 
-                {/* Track */}
                 <circle
                     cx={size / 2}
                     cy={size / 2}
@@ -86,7 +89,6 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
                     fill="none"
                 />
 
-                {/* Animated Progress */}
                 <motion.circle
                     cx={size / 2}
                     cy={size / 2}
@@ -100,7 +102,6 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
                 />
             </svg>
 
-            {/* Animated Text */}
             <motion.span
                 className="absolute font-bold text-xl inline-flex items-center gap-1"
                 style={{ color: textColor }}

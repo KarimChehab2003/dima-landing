@@ -7,7 +7,7 @@ function TestimonialCard({ quote, name, jobRole, companyLogo }: TestimonialType)
     const isRTL = locale === 'ar';
 
     return (
-        <article className="w-[300px] h-[350px] relative flex flex-col p-6 bg-white rounded-xl shadow-md -mx-4 my-8">
+        <article className="w-[300px] h-[400px] relative flex flex-col p-6 bg-white rounded-xl shadow-md -mx-4 my-8">
             <div className={`flex gap-4 items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <figure className="relative w-6 h-6 shrink-0">
                     <Image
@@ -25,15 +25,16 @@ function TestimonialCard({ quote, name, jobRole, companyLogo }: TestimonialType)
                     <h3 className="font-medium text-base">{name}</h3>
                     <p className="text-muted-foreground text-sm"><bdi>{jobRole}</bdi></p>
                 </div>
-                <figure>
+                <figure className="w-[120px] h-[60px] flex items-center justify-center">
                     <Image
                         src={companyLogo}
                         alt={name}
-                        width={100}
-                        height={50}
-                        className="object-contain mt-4"
+                        width={120}
+                        height={60}
+                        className="object-contain"
                     />
                 </figure>
+
             </div>
         </article>
     );

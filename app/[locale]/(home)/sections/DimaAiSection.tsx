@@ -16,7 +16,7 @@ function DimaAiSection() {
           {/* Text Section */}
           <div className={`flex-1 space-y-6 text-left ${isRTL ? "text-right" : ""}`}>
             <p className="text-sm mb-4 font-bold">{t("badge")}</p>
-            <h2 className="text-[24px] lg:text-[40px] font-normal text-[#95DDEE] leading-tight capitalize">
+            <h2 className="text-[24px] lg:text-[44px] font-normal text-[#95DDEE] leading-tight capitalize">
               {t("title")}
             </h2>
             <p className="text-base sm:text-lg font-medium max-w-2xl leading-relaxed mx-auto lg:mx-0">

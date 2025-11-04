@@ -56,7 +56,7 @@ function OwnConversationSection() {
         </div>
 
         {/* Scrollable Buttons */}
-        <div className="w-full max-w-4xl overflow-x-auto py-4">
+        <div className="w-full overflow-x-auto py-4">
           <div className="flex justify-start items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap">
             {features.map((feature, idx) => {
               const Icon = iconMap[feature.icon] || FaLayerGroup;
@@ -64,8 +64,9 @@ function OwnConversationSection() {
                 <Button
                   key={idx}
                   variant={activeIndex === idx ? "default" : "ghost"}
+                  size={"xl"}
                   onClick={() => setActiveIndex(idx)}
-                  className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0"
+                  className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0 tracking-normal"
                 >
                   <Icon size={16} />
                   <span>{feature.title}</span>
@@ -93,7 +94,7 @@ function OwnConversationSection() {
 
           {/* Info + Button */}
           <div
-            className={`flex flex-col justify-end text-center w-full xl:max-w-md z-30 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] xl:pl-34 ${isRTL
+            className={`flex flex-col justify-end text-center w-full xl:max-w-md z-30 h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] xl:pl-22 ${isRTL
               ? "text-right items-end"
               : "items-start text-left"
               }`}

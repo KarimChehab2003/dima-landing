@@ -37,7 +37,7 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            className="bg-white fixed top-[90px] left-0 p-8 w-full border-t shadow-xl"
+                            className="bg-white fixed top-[90px] left-0 p-8 w-full border-t shadow-xl rounded-2xl"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             initial={{

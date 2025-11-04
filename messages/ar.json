@@ -290,7 +290,7 @@
         },
         "phoneNumber": {
           "title": "رقم الهاتف",
-          "placeholder": "أضف رمز البلد هنا"
+          "placeholder": "+966"
         },
         "companyName": {
           "title": "اسم الشركة",

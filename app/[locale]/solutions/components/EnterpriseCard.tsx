@@ -6,7 +6,7 @@ function EntrepriseCard({ icon, title, description }: EnterpriseType) {
         <article className="flex flex-col justify-center items-center bg-[#95DDEE]/50 p-8 rounded-xl min-h-[332px]">
             <div className="flex-1 flex items-baseline flex-col gap-8">
                 {/* Icon */}
-                <figure className="relative w-12 h-12 bg-[#2B558C] rounded-full">
+                <figure className="relative w-8 h-8 bg-[#2B558C] rounded-full">
                     <Image
                         src={icon}
                         alt="icon"
@@ -16,7 +16,7 @@ function EntrepriseCard({ icon, title, description }: EnterpriseType) {
                 </figure>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold">{title}</h3>
+                <h3 className="text-2xl font-bold">{title}</h3>
 
                 {/* Description */}
                 <p>{description}</p>

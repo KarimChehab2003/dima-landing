@@ -33,7 +33,7 @@ function RequestDemoButton({
           width={30}
           height={30}
         />
-        <span className="uppercase">{t("cta")}</span>
+        <span className="tracking-wide">{t("cta")}</span>
       </Button>
     </Link>
   );

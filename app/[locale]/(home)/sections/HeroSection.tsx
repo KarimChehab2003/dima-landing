@@ -45,7 +45,7 @@ export default function HeroSection() {
         {/* Left Side: Dynamic Text */}
         <div className="flex-1 space-y-6">
 
-          <h1 className="text-2xl lg:text-[44px] mb-8 ">
+          <h1 className="text-2xl lg:text-[44px] mb-8 min-h-32 lg:min-h-60 xl:min-h-auto">
             {t("titlePrefix")}
             <Typewriter
               options={{

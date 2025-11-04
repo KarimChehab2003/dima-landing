@@ -155,7 +155,7 @@
       "cta": "Request a demo"
     },
     "dimaSuite": {
-      "title": "Discover dima's suite of AI-powered solutions",
+      "title": "Discover dima's Suite Of AI-powered solutions",
       "cta": "Request a demo",
       "solutions": [
         {
@@ -271,7 +271,7 @@
         },
         "phoneNumber": {
           "title": "Phone Number",
-          "placeholder": "Add here country code"
+          "placeholder": "+966"
         },
         "companyName": {
           "title": "Company Name",

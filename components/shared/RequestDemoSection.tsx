@@ -12,7 +12,7 @@ function RequestDemoSection() {
     <SectionWrapper>
       <div className="container mx-auto max-w-7xl flex flex-col gap-8">
         {/* Heading */}
-        <h2 className="text-[24px] lg:text-[44px] font-normal text-center">
+        <h2 className="text-[24px] lg:text-[44px] font-normal text-center capitalize">
           {t("title")}
         </h2>
 
