@@ -30,7 +30,7 @@ function DimaAiSection() {
             className={`relative w-full lg:flex-1 h-[220px] sm:h-[300px] lg:h-[500px]`}
           >
             <Image
-              src="/dima-phone.svg"
+              src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2Fdima-phone.svg?alt=media&token=1e69d363-9700-4b5f-8226-228f82c5c0a6"
               alt="stats"
               fill
               className="object-contain"

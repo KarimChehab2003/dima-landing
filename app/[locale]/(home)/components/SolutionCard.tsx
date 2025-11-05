@@ -16,7 +16,7 @@ function SolutionCard({ logo, href, translationKey }: SolutionLink) {
       <div className={`flex flex-col gap-3 w-full ${isRTL ? "items-end" : "items-start"}`}>
         {/* Logo */}
         <figure className="relative min-w-16 min-h-16">
-          <Image src={logo} alt={translationKey} fill className="object-contain" />
+          <Image src={logo} alt={translationKey} fill className="object-contain max-h-16" />
         </figure>
 
         {/* Heading */}
