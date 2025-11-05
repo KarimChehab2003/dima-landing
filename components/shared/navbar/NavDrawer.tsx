@@ -27,10 +27,6 @@ function NavDrawer() {
     const locale = useLocale();
     const isRTL = locale === "ar";
 
-    // Get translation data similar to ResourcesDropdown
-
-
-
     return (
         <Drawer direction="right" open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger asChild>
@@ -46,7 +42,7 @@ function NavDrawer() {
                         <Link
                             href="/"
                             onClick={() => setIsOpen(false)}
-                            className="block text-base font-medium hover:text-sky-500 transition"
+                            className="block text-base font-medium hover:text-primary transition"
                         >
                             {t("home")}
                         </Link>
@@ -80,7 +76,7 @@ function NavDrawer() {
                                                 <Link
                                                     href={link.href}
                                                     onClick={() => setIsOpen(false)}
-                                                    className={`block text-sm text-muted-foreground hover:text-sky-500 transition ${isRTL ? "text-right" : "text-left"
+                                                    className={`block text-sm text-muted-foreground hover:text-primary transition ${isRTL ? "text-right" : "text-left"
                                                         }`}
                                                 >
                                                     {t(`resources.links.blogs.blog${i + 1}`)}
@@ -105,7 +101,7 @@ function NavDrawer() {
                                                 <Link
                                                     href={link.href}
                                                     onClick={() => setIsOpen(false)}
-                                                    className={`flex items-center gap-2 text-sm text-muted-foreground hover:text-sky-500 transition ${isRTL ? "text-right" : "text-left"
+                                                    className={`flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition ${isRTL ? "text-right" : "text-left"
                                                         }`}
                                                 >
                                                     {link.icon && (
@@ -129,7 +125,7 @@ function NavDrawer() {
                         <Link
                             href="/case-studies"
                             onClick={() => setIsOpen(false)}
-                            className="block text-base font-medium hover:text-sky-500 transition"
+                            className="block text-base font-medium hover:text-primary transition"
                         >
                             {t("caseStudies")}
                         </Link>

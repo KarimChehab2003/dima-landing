@@ -53,7 +53,7 @@ function ResourcesDropdown() {
 
             <figure className="flex-1 flex justify-center items-center">
                 <Image
-                    src="/analyze-data.png"
+                    src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Navbar%2Fanalyze-data.png?alt=media&token=27c4ab47-2856-47f7-8524-5043f35a5363"
                     alt="moon image"
                     width={331}
                     height={331}

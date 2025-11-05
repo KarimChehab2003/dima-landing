@@ -11,16 +11,15 @@ function SolutionNavLink({ logo, href, translationKey, isRTL }: SolutionLink & {
                 className={`flex items-center py-2 gap-4 transition-colors hover:text-primary ${isRTL ? "lg:flex-row-reverse" : "flex-row"
                     }`}
             >
-                <figure className="flex justify-center items-center h-[65px] w-auto shrink-0">
+                <figure className="flex justify-center items-center h-[45px] sm:h-[55px] lg:h-[65px] w-auto shrink-0">
                     <Image
                         src={logo}
                         alt={`${translationKey} logo`}
                         width={80}
                         height={60}
-                        className="object-contain max-h-[65px]"
+                        className="object-contain max-h-[45px] sm:max-h-[55px] lg:max-h-[65px]"
                     />
                 </figure>
-
 
                 <div className="space-y-1">
                     <p className="font-semibold hover:underline">{t(`${translationKey}.title`)}</p>

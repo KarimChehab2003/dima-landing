@@ -41,7 +41,7 @@ function SolutionsDropdown() {
                 {/* Links list */}
                 <ul className="max-w-4xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     {dimaSolutions
-                        .filter((s) => s.href !== "/solutions/consumer-insights")
+                        .filter((s) => s.translationKey !== "consumerInsights")
                         .map((link) => (
                             <li key={link.href} className="w-full">
                                 <SolutionNavLink {...link} isRTL={isRTL} />
