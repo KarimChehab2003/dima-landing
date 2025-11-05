@@ -287,27 +287,27 @@ export const layeredCardsData: LayeredCardType[] = [
 
 export const heroSlides: HeroSlide[] = [
     {
-        image: "/hero-carousel-item-1.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-1.svg?alt=media&token=720d043c-71ab-4cb2-9444-7dc32f1a6f59",
         translationKey: "slides.socialListening",
     },
     {
-        image: "/hero-carousel-item-2.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-2.svg?alt=media&token=7a3ec98e-fcd3-4add-a39e-1dc46797e450",
         translationKey: "slides.influencerTracking",
     },
     {
-        image: "/hero-carousel-item-3.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
         translationKey: "slides.sentimentInsights",
     },
     {
-        image: "/hero-carousel-item-3.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
         translationKey: "slides.competitorBenchmarking",
     },
     {
-        image: "/hero-carousel-item-3.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
         translationKey: "slides.discoverCreators",
     },
     {
-        image: "/hero-carousel-item-3.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
         translationKey: "slides.campaignRoi",
     },
 ];
