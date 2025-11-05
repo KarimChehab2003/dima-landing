@@ -16,10 +16,10 @@ function ResourcesDropdown() {
                     <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("blogs.title")}</h2>
                     <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     <ul className={`grid grid-cols-1 gap-x-8 gap-y-4 ${isRTL ? 'text-right' : ''}`}>
-                        {blogsLinks.map((link) => (
+                        {blogsLinks.map((link, i) => (
                             <li key={link.href} className={`inline-flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                                 <div className="h-15 w-20 rounded-lg bg-muted"></div>
-                                <Link href={link.href}>{link.key ? t(`blogs.${link.key}`) : link.title}</Link>
+                                <Link href={link.href}>{t(`blogs.blog${i + 1}`)}</Link>
                             </li>
                         ))}
                     </ul>
@@ -44,7 +44,7 @@ function ResourcesDropdown() {
                                     width={20}
                                     height={20}
                                 />
-                                <Link href={link.href}>{link.key ? t(`moreResources.${link.key}`) : link.title}</Link>
+                                <Link href={link.href}>{t(`moreResources.${link.translationKey}`)}</Link>
                             </li>
                         ))}
                     </ul>

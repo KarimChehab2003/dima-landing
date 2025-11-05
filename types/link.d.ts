@@ -4,7 +4,7 @@ export type NavLink = {
     title: string;
     href: string;
     icon?: string;
-    key?: string;
+    translationKey: string;
 }
 
 export type SolutionLink = {
@@ -12,6 +12,7 @@ export type SolutionLink = {
     description: string;
     logo: string;
     href: string
+    translationKey: string;
 }
 
 export type SocialMediaLink = {

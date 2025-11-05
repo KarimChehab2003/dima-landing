@@ -20,7 +20,6 @@ import SolutionNavLink from "./SolutionNavLink";
 import Image from "next/image";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useLocale, useTranslations } from "next-intl";
-import { SolutionLink } from "@/types/link";
 
 function NavDrawer() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -29,8 +28,8 @@ function NavDrawer() {
     const isRTL = locale === "ar";
 
     // Get translation data similar to ResourcesDropdown
-    const features = t.raw("resources.links");
-    const solutions = t.raw("solutions.links") as SolutionLink[];
+
+
 
     return (
         <Drawer direction="right" open={isOpen} onOpenChange={setIsOpen}>
@@ -58,7 +57,7 @@ function NavDrawer() {
                                 <AccordionTrigger>{t("solutions.title")}</AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="space-y-2 pl-3">
-                                        {solutions.map((link) => (
+                                        {dimaSolutions.map((link) => (
                                             <li key={link.title} onClick={() => setIsOpen(false)}>
                                                 <SolutionNavLink {...link} isRTL={isRTL} />
                                             </li>
@@ -72,11 +71,11 @@ function NavDrawer() {
                         <Accordion type="single" collapsible>
                             <AccordionItem value="blogs">
                                 <AccordionTrigger>
-                                    {features.blogs.title}
+                                    {t("resources.links.blogs.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="space-y-4 p-3">
-                                        {blogsLinks.map((link) => (
+                                        {blogsLinks.map((link, i) => (
                                             <li key={link.href}>
                                                 <Link
                                                     href={link.href}
@@ -84,9 +83,7 @@ function NavDrawer() {
                                                     className={`block text-sm text-muted-foreground hover:text-sky-500 transition ${isRTL ? "text-right" : "text-left"
                                                         }`}
                                                 >
-                                                    {link.key
-                                                        ? features.blogs[link.key]
-                                                        : link.title}
+                                                    {t(`resources.links.blogs.blog${i + 1}`)}
                                                 </Link>
                                             </li>
                                         ))}
@@ -99,7 +96,7 @@ function NavDrawer() {
                         <Accordion type="single" collapsible>
                             <AccordionItem value="resources">
                                 <AccordionTrigger>
-                                    {features.moreResources.title}
+                                    {t("resources.links.moreResources.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="space-y-4 p-3">
@@ -119,9 +116,7 @@ function NavDrawer() {
                                                             height={18}
                                                         />
                                                     )}
-                                                    {link.key
-                                                        ? features.moreResources[link.key]
-                                                        : link.title}
+                                                    {t(`resources.links.moreResources.${link.translationKey}`)}
                                                 </Link>
                                             </li>
                                         ))}
