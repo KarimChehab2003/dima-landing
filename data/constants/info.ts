@@ -1,4 +1,4 @@
-import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, EnterpriseType, QuestionAccordion, TestimonialType } from "@/types/info";
+import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, EnterpriseType, LayeredCardType, QuestionAccordion, SideInfoType, TestimonialType } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
@@ -225,4 +225,49 @@ export const enterpriseFeaturesCards: EnterpriseType[] = [
         title: "Capture Historical Data",
         description: "dima provides full historical coverage to see the full picture."
     },
-] 
+]
+
+export const sideInfoCards: SideInfoType[] = [
+    {
+        icon: "/case-study-icons/challenge-icon.svg",
+        title: "Challenge:",
+        description: "Challenge text goes here"
+    },
+    {
+        icon: "/case-study-icons/solution-icon.svg",
+        title: "Solution:",
+        description: "Implementing dima into workflows for early crisis prediction, 24/7 regional media coverage across channels, and seamless automated reporting."
+    },
+    {
+        icon: "/case-study-icons/result-icon.svg",
+        title: "Result:",
+        description: "Agency scaled to handle 5x more clients, achieved 100% daily coverage accuracy, and detected crises within minutes instead of days"
+    },
+]
+
+export const layeredCardsData: LayeredCardType[] = [
+    {
+        text: "More clients handled",
+        bgColor: "bg-primary",
+        suffix: "x",
+        suffixColor: "text-primary",
+        value: 5,
+        rotation: "-rotate-10",
+    },
+    {
+        text: "Increase in time to action",
+        bgColor: "bg-blue-700",
+        suffix: "%",
+        suffixColor: "text-blue-700",
+        value: 90,
+        rotation: "rotate-10",
+    },
+    {
+        text: "Daily Coverage accuracy",
+        bgColor: "bg-purple-700",
+        suffix: "%",
+        suffixColor: "text-purple-700",
+        value: 100,
+        rotation: "-rotate-12",
+    },
+];

@@ -5,7 +5,7 @@ function FilterSection() {
     return (
         <div className="container mx-auto flex flex-col justify-center items-center gap-8 my-12">
             {/* Scrollable Button Row */}
-            <div className="w-full overflow-x-auto flex justify-center py-4">
+            <div className="w-full overflow-x-auto lg:flex lg:justify-center py-4">
                 <ul className="flex items-center gap-4 w-max px-4">
                     {["all", "customer success stories", "use cases"].map((text, i) => (
                         <li key={i} className="shrink-0">

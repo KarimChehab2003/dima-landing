@@ -45,3 +45,18 @@ export type EnterpriseType = {
     title: string;
     description: string;
 }
+
+export type SideInfoType = {
+    icon: string;
+    title: string;
+    description: string;
+}
+
+export type LayeredCardType = {
+    text: string;
+    bgColor: string;
+    suffix: string;
+    suffixColor: string;
+    value: number;
+    rotation: string;
+}
