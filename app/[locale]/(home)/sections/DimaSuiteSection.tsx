@@ -2,12 +2,10 @@ import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import SolutionCard from "../components/SolutionCard";
 import RequestDemoButton from "../components/RequestDemoButton";
 import { useTranslations } from "next-intl";
-import { SolutionLink } from "@/types/link";
+import { dimaSolutions } from "@/data/constants/links";
 
 function DimaSuiteSection() {
     const t = useTranslations("Home.dimaSuite");
-    const solutions = t.raw("solutions") as SolutionLink[];
-
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center gap-12">
@@ -17,7 +15,7 @@ function DimaSuiteSection() {
                 <RequestDemoButton size="xl" />
 
                 <ul className="flex flex-wrap justify-center gap-12">
-                    {solutions.map((solution) => (
+                    {dimaSolutions.map((solution) => (
                         <li key={solution.href} className="w-[275px]">
                             <SolutionCard
                                 {...solution}

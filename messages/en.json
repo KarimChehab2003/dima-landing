@@ -129,50 +129,36 @@
     "dimaSuite": {
       "title": "Discover dima's Suite Of AI-powered solutions",
       "cta": "Request a demo",
-      "solutions": [
-        {
-          "title": "Consumer Insights",
-          "description": "Understand your audience everywhere",
-          "href": "/solutions/consumer-insights",
-          "logo": "/nav-links/ci.svg"
-        },
-        {
-          "title": "Social Listening & Analytics",
-          "description": "Listen, analyze & act",
-          "href": "/solutions/social-listening-analytics",
-          "logo": "/nav-links/sl.svg"
-        },
-        {
+      "solutions": {
+        "prComms": {
           "title": "PR & Comms",
-          "description": "Daily monitoring & coverage reports for all your clients",
-          "href": "/solutions/pr-and-comms",
-          "logo": "/nav-links/pr.svg"
+          "description": "Daily monitoring & coverage reports"
         },
-        {
-          "title": "Own Page Intelligence",
-          "description": "Elevate your social presence",
-          "href": "/solutions/own-page-intelligence",
-          "logo": "/nav-links/oi.svg"
-        },
-        {
+        "marketInsights": {
           "title": "Market Insights",
-          "description": "Benchmark performance",
-          "href": "/solutions/market-insights",
-          "logo": "/nav-links/mi.svg"
+          "description": "Benchmark performance"
         },
-        {
-          "title": "Customer Experience",
-          "description": "Collect & analyze reviews",
-          "href": "/solutions/customer-experience",
-          "logo": "/nav-links/ce.svg"
+        "socialListening": {
+          "title": "Social Listening & Analytics",
+          "description": "Listen, analyze & act"
         },
-        {
+        "consumerInsights": {
+          "title": "Consumer Insights",
+          "description": "Understand your audience everywhere"
+        },
+        "ownIntelligence": {
+          "title": "Own Page Intelligence",
+          "description": "Elevate your social presence"
+        },
+        "influencerMarketing": {
           "title": "Influencer Marketing",
-          "description": "Find the right partners for your brand",
-          "href": "/solutions/influencer-marketing",
-          "logo": "/nav-links/im.svg"
+          "description": "Find the right partners for your brand"
+        },
+        "customerExperience": {
+          "title": "Customer Experience",
+          "description": "Collect & analyze reviews"
         }
-      ],
+      },
       "explore": "Explore",
       "comingSoon": "Coming Soon"
     },

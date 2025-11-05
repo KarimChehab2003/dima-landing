@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 
-function SolutionCard({ logo, title, description, href }: SolutionLink) {
+function SolutionCard({ logo, href, translationKey }: SolutionLink) {
   const locale = useLocale();
   const t = useTranslations("Home.dimaSuite");
   const isRTL = locale === "ar";
@@ -16,12 +16,12 @@ function SolutionCard({ logo, title, description, href }: SolutionLink) {
       <div className={`flex flex-col gap-3 w-full ${isRTL ? "items-end" : "items-start"}`}>
         {/* Logo */}
         <figure className="relative min-w-16 min-h-16">
-          <Image src={logo} alt={title} fill className="object-contain" />
+          <Image src={logo} alt={translationKey} fill className="object-contain" />
         </figure>
 
         {/* Heading */}
-        <h3 className="text-2xl">{title}</h3>
-        <p className="text-sm">{description}</p>
+        <h3 className="text-2xl">{t(`solutions.${translationKey}.title`)}</h3>
+        <p className="text-sm">{t(`solutions.${translationKey}.description`)}</p>
       </div>
 
       {/* Explore/Coming soon button */}
