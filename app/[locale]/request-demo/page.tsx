@@ -1,6 +1,6 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { Input } from "@/components/ui/input";
-import RequestDemoButton from "../(home)/components/RequestDemoButton";
+import RequestDemoButton from "../../../components/shared/RequestDemoButton";
 import Image from "next/image";
 
 function RequestDemoPage() {

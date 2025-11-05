@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 import { useTranslations, useLocale } from "next-intl";
-import RequestDemoButton from "../components/RequestDemoButton";
+import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 import { ownConversationInfo } from "@/data/constants/info";
 
 const textVariants = {

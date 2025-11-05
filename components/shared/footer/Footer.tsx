@@ -4,7 +4,7 @@ import SocialMediaLinks from "./SocialMediaLinks";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import RequestDemoButton from "@/app/[locale]/(home)/components/RequestDemoButton";
+import RequestDemoButton from "@/components/shared/RequestDemoButton";
 import { NavLink, SolutionLink } from "@/types/link";
 import { dimaSolutions, footerResourcesLinks } from "@/data/constants/links";
 

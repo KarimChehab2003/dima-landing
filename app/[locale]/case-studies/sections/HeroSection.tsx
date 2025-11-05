@@ -1,5 +1,5 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
-import RequestDemoButton from "../../(home)/components/RequestDemoButton";
+import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 import { Button } from "@/components/ui/button";
 import CaseStudyCard from "@/components/shared/CaseStudyCard";
 

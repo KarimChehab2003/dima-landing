@@ -1,4 +1,4 @@
-import RequestDemoButton from "../../(home)/components/RequestDemoButton";
+import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 
 function DimaSection() {
     return (

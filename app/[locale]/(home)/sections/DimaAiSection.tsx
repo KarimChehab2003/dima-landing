@@ -1,7 +1,7 @@
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import RequestDemoButton from "../components/RequestDemoButton";
+import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 
 function DimaAiSection() {
   const t = useTranslations("Home.dimaAi");
