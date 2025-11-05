@@ -32,43 +32,50 @@ export const ownConversationInfo: ConversationInfo[] = [
         title: "Listen, analyze & act",
         subTitle: "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI.",
         icon: FaLaptop,
-        image: "/elevating-social-presence.svg"
+        image: "/elevating-social-presence.svg",
+        translationKey: "listen"
     },
     {
         title: "Grow your brand with the right partners",
         subTitle: "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
         icon: FaChartLine,
-        image: "/elevating-social-presence.svg"
+        image: "/elevating-social-presence.svg",
+        translationKey: "grow"
     },
     {
         title: "Daily monitoring & coverage reports for all your clients",
         subTitle: "Stay in control of your brand narrative with proactive monitoring and reporting.",
         icon: FaLayerGroup,
-        image: "/elevating-social-presence.svg"
+        image: "/elevating-social-presence.svg",
+        translationKey: "daily"
     },
     {
         title: "Elevate your social presence",
         subTitle: "Turn your owned channels into proof of impact with AI content performance tracking.",
         icon: FaLayerGroup,
-        image: "/elevating-social-presence.svg"
+        image: "/elevating-social-presence.svg",
+        translationKey: "elevate"
     },
     {
         title: "Benchmark performance",
         subTitle: "Outpace your competitors with insights that accelerate decisions and increases your share of voice",
         icon: PiUserList,
-        image: "/elevating-social-presence.svg"
+        image: "/elevating-social-presence.svg",
+        translationKey: "benchmark"
     },
     {
         title: "Understand your audience everywhere",
         subTitle: "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact.",
         icon: FaLayerGroup,
-        image: "/elevating-social-presence.svg"
+        image: "/elevating-social-presence.svg",
+        translationKey: "understand"
     },
     {
         title: "Collect & analyze reviews",
         subTitle: "Turn feedback into action to protect loyalty and increase customer satisfaction",
         icon: FaLayerGroup,
-        image: "/elevating-social-presence.svg"
+        image: "/elevating-social-presence.svg",
+        translationKey: "collect"
     },
 ]
 

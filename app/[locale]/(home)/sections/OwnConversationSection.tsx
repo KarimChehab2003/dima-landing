@@ -6,19 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 import { useTranslations, useLocale } from "next-intl";
 import RequestDemoButton from "../components/RequestDemoButton";
-import {
-  FaLaptop,
-  FaChartLine,
-  FaLayerGroup,
-} from "react-icons/fa";
-import { PiUserList } from "react-icons/pi";
-
-const iconMap: Record<string, React.ComponentType<{ size?: number }>> = {
-  FaLaptop,
-  FaChartLine,
-  FaLayerGroup,
-  PiUserList,
-};
+import { ownConversationInfo } from "@/data/constants/info";
 
 const textVariants = {
   hidden: { opacity: 0, x: 20 },
@@ -31,16 +19,8 @@ function OwnConversationSection() {
   const locale = useLocale();
   const isRTL = locale === "ar";
 
-  // Fetch all localized features as array
-  const features = t.raw("features") as {
-    title: string;
-    description: string;
-    icon: string;
-    image: string;
-  }[];
-
   const [activeIndex, setActiveIndex] = useState<number>(4);
-  const activeFeature = features[activeIndex];
+  const activeFeature = ownConversationInfo[activeIndex];
 
   return (
     <SectionWrapper>
@@ -58,21 +38,19 @@ function OwnConversationSection() {
         {/* Scrollable Buttons */}
         <div className="w-full overflow-x-auto py-4">
           <div className="flex justify-center items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap">
-            {features.map((feature, idx) => {
-              const Icon = iconMap[feature.icon] || FaLayerGroup;
-              return (
+            {
+              ownConversationInfo.map((feature, idx) => (
                 <Button
-                  key={idx}
+                  key={feature.translationKey}
                   variant={activeIndex === idx ? "default" : "ghost"}
                   size={"xl"}
                   onClick={() => setActiveIndex(idx)}
                   className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0 tracking-normal"
                 >
-                  <Icon size={16} />
-                  <span>{feature.title}</span>
+                  <feature.icon size={16} />
+                  <span>{t(`features.${feature.translationKey}.title`)}</span>
                 </Button>
-              );
-            })}
+              ))}
           </div>
         </div>
 
@@ -85,7 +63,7 @@ function OwnConversationSection() {
           <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-b xl:bg-none from-primary via-[#5FC9E7] to-[#AEEBFF] rounded-2xl">
             <Image
               src={activeFeature.image}
-              alt={activeFeature.title}
+              alt={activeFeature.translationKey + " icon"}
               fill
               className="object-contain z-10 p-6"
               priority
@@ -101,7 +79,7 @@ function OwnConversationSection() {
           >
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeFeature.title}
+                key={activeFeature.translationKey}
                 variants={textVariants}
                 exit="exit"
                 initial="hidden"
@@ -112,10 +90,10 @@ function OwnConversationSection() {
                   }`}
               >
                 <h3 className="text-2xl font-semibold my-4 sm:mb-6">
-                  {activeFeature.title}
+                  {t(`features.${activeFeature.translationKey}.title`)}
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-                  {activeFeature.description}
+                  {t(`features.${activeFeature.translationKey}.description`)}
                 </p>
               </motion.div>
             </AnimatePresence>

@@ -19,6 +19,7 @@ export type ConversationInfo = {
     subTitle: string;
     icon: IconType;
     image: string;
+    translationKey: string;
 }
 
 export type CaseStudyInfo = {
