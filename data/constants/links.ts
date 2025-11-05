@@ -59,55 +59,19 @@ export const resourcesLinks: NavLink[] = [
 export const footerResourcesLinks: NavLink[] = [
     {
         title: "Case Studies",
-        href: "/case-studies"
+        href: "/case-studies",
+        translationKey: "caseStudies"
     },
     {
         title: "Blogs",
-        href: "/blogs"
+        href: "/blogs",
+        translationKey: "blogs"
     },
     {
         title: "FAQs",
-        href: "/faqs"
+        href: "/faqs",
+        translationKey: "faqs"
     },
-]
-
-export const footerLinks: NavLink[] = [
-    {
-        title: "Home",
-        href: "/"
-    },
-
-    {
-        title: "About",
-        href: "/about-us"
-    },
-    {
-        title: "Blogs",
-        href: "/blogs"
-    },
-    {
-        title: "Resources",
-        href: "/resources"
-    },
-    {
-        title: "FAQs",
-        href: "/faqs"
-    },
-]
-
-export const socialMediaLinks: SocialMediaLink[] = [
-    // {
-    //     href: "#twitter",
-    //     icon: FaXTwitter
-    // },
-    // {
-    //     href: "#instagram",
-    //     icon: FaInstagram
-    // },
-    {
-        href: "https://www.linkedin.com/company/darwinz-ai",
-        icon: FaLinkedin
-    }
 ]
 
 export const dimaSolutions: SolutionLink[] = [
@@ -162,6 +126,20 @@ export const dimaSolutions: SolutionLink[] = [
     }
 ];
 
+export const socialMediaLinks: SocialMediaLink[] = [
+    // {
+    //     href: "#twitter",
+    //     icon: FaXTwitter
+    // },
+    // {
+    //     href: "#instagram",
+    //     icon: FaInstagram
+    // },
+    {
+        href: "https://www.linkedin.com/company/darwinz-ai",
+        icon: FaLinkedin
+    }
+]
 
 export const languages: LanguageLink[] = [
     { locale: "en", label: "English", flag: "/flags/en.svg" },

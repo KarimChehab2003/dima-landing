@@ -293,67 +293,50 @@
     },
     "solutions": {
       "title": "Solutions",
-      "links": [
-        {
+      "links": {
+        "prComms": {
           "title": "PR & Comms",
-          "description": "Daily monitoring & coverage reports",
-          "logo": "/nav-links/pr.svg",
-          "href": "/solutions/pr-and-comms"
+          "description": "Daily monitoring & coverage reports"
         },
-        {
+        "marketInsights": {
           "title": "Market Insights",
-          "description": "Benchmark performance",
-          "logo": "/nav-links/mi.svg",
-          "href": "/solutions/market-insights"
+          "description": "Benchmark performance"
         },
-        {
+        "socialListening": {
           "title": "Social Listening & Analytics",
-          "description": "Listen, analyze & act",
-          "logo": "/nav-links/sl.svg",
-          "href": "/solutions/social-listening-analytics"
+          "description": "Listen, analyze & act"
         },
-        {
+        "consumerInsights": {
           "title": "Consumer Insights",
-          "description": "Understand your audience everywhere",
-          "logo": "/nav-links/ci.svg",
-          "href": "/solutions/consumer-insights"
+          "description": "Understand your audience everywhere"
         },
-        {
+        "ownIntelligence": {
           "title": "Own Page Intelligence",
-          "description": "Elevate your social presence",
-          "logo": "/nav-links/oi.svg",
-          "href": "/solutions/own-page-intelligence"
+          "description": "Elevate your social presence"
         },
-        {
+        "influencerMarketing": {
           "title": "Influencer Marketing",
-          "description": "Find the right partners for your brand",
-          "logo": "/nav-links/im.svg",
-          "href": "/solutions/influencer-marketing"
+          "description": "Find the right partners for your brand"
         },
-        {
+        "customerExperience": {
           "title": "Customer Experience",
-          "description": "Collect & analyze reviews",
-          "logo": "/nav-links/ce.svg",
-          "href": "/solutions/customer-experience"
+          "description": "Collect & analyze reviews"
         }
-      ]
+      }
     },
     "resources": {
       "title": "Resources",
-      "links": [
-        {
-          "title": "Case Studies",
-          "href": "/case-studies"
+      "links": {
+        "caseStudies": {
+          "title": "Case Studies"
         },
-        {
-          "title": "Blogs",
-          "href": "/blogs"
+        "blogs": {
+          "title": "Blogs"
         },
-        {
-          "title": "FAQs",
-          "href": "/faqs"
+        "faqs": {
+          "title": "FAQs"
         }
-      ]
+      }
     },
     "getInTouch": {
       "title": "Get In Touch",

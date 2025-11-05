@@ -6,13 +6,14 @@ import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import RequestDemoButton from "@/app/[locale]/(home)/components/RequestDemoButton";
 import { NavLink, SolutionLink } from "@/types/link";
+import { dimaSolutions, footerResourcesLinks } from "@/data/constants/links";
 
 function Footer() {
   const t = useTranslations("Footer");
   const locale = useLocale();
   const isRTL = locale === "ar";
-  const solutions = t.raw("solutions.links") as (NavLink | SolutionLink)[];
-  const resources = t.raw("resources.links") as (NavLink | SolutionLink)[];
+  // const solutions = t.raw("solutions.links") as (NavLink | SolutionLink)[];
+  // const resources = t.raw("resources.links") as (NavLink | SolutionLink)[];
 
   return (
     <footer className="bg-[#2C2C2C] text-white rounded-t-4xl" dir={isRTL ? "rtl" : "ltr"}>
@@ -26,12 +27,19 @@ function Footer() {
             <RequestDemoButton className="bg-white! text-black!" computerVariant="black" size="xl" />
           </div>
 
-          <FooterLinks title={t("solutions.title")} links={solutions} />
-          <FooterLinks title={t("resources.title")} links={resources} />
-          <FooterLinks
-            title={t("getInTouch.title")}
-            links={[{ title: t("getInTouch.mail"), href: "mailto:info@darwinz.ai" }]}
-          />
+          {/* Footer Links */}
+          <FooterLinks title={t("solutions.title")} links={dimaSolutions} section="solutions" />
+          <FooterLinks title={t("resources.title")} links={footerResourcesLinks} section="resources" />
+          {/* Get In Touch */}
+          <div>
+            <h3 className="text-xl font-medium mb-4">{t("getInTouch.title")}</h3>
+            <a
+              href={`mailto:${t("getInTouch.mail")}`}
+              className="font-light hover:text-primary transition-colors duration-200"
+            >
+              {t("getInTouch.mail")}
+            </a>
+          </div>
         </div>
 
         <div className="w-full flex justify-center lg:justify-end">

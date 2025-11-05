@@ -286,7 +286,6 @@
       }
     }
   },
-  "About": { "title": "صفحة عنا" },
   "Footer": {
     "dima": {
       "description": "مساعدك الذكي لمراقبة وسائل الإعلام",
@@ -294,67 +293,50 @@
     },
     "solutions": {
       "title": "الحلول",
-      "links": [
-        {
+      "links": {
+        "prComms": {
           "title": "العلاقات العامة والاتصالات",
-          "description": "مراقبة وتقارير يومية للتغطية الإعلامية",
-          "logo": "/nav-links/pr.svg",
-          "href": "/solutions/pr-and-comms"
+          "description": "مراقبة وتقارير يومية للتغطية الإعلامية"
         },
-        {
+        "marketInsights": {
           "title": "رؤى السوق",
-          "description": "قياس الأداء والمقارنة مع المنافسين",
-          "logo": "/nav-links/mi.svg",
-          "href": "/solutions/market-insights"
+          "description": "قياس الأداء والمقارنة مع المنافسين"
         },
-        {
+        "socialListening": {
           "title": "رصد وتحليل وسائل التواصل الاجتماعي",
-          "description": "استمع، حلّل، واتخذ القرار",
-          "logo": "/nav-links/sl.svg",
-          "href": "/solutions/social-listening-analytics"
+          "description": "استمع، حلّل، واتخذ القرار"
         },
-        {
+        "consumerInsights": {
           "title": "رؤى المستهلكين",
-          "description": "افهم جمهورك في كل مكان",
-          "logo": "/nav-links/ci.svg",
-          "href": "/solutions/consumer-insights"
+          "description": "افهم جمهورك في كل مكان"
         },
-        {
+        "ownIntelligence": {
           "title": "تحليل الصفحة الرئيسية",
-          "description": "ارتقِ بحضورك على وسائل التواصل الاجتماعي",
-          "logo": "/nav-links/oi.svg",
-          "href": "/solutions/own-page-intelligence"
+          "description": "ارتقِ بحضورك على وسائل التواصل الاجتماعي"
         },
-        {
+        "influencerMarketing": {
           "title": "التسويق عبر المؤثرين",
-          "description": "اعثر على الشركاء المناسبين لعلامتك التجارية",
-          "logo": "/nav-links/im.svg",
-          "href": "/solutions/influencer-marketing"
+          "description": "اعثر على الشركاء المناسبين لعلامتك التجارية"
         },
-        {
+        "customerExperience": {
           "title": "تجربة العملاء",
-          "description": "جمع وتحليل المراجعات لتطوير الأداء",
-          "logo": "/nav-links/ce.svg",
-          "href": "/solutions/customer-experience"
+          "description": "جمع وتحليل المراجعات لتطوير الأداء"
         }
-      ]
+      }
     },
     "resources": {
       "title": "الموارد",
-      "links": [
-        {
-          "title": "دراسات الحالة",
-          "href": "/case-studies"
+      "links": {
+        "caseStudies": {
+          "title": "دراسات الحالة"
         },
-        {
-          "title": "المدونات",
-          "href": "/blogs"
+        "blogs": {
+          "title": "المدونات"
         },
-        {
-          "title": "الأسئلة الشائعة",
-          "href": "/faqs"
+        "faqs": {
+          "title": "الأسئلة الشائعة"
         }
-      ]
+      }
     },
     "getInTouch": {
       "title": "تواصل معنا",
