@@ -7,34 +7,18 @@ import { useTranslations, useLocale } from "next-intl";
 import CyclicSwapCards from "../components/CyclicCardRotation";
 import Typewriter from "typewriter-effect";
 import RequestDemoButton from "../components/RequestDemoButton";
+import { heroSlides } from "@/data/constants/info";
 
-const slidesImages = [
-  "/hero-carousel-item-1.svg",
-  "/hero-carousel-item-2.svg",
-  "/hero-carousel-item-3.svg",
-  "/hero-carousel-item-3.svg",
-  "/hero-carousel-item-3.svg",
-  "/hero-carousel-item-3.svg",
-];
-
-// TODO: Refactor this component
 
 export default function HeroSection() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const t = useTranslations("Home.hero");
   const locale = useLocale();
   const isRTL = locale === "ar";
-  const slideTitles = [
-    t("slides.socialListening"),
-    t("slides.influencerTracking"),
-    t("slides.sentimentInsights"),
-    t("slides.competitorBenchmarking"),
-    t("slides.discoverCreators"),
-    t("slides.campaignRoi"),
-  ];
-  const slides = slideTitles.map((title, idx) => ({
-    title,
-    image: slidesImages[idx],
+
+  const slides = heroSlides.map((slide) => ({
+    title: t(slide.translationKey),
+    image: slide.image,
   }));
 
   return (

@@ -1,5 +1,9 @@
 import { IconType } from "react-icons";
 
+export type HeroSlide = {
+    image: string;
+    translationKey: string;
+}
 
 export type EmpoweringAgenciesInfo = {
     title: string;

@@ -1,4 +1,4 @@
-import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, EnterpriseType, LayeredCardType, QuestionAccordion, SideInfoType, TestimonialType } from "@/types/info";
+import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, EnterpriseType, HeroSlide, LayeredCardType, QuestionAccordion, SideInfoType, TestimonialType } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
@@ -269,5 +269,32 @@ export const layeredCardsData: LayeredCardType[] = [
         suffixColor: "text-purple-700",
         value: 100,
         rotation: "-rotate-12",
+    },
+];
+
+export const heroSlides: HeroSlide[] = [
+    {
+        image: "/hero-carousel-item-1.svg",
+        translationKey: "slides.socialListening",
+    },
+    {
+        image: "/hero-carousel-item-2.svg",
+        translationKey: "slides.influencerTracking",
+    },
+    {
+        image: "/hero-carousel-item-3.svg",
+        translationKey: "slides.sentimentInsights",
+    },
+    {
+        image: "/hero-carousel-item-3.svg",
+        translationKey: "slides.competitorBenchmarking",
+    },
+    {
+        image: "/hero-carousel-item-3.svg",
+        translationKey: "slides.discoverCreators",
+    },
+    {
+        image: "/hero-carousel-item-3.svg",
+        translationKey: "slides.campaignRoi",
     },
 ];
