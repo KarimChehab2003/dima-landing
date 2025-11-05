@@ -16,10 +16,10 @@ function CounterPercentage({ number, text }: CounterPercentageProps) {
     }, [number])
     return (
         <div className="flex flex-col items-center gap-4">
-            <span className="text-5xl font-bold text-primary">
+            <span className="text-4xl sm:text-5xl font-bold text-primary">
                 <motion.span className="text-black">{rounded}</motion.span>%
             </span>
-            <p className="text-4xl font-medium">{text}</p>
+            <p className="text-2xl sm:text-4xl font-medium">{text}</p>
         </div>
     );
 }
