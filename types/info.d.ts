@@ -38,6 +38,7 @@ export type TestimonialType = {
     name: string;
     jobRole: string;
     companyLogo: string;
+    translationKey: string;
 }
 
 export type CardType = {

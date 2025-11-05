@@ -1,11 +1,11 @@
 import { TestimonialType } from "@/types/info";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
-function TestimonialCard({ quote, name, jobRole, companyLogo }: TestimonialType) {
+function TestimonialCard({ companyLogo, translationKey }: TestimonialType) {
     const locale = useLocale();
     const isRTL = locale === 'ar';
-
+    const t = useTranslations("Home.testimonials.items")
     return (
         <article className="w-[300px] h-[400px] relative flex flex-col p-6 bg-white rounded-xl shadow-md -mx-4 my-8">
             <div className={`flex gap-4 items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
@@ -17,18 +17,18 @@ function TestimonialCard({ quote, name, jobRole, companyLogo }: TestimonialType)
                         className={`object-contain ${isRTL ? 'rotate-180' : ''}`}
                     />
                 </figure>
-                <p className="text-sm leading-relaxed"><bdi>{quote}</bdi></p>
+                <p className="text-sm leading-relaxed"><bdi>{t(`${translationKey}.quote`)}</bdi></p>
             </div>
 
             <div className={`mt-auto pt-6 flex justify-between items-center ${isRTL ? 'flex-row-reverse text-right' : 'text-left'}`}>
                 <div>
-                    <h3 className="font-medium text-base">{name}</h3>
-                    <p className="text-muted-foreground text-sm"><bdi>{jobRole}</bdi></p>
+                    <h3 className="font-medium text-base">{t(`${translationKey}.name`)}</h3>
+                    <p className="text-muted-foreground text-sm"><bdi>{t(`${translationKey}.jobRole`)}</bdi></p>
                 </div>
                 <figure className="w-[120px] h-[60px] flex items-center justify-center">
                     <Image
                         src={companyLogo}
-                        alt={name}
+                        alt={translationKey}
                         width={120}
                         height={60}
                         className="object-contain"

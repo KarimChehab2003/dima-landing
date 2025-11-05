@@ -28,7 +28,6 @@ export default function TestimonialCarousel({
     const [activeSlide, setActiveSlide] = useState(0);
     const isRTL = useLocale() === "ar"
     const settings = {
-        className: "center",
         centerMode: true,
         infinite: true,
         slidesToShow,
@@ -43,15 +42,13 @@ export default function TestimonialCarousel({
         beforeChange: (_: number, next: number) => setActiveSlide(next),
     };
 
-    const source = (items && items.length ? items : testimonialsInfo).concat(
-        items && items.length ? items : testimonialsInfo
-    );
+    const slides = items?.concat(items);
 
     return (
         <div className="w-full md:px-8 lg:px-12">
             <Slider {...settings}>
-                {source.map((info, index) => {
-                    const total = source.length;
+                {slides?.map((info, index) => {
+                    const total = slides.length;
                     let distance = Math.abs(index - activeSlide);
                     if (distance > total / 2) distance = total - distance;
                     const classIndex = Math.min(distance, scaleOpacityClasses.length - 1);
