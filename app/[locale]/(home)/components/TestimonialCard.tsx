@@ -11,7 +11,7 @@ function TestimonialCard({ companyLogo, translationKey }: TestimonialType) {
             <div className={`flex gap-4 items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <figure className="relative w-6 h-6 shrink-0">
                     <Image
-                        src="/open-quote.svg"
+                        src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FTestimonials%2Fopen-quote.svg?alt=media&token=4c89236c-9543-47e7-ad6d-fa8f95b58aa9"
                         alt="open quotes"
                         fill
                         className={`object-contain ${isRTL ? 'rotate-180' : ''}`}

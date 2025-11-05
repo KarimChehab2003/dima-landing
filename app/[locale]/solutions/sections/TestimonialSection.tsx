@@ -10,7 +10,7 @@ function TestimonialSection() {
                     {/* Quote image */}
                     <figure className="flex justify-center sm:justify-start items-start shrink-0">
                         <Image
-                            src="/quote-marks-solutions.png"
+                            src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FTestimonial%2Fquote-marks-solutions.png?alt=media&token=f15801a5-6250-4d4e-9490-0afb97e2d9fc"
                             alt="quote marks"
                             width={70}
                             height={60}
@@ -35,7 +35,7 @@ function TestimonialSection() {
                             className="flex flex-col sm:flex-row items-center sm:items-start sm:gap-4 mt-6 sm:mt-8">
                             <figure className="relative w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-0">
                                 <Image
-                                    src="/testimonial-logos/wadi-degla.png"
+                                    src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FTestimonials%2Fwadi-degla.png?alt=media&token=2840fd94-b2e7-4d47-9f6a-fe380240a90c"
                                     alt="wadi degla logo"
                                     fill
                                     className="object-contain"
@@ -58,7 +58,7 @@ function TestimonialSection() {
                 <figure
                     className="relative flex-1 h-64 sm:h-80 md:h-[400px] lg:h-[468px] order-1 lg:order-2">
                     <Image
-                        src="/testimonial-image.png"
+                        src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FTestimonial%2Ftestimonial-image.png?alt=media&token=d0a324ab-4a0d-46ce-8467-93c9d659bcfb"
                         fill
                         className="object-contain"
                         alt="testimonial image"

@@ -15,7 +15,7 @@ function HeroSection() {
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
                     <figure className="p-1 rounded-lg bg-muted/50">
                         <Image
-                            src={"/social-listening/hero-image-1.svg"}
+                            src={"https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FHero%2Fhero-image-1.svg?alt=media&token=f2f62a52-a3a5-451e-8e63-3627066f6a8b"}
                             alt="Hero Image 1"
                             width={322}
                             height={322}
@@ -23,7 +23,7 @@ function HeroSection() {
                     </figure>
                     <figure className="p-1 rounded-lg bg-muted/50">
                         <Image
-                            src={"/social-listening/hero-image-2.svg"}
+                            src={"https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FHero%2Fhero-image-2.svg?alt=media&token=ff992d4f-28d8-4136-884a-596b90411b9f"}
                             alt="Hero Image 2"
                             width={322}
                             height={322}

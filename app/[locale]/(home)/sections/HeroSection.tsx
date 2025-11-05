@@ -47,7 +47,7 @@ export default function HeroSection() {
         {/* Right Side: Carousel*/}
         <div className={`flex-1 mt-12 lg:mt-0 overflow-hidden mx-auto flex items-center w-full max-w-full h-80 md:h-[500px] lg:h-[600px] ${isRTL ? "lg:order-1" : "lg:order-2"}`}
           style={{
-            backgroundImage: "url('/dima-carousel-background.svg')",
+            backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fdima-carousel-background.svg?alt=media&token=5a1e7a1f-c0ec-46f2-9be5-64bdda22213d')",
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

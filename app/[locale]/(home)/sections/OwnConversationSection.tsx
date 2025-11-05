@@ -56,7 +56,7 @@ function OwnConversationSection() {
 
         {/* Image + Text */}
         <div
-          className="flex flex-col xl:flex-row items-center justify-between xl:justify-center w-full rounded-4xl mt-6 bg-no-repeat xl:bg-[url(/bg-vector.svg)] bg-center"
+          className="flex flex-col xl:flex-row items-center justify-between xl:justify-center w-full rounded-4xl mt-6 bg-no-repeat xl:bg-[url(https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Fbg-vector.svg?alt=media&token=028ac753-b7f1-4a6e-925e-2e70467d8c5d)] bg-center"
           dir="ltr"
         >
           {/* Image Section */}

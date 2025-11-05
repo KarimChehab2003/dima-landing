@@ -11,7 +11,7 @@ function EmpoweringAgenciesSection() {
             <div
                 className="container mx-auto space-y-10 md:space-y-14 bg-no-repeat bg-contain"
                 style={{
-                    backgroundImage: "url('/empowering-agencies-bg.png')",
+                    backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2Fempowering-agencies-bg.png?alt=media&token=44c924f7-d4dd-4ac9-9be4-65604eccdbde')",
                     backgroundPosition: "right center",
                 }}
                 dir="ltr"
