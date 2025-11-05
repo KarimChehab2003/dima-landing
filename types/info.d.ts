@@ -11,6 +11,7 @@ export type EmpoweringAgenciesInfo = {
     value: number;
     suffix?: string;
     maxValue?: number;
+    translationKey: string;
 }
 
 export type ConversationInfo = {

@@ -2,27 +2,28 @@ import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, Ente
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
 
-
-
 export const empoweringAgenciesInfo: EmpoweringAgenciesInfo[] = [
     {
         title: "Full Coverage",
         description: "Track tagged, untagged and misspelled mentions of your brand across social, communities and media",
         value: 100,
-        suffix: "%"
+        suffix: "%",
+        translationKey: "fullCoverage"
     },
     {
         title: "Accurate Arabic Analysis",
         description: "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic",
         value: 97,
-        suffix: "%"
+        suffix: "%",
+        translationKey: "accurateArabicAnalysis"
     },
     {
         title: "Mentions Captured",
         description: "Scale without constraints, unlimited users, keywords and reports at enterprise scale",
         value: 50_000_000,
         maxValue: 50_000_000,
-        suffix: "M"
+        suffix: "M",
+        translationKey: "mentionsCaptured"
     },
 ]
 

@@ -2,17 +2,17 @@
 
 import { EmpoweringAgenciesInfo } from "@/types/info";
 import RadialGradientProgress from "./RadialGradientProgress";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function EmpoweringAgenciesCard({
     value,
-    title,
-    description,
     suffix,
     maxValue,
+    translationKey
 }: EmpoweringAgenciesInfo) {
     const locale = useLocale();
     const isRTL = locale === "ar";
+    const t = useTranslations("Home.empoweringAgencies.cards")
     return (
         <article className="w-full max-w-sm mx-auto h-full rounded-3xl shadow-md shadow-primary flex flex-col items-center gap-4 p-4 sm:p-6 bg-muted transition-transform duration-300 hover:scale-[1.02]">
             {/* Top section */}
@@ -27,13 +27,13 @@ export default function EmpoweringAgenciesCard({
                     />
                 </div>
                 <h3 className={`text-lg md:text-2xl capitalize tracking-wide text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
-                    {title}
+                    {t(`${translationKey}.title`)}
                 </h3>
             </div>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-center leading-relaxed px-2 sm:px-4">
-                {description}
+                {t(`${translationKey}.description`)}
             </p>
         </article>
     );

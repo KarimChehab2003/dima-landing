@@ -6,17 +6,6 @@ import { empoweringAgenciesInfo } from "@/data/constants/info";
 function EmpoweringAgenciesSection() {
     const t = useTranslations("Home.empoweringAgencies");
 
-    const cardKeys = ["fullCoverage", "accurateArabicAnalysis", "mentionsCaptured"] as const;
-
-    const cards = empoweringAgenciesInfo.map((info, idx) => {
-        const key = cardKeys[idx];
-        return {
-            ...info,
-            title: t(`cards.${key}.title`),
-            description: t(`cards.${key}.description`),
-        };
-    });
-
     return (
         <SectionWrapper className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-16">
             <div
@@ -35,7 +24,7 @@ function EmpoweringAgenciesSection() {
 
                 {/* Cards Grid */}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12">
-                    {cards.map((info) => (
+                    {empoweringAgenciesInfo.map((info) => (
                         <li key={info.title}>
                             <EmpoweringAgenciesCard {...info} />
                         </li>
