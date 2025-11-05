@@ -32,71 +32,71 @@ export const ownConversationInfo: ConversationInfo[] = [
         title: "Listen, analyze & act",
         subTitle: "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI.",
         icon: FaLaptop,
-        image: "/elevating-social-presence.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
         translationKey: "listen"
     },
     {
         title: "Grow your brand with the right partners",
         subTitle: "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
         icon: FaChartLine,
-        image: "/elevating-social-presence.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
         translationKey: "grow"
     },
     {
         title: "Daily monitoring & coverage reports for all your clients",
         subTitle: "Stay in control of your brand narrative with proactive monitoring and reporting.",
         icon: FaLayerGroup,
-        image: "/elevating-social-presence.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
         translationKey: "daily"
     },
     {
         title: "Elevate your social presence",
         subTitle: "Turn your owned channels into proof of impact with AI content performance tracking.",
         icon: FaLayerGroup,
-        image: "/elevating-social-presence.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
         translationKey: "elevate"
     },
     {
         title: "Benchmark performance",
         subTitle: "Outpace your competitors with insights that accelerate decisions and increases your share of voice",
         icon: PiUserList,
-        image: "/elevating-social-presence.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
         translationKey: "benchmark"
     },
     {
         title: "Understand your audience everywhere",
         subTitle: "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact.",
         icon: FaLayerGroup,
-        image: "/elevating-social-presence.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
         translationKey: "understand"
     },
     {
         title: "Collect & analyze reviews",
         subTitle: "Turn feedback into action to protect loyalty and increase customer satisfaction",
         icon: FaLayerGroup,
-        image: "/elevating-social-presence.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
         translationKey: "collect"
     },
 ]
 
 export const caseStudiesInfo: CaseStudyInfo[] = [
     {
-        image: "/case-studies/case-study-1.png",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FCase%20Studies%2Fcase-study-1.png?alt=media&token=45d3f921-923e-4060-b209-a9eb6728b005",
         companyName: "Company Name",
         description: "Lumora Health partnered with Grovia to streamline their product launch process and cross-team coordination."
     },
     {
-        image: "/case-studies/case-study-2.png",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FCase%20Studies%2Fcase-study-2.png?alt=media&token=25d37588-0f32-429c-9296-948fe24d34d3",
         companyName: "Company Name",
         description: "NaviAI, an emerging leader in AI-driven navigation systems, partnered with Grovia to scale their technical team."
     },
     {
-        image: "/case-studies/case-study-3.png",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FCase%20Studies%2Fcase-study-3.png?alt=media&token=09711ace-a72f-4a4e-8304-a8b73e3dd16b",
         companyName: "Company Name",
         description: "Helped Pluto scale their product team and streamline onboarding as they expanded into new markets."
     },
     {
-        image: "/case-studies/case-study-4.png",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FCase%20Studies%2Fcase-study-4.png?alt=media&token=eb6ccc22-2ae4-4c82-9cd9-a2706db60272",
         companyName: "Company Name",
         description: "Partnered with VitaHealth to set up their first operations team from the ground up."
     },
@@ -122,21 +122,21 @@ export const testimonialsInfo: TestimonialType[] = [
         quote: "dima should be the go-to partner for any business serious about customer satisfaction and brand perception. Their ability to blend data, creativity and strategy makes a real difference",
         name: "Samer Yassa",
         jobRole: "Business Development Manager at Wadi Degla",
-        companyLogo: "/testimonial-logos/wadi-degla.png",
+        companyLogo: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FTestimonials%2Fwadi-degla.png?alt=media&token=2840fd94-b2e7-4d47-9f6a-fe380240a90c",
         translationKey: "samerYassa"
     },
     {
         quote: "For over 30 years, we've been working closely with our clients to offer them the state-of-the-art PR solutions across different industries and verticals. dima has enabled our media monitoring PR experts to offer easier, faster & more accurate media coverage & analysis",
         name: "Dina El Sewefy",
         jobRole: "CEO at MountPR",
-        companyLogo: "/testimonial-logos/mountpr.png",
+        companyLogo: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FTestimonials%2Fmountpr.png?alt=media&token=f05ece49-9938-4453-a8aa-c6bd1b65c0b2",
         translationKey: "dinaElSewefy"
     },
     {
         quote: "Working with the team at dima has helped us with understanding the drivers of engagement on our pages and to build an effective strategy across all social platforms through a true understanding of our audience's reactions and comments to everything we post!",
         name: "Omar Al Masry",
         jobRole: "Senior Brand Manager at Mori International",
-        companyLogo: "/testimonial-logos/mori-int.png",
+        companyLogo: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FTestimonials%2Fmori-int.png?alt=media&token=b7dcefa6-cf1c-4137-8985-ebef97cb9758",
         translationKey: "omarAlMasry"
 
     },
@@ -144,14 +144,14 @@ export const testimonialsInfo: TestimonialType[] = [
         quote: "Being top of mind in the F&B market is difficult, everyday we see new players & trends…dima helps us to truly monitor where we stand in the market at all times and to maintain market leadership by staying in tune with the next big thing",
         name: "Mohamed Osman",
         jobRole: "Chariman at Tico Group",
-        companyLogo: "/testimonial-logos/tico.png",
+        companyLogo: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FTestimonials%2Ftico.png?alt=media&token=6aeff656-ff4f-4d3f-b2f1-b2bdc1f75e82",
         translationKey: "mohamedOsman"
     },
     {
         quote: "Managing over 50 locations in 3 different continents is not easy, but dima makes it easier by providing tailored business insights to our different audiences 24/7 so that we can provide a tailored marketing strategy that targets our various audience segments",
         name: "Mostafa AlSagheer",
         jobRole: "Vice Chairman at AlSagheer Group",
-        companyLogo: "/testimonial-logos/alsagheer.png",
+        companyLogo: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FTestimonials%2Falsagheer.png?alt=media&token=2a1eb961-78b1-4c97-97a2-0a393e63d290",
         translationKey: "mostafaAlSagheer"
     },
 ]
@@ -287,27 +287,27 @@ export const layeredCardsData: LayeredCardType[] = [
 
 export const heroSlides: HeroSlide[] = [
     {
-        image: "/hero-carousel-item-1.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-1.svg?alt=media&token=720d043c-71ab-4cb2-9444-7dc32f1a6f59",
         translationKey: "slides.socialListening",
     },
     {
-        image: "/hero-carousel-item-2.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-2.svg?alt=media&token=7a3ec98e-fcd3-4add-a39e-1dc46797e450",
         translationKey: "slides.influencerTracking",
     },
     {
-        image: "/hero-carousel-item-3.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
         translationKey: "slides.sentimentInsights",
     },
     {
-        image: "/hero-carousel-item-3.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
         translationKey: "slides.competitorBenchmarking",
     },
     {
-        image: "/hero-carousel-item-3.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
         translationKey: "slides.discoverCreators",
     },
     {
-        image: "/hero-carousel-item-3.svg",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
         translationKey: "slides.campaignRoi",
     },
 ];

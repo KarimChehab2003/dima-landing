@@ -5,7 +5,6 @@ import LanguageSwitcher from "../LanguageSwitcher";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import RequestDemoButton from "@/components/shared/RequestDemoButton";
-import { NavLink, SolutionLink } from "@/types/link";
 import { dimaSolutions, footerResourcesLinks } from "@/data/constants/links";
 
 function Footer() {
@@ -21,7 +20,7 @@ function Footer() {
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ${isRTL ? "text-right" : "text-left"}`}>
           <div className="flex flex-col gap-4">
             <figure>
-              <Image src="/dima-logo-white.svg" alt="dima logo white" width={120} height={50} />
+              <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Footer%2Fdima-logo-white.svg?alt=media&token=e9b4ea82-a30b-4187-97a7-15ef531dc17d" alt="dima logo white" width={120} height={50} />
             </figure>
             <h2 className="capitalize text-2xl">{t("dima.description")}</h2>
             <RequestDemoButton className="bg-white! text-black!" computerVariant="black" size="xl" />

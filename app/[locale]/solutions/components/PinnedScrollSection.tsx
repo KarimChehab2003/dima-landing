@@ -29,19 +29,19 @@ export default function PinnedScrollSection() {
             <div className="sticky top-0 h-screen w-1/2 flex justify-center items-center">
                 <figure className="px-4 py-32 rounded-4xl bg-[linear-gradient(-125deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)]">
                     {currentStepIndex === 0 && (
-                        <Image src="/scroll-image-1.svg" width={540} height={340} alt="Step 1" priority />
+                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 1" priority />
                     )}
                     {currentStepIndex === 1 && (
-                        <Image src="/scroll-image-2.svg" width={540} height={340} alt="Step 2" priority />
+                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 2" priority />
                     )}
                     {currentStepIndex === 2 && (
-                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 3" priority />
+                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 3" priority />
                     )}
                     {currentStepIndex === 3 && (
-                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 4" priority />
+                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 4" priority />
                     )}
                     {currentStepIndex === 4 && (
-                        <Image src="/scroll-image-3.svg" width={540} height={340} alt="Step 5" priority />
+                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 5" priority />
                     )}
                 </figure>
             </div>
