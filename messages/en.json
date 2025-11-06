@@ -54,6 +54,65 @@
     "caseStudies": "Case Studies",
     "requestDemo": "Request a demo"
   },
+  "Footer": {
+    "dima": {
+      "description": "Your Media Monitoring AI Copilot",
+      "requestDemo": "Request a Demo"
+    },
+    "solutions": {
+      "title": "Solutions",
+      "links": {
+        "prComms": {
+          "title": "PR & Comms",
+          "description": "Daily monitoring & coverage reports"
+        },
+        "marketInsights": {
+          "title": "Market Insights",
+          "description": "Benchmark performance"
+        },
+        "socialListening": {
+          "title": "Social Listening & Analytics",
+          "description": "Listen, analyze & act"
+        },
+        "consumerInsights": {
+          "title": "Consumer Insights",
+          "description": "Understand your audience everywhere"
+        },
+        "ownIntelligence": {
+          "title": "Own Page Intelligence",
+          "description": "Elevate your social presence"
+        },
+        "influencerMarketing": {
+          "title": "Influencer Marketing",
+          "description": "Find the right partners for your brand"
+        },
+        "customerExperience": {
+          "title": "Customer Experience",
+          "description": "Collect & analyze reviews"
+        }
+      }
+    },
+    "resources": {
+      "title": "Resources",
+      "links": {
+        "caseStudies": {
+          "title": "Case Studies"
+        },
+        "blogs": {
+          "title": "Blogs"
+        },
+        "faqs": {
+          "title": "FAQs"
+        }
+      }
+    },
+    "getInTouch": {
+      "title": "Get In Touch",
+      "mail": "info@darwinz.ai"
+    },
+    "copyright": "© The Dar.AI. All Rights Reserved.",
+    "privacyPolicy": "Privacy Policy"
+  },
   "Home": {
     "hero": {
       "titlePrefix": "The Arabic-First AI Copilot For",
@@ -258,63 +317,255 @@
       }
     }
   },
-  "Footer": {
-    "dima": {
-      "description": "Your Media Monitoring AI Copilot",
-      "requestDemo": "Request a Demo"
-    },
-    "solutions": {
-      "title": "Solutions",
-      "links": {
-        "prComms": {
-          "title": "PR & Comms",
-          "description": "Daily monitoring & coverage reports"
+  "Solutions": {
+    "social-listening-analytics": {
+      "hero": {
+        "title": "Social Listening & Analytics",
+        "subTitle": "Arabic-First Copilot for Social Listening & Analytics",
+        "metrics": [
+          {
+            "number": 100,
+            "title": "Full Coverage"
+          },
+          {
+            "number": 97,
+            "title": "Arabic Accuracy"
+          },
+          {
+            "number": 44,
+            "title": "Faster Time-to-Insight"
+          }
+        ]
+      },
+      "expandingCards": {
+        "title": "Hear every conversation and turn noise into actionable insights",
+        "cards": [
+          {
+            "title": "Full Coverage",
+            "description": "Track and analyze coverage across online publications, social media, print, TV, radio & closed communities, so you can get the full picture.",
+            "highlighted": "online publications, social media, print, TV, radio & closed communities"
+          },
+          {
+            "title": "Arabic-First AI Copilot",
+            "description": "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic.",
+            "highlighted": "dialects, slang and Franco-Arabic."
+          },
+          {
+            "title": "Built for Agencies",
+            "description": "Scale without constraints, Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
+            "highlighted": "Unlimited keywords, reports & users."
+          }
+        ]
+      },
+      "scrollingSection": {
+        "title": "Stay Ahead Of The Conversation",
+        "subTitle": "Get to the heart of millions of mentions with AI powered insights that drive smarter & faster decisions",
+        "cards": [
+          {
+            "title": "Trend Detection",
+            "description": "Identify emerging trends before they gain momentum, giving you the edge to act first"
+          },
+          {
+            "title": "Communities",
+            "description": "Track communities conversations to expand coverage and visibility"
+          },
+          {
+            "title": "Posts Vs Comments analysis",
+            "description": "Separate post and comment section analysis for deeper, more accurate insights."
+          },
+          {
+            "title": "Be First to Know, First to Act",
+            "description": "Act instantly on real-time alerts to prevent crises, seize opportunities, and accelerate response times."
+          },
+          {
+            "title": "Go beyond mentions",
+            "description": "Seamlessly track sentiment, emotion, topics & more to uncover the true context behind conversations"
+          }
+        ],
+        "cta": "Turn conversations into insights"
+      },
+      "cardsGrid": {
+        "title": "Built For Enterprises",
+        "cards": [
+          {
+            "title": "360° Conversation coverage",
+            "description": "track tagged, untagged, and misspelled mentions across all social media platforms and private groups."
+          },
+          {
+            "title": "Arabic-First Engine",
+            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance."
+          },
+          {
+            "title": "Crisis Alerts",
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+          },
+          {
+            "title": "Customizable White-Label Reports",
+            "description": "Generate unlimited reports in branded templates (PPT, PDF, Excel), ready to share instantly"
+          },
+          {
+            "title": "dima AI Assistant",
+            "description": "Ask plain-language questions about your brand and get instant, actionable answers."
+          },
+          {
+            "title": "Unlimited Users & Keywords",
+            "description": "No caps on team members or keywords"
+          },
+          {
+            "title": "Visual Listening",
+            "description": "Spot your brand in images, videos and audio to capture the full picture."
+          },
+          {
+            "title": "Capture historical data",
+            "description": "dima provides full historical coverage to see the full picture."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "Hear It From Our Clients",
+        "quote": "dima should be the go-to partner for any business serious about customer satisfaction and brand perception. Their ability to blend data, creativity and strategy makes a real difference",
+        "name": "Samer Yassa",
+        "jobRole": "Business Development Manager at Wadi Degla"
+      },
+      "faq": [
+        {
+          "question": "Does using dima mean that my data can be leaked to my competitors?",
+          "answer": "dima does not share any account's data. Your account data is stored securely and exclusively for your use. Likewise, no current client's data can ever be accessed or shared with another account."
         },
-        "marketInsights": {
-          "title": "Market Insights",
-          "description": "Benchmark performance"
+        {
+          "question": "What is the Arabic accuracy for social media listening?",
+          "answer": "dima delivers 97% accuracy in Arabic for social media monitoring listening, and that rate is continuously improving. dima is Arabic-first, built in the region to capture dialects, slang, and Franco-Arabic."
         },
-        "socialListening": {
-          "title": "Social Listening & Analytics",
-          "description": "Listen, analyze & act"
-        },
-        "consumerInsights": {
-          "title": "Consumer Insights",
-          "description": "Understand your audience everywhere"
-        },
-        "ownIntelligence": {
-          "title": "Own Page Intelligence",
-          "description": "Elevate your social presence"
-        },
-        "influencerMarketing": {
-          "title": "Influencer Marketing",
-          "description": "Find the right partners for your brand"
-        },
-        "customerExperience": {
-          "title": "Customer Experience",
-          "description": "Collect & analyze reviews"
+        {
+          "question": "What platforms does dima monitor?",
+          "answer": "dima covers both traditional and social media platforms. Traditional includes: Online Publications, Print Publications, TV & Radio. Social Media includes: TikTok, X, Snapchat, Facebook, Instagram, LinkedIn & more. There are other sources covered by dima as well like Google Maps Reviews & others in the pipeline. If you don't see the platform you want in the list, contact us to see when it will be available, our team is probably working on it already!"
         }
-      }
+      ]
     },
-    "resources": {
-      "title": "Resources",
-      "links": {
-        "caseStudies": {
-          "title": "Case Studies"
+    "pr-comms": {
+      "hero": {
+        "title": "PR & Comms",
+        "subTitle": "The First Media Monitoring Copilot for PR & Comms",
+        "metrics": [
+          {
+            "number": 100,
+            "title": "Full Coverage"
+          },
+          {
+            "number": 97,
+            "title": "Arabic Accuracy"
+          },
+          {
+            "number": 0,
+            "title": "Clients Lost"
+          }
+        ]
+      },
+      "expandingCards": {
+        "title": "Capture every narrative with Arabic accuracy",
+        "cards": [
+          {
+            "title": "Full Coverage",
+            "description": "Track and analyze coverage across online publications, social media, print, TV, radio & closed communities, so you can get the full picture.",
+            "highlighted": "online publications, social media, print, TV, radio & closed communities"
+          },
+          {
+            "title": "Arabic-First AI Copilot",
+            "description": "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic.",
+            "highlighted": "dialects, slang and Franco-Arabic"
+          },
+          {
+            "title": "Built for Agencies",
+            "description": "Scale without constraints. Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
+            "highlighted": "Unlimited keywords, reports & users"
+          }
+        ]
+      },
+      "scrollingSection": {
+        "title": "Steer your PR strategy with dima",
+        "subTitle": "From first mention to final report with the speed, scale, and precision PR & Communications teams need to lead the narrative.",
+        "cards": [
+          {
+            "title": "See the whole narrative",
+            "description": "Analyze & monitor mentions and topics of interest across traditional & social media platforms around the world."
+          },
+          {
+            "title": "Measure what matters automatically",
+            "description": "Automatically calculate key KPIs like PRV, IMP, OTS, CIRC and customize your own seamlessly."
+          },
+          {
+            "title": "Be First to Know, First to Act",
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball."
+          },
+          {
+            "title": "Client-ready in every format",
+            "description": "Generate white-labeled reports in PPT, PDF, Excel and more with branded templates in a click."
+          }
+        ],
+        "cta": "Ready to take control of the narrative"
+      },
+      "cardsGrid": {
+        "title": "Built For Agencies",
+        "cards": [
+          {
+            "title": "Full Coverage",
+            "description": "Track your brand across online news, print, broadcast and social platforms including closed communities, all in one view."
+          },
+          {
+            "title": "Arabic-First Engine",
+            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance."
+          },
+          {
+            "title": "Crisis Alerts",
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball."
+          },
+          {
+            "title": "Customizable White-Label Reports",
+            "description": "Deliver unlimited PPT, PDF, Excel, or HTML reports in branded templates, tailored for each department or client."
+          },
+          {
+            "title": "dima AI Assistant",
+            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+          },
+          {
+            "title": "Unlimited Users & Keywords",
+            "description": "No caps on team members or keywords."
+          },
+          {
+            "title": "Visual Listening",
+            "description": "Spot your brand in images, videos and audio to capture the full picture."
+          },
+          {
+            "title": "Influencer & Journalist Finder",
+            "description": "Identify the voices that shape your industry so outreach hits where it matters."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "Hear It From Our Clients",
+        "quote": "MountPR's partnership with dima revolutionized our PR workflow. We now act faster, report smarter, and stay ahead of every story.",
+        "name": "MountPR",
+        "jobRole": "Communications Agency"
+      },
+      "form": {
+        "title": "Request a Demo",
+        "subTitle": "Discover how dima's Arabic-first AI empowers your team with unparalleled monitoring, real-time insights, and competitive benchmarking.",
+        "note": "Add country code to phone number (default: Saudi Arabia)"
+      },
+      "faq": [
+        {
+          "question": "Is there a limitation on the number of users for the platform?",
+          "answer": "No, dima has no limitation on the number of users per single account."
         },
-        "blogs": {
-          "title": "Blogs"
+        {
+          "question": "Is there a limitation on the number of reports to be extracted from dima per day/month?",
+          "answer": "No, dima has no limitation on the number of reports extracted."
         },
-        "faqs": {
-          "title": "FAQs"
+        {
+          "question": "Is there a client view that allows for sharing instant insights, reports, and live monitoring?",
+          "answer": "Yes, dima offers different access levels for the expert and the client, providing the client with easy accessibility and the expert with full control."
         }
-      }
-    },
-    "getInTouch": {
-      "title": "Get In Touch",
-      "mail": "info@darwinz.ai"
-    },
-    "copyright": "© The Dar.AI. All Rights Reserved.",
-    "privacyPolicy": "Privacy Policy"
+      ]
+    }
   }
 }

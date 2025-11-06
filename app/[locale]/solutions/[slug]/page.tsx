@@ -1,8 +1,8 @@
 import RequestDemoSection from "@/components/shared/RequestDemoSection";
-import ActionableInsightsSection from "../sections/ActionableInsightsSection";
-import BuiltEntreprisesSection from "../sections/BuiltEntreprisesSection";
+import ExpandingCardsSection from "../sections/ExpandingCardsSection";
+import CardsGrid from "../sections/CardsGrid";
 import HeroSection from "../sections/HeroSection";
-import StayAheadSection from "../sections/StayAheadSection";
+import ScrollingSection from "../sections/ScrollingSection";
 import TestimonialSection from "../sections/TestimonialSection";
 import QuestionsAnsweredSection from "@/components/shared/QuestionsAnsweredSection";
 
@@ -15,9 +15,9 @@ async function SolutionPage({ params }: SolutionPageProps) {
     return (
         <main>
             <HeroSection />
-            <ActionableInsightsSection />
-            <StayAheadSection />
-            <BuiltEntreprisesSection />
+            <ExpandingCardsSection />
+            <ScrollingSection />
+            <CardsGrid />
             <TestimonialSection />
             <RequestDemoSection />
             <QuestionsAnsweredSection />
