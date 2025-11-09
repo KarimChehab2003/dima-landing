@@ -24,12 +24,12 @@ export default function HeroSection() {
   return (
     <SectionWrapper className="flex-col justify-between min-h-dvh my-8 lg:my-0">
       <div
-        className={`container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8`}
+        className={`container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 gap-4`}
       >
         {/* Left Side: Dynamic Text */}
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 space-y-6 w-full text-center lg:text-start">
 
-          <h1 className="text-2xl lg:text-[44px] mb-8 min-h-32 lg:min-h-60 xl:min-h-auto">
+          <h1 className="text-2xl md:text-[44px] mb-8 min-h-32 lg:min-h-60 xl:min-h-auto">
             {t("titlePrefix")}
             <Typewriter
               options={{

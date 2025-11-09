@@ -142,7 +142,7 @@ export const socialMediaLinks: SocialMediaLink[] = [
 ]
 
 export const languages: LanguageLink[] = [
-    { locale: "en", label: "English", flag: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/LanguageSwitcher%2Fen.svg?alt=media&token=46d4770a-e8cd-45af-86af-9fa01e77c678" },
-    { locale: "ar", label: "العربية", flag: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/LanguageSwitcher%2Far.svg?alt=media&token=966d6a19-7e6f-4a18-b3fd-e3ecc30fcf7c" },
+    { locale: "en", label: "English", flag: "/flags/en.svg" },
+    { locale: "ar", label: "العربية", flag: "/flags/ar.svg" },
 ];
 

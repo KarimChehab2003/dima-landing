@@ -70,7 +70,7 @@ function RequestDemoForm() {
             </div>
 
             <div className="flex justify-center items-center">
-                <Button className="bg-linear-to-r from-black to-[#6D6D6D] w-full max-w-xs" >
+                <Button className="bg-linear-to-r from-black to-[#6D6D6D] hover:scale-102 w-full max-w-xs" >
                     {t("form.submit")}
                 </Button>
             </div>

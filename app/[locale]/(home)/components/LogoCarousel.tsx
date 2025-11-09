@@ -1,6 +1,5 @@
 "use client";
 
-
 import AutoScroll from "embla-carousel-auto-scroll";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
@@ -19,18 +18,24 @@ export default function LogoCarousel() {
             className="w-full overflow-hidden my-4"
             dir="ltr"
         >
-            <CarouselContent className="flex items-center gap-12 sm:gap-16 md:gap-20">
+            <CarouselContent className="flex items-center gap-10 sm:gap-16 md:gap-20">
                 {Array.from({ length: 14 }).map((_, index) => (
                     <CarouselItem
                         key={index}
-                        className="flex-none basis-[30%] sm:basis-[20%] md:basis-[12%] lg:basis-[10%]"
-                    >
-                        <div className="flex items-center justify-center h-20 sm:h-[100px] md:h-[120px]">
+                        className="
+                            flex-none 
+                            basis-[50%]    
+                            md:basis-[20%]                         
+                            lg:basis-[15%] 
+                            xl:basis-[10%]
+                        ">
+                        <div className="flex items-center justify-center 
+                                h-24 sm:h-[100px] md:h-[120px]">
                             <Image
                                 src={`/logo-slider/${index + 1}.svg`}
                                 alt={`Logo ${index}`}
-                                width={200}
-                                height={100}
+                                width={220}
+                                height={110}
                                 className="object-contain w-auto h-full"
                             />
                         </div>
