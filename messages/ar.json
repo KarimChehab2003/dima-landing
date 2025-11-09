@@ -567,5 +567,9 @@
         }
       ]
     }
+  },
+  "LanguageSwitcher": {
+    "searchPlaceholder": "ابحث عن لغة...",
+    "emptyFind": "لم يتم العثور على أي لغة."
   }
 }

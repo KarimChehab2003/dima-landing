@@ -562,5 +562,9 @@
         }
       ]
     }
+  },
+  "LanguageSwitcher": {
+    "searchPlaceholder": "Search language...",
+    "emptyFind": "No languages found."
   }
 }

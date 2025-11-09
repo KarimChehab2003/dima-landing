@@ -18,17 +18,19 @@ import {
 import { Link, usePathname } from "@/i18n/navigation";
 import { languages } from "@/data/constants/links";
 import { LanguageLink } from "@/types/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
   const currentLocale = useLocale();
-
+  const isRTL = currentLocale === "ar";
+  const t = useTranslations("LanguageSwitcher");
   const [open, setOpen] = useState<boolean>(false);
   const [currentLanguage, setCurrentLanguage] = useState<
     LanguageLink | undefined
   >(languages.find((l) => l.locale === currentLocale));
+
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -45,14 +47,14 @@ export default function LanguageSwitcher() {
               height={29}
             />
           </figure>
-          <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50 text-muted-foreground" />
+          <ChevronDown className={`${isRTL ? "mr-2" : "ml-2"} h-4 w-4 shrink-0 opacity-50 text-muted-foreground`} />
         </div>
       </PopoverTrigger>
 
       <PopoverContent className="w-[180px] p-0">
         <Command>
-          <CommandInput placeholder="Search language..." />
-          <CommandEmpty>No language found.</CommandEmpty>
+          <CommandInput placeholder={t("searchPlaceholder")} />
+          <CommandEmpty >{t("emptyFind")}</CommandEmpty>
           <CommandGroup>
             {languages.map((lang) => (
               <CommandItem

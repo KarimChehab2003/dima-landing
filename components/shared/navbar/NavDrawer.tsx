@@ -20,6 +20,7 @@ import SolutionNavLink from "./SolutionNavLink";
 import Image from "next/image";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useLocale, useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 
 function NavDrawer() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -84,6 +85,10 @@ function NavDrawer() {
                                             </li>
                                         ))}
                                     </ul>
+
+                                    <Button className="mt-4" size={"xl"}>
+                                        <Link href="/blogs">{t("resources.links.blogs.viewAllBlogs")}</Link>
+                                    </Button>
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>

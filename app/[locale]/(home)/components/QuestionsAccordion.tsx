@@ -2,7 +2,7 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 function QuestionsAccordion() {
     const [openItem, setOpenItem] = useState<string>("item-1");
@@ -13,6 +13,8 @@ function QuestionsAccordion() {
         { key: "faq2", question: t("faq2.question"), answer: t("faq2.answer") },
         { key: "faq3", question: t("faq3.question"), answer: t("faq3.answer") }
     ];
+    const locale = useLocale();
+    const isRTL = locale === "ar";
 
     return (
         <Accordion
@@ -33,7 +35,7 @@ function QuestionsAccordion() {
                         value={value}
                         className="bg-white rounded-xl py-4 px-6"
                     >
-                        <AccordionTrigger className={`text-lg transition-all hover:no-underline ${isOpen ? "font-bold" : "font-medium"}`}>
+                        <AccordionTrigger className={`text-lg transition-all hover:no-underline ${isOpen ? "font-bold" : "font-medium"} ${isRTL ? "text-right" : "text-left"}`}>
                             {question}
                         </AccordionTrigger>
                         <AccordionContent className="text-sm/relaxed mt-4">
