@@ -46,53 +46,53 @@
   --radius: 0.625rem;
 
   /* Base colors */
-  --background: #FFFFFF; /* White base background */
-  --foreground: #2C2C2C; /* Dark Grey main text */
+  --background: #ffffff; /* White base background */
+  --foreground: #2c2c2c; /* Dark Grey main text */
 
   /* Surfaces */
-  --card: #FFFFFF;
-  --card-foreground: #2C2C2C;
-  --popover: #FFFFFF;
-  --popover-foreground: #2C2C2C;
+  --card: #ffffff;
+  --card-foreground: #2c2c2c;
+  --popover: #ffffff;
+  --popover-foreground: #2c2c2c;
 
   /* Brand colors */
-  --primary: #08A5CD; /* Very Soft Cyan for primary brand elements */
-  --primary-foreground: #FFFFFF;
+  --primary: #08a5cd; /* Very Soft Cyan for primary brand elements */
+  --primary-foreground: #ffffff;
 
-  --secondary: #AE3794;
-  --secondary-foreground: #FFFFFF;
+  --secondary: #ae3794;
+  --secondary-foreground: #ffffff;
 
-  --accent: #F26329;
-  --accent-foreground: #FFFFFF;
+  --accent: #f26329;
+  --accent-foreground: #ffffff;
 
-  --muted: #F5F5F5; /* Light Gray for subtle backgrounds and separators */
-  --muted-foreground: #6D6D6D;
+  --muted: #f5f5f5; /* Light Gray for subtle backgrounds and separators */
+  --muted-foreground: #6d6d6d;
 
   /* Feedback colors */
-  --destructive: #ED00A4;
-  --destructive-foreground: #FFFFFF;
+  --destructive: #ed00a4;
+  --destructive-foreground: #ffffff;
 
   /* UI structure */
-  --border: #E6E6E6;
-  --input: #E6E6E6;
-  --ring: #08A5CD; /* Using very soft cyan for focus ring */
+  --border: #e6e6e6;
+  --input: #e6e6e6;
+  --ring: #08a5cd; /* Using very soft cyan for focus ring */
 
   /* Charts / extra colors */
-  --chart-1: #00AAF6;
-  --chart-2: #00C7EC;
-  --chart-3: #0A8298;
-  --chart-4: #AE3794;
-  --chart-5: #F26329;
+  --chart-1: #00aaf6;
+  --chart-2: #00c7ec;
+  --chart-3: #0a8298;
+  --chart-4: #ae3794;
+  --chart-5: #f26329;
 
   /* Sidebar (if used) */
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #2C2C2C;
-  --sidebar-primary: #08A5CD;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F5F5F5;
-  --sidebar-accent-foreground: #2C2C2C;
-  --sidebar-border: #E6E6E6;
-  --sidebar-ring: #08A5CD;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #2c2c2c;
+  --sidebar-primary: #08a5cd;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #2c2c2c;
+  --sidebar-border: #e6e6e6;
+  --sidebar-ring: #08a5cd;
 }
 
 @layer base {
@@ -111,4 +111,13 @@
 
 .slick-slider {
   overflow: hidden !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -1,7 +1,7 @@
 "use client";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 import { useTranslations, useLocale } from "next-intl";
@@ -22,9 +22,27 @@ function OwnConversationSection() {
   const [activeIndex, setActiveIndex] = useState<number>(4);
   const activeFeature = ownConversationInfo[activeIndex];
 
+  // Auto-cycle through buttons every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % ownConversationInfo.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Auto-scroll active button into view
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  useEffect(() => {
+    buttonRefs.current[activeIndex]?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  }, [activeIndex]);
+
   return (
     <SectionWrapper>
-      <div className="flex flex-col items-center xl:gap-8 w-full">
+      <div className="flex flex-col items-center w-full">
         {/* Header */}
         <div className="space-y-3 text-center max-w-3xl">
           <h2 className="text-[24px] md:text-[44px] font-normal my-4">
@@ -36,21 +54,32 @@ function OwnConversationSection() {
         </div>
 
         {/* Scrollable Buttons */}
-        <div className="w-full overflow-x-auto py-4 md:my-4">
-          <div className="flex justify-center items-center gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap">
-            {
-              ownConversationInfo.map((feature, idx) => (
-                <Button
-                  key={feature.translationKey}
-                  variant={activeIndex === idx ? "default" : "ghost"}
-                  size={"xl"}
-                  onClick={() => setActiveIndex(idx)}
-                  className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0 tracking-normal"
-                >
-                  <feature.icon size={16} />
-                  <span>{t(`features.${feature.translationKey}.title`)}</span>
-                </Button>
-              ))}
+        <div className="w-full overflow-x-auto py-4 hide-scrollbar">
+          <div
+            className="
+              flex gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 
+              whitespace-nowrap 
+              w-max
+            "
+          >
+            {ownConversationInfo.map((feature, idx) => (
+              <Button
+                key={feature.translationKey}
+                variant={activeIndex === idx ? "default" : "ghost"}
+                size="xl"
+                onClick={() => setActiveIndex(idx)}
+                ref={(el) => { buttonRefs.current[idx] = el; }} // comment if not using scroll-into-view
+                className="
+                  inline-flex items-center gap-2 
+                  text-sm sm:text-base 
+                  px-3 sm:px-4 md:px-6 
+                  shrink-0 tracking-normal
+                "
+              >
+                <feature.icon size={16} />
+                <span>{t(`features.${feature.translationKey}.title`)}</span>
+              </Button>
+            ))}
           </div>
         </div>
 
@@ -63,7 +92,7 @@ function OwnConversationSection() {
           <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-b xl:bg-none from-primary via-[#5FC9E7] to-[#AEEBFF] rounded-2xl sm:order-1 order-2">
             <Image
               src={activeFeature.image}
-              alt={activeFeature.translationKey + " icon"}
+              alt={activeFeature.translationKey + ' icon'}
               fill
               className="object-contain z-10 p-6"
               priority
@@ -73,8 +102,8 @@ function OwnConversationSection() {
           {/* Info + Button */}
           <div
             className={`flex flex-col justify-start text-center w-full xl:max-w-md z-30 lg:h-[500px] xl:h-[600px] xl:pl-22 sm:order-2 pb-4 ${isRTL
-              ? "text-right items-end xl:pr-6"
-              : "items-start text-left"
+              ? 'text-right items-end xl:pr-6'
+              : 'items-start text-left'
               }`}
           >
             <AnimatePresence mode="wait">
@@ -85,8 +114,8 @@ function OwnConversationSection() {
                 initial="hidden"
                 animate="visible"
                 className={`w-full xl:flex-1 flex flex-col justify-center ${isRTL
-                  ? "items-end text-right"
-                  : "items-start text-left"
+                  ? 'items-end text-right'
+                  : 'items-start text-left'
                   }`}
               >
                 <h3 className="text-2xl font-semibold my-4 sm:mb-6">
@@ -98,8 +127,11 @@ function OwnConversationSection() {
               </motion.div>
             </AnimatePresence>
 
-            <div className={`my-4 w-full xl:flex-1 flex justify-center ${isRTL ? "md:justify-end" : "md:justify-start"}`}>
-              <RequestDemoButton size={"xl"} />
+            <div
+              className={`my-4 w-full xl:flex-1 flex justify-center ${isRTL ? 'md:justify-end' : 'md:justify-start'
+                }`}
+            >
+              <RequestDemoButton size={"xl"} className="mt-4" />
             </div>
           </div>
         </div>
