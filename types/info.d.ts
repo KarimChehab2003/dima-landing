@@ -67,3 +67,8 @@ export type LayeredCardType = {
     value: number;
     rotation: string;
 }
+
+export type TestimonialAsset = {
+    companyLogo: string;
+    testimonialImage?: string;
+}

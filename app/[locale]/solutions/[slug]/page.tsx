@@ -11,14 +11,14 @@ type SolutionPageProps = {
 }
 
 async function SolutionPage({ params }: SolutionPageProps) {
-    const name = (await params).slug;
+    const slug = (await params).slug;
     return (
         <main>
-            <HeroSection />
-            <ExpandingCardsSection />
-            <ScrollingSection />
-            <CardsGrid />
-            <TestimonialSection />
+            <HeroSection slug={slug} />
+            <ExpandingCardsSection slug={slug} />
+            <ScrollingSection slug={slug} />
+            <CardsGrid slug={slug} />
+            <TestimonialSection slug={slug} />
             <RequestDemoSection />
             <QuestionsAnsweredSection />
         </main>

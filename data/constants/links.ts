@@ -79,7 +79,7 @@ export const dimaSolutions: SolutionLink[] = [
         logo: "/nav-links/pr.svg",
         title: "PR & Comms",
         description: "Daily monitoring & coverage reports",
-        href: "/solutions/pr-and-comms",
+        href: "/solutions/pr-comms",
         translationKey: "prComms"
     },
     {
