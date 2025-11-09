@@ -12,8 +12,8 @@ function ScrollingSection({ slug }: { slug: string }) {
         <SectionWrapper className="mb-0">
             <div className="container mx-auto flex flex-col justify-center items-center gap-4 my-12">
                 {/* Heading */}
-                <h2 className="text-2xl lg:text-[44px] text-center ">{t("title")}</h2>
-                <p className="text-3xl font-light text-center">{t("subTitle")}</p>
+                <h2 className="text-2xl md:text-[44px] text-center ">{t("title")}</h2>
+                <p className="text-xl font-light text-center">{t("subTitle")}</p>
 
                 {/* Pinned Scroll Section for desktop */}
                 <div className="hidden lg:block">
@@ -24,7 +24,7 @@ function ScrollingSection({ slug }: { slug: string }) {
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
                     {
                         cards.map((card) => (
-                            <li key={card.title}>
+                            <li key={card.title} className="my-4">
                                 <ScrollingCard
                                     {...card}
                                 />
@@ -34,7 +34,7 @@ function ScrollingSection({ slug }: { slug: string }) {
                 </ul>
 
                 {/* CTA mobile */}
-                <div className="text-xl text-center font-semibold bg-black rounded-2xl px-6 py-4 mt-8 lg:hidden w-full flex flex-col justify-center items-center gap-2">
+                <div className="text-xl text-center font-semibold bg-black rounded-2xl px-6 py-4 mt-8 lg:hidden w-full flex flex-col md:flex-row justify-center items-center gap-2">
                     <h3 className="text-white">{t("cta")}</h3>
                     <RequestDemoButton />
                 </div>

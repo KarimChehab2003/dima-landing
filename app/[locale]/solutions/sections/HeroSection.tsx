@@ -43,7 +43,7 @@ function HeroSection({ slug }: { slug: string }) {
                 <LogoCarousel />
 
                 {/* Percentages */}
-                <div className="flex flex-col sm:flex-row justify-around items-center gap-12 w-full ">
+                <div className="flex flex-col sm:flex-row justify-evenly items-center gap-12 w-full ">
                     {/* <CounterPercentage number={100} text="Full Coverage" />
                     <CounterPercentage number={97} text="Arabic Accuracy" />
                     <CounterPercentage number={44} text="Faster Time-to-Insight" /> */}
