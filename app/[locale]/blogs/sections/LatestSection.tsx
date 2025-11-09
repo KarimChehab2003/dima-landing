@@ -17,7 +17,7 @@ function LatestSection() {
                 </ul>
 
                 {/* Side Blogs */}
-                <ul>
+                <ul className="hidden md:block">
                     {Array.from({ length: 4 }).map((_, i) => (
                         <li key={i} className={i !== 2 ? "border-b border-b-muted my-4" : "border-b-0"}>
                             <BlogCard includeImage={false} orientation="horizontal" />
