@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useLocale, useTranslations } from "use-intl";
+import PhoneNumberInput from "@/components/shared/PhoneNumberInput";
 
 function RequestDemoForm() {
     const t = useTranslations("Home.requestDemo");
@@ -10,6 +11,8 @@ function RequestDemoForm() {
     const isRTL = locale === "ar";
     return (
         <form className="space-y-6 rounded-2xl p-8 bg-white h-full flex flex-col justify-between">
+
+            {/* Name */}
             <div className="grid w-full items-center gap-3">
                 <Label
                     htmlFor="formNameInput"
@@ -25,6 +28,8 @@ function RequestDemoForm() {
                     className={`text-sm ${isRTL ? "text-right" : ""}`}
                 />
             </div>
+
+            {/* Email */}
             <div className="grid w-full items-center gap-3">
                 <Label
                     htmlFor="formEmailInput"
@@ -39,6 +44,8 @@ function RequestDemoForm() {
                     placeholder={t("form.email.placeholder")}
                     className={`text-sm ${isRTL ? "text-right" : ""}`} />
             </div>
+
+            {/* Phone Number */}
             <div className="grid w-full items-center gap-3">
                 <Label
                     htmlFor="formPhoneNumInput"
@@ -46,13 +53,10 @@ function RequestDemoForm() {
                 >
                     {t("form.phoneNumber.title")}
                 </Label>
-                <Input
-                    type="text"
-                    id="formPhoneNumInput"
-                    name="phoneNum"
-                    placeholder={t("form.phoneNumber.placeholder")}
-                    className={`text-sm ${isRTL ? "text-right" : ""}`} />
+                <PhoneNumberInput />
             </div>
+
+            {/* Company Name */}
             <div className="grid w-full items-center gap-3">
                 <Label
                     htmlFor="formCompanyInput"

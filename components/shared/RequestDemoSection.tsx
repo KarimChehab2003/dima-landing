@@ -22,6 +22,7 @@ function RequestDemoSection() {
         </p>
         <div className={`flex justify-between items-stretch gap-6  ${isRTL ? "flex-row-reverse" : ""}`}>
           <div className="lg:basis-3/5 basis-5/5 bg-[linear-gradient(90deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] p-5 rounded-4xl min-h-[600px]">
+            {/* Form */}
             <RequestDemoForm />
           </div>
 
