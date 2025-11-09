@@ -15,7 +15,7 @@ function RequestDemoPage() {
             className="bg-white"
         >
             <SectionWrapper className="min-h-dvh justify-stretch">
-                <div className="container mx-auto flex flex-col-reverse lg:flex-row justify-center items-center lg:items-stretch gap-12 my-12 flex-1">
+                <div className="container mx-auto flex flex-col-reverse lg:flex-row justify-center items-center lg:items-stretch gap-12  flex-1">
                     {/* Text & Form Section */}
                     <div className="flex-1 flex flex-col justify-center gap-4 text-center lg:text-left">
                         <p className="text-primary font-medium mb-4">— REQUEST A DEMO</p>

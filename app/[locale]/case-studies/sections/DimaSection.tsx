@@ -2,7 +2,7 @@ import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 
 function DimaSection() {
     return (
-        <div className="container mx-auto flex flex-col justify-center gap-8 my-12 rounded-4xl lg:rounded-[64px] bg-[#043558] p-12 text-white">
+        <div className="container mx-auto flex flex-col justify-center gap-8  rounded-4xl lg:rounded-[64px] bg-[#043558] p-12 text-white">
             <span className="text-sm font-bold">dima ai</span>
             <h2 className="text-2xl lg:text-[44px]">Discover how dima&apos;s arabic-first AI copilot helps your team unlock
                 deeper insights, respond faster, protect reputation, and scale impact</h2>

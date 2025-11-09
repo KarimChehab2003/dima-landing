@@ -6,7 +6,7 @@ import CaseStudyCard from "@/components/shared/CaseStudyCard";
 function HeroSection() {
     return (
         <SectionWrapper className="min-h-dvh">
-            <div className="container mx-auto flex flex-col justify-center items-center gap-8 my-12">
+            <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
                 {/* Heading */}
                 <h1 className="text-2xl lg:text-[44px] text-center max-w-5xl">See how leading companies across MENA trust dima to stay ahead of conversations, protect their reputation, and unlock growth</h1>
 

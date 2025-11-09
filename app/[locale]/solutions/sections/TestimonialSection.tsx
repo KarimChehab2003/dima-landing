@@ -8,7 +8,7 @@ function TestimonialSection({ slug }: { slug: string }) {
     const assets = testimonialAssets[slug];
     return (
         <SectionWrapper>
-            <div className="container mx-auto flex flex-col lg:flex-row justify-center items-stretch gap-8 my-12 px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto flex flex-col lg:flex-row justify-center items-stretch gap-8  px-4 sm:px-6 lg:px-8">
                 {/* Text Section */}
                 <div className="flex-1 flex flex-col sm:flex-row gap-6 sm:gap-8 text-center sm:text-left order-2 lg:order-1">
                     {/* Quote image */}

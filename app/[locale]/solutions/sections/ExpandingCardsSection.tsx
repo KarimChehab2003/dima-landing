@@ -12,7 +12,7 @@ function ExpandingCardsSection({ slug }: { slug: string }) {
     const cards = t.raw("cards") as CardType[];
     return (
         <SectionWrapper>
-            <div className="container mx-auto flex flex-col justify-center items-center gap-8 my-12">
+            <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
                 {/* Heading */}
                 <h2 className="text-2xl lg:text-[44px] text-center">{t("title")}</h2>
 

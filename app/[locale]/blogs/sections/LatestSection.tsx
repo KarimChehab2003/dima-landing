@@ -3,7 +3,7 @@ import BlogCard from "../components/BlogCard";
 
 function LatestSection() {
     return (
-        <div className="container mx-auto flex justify-center items-center gap-8 my-12">
+        <div className="container mx-auto flex justify-center items-center gap-8 ">
             <ContentSection title="The Latest" className="gap-8">
                 {/* Blogs */}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">

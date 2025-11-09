@@ -6,7 +6,7 @@ import CaseStudyCard from "@/components/shared/CaseStudyCard";
 
 function HeroSection() {
     return (
-        <div className="container mx-auto flex flex-col justify-center items-start gap-8 my-12 px-4">
+        <div className="container mx-auto flex flex-col justify-center items-start gap-8  px-4">
 
             {/* Header and Search */}
             <div className="flex justify-between items-center w-full flex-wrap gap-4">
