@@ -31,13 +31,24 @@ function OwnConversationSection() {
   }, []);
 
   // Auto-scroll active button into view
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
   useEffect(() => {
-    buttonRefs.current[activeIndex]?.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
-    });
+    const button = buttonRefs.current[activeIndex];
+    const container = containerRef.current;
+
+    if (button && container) {
+      const buttonLeft = button.offsetLeft;
+      const buttonWidth = button.offsetWidth;
+      const containerWidth = container.offsetWidth;
+
+      // Scroll horizontally so the button is centered
+      container.scrollTo({
+        left: buttonLeft - containerWidth / 2 + buttonWidth / 2,
+        behavior: "smooth",
+      });
+    }
   }, [activeIndex]);
 
   return (
@@ -54,13 +65,16 @@ function OwnConversationSection() {
         </div>
 
         {/* Scrollable Buttons */}
-        <div className="w-full overflow-x-auto py-4 hide-scrollbar">
+        <div
+          ref={containerRef}
+          className="w-full overflow-x-auto py-4 md:my-4 hide-scrollbar"
+        >
           <div
             className="
-              flex gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 
-              whitespace-nowrap 
-              w-max
-            "
+      flex gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 
+      whitespace-nowrap 
+      w-max
+    "
           >
             {ownConversationInfo.map((feature, idx) => (
               <Button
@@ -68,13 +82,8 @@ function OwnConversationSection() {
                 variant={activeIndex === idx ? "default" : "ghost"}
                 size="xl"
                 onClick={() => setActiveIndex(idx)}
-                ref={(el) => { buttonRefs.current[idx] = el; }} // comment if not using scroll-into-view
-                className="
-                  inline-flex items-center gap-2 
-                  text-sm sm:text-base 
-                  px-3 sm:px-4 md:px-6 
-                  shrink-0 tracking-normal
-                "
+                ref={(el) => { buttonRefs.current[idx] = el }}
+                className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0 tracking-normal"
               >
                 <feature.icon size={16} />
                 <span>{t(`features.${feature.translationKey}.title`)}</span>
@@ -82,6 +91,7 @@ function OwnConversationSection() {
             ))}
           </div>
         </div>
+
 
         {/* Image + Text */}
         <div
