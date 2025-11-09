@@ -4,7 +4,7 @@ import CardsGrid from "../sections/CardsGrid";
 import HeroSection from "../sections/HeroSection";
 import ScrollingSection from "../sections/ScrollingSection";
 import TestimonialSection from "../sections/TestimonialSection";
-import QuestionsAnsweredSection from "@/components/shared/QuestionsAnsweredSection";
+import QuestionsAnsweredSection from "@/app/[locale]/(home)/sections/QuestionsAnsweredSection";
 
 type SolutionPageProps = {
     params: Promise<{ slug: string }>
@@ -20,7 +20,7 @@ async function SolutionPage({ params }: SolutionPageProps) {
             <CardsGrid slug={slug} />
             <TestimonialSection slug={slug} />
             <RequestDemoSection />
-            <QuestionsAnsweredSection />
+            <QuestionsAnsweredSection slug={slug} />
         </main>
     );
 }

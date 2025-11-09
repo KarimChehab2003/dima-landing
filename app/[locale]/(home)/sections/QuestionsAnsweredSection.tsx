@@ -6,7 +6,11 @@ import { Link } from "@/i18n/navigation";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import QuestionsAccordion from "@/app/[locale]/(home)/components/QuestionsAccordion";
 
-function QuestionsAnsweredSection() {
+type QuestionsAnsweredSectionProps = {
+    slug?: string
+}
+
+function QuestionsAnsweredSection({ slug }: QuestionsAnsweredSectionProps) {
     const t = useTranslations("Home.questionsAnswered");
 
     return (
@@ -25,7 +29,7 @@ function QuestionsAnsweredSection() {
                 </div>
 
                 {/* FAQs */}
-                <QuestionsAccordion />
+                <QuestionsAccordion pageSlug={slug} />
             </div>
         </SectionWrapper>
     );
