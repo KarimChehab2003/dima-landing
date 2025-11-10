@@ -28,7 +28,7 @@ function TestimonialSection({ slug }: { slug: string }) {
                         <h2 className="text-4xl sm:text-3xl lg:text-[44px] font-semibold capitalize mb-4 leading-snug">
                             {t("title")}
                         </h2>
-                        <p className="text-base sm:text-lg font-medium leading-relaxed">
+                        <p className="text-lg sm:text-[22px] font-medium leading-relaxed">
                             “{t("quote")}”
                         </p>
 

@@ -8,7 +8,7 @@ type ExpandingCardProps = CardType & {
     onClick: () => void;
 };
 
-function ExpandingCard({ title, description, highighted, isExpanded, onClick }: ExpandingCardProps) {
+function ExpandingCard({ title, description, highlighted, isExpanded, onClick }: ExpandingCardProps) {
     const variants = {
         hidden: { opacity: 0, y: 20, transition: { duration: 0.5 } },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -17,11 +17,11 @@ function ExpandingCard({ title, description, highighted, isExpanded, onClick }: 
     return (
         <div
             onClick={onClick}
-            className={`bg-linear-to-b from-primary to-[#8A38F5] p-1 transition-all duration-500 rounded-3xl cursor-pointer lg:min-h-48
+            className={`bg-linear-to-b from-primary to-[#8A38F5] p-1 transition-all duration-500 rounded-3xl cursor-pointer min-h-52
       ${isExpanded ? "basis-2/3" : "basis-1/3"}
       `}
         >
-            <div className="bg-white transition-colors duration-300 px-6 py-3 rounded-[20px] h-full w-full flex flex-col justify-center">
+            <div className="bg-white transition-colors duration-300 px-6 py-3 rounded-[20px] h-full w-full flex flex-col justify-center min-h-52 lg:min-h-0">
                 {/* For desktop */}
                 <motion.h3
                     layout
@@ -50,7 +50,7 @@ function ExpandingCard({ title, description, highighted, isExpanded, onClick }: 
                             animate="visible"
                             className="mt-2"
                         >
-                            {renderHighlightedText(description, highighted)}
+                            {renderHighlightedText(description, highlighted)}
                         </motion.p>
                     )}
                 </AnimatePresence>

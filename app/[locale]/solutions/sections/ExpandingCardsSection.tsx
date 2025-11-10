@@ -10,21 +10,24 @@ function ExpandingCardsSection({ slug }: { slug: string }) {
     const [expandedIndex, setExpandedIndex] = useState<number>(0);
     const t = useTranslations(`Solutions.${slug}.expandingCards`);
     const cards = t.raw("cards") as CardType[];
+    console.log(cards[0].highlighted)
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
                 {/* Heading */}
-                <h2 className="text-2xl lg:text-[44px] text-center">{t("title")}</h2>
+                <h2 className="text-2xl lg:text-[44px] text-center capitalize">{t("title")}</h2>
 
                 {/* Expanding Cards */}
-                <div className="flex flex-col lg:flex-row justify-between items-stretch gap-8 w-full max-w-5xl lg:max-h-48">
+                <div className="flex flex-col lg:flex-row justify-between items-stretch gap-8 w-full max-w-5xl lg:max-h-52">
                     {
                         cards.map((card, i) => (
                             <ExpandingCard
                                 key={card.title}
                                 {...card}
                                 isExpanded={expandedIndex === i}
-                                onClick={() => setExpandedIndex(i)} />
+                                onClick={() => setExpandedIndex(i)}
+                                highlighted={card.highlighted}
+                            />
                         ))
                     }
                 </div>

@@ -5,9 +5,10 @@ import { motion, useMotionValue, useTransform, animate, easeOut, useInView } fro
 type CounterPercentageProps = {
     number: number;
     text: string;
+    className?: string;
 };
 
-function CounterPercentage({ number, text }: CounterPercentageProps) {
+function CounterPercentage({ number, text, className }: CounterPercentageProps) {
     const count = useMotionValue(0);
     const rounded = useTransform(() => Math.round(count.get()));
     const ref = useRef(null);
@@ -21,12 +22,13 @@ function CounterPercentage({ number, text }: CounterPercentageProps) {
     }, [isInView, number]);
 
     return (
-        <div ref={ref} className="flex flex-col items-center gap-4">
+        <div ref={ref} className={`flex flex-col items-center gap-4 px-6 py-8 rounded-2xl bg-muted lg:bg-white ${className}`}>
             <span className="text-4xl lg:text-5xl font-bold text-primary">
                 <motion.span className="text-black">{rounded}</motion.span>%
             </span>
             <p className="text-3xl lg:text-4xl font-medium text-center">{text}</p>
         </div>
+
     );
 }
 

@@ -12,7 +12,7 @@ function HeroSection({ slug }: { slug: string }) {
             <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
                 {/* Heading */}
                 <h2 className="bg-black text-white uppercase w-fit p-1 rounded-sm italic tracking-wide">{t("title")}</h2>
-                <h1 className="text-2xl lg:text-[48px] font-normal text-center">{t("subTitle")}</h1>
+                <h1 className="text-2xl lg:text-[48px] font-normal text-center capitalize">{t("subTitle")}</h1>
 
                 {/* Images */}
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
@@ -43,14 +43,20 @@ function HeroSection({ slug }: { slug: string }) {
                 <LogoCarousel />
 
                 {/* Percentages */}
-                <div className="flex flex-col sm:flex-row justify-evenly items-center gap-12 w-full ">
-                    {/* <CounterPercentage number={100} text="Full Coverage" />
-                    <CounterPercentage number={97} text="Arabic Accuracy" />
-                    <CounterPercentage number={44} text="Faster Time-to-Insight" /> */}
-                    {metrics.map((metric) => (
-                        <CounterPercentage key={metric.title} number={metric.number} text={metric.title} />
+                <div className="grid w-full gap-6 
+                sm:grid-cols-1 
+                md:grid-cols-2 
+                lg:grid-cols-3">
+                    {metrics.map((metric, i) => (
+                        <CounterPercentage
+                            key={metric.title}
+                            number={metric.number}
+                            text={metric.title}
+                            className={i === 2 ? "sm:col-span-2 lg:col-span-1" : ""}
+                        />
                     ))}
                 </div>
+
             </div>
         </SectionWrapper>
     );

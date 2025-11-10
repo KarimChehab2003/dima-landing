@@ -12,7 +12,7 @@ function ScrollingSection({ slug }: { slug: string }) {
         <SectionWrapper className="mb-0">
             <div className="container mx-auto flex flex-col justify-center items-center gap-4 ">
                 {/* Heading */}
-                <h2 className="text-2xl md:text-[44px] text-center ">{t("title")}</h2>
+                <h2 className="text-2xl md:text-[44px] text-center">{t("title")}</h2>
                 <p className="text-xl font-light text-center">{t("subTitle")}</p>
 
                 {/* Pinned Scroll Section for desktop */}

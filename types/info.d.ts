@@ -44,7 +44,7 @@ export type TestimonialType = {
 export type CardType = {
     title: string;
     description: string;
-    highighted?: string;
+    highlighted?: string;
 }
 
 export type EnterpriseType = {
