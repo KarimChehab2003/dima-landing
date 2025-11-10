@@ -6,6 +6,7 @@ import Navbar from "@/components/shared/navbar/Navbar";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Footer from "@/components/shared/footer/Footer";
+import ReactQueryProvider from "../ReactQueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,13 +35,15 @@ export default async function RootLayout({
         className={`${geistSans.className} antialiased`}
       >
         <NextIntlClientProvider>
-          <div className="min-h-dvh h-full flex flex-col justify-between">
-            <Navbar />
-            <div className="flex-1">
-              {children}
+          <ReactQueryProvider>
+            <div className="min-h-dvh h-full flex flex-col justify-between">
+              <Navbar />
+              <div className="flex-1">
+                {children}
+              </div>
+              <Footer />
             </div>
-            <Footer />
-          </div>
+          </ReactQueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>
