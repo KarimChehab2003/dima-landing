@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import useBlog from "../hooks/useBlog";
 import remarkGfm from "remark-gfm"
 import SectionWrapper from "@/components/shared/SectionWrapper";
+import Link from "next/link";
 
 
 function BlogContent({ slug }: { slug: string }) {
@@ -32,8 +33,18 @@ function BlogContent({ slug }: { slug: string }) {
 
             {/* Content */}
             <SectionWrapper>
-                <div className="container max-w-[1536px] mx-auto prose prose-neutral">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{blog?.content}</ReactMarkdown>
+                <div className="container max-w-[1536px] mx-auto prose">
+                    <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                            // Changing a tag into next.js Link tag
+                            a: ({ href, children, ...props }) => {
+                                return (
+                                    <Link href={href || "#"} className="text-primary" {...props}>{children}</Link>
+                                )
+                            },
+                        }}
+                    >{blog?.content}</ReactMarkdown>
                 </div>
             </SectionWrapper>
 

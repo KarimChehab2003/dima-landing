@@ -5,10 +5,10 @@ type SingleViewBlogPageProps = {
 }
 
 async function SingleViewBlogPage({ params }: SingleViewBlogPageProps) {
-    const name = (await params).slug
+    const slug = (await params).slug
     return (
         <main>
-            <BlogContent slug="my-cool-blog" />
+            <BlogContent slug={slug} />
         </main>
     );
 }
