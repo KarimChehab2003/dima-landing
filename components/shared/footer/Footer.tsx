@@ -1,18 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import FooterLinks from "./FooterLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import RequestDemoButton from "@/components/shared/RequestDemoButton";
 import { dimaSolutions, footerResourcesLinks } from "@/data/constants/links";
+import { Button } from "@/components/ui/button";
 
 function Footer() {
   const t = useTranslations("Footer");
   const locale = useLocale();
   const isRTL = locale === "ar";
-  // const solutions = t.raw("solutions.links") as (NavLink | SolutionLink)[];
-  // const resources = t.raw("resources.links") as (NavLink | SolutionLink)[];
+
 
   return (
     <footer className="bg-[#2C2C2C] text-white rounded-t-4xl" dir={isRTL ? "rtl" : "ltr"}>
@@ -23,7 +24,29 @@ function Footer() {
               <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Footer%2Fdima-logo-white.svg?alt=media&token=e9b4ea82-a30b-4187-97a7-15ef531dc17d" alt="dima logo white" width={120} height={50} />
             </figure>
             <h2 className="capitalize text-2xl">{t("dima.description")}</h2>
-            <RequestDemoButton className="bg-white! text-black!" computerVariant="black" size="xl" />
+
+            {/* CTA Button */}
+            <Button className="group bg-white! text-black! hover:text-white! hover:bg-black! transition-colors duration-300 w-fit" size="xl">
+              <div className="relative w-[30px] h-[30px]">
+                {/* Black icon (default) */}
+                <Image
+                  src="/computer-black.svg"
+                  alt="black computer icon"
+                  fill
+                  className="object-contain transition-opacity duration-300 group-hover:opacity-0"
+                />
+                {/* White icon (shown on hover) */}
+                <Image
+                  src="/computer.svg"
+                  alt="white computer icon"
+                  fill
+                  className="object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100 absolute top-0 left-0"
+                />
+              </div>
+
+              <span className="tracking-wide">{t("dima.requestDemo")}</span>
+            </Button>
+
           </div>
 
           {/* Footer Links */}

@@ -1,26 +1,26 @@
 import RequestDemoSection from "@/components/shared/RequestDemoSection";
-import ActionableInsightsSection from "../sections/ActionableInsightsSection";
-import BuiltEntreprisesSection from "../sections/BuiltEntreprisesSection";
+import ExpandingCardsSection from "../sections/ExpandingCardsSection";
+import CardsGrid from "../sections/CardsGrid";
 import HeroSection from "../sections/HeroSection";
-import StayAheadSection from "../sections/StayAheadSection";
+import ScrollingSection from "../sections/ScrollingSection";
 import TestimonialSection from "../sections/TestimonialSection";
-import QuestionsAnsweredSection from "@/components/shared/QuestionsAnsweredSection";
+import QuestionsAnsweredSection from "@/app/[locale]/(home)/sections/QuestionsAnsweredSection";
 
 type SolutionPageProps = {
     params: Promise<{ slug: string }>
 }
 
 async function SolutionPage({ params }: SolutionPageProps) {
-    const name = (await params).slug;
+    const slug = (await params).slug;
     return (
         <main>
-            <HeroSection />
-            <ActionableInsightsSection />
-            <StayAheadSection />
-            <BuiltEntreprisesSection />
-            <TestimonialSection />
+            <HeroSection slug={slug} />
+            <ExpandingCardsSection slug={slug} />
+            <ScrollingSection slug={slug} />
+            <CardsGrid slug={slug} />
+            <TestimonialSection slug={slug} />
             <RequestDemoSection />
-            <QuestionsAnsweredSection />
+            <QuestionsAnsweredSection slug={slug} />
         </main>
     );
 }

@@ -1,26 +1,34 @@
 "use client";
-import { useMotionValue, motion, animate, easeOut, useTransform } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { motion, useMotionValue, useTransform, animate, easeOut, useInView } from "motion/react";
 
 type CounterPercentageProps = {
     number: number;
     text: string;
-}
+    className?: string;
+};
 
-function CounterPercentage({ number, text }: CounterPercentageProps) {
+function CounterPercentage({ number, text, className }: CounterPercentageProps) {
     const count = useMotionValue(0);
     const rounded = useTransform(() => Math.round(count.get()));
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-50px" });
+
     useEffect(() => {
-        const controls = animate(count, number, { duration: 3, ease: easeOut });
-        return () => controls.stop();
-    }, [number])
+        if (isInView) {
+            const controls = animate(count, number, { duration: 3, ease: easeOut });
+            return () => controls.stop();
+        }
+    }, [isInView, number]);
+
     return (
-        <div className="flex flex-col items-center gap-4">
-            <span className="text-4xl sm:text-5xl font-bold text-primary">
+        <div ref={ref} className={`flex flex-col items-center gap-4 px-6 py-8 rounded-2xl bg-muted lg:bg-white ${className}`}>
+            <span className="text-4xl lg:text-5xl font-bold text-primary">
                 <motion.span className="text-black">{rounded}</motion.span>%
             </span>
-            <p className="text-2xl sm:text-4xl font-medium">{text}</p>
+            <p className="text-3xl lg:text-4xl font-medium text-center">{text}</p>
         </div>
+
     );
 }
 

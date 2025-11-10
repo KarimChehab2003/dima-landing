@@ -1,10 +1,14 @@
 import Image from "next/image";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
+import { useTranslations } from "next-intl";
+import { testimonialAssets } from "@/data/constants/solutionPageAssets";
 
-function TestimonialSection() {
+function TestimonialSection({ slug }: { slug: string }) {
+    const t = useTranslations(`Solutions.${slug}.testimonial`)
+    const assets = testimonialAssets[slug];
     return (
         <SectionWrapper>
-            <div className="container mx-auto flex flex-col lg:flex-row justify-center items-stretch gap-8 my-12 px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto flex flex-col lg:flex-row justify-center items-stretch gap-8  px-4 sm:px-6 lg:px-8">
                 {/* Text Section */}
                 <div className="flex-1 flex flex-col sm:flex-row gap-6 sm:gap-8 text-center sm:text-left order-2 lg:order-1">
                     {/* Quote image */}
@@ -22,20 +26,18 @@ function TestimonialSection() {
                     <div className="flex-1 flex flex-col justify-between">
 
                         <h2 className="text-4xl sm:text-3xl lg:text-[44px] font-semibold capitalize mb-4 leading-snug">
-                            hear it from our clients
+                            {t("title")}
                         </h2>
-                        <p className="text-base sm:text-lg font-medium leading-relaxed">
-                            “dima should be the go-to partner for any business serious about
-                            customer satisfaction and brand perception. Their ability to
-                            blend data, creativity and strategy makes a real difference.”
+                        <p className="text-lg sm:text-[22px] font-medium leading-relaxed">
+                            “{t("quote")}”
                         </p>
 
 
                         <div
-                            className="flex flex-col sm:flex-row items-center sm:items-start sm:gap-4 mt-6 sm:mt-8">
+                            className="flex flex-col sm:flex-row items-center sm:items-center sm:gap-4 mt-6 sm:mt-8">
                             <figure className="relative w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-0">
                                 <Image
-                                    src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FTestimonials%2Fwadi-degla.png?alt=media&token=2840fd94-b2e7-4d47-9f6a-fe380240a90c"
+                                    src={assets.companyLogo}
                                     alt="wadi degla logo"
                                     fill
                                     className="object-contain"
@@ -44,10 +46,10 @@ function TestimonialSection() {
 
                             <div>
                                 <p className="font-medium text-lg sm:text-xl">
-                                    Samer Yassa
+                                    {t("name")}
                                 </p>
                                 <p className="text-primary text-sm font-bold">
-                                    Business Development Manager, Wadi Degla
+                                    {t("jobRole")}
                                 </p>
                             </div>
                         </div>

@@ -197,48 +197,16 @@ export const scrollingCards: CardType[] = [
     }
 ]
 
-export const enterpriseFeaturesCards: EnterpriseType[] = [
-    {
-        icon: "/enterprise-icons/360.png",
-        title: "360° Conversation Coverage",
-        description: "Track tagged, untagged, and misspelled mentions across all social media platforms and private groups"
-    },
-    {
-        icon: "/enterprise-icons/arabic.png",
-        title: "Arabic-First Engine",
-        description: "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance"
-    },
-    {
-        icon: "/enterprise-icons/crisis-alert.png",
-        title: "Crisis Alerts",
-        description: "You're the first to know, before the public sees it grow. Get early crisis alerts via whatsapp and app notifications"
-    },
-    {
-        icon: "/enterprise-icons/custom.png",
-        title: "Customizable White-Label Reports",
-        description: "Generate unlimited reports in branded templates (PPT, PDF, Excel), ready to share instantly"
-    },
-    {
-        icon: "/enterprise-icons/dima.png",
-        title: "dima AI Assistant",
-        description: "Ask plain-language questions about your brand and get instant, actionable answers"
-    },
-    {
-        icon: "/enterprise-icons/users.png",
-        title: "Unlimited Users & Keywords",
-        description: "No caps on team members or keywords"
-    },
-    {
-        icon: "/enterprise-icons/visual.png",
-        title: "Visual Listening",
-        description: "Spot your brand in images, videos and audio to capture the full picture."
-    },
-    {
-        icon: "/enterprise-icons/historical-data.png",
-        title: "Capture Historical Data",
-        description: "dima provides full historical coverage to see the full picture."
-    },
-]
+export const enterpriseFeaturesCards: { icon: string, translationKey: string }[] = [
+    { icon: "/enterprise-icons/360.png", translationKey: "cards.0" },
+    { icon: "/enterprise-icons/arabic.png", translationKey: "cards.1" },
+    { icon: "/enterprise-icons/crisis-alert.png", translationKey: "cards.2" },
+    { icon: "/enterprise-icons/custom.png", translationKey: "cards.3" },
+    { icon: "/enterprise-icons/dima.png", translationKey: "cards.4" },
+    { icon: "/enterprise-icons/users.png", translationKey: "cards.5" },
+    { icon: "/enterprise-icons/visual.png", translationKey: "cards.6" },
+    { icon: "/enterprise-icons/historical-data.png", translationKey: "cards.7" },
+];
 
 export const sideInfoCards: SideInfoType[] = [
     {

@@ -6,7 +6,7 @@ import DimaSuiteSection from "./sections/DimaSuiteSection";
 import CaseStudiesSection from "./sections/CaseStudiesSection";
 import TestimonialSection from "./sections/TestimonialSection";
 import RequestDemoSection from "@/components/shared/RequestDemoSection";
-import QuestionsAnsweredSection from "@/components/shared/QuestionsAnsweredSection";
+import QuestionsAnsweredSection from "@/app/[locale]/(home)/sections/QuestionsAnsweredSection";
 
 
 function HomePage() {

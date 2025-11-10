@@ -3,9 +3,9 @@
 import { Scrollama, Step } from "react-scrollama";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { scrollingCards } from "@/data/constants/info";
+import { CardType } from "@/types/info";
 
-export default function PinnedScrollSection() {
+export default function PinnedScrollSection({ cards }: { cards: CardType[] }) {
     const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);
     const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -49,7 +49,7 @@ export default function PinnedScrollSection() {
             {/* Scroll text section */}
             <div className="w-1/2 px-4">
                 <Scrollama onStepEnter={handleStepEnter} offset={0.6}>
-                    {scrollingCards.map((card, i) => (
+                    {cards.map((card, i) => (
                         <Step data={i} key={card.title}>
                             <div
                                 ref={(element) => { stepRefs.current[i] = element }}
@@ -65,7 +65,7 @@ export default function PinnedScrollSection() {
 
             {/* Indices */}
             <div className="sticky top-0 h-screen flex flex-col justify-center items-center gap-8 pl-10">
-                {scrollingCards.map((_, index) => (
+                {cards.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => scrollToStep(index)}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { ArrowRight, Menu } from "lucide-react";
 import {
     Accordion,
     AccordionContent,
@@ -20,6 +20,7 @@ import SolutionNavLink from "./SolutionNavLink";
 import Image from "next/image";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useLocale, useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 
 function NavDrawer() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -84,6 +85,10 @@ function NavDrawer() {
                                             </li>
                                         ))}
                                     </ul>
+
+                                    <Button className="mt-4" size={"xl"}>
+                                        <Link href="/blogs">{t("resources.links.blogs.viewAllBlogs")}</Link>
+                                    </Button>
                                 </AccordionContent>
                             </AccordionItem>
                         </Accordion>
@@ -130,7 +135,12 @@ function NavDrawer() {
                             {t("caseStudies")}
                         </Link>
 
-                        <LanguageSwitcher />
+                        <Button >
+                            <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
+                            <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
+                                <ArrowRight color="black" />
+                            </div>
+                        </Button>
                     </nav>
                 </div>
             </DrawerContent>

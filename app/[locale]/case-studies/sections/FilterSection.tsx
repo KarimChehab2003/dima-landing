@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 function FilterSection() {
     return (
-        <div className="container mx-auto flex flex-col justify-center items-center gap-8 my-12">
+        <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
             {/* Scrollable Button Row */}
             <div className="w-full overflow-x-auto lg:flex lg:justify-center py-4">
                 <ul className="flex items-center gap-4 w-max px-4">

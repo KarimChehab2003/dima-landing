@@ -10,7 +10,7 @@ function SolutionsDropdown() {
     const isRTL = locale === "ar";
 
     return (
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col ">
             {/* Header */}
             <div>
                 <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>
@@ -21,7 +21,7 @@ function SolutionsDropdown() {
                 ></div>
             </div>
 
-            <div className={`flex justify-center items-center space-y-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+            <div className={`flex justify-center items-center ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 {/* Customer Insights */}
                 <Link href="/solutions/consumer-insights" className={`flex justify-center items-center gap-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                     <figure className="flex justify-center items-center">

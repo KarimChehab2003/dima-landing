@@ -3,7 +3,7 @@ import LayeredCard from "../components/LayeredCard";
 
 function StackedCardsSection() {
     return (
-        <section className="container mx-auto flex flex-col justify-center items-center gap-8 my-12 bg-black text-white p-6 sm:p-10 lg:p-16 rounded-3xl min-h-[500px]">
+        <section className="container mx-auto flex flex-col justify-center items-center gap-8  bg-black text-white p-6 sm:p-10 lg:p-16 rounded-3xl min-h-[500px]">
             <div className="flex flex-col justify-center gap-10 lg:gap-12 text-center lg:text-left">
                 {/* Heading & Description */}
                 <div className="max-w-4xl mx-auto lg:mx-0 space-y-4">

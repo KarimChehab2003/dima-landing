@@ -44,7 +44,7 @@ export type TestimonialType = {
 export type CardType = {
     title: string;
     description: string;
-    highighted?: string;
+    highlighted?: string;
 }
 
 export type EnterpriseType = {
@@ -66,4 +66,9 @@ export type LayeredCardType = {
     suffixColor: string;
     value: number;
     rotation: string;
+}
+
+export type TestimonialAsset = {
+    companyLogo: string;
+    testimonialImage?: string;
 }

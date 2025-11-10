@@ -28,7 +28,7 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
     progress = 75,
     innerColor = "#95DDEE",
     outerColor = "#11A8CF",
-    trackColor = "#e5e7eb",
+    trackColor = "#ffffff",
     textColor = "#1f2937",
     duration = 1.5,
     suffix = "%",
@@ -47,7 +47,8 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
     useEffect(() => {
         if (!isInView) return;
 
-        const targetOffset = circumference - (progress / maxValue) * circumference;
+        const gap = 0.05 * circumference;
+        const targetOffset = circumference - (progress / maxValue) * (circumference - gap);
 
         const offsetAnimation = animate(offset, targetOffset, {
             duration,

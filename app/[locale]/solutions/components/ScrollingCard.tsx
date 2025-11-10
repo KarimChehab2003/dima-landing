@@ -11,8 +11,8 @@ function ScrollingCard({ title, description }: CardType) {
 
             {/* Text */}
             <div>
-                <h2 className="text-4xl">{title}</h2>
-                <p className="text-2xl font-light mt-4">{description}</p>
+                <h2 className="text-2xl lg:text-[44px]">{title}</h2>
+                <p className="text-xl font-light mt-4">{description}</p>
             </div>
         </article>
     );

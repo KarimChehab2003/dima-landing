@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function CaseContent() {
     return (
-        <section className="container mx-auto flex flex-col lg:flex-row justify-center items-start gap-8 my-12 px-4 sm:px-6 lg:px-12">
+        <section className="container mx-auto flex flex-col lg:flex-row justify-center items-start gap-8  px-4 sm:px-6 lg:px-12">
             {/* Main Text Content */}
             <div className="flex flex-col gap-6 flex-1">
                 {/* Title */}

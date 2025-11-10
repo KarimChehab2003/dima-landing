@@ -4,12 +4,12 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all duration-200 ease-out active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 rounded-full font-extralight capitalize",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all duration-200 ease-out active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 rounded-full font-extralight",
   {
     variants: {
       variant: {
         default:
-          "bg-[#2C2C2C]! text-white hover:bg-[#1a1a1a] shadow-sm hover:shadow-md focus-visible:ring-ring/40 dark:bg-neutral-900 dark:hover:bg-neutral-800",
+          "bg-[#2C2C2C]! text-white hover:bg-black!  shadow-sm hover:shadow-md focus-visible:ring-ring/40 dark:bg-neutral-900 dark:hover:bg-neutral-800",
         destructive:
           "bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-400/50",
         outline:

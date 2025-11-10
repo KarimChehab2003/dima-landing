@@ -9,7 +9,7 @@ function DimaAiSection() {
   const isRTL = locale === "ar";
   return (
     <SectionWrapper>
-      <div className="container mx-auto p-6 sm:px-24  text-white rounded-4xl lg:rounded-[64px] bg-[#043558]">
+      <div className="container mx-auto p-6 sm:px-24  text-white rounded-4xl lg:rounded-[64px] bg-[#043558] max-w-[1348px]">
         <div
           className={`flex flex-col lg:flex-row justify-between items-center gap-4`}
         >
