@@ -5,7 +5,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import Image from "next/image";
 
 export default function LogoCarousel() {
-    const autoScrollPlugin = AutoScroll({ speed: 1, stopOnInteraction: false });
+    const autoScrollPlugin = AutoScroll({ speed: 2, stopOnInteraction: false });
 
     return (
         <Carousel

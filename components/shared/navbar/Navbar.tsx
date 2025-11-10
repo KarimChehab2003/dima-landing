@@ -69,6 +69,12 @@ function Navbar() {
                         <div>
                             <LanguageSwitcher />
                         </div>
+                        <Button className="hidden lg:flex">
+                            <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
+                            <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
+                                <ArrowRight color="black" />
+                            </div>
+                        </Button>
                     </div>
                 </div>
             </div>

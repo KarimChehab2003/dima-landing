@@ -11,28 +11,43 @@ function SolutionCard({ logo, href, translationKey }: SolutionLink) {
   const isRTL = locale === "ar";
 
   return (
-    <article className={`flex flex-col justify-between h-full items-start gap-3 shadow-[0_0_15px_rgba(0,0,0,0.2)] rounded-3xl p-8 ${isRTL ? "items-end text-right" : "items-start text-left"}`}
-      dir="ltr">
-      <div className={`flex flex-col gap-3 w-full  ${isRTL ? "items-end" : "items-start"}`}> {/* change this line to items-center */}
-        {/* Logo */}
-        <figure className="relative min-w-16 min-h-16">
-          <Image src={logo} alt={translationKey} fill className="object-contain max-h-16" />
-        </figure>
+    <article
+      className={`flex flex-col justify-between h-full gap-3 shadow-[0_0_15px_rgba(0,0,0,0.08)] rounded-3xl p-8 ${isRTL ? "items-end text-right" : "items-start text-left"
+        }`}
+      dir="ltr"
+    >
+      {/* Logo */}
+      <figure className="flex justify-center items-center max-h-[65px] w-auto shrink-0">
+        <Image
+          src={logo}
+          alt={translationKey}
+          width={80}
+          height={60}
+          className="object-contain min-h-[65px] max-h-[65px]"
+        />
+      </figure>
 
-        {/* Heading */}
-        <h3 className="text-2xl">{t(`solutions.${translationKey}.title`)}</h3>
-        <p className="text-sm">{t(`solutions.${translationKey}.description`)}</p>
+      {/* Title + Description */}
+      <div className={`flex flex-col gap-2 w-full ${isRTL ? "items-end" : "items-start"}`}>
+        <h3 className="text-[22px]">{t(`solutions.${translationKey}.title`)}</h3>
+        <p className="text-[15px] text-muted-foreground">
+          {t(`solutions.${translationKey}.description`)}
+        </p>
       </div>
 
-      {/* Explore/Coming soon button */}
-      {href === "/solutions/influencer-marketing" ||
-        href === "/solutions/customer-experience" ? (
-        <p className={`text-primary ${isRTL ? "self-end" : "self-start"}`}>{t("comingSoon")}</p>
-      ) : (
-        <Link href={href} className={isRTL ? "self-end" : "self-start"}> {/* change this line to self-center */}
-          <Button variant="outline" className="px-4! font-normal">{t("explore")}</Button>
-        </Link>
-      )}
+      {/* Explore / Coming Soon */}
+      <div className={`w-full ${isRTL ? "text-right" : "text-left"}`}>
+        {href === "/solutions/influencer-marketing" ||
+          href === "/solutions/customer-experience" ? (
+          <p className="text-primary">{t("comingSoon")}</p>
+        ) : (
+          <Link href={href}>
+            <Button variant="outline" className="px-3 font-normal">
+              {t("explore")}
+            </Button>
+          </Link>
+        )}
+      </div>
     </article>
   );
 }

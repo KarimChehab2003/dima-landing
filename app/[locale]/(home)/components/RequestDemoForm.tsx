@@ -10,7 +10,7 @@ function RequestDemoForm() {
     const locale = useLocale();
     const isRTL = locale === "ar";
     return (
-        <form className="space-y-6 rounded-2xl p-8 bg-white h-full flex flex-col justify-between">
+        <form className="space-y-6 rounded-4xl lg:rounded-2xl p-8 bg-white h-full flex flex-col justify-between">
 
             {/* Name */}
             <div className="grid w-full items-center gap-3">

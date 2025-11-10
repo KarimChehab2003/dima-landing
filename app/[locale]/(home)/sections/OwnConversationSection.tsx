@@ -45,7 +45,7 @@ function OwnConversationSection() {
 
       // Scroll horizontally so the button is centered
       container.scrollTo({
-        left: buttonLeft - containerWidth / 2 + buttonWidth / 2,
+        left: buttonLeft - containerWidth / 2 + buttonWidth / 2.5,
         behavior: "smooth",
       });
     }
@@ -131,7 +131,7 @@ function OwnConversationSection() {
 
             <div
               className={`xl:my-4 w-full xl:flex-1 flex justify-center ${isRTL ? 'md:justify-end' : 'md:justify-start'}`}>
-              <RequestDemoButton size={"xl"} className="xl:mt-4" />
+              <RequestDemoButton size={"xl"} className="mt-4" />
             </div>
           </div>
         </div>
