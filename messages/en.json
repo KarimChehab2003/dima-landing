@@ -52,7 +52,7 @@
       }
     },
     "caseStudies": "Case Studies",
-    "requestDemo": "Request a demo"
+    "requestDemo": "Request a Demo"
   },
   "Footer": {
     "dima": {
@@ -124,7 +124,7 @@
         "discoverCreators": "Discovering Organic Creators",
         "campaignRoi": "Measuring Campaign ROI"
       },
-      "cta": "Request a demo",
+      "cta": "Request a Demo",
       "trustedBy": "Trusted by 250+ leading agencies & enterprises in GCC & MENA"
     },
     "empoweringAgencies": {
@@ -183,11 +183,11 @@
       "badge": "DIMA AI",
       "title": "Your brand powered by Arabic-first AI",
       "description": "Meet dima AI — your copilot for turning data into clarity. With Arabic-first intelligence, it understands all dialects, slang, and Franco-Arabic, transforming raw data into instant insights and clear reports, giving you the full picture global tools miss.",
-      "cta": "Request a demo"
+      "cta": "Request a Demo"
     },
     "dimaSuite": {
       "title": "Discover dima's Suite Of AI-powered solutions",
-      "cta": "Request a demo",
+      "cta": "Request a Demo",
       "solutions": {
         "prComms": {
           "title": "PR & Comms",
@@ -300,7 +300,7 @@
     "questionsAnswered": {
       "title": "Your Questions, Answered",
       "description": "Get quick answers to the most common questions about our platform and services.",
-      "request a demo": "Request a demo",
+      "request a demo": "Request a Demo",
       "faqs": [
         {
           "question": "What platforms does dima cover?",

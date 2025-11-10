@@ -66,15 +66,9 @@ function Navbar() {
 
                     {/*  Language Switcher and Request a Demo */}
                     <div className="inline-flex items-center gap-2 order-1 lg:order-3">
-                        <div className="hidden lg:flex">
+                        <div>
                             <LanguageSwitcher />
                         </div>
-                        <Button>
-                            <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
-                            <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
-                                <ArrowRight color="black" />
-                            </div>
-                        </Button>
                     </div>
                 </div>
             </div>

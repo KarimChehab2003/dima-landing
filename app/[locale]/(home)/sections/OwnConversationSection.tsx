@@ -67,15 +67,8 @@ function OwnConversationSection() {
         {/* Scrollable Buttons */}
         <div
           ref={containerRef}
-          className="w-full overflow-x-auto py-4 md:my-4 hide-scrollbar"
-        >
-          <div
-            className="
-      flex gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 
-      whitespace-nowrap 
-      w-max
-    "
-          >
+          className="w-full overflow-x-auto py-4 md:my-4 hide-scrollbar">
+          <div className="flex gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap w-max">
             {ownConversationInfo.map((feature, idx) => (
               <Button
                 key={feature.translationKey}
@@ -111,7 +104,7 @@ function OwnConversationSection() {
 
           {/* Info + Button */}
           <div
-            className={`flex flex-col justify-start text-center w-full xl:max-w-md z-30 lg:h-[500px] xl:h-[600px] xl:pl-22 sm:order-2 pb-4 ${isRTL
+            className={`flex flex-col justify-start text-center w-full xl:max-w-md z-30  lg:h-[500px] xl:h-[600px] xl:pl-22 sm:order-2 pb-4 ${isRTL
               ? 'text-right items-end xl:pr-6'
               : 'items-start text-left'
               }`}
@@ -125,8 +118,7 @@ function OwnConversationSection() {
                 animate="visible"
                 className={`w-full xl:flex-1 flex flex-col justify-center ${isRTL
                   ? 'items-end text-right'
-                  : 'items-start text-left'
-                  }`}
+                  : 'items-start text-left'} h-[175px]`}
               >
                 <h3 className="text-2xl font-semibold my-4 sm:mb-6">
                   {t(`features.${activeFeature.translationKey}.title`)}
@@ -138,10 +130,8 @@ function OwnConversationSection() {
             </AnimatePresence>
 
             <div
-              className={`my-4 w-full xl:flex-1 flex justify-center ${isRTL ? 'md:justify-end' : 'md:justify-start'
-                }`}
-            >
-              <RequestDemoButton size={"xl"} className="mt-4" />
+              className={`xl:my-4 w-full xl:flex-1 flex justify-center ${isRTL ? 'md:justify-end' : 'md:justify-start'}`}>
+              <RequestDemoButton size={"xl"} className="xl:mt-4" />
             </div>
           </div>
         </div>

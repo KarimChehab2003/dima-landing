@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { ArrowRight, Menu } from "lucide-react";
 import {
     Accordion,
     AccordionContent,
@@ -135,7 +135,12 @@ function NavDrawer() {
                             {t("caseStudies")}
                         </Link>
 
-                        <LanguageSwitcher />
+                        <Button >
+                            <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
+                            <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
+                                <ArrowRight color="black" />
+                            </div>
+                        </Button>
                     </nav>
                 </div>
             </DrawerContent>
