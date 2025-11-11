@@ -3,8 +3,8 @@ import ContentSection from "../components/ContentSection";
 import BlogCard from "../components/BlogCard";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { ChevronDown, SearchIcon } from "lucide-react";
-import CaseStudyCard from "@/components/shared/CaseStudyCard";
 import useBlogs from "../hooks/useBlogs";
+import CaseStudyCard from "../../case-studies/components/CaseStudyCard";
 
 function HeroSection() {
     const { data: blogs, isLoading, isError } = useBlogs(3);

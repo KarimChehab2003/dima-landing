@@ -22,7 +22,7 @@ export type ConversationInfo = {
     translationKey: string;
 }
 
-export type CaseStudyInfo = {
+export type BrandCardInfo = {
     image: string;
     companyName: string;
     description: string;

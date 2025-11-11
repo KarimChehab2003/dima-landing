@@ -68,33 +68,35 @@ function PaginationLink({
 
 function PaginationPrevious({
   className,
+  size = "icon",
   ...props
 }: React.ComponentProps<typeof PaginationLink>) {
   return (
     <PaginationLink
       aria-label="Go to previous page"
       size="default"
-      className={cn("gap-1 px-2.5 sm:pl-2.5", className)}
+      className={cn(buttonVariants({ variant: "ghost", size }), className)}
       {...props}
     >
       <ChevronLeftIcon />
-      <span className="hidden sm:block">Previous</span>
+      <span className="hidden sm:block"></span>
     </PaginationLink>
   )
 }
 
 function PaginationNext({
   className,
+  size = "icon",
   ...props
 }: React.ComponentProps<typeof PaginationLink>) {
   return (
     <PaginationLink
       aria-label="Go to next page"
       size="default"
-      className={cn("gap-1 px-2.5 sm:pr-2.5", className)}
+      className={cn(buttonVariants({ variant: "ghost", size }), className)}
       {...props}
     >
-      <span className="hidden sm:block">Next</span>
+      <span className="hidden sm:block"></span>
       <ChevronRightIcon />
     </PaginationLink>
   )

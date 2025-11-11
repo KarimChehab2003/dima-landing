@@ -1,9 +1,10 @@
 import { caseStudiesInfo } from "@/data/constants/info";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
-import CaseStudyCard from "../components/CaseStudyCard";
+
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import BrandCard from "../components/BrandCard";
 
 function CaseStudiesSection() {
     const t = useTranslations("Home.caseStudies");
@@ -17,7 +18,7 @@ function CaseStudiesSection() {
                     {
                         caseStudiesInfo.map((info) => (
                             <li key={info.image}>
-                                <CaseStudyCard {...info} />
+                                <BrandCard {...info} />
                             </li>
                         ))
                     }
