@@ -14,7 +14,7 @@ type VideosSectionProps = {
 
 function VideosSection({ title, videos }: VideosSectionProps) {
     return (
-        <div className="container mx-auto flex justify-center items-center gap-8  rounded-4xl bg-muted py-12">
+        <div className="container mx-auto flex justify-center items-center gap-8 rounded-4xl bg-muted py-12 my-4">
             <div className="flex flex-col justify-center gap-8 p-4 max-w-6xl w-full">
                 {/* Title */}
                 <h2 className="text-2xl font-bold">{title}</h2>

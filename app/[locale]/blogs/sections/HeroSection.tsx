@@ -1,10 +1,15 @@
+"use client";
 import ContentSection from "../components/ContentSection";
 import BlogCard from "../components/BlogCard";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { ChevronDown, SearchIcon } from "lucide-react";
 import CaseStudyCard from "@/components/shared/CaseStudyCard";
+import useBlogs from "../hooks/useBlogs";
 
 function HeroSection() {
+    const { data: blogs, isLoading, isError } = useBlogs(3);
+    if (isLoading) return <p>Loading...</p>
+    if (isError) return <p>failed to load editors pick blog</p>
     return (
         <div className="container mx-auto flex flex-col justify-center items-start gap-8  px-4">
 
@@ -39,9 +44,9 @@ function HeroSection() {
                 {/* Editor's Picks */}
                 <ContentSection title="Editor's Pick" className="flex-1 w-full items-start">
                     <ul>
-                        {Array.from({ length: 3 }).map((_, i) => (
-                            <li key={i} className={i !== 2 ? "border-b border-b-muted mb-4" : "border-b-0"}>
-                                <BlogCard orientation="horizontal" />
+                        {blogs?.map((blog, i) => (
+                            <li key={blog.id} className={i !== 2 ? "border-b border-b-muted mb-4" : "border-b-0"}>
+                                <BlogCard orientation="horizontal" blog={blog} />
                             </li>
                         ))}
                     </ul>

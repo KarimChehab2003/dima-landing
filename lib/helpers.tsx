@@ -10,3 +10,4 @@ export const renderHighlightedText = (text: string, highlight?: string) => {
         )
     );
 };
+

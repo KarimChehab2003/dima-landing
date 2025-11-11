@@ -1,53 +1,63 @@
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { cn, timeAgo } from "@/lib/utils";
+import { Blog } from "@/types/content";
+import { useLocale } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 type BlogCardProps = {
     orientation?: "horizontal" | "vertical";
     includeImage?: boolean;
+    blog: Blog
 };
 
-function BlogCard({ orientation = "vertical", includeImage = true }: BlogCardProps) {
+function BlogCard({ orientation = "vertical", includeImage = true, blog }: BlogCardProps) {
+    const locale = useLocale();
+    const isRTL = locale === "ar";
     const isHorizontal = orientation === "horizontal";
 
     return (
-        <article
-            className={cn(
-                "flex items-start gap-4",
-                isHorizontal ? "flex-col sm:flex-row" : "flex-col"
-            )}
-        >
-            {/* Image */}
-            {includeImage && (
-                <figure
-                    className={cn(
+        <article className="group">
+            <Link href={`/blogs/${blog.id}`} className={cn(
+                "flex flex-col gap-4",
+                isHorizontal ? "sm:flex-row sm:items-center" : "items-start"
+            )}>
+                {/* Image */}
+                {includeImage && (
+                    <figure className={cn(
                         "relative rounded-xl overflow-hidden",
                         isHorizontal
                             ? "w-full sm:w-48 h-48 sm:h-28"
                             : "w-full min-h-[200px]"
-                    )}
-                >
-                    <Image
-                        src="/blog-placeholder.svg"
-                        alt="blog image"
-                        fill
-                        className="object-cover"
-                    />
-                </figure>
-            )}
+                    )}>
+                        <Image
+                            src={blog.thumbnail}
+                            alt="blog image"
+                            fill
+                            className="object-cover"
+                        />
+                    </figure>
+                )}
 
-            {/* Text content */}
-            <div className="flex flex-col gap-4 flex-1">
-                <div className="flex flex-wrap gap-2 w-full">
-                    <Badge className="bg-muted! text-black font-bold text-xs">Tag 1</Badge>
-                    <Badge className="bg-muted! text-black font-bold text-xs">Tag 2</Badge>
+                {/* Text content */}
+                <div className="flex flex-col gap-4 flex-1">
+                    <ul className="flex flex-wrap gap-2 w-full">
+                        {blog.tags.map((tag) => (
+                            <Badge className="bg-muted text-black font-bold text-xs capitalize" key={tag}>{tag}</Badge>
+                        ))}
+                    </ul>
+
+                    <p className="font-bold group-hover:underline">
+                        {blog.content.title}
+                    </p>
+                    <p className="text-xs">{blog.dateCreated.toDate().toLocaleDateString(isRTL ? "ar-EG" : "en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "2-digit",
+                        numberingSystem: "latn"
+                    })} ● {timeAgo(blog.dateCreated.toDate(), locale)}</p>
                 </div>
-
-                <p className="font-bold">
-                    What are KOLs in marketing? How to find true experts for your brand
-                </p>
-                <p className="text-xs">September 19, 2025 ● 14 minutes</p>
-            </div>
+            </Link>
         </article>
     );
 }

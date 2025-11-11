@@ -10,7 +10,6 @@ function ExpandingCardsSection({ slug }: { slug: string }) {
     const [expandedIndex, setExpandedIndex] = useState<number>(0);
     const t = useTranslations(`Solutions.${slug}.expandingCards`);
     const cards = t.raw("cards") as CardType[];
-    console.log(cards[0].highlighted)
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">

@@ -3,20 +3,31 @@
 import { db } from "@/lib/firebase";
 import { Blog } from "@/types/content";
 import { useQuery } from "@tanstack/react-query";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
+import { useLocale } from "next-intl";
 
-function useBlogs() {
+function useBlogs(limitCount: number = 4) {
+    const locale = useLocale();
+
     return useQuery({
-        queryKey: ["blogs"],
+        queryKey: ["blogs", limitCount, locale],
         queryFn: async () => {
-            const querySnapshot = await getDocs(collection(db, "blogs"));
+            const q = query(collection(db, "blogs"), orderBy("dateCreated", "desc"), limit(limitCount));
+            const querySnapshot = await getDocs(q);
+
             const blogs: Blog[] = [];
             querySnapshot.forEach((doc) => {
-                blogs.push({ id: doc.id, ...doc.data() } as Blog);
-            })
+                const data = doc.data();
+                blogs.push({
+                    id: doc.id,
+                    ...data,
+                    content: data.content?.[locale] || data.content?.en
+                } as Blog);
+            });
+
             return blogs;
-        }
-    })
+        },
+    });
 }
 
 export default useBlogs;

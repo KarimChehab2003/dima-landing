@@ -1,10 +1,15 @@
-export type Blog = {
-    id: string;
-    author: string;
+import { Timestamp } from "firebase/firestore";
+
+type Content = {
     title: string;
     description: string;
-    content: string;
-    dateCreated: string;
+    body: string
+}
+
+export type Blog = {
+    id: string;
+    content: Content;
+    dateCreated: Timestamp;
     tags: string[];
     thumbnail: string;
 }

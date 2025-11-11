@@ -7,9 +7,10 @@ type ContentSectionProps = {
     children: React.ReactNode
     title: string;
     includeViewAll?: boolean;
+    hrefViewAll?: string;
 }
 
-function ContentSection({ className, children, title, includeViewAll = true }: ContentSectionProps) {
+function ContentSection({ className, children, title, includeViewAll = true, hrefViewAll = "#" }: ContentSectionProps) {
     return (
         <div>
             {/* Separator */}
@@ -19,7 +20,7 @@ function ContentSection({ className, children, title, includeViewAll = true }: C
             <div className="flex flex-wrap justify-between items-center gap-2 mb-4">
                 <h2 className="text-lg sm:text-xl font-bold">{title}</h2>
                 {includeViewAll && (
-                    <Link href="#" className="text-primary text-sm inline-flex items-center font-bold">
+                    <Link href={hrefViewAll} className="text-primary text-sm inline-flex items-center font-bold">
                         View all <ChevronRight />
                     </Link>
                 )}
