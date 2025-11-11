@@ -10,9 +10,9 @@ function useBlog(slug: string) {
         queryKey: ["blogs", slug],
         queryFn: async () => {
             const docRef = doc(db, "blogs", slug);
-            console.log("Fetching....")
+            console.log(docRef)
             const docSnap = await getDoc(docRef);
-            console.log("The docSnap -> ", docSnap)
+            console.log(docSnap)
             if (!docSnap.exists()) throw new Error("Blog not found");
             return { id: docSnap.id, ...docSnap.data() } as Blog
         }
