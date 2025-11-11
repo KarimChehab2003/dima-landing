@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function CaseStudyCard() {
     return (
-        <article className="flex flex-col gap-4 p-8 shadow-[0_0_15px_rgba(0,0,0,0.07)] rounded-xl rounded-br-[64px] max-w-md">
+        <article className="flex flex-col gap-4 p-8 shadow-[0_0_15px_rgba(0,0,0,0.07)] rounded-xl rounded-br-[64px]">
             {/* Metric */}
             <div className="space-x-2">
                 <span className="text-3xl lg:text-5xl font-bold text-primary">5%</span>
