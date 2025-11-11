@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 function CaseStudyCard() {
     return (
-        <article className="bg-[#00C7EC]/9 py-4 px-6 rounded-3xl shadow-md max-w-2xl">
+        <article className="bg-[#00C7EC]/9 py-4 px-6 rounded-3xl shadow-md ">
             {/* Image */}
             <figure className="relative w-full overflow-hidden rounded-2xl">
                 <Image
