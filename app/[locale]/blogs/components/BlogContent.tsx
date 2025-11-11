@@ -7,7 +7,11 @@ import Link from "next/link";
 
 
 function BlogContent({ slug }: { slug: string }) {
-    const { data: blog, isLoading, isError } = useBlog(slug);
+    const { data: blog, isLoading, isError, status, fetchStatus, error } = useBlog(slug);
+
+    console.log("status of query:", status);
+    console.log("status of fetch function: ", fetchStatus)
+    console.log("Error found: ", error)
 
     if (isLoading) return <p>Loading...</p>
     if (isError) return <p>Failed to load blog</p>
