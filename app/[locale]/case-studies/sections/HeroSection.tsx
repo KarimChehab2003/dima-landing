@@ -1,5 +1,4 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
-import LogoCarousel from "../../(home)/components/LogoCarousel";
 
 function HeroSection() {
     return (
