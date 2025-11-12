@@ -44,8 +44,8 @@ function ResourcesDropdown() {
                                     width={20}
                                     height={20}
                                 />
-                                <Link href={link.href}>{t(`moreResources.${link.translationKey}`)}</Link>
-                                <p className="text-primary text-xs">Coming soon</p>
+                                <Link href={link.href}>{t(`moreResources.${link.translationKey}.title`)}</Link>
+                                <p className="text-primary text-xs">{t(`moreResources.${link.translationKey}.comingSoon`)}</p>
                             </li>
                         ))}
                     </ul>

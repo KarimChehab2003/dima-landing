@@ -102,7 +102,7 @@ function NavDrawer() {
                                 <AccordionContent>
                                     <ul className="space-y-4 p-3">
                                         {resourcesLinks.map((link) => (
-                                            <li key={link.href}>
+                                            <li key={link.href} className="flex items-center space-x-2">
                                                 <Link
                                                     href={link.href}
                                                     onClick={() => setIsOpen(false)}
@@ -117,8 +117,9 @@ function NavDrawer() {
                                                             height={18}
                                                         />
                                                     )}
-                                                    {t(`resources.links.moreResources.${link.translationKey}`)}
+                                                    {t(`resources.links.moreResources.${link.translationKey}.title`)}
                                                 </Link>
+                                                <span className="text-primary text-xs">{t(`resources.links.moreResources.${link.translationKey}.comingSoon`)}</span>
                                             </li>
                                         ))}
                                     </ul>
