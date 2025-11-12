@@ -20,6 +20,8 @@ function Footer() {
       <div className="container mx-auto flex flex-col px-6 py-12 space-y-8">
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ${isRTL ? "text-right" : "text-left"}`}>
           <div className="flex flex-col gap-4">
+
+            {/* Dima logo */}
             <figure>
               <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Footer%2Fdima-logo-white.svg?alt=media&token=e9b4ea82-a30b-4187-97a7-15ef531dc17d" alt="dima logo white" width={120} height={50} />
             </figure>
@@ -52,6 +54,7 @@ function Footer() {
           {/* Footer Links */}
           <FooterLinks title={t("solutions.title")} links={dimaSolutions} section="solutions" />
           <FooterLinks title={t("resources.title")} links={footerResourcesLinks} section="resources" />
+
           {/* Get In Touch */}
           <div>
             <h3 className="text-xl font-medium mb-4">{t("getInTouch.title")}</h3>
@@ -64,12 +67,15 @@ function Footer() {
           </div>
         </div>
 
+        {/* Social Media */}
         <div className="w-full flex justify-center lg:justify-end">
           <SocialMediaLinks />
         </div>
 
+        {/* Divider */}
         <div className="h-px w-full bg-white/20"></div>
 
+        {/* Copyright */}
         <div className={`flex flex-col sm:flex-row justify-between items-center gap-4 text-sm ${isRTL ? "text-right" : "text-left"}`}>
           <LanguageSwitcher />
           <p className="text-gray-300">{t("copyright")}</p>
