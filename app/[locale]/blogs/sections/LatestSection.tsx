@@ -2,36 +2,53 @@
 import ContentSection from "../components/ContentSection";
 import BlogCard from "../components/BlogCard";
 import useBlogs from "../hooks/useBlogs";
+import BlogCardSkeleton from "../components/BlogCardSkeleton";
 
 function LatestSection() {
     const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs(6);
     const { data: sideBlogs, isLoading: sideBlogsLoading, isError: sideBlogsError } = useBlogs(4);
 
-    if (blogsLoading || sideBlogsLoading) return <p>Loading...</p>
-    if (blogsError || sideBlogsError) return <p>failed to load blogs</p>
     return (
-        <div className="container mx-auto flex justify-center items-center gap-8 ">
-            <ContentSection title="The Latest" className="gap-8">
-                {/* Blogs */}
-                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-                    {
-                        blogs?.map((blog) => (
-                            <li key={`blogs/${blog.id}`}>
-                                <BlogCard blog={blog} />
-                            </li>
-                        ))
-                    }
-                </ul>
+        <div className="container mx-auto flex justify-center items-center gap-8 w-full">
+            <div className="flex-1">
+                <ContentSection title="The Latest" className="items-start gap-8">
+                    {blogsError && <p>Failed to load latest blogs</p>}
+                    {/* Blogs */}
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 w-full md:basis-3/4">
+                        {
+                            blogsLoading
+                                ? Array.from({ length: 6 }).map((_, i) => (
+                                    <li key={`skeleton-latest-${i}`}>
+                                        <BlogCardSkeleton />
+                                    </li>
+                                ))
+                                : blogs?.map((blog) => (
+                                    <li key={`blogs/${blog.id}`}>
+                                        <BlogCard blog={blog} />
+                                    </li>
+                                ))
+                        }
+                    </ul>
 
-                {/* Side Blogs */}
-                <ul className="hidden md:block">
-                    {sideBlogs?.map((blog, i) => (
-                        <li key={`sideBlogs/${blog.id}`} className={i !== 2 ? "border-b border-b-muted my-4" : "border-b-0"}>
-                            <BlogCard includeImage={false} orientation="horizontal" blog={blog} />
-                        </li>
-                    ))}
-                </ul>
-            </ContentSection>
+                    {/* Side Blogs */}
+                    {sideBlogsError && <p>Failed to load side blogs</p>}
+                    <ul className="hidden md:grid grid-cols-1 gap-4 divide-y basis-1/4">
+                        {
+                            sideBlogsLoading
+                                ? Array.from({ length: 4 }).map((_, i) => (
+                                    <li key={`skeleton-side-${i}`} className="pb-2">
+                                        <BlogCardSkeleton includeImage={false} />
+                                    </li>
+                                ))
+                                : sideBlogs?.map((blog) => (
+                                    <li key={`sideBlogs/${blog.id}`} className="pb-2">
+                                        <BlogCard includeImage={false} blog={blog} />
+                                    </li>
+                                ))
+                        }
+                    </ul>
+                </ContentSection>
+            </div>
         </div>
     );
 }

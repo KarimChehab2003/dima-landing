@@ -9,7 +9,7 @@ import RequestDemoSection from "@/components/shared/RequestDemoSection";
 function BlogsPage() {
     return (
         <main>
-            <SectionWrapper>
+            <SectionWrapper className="mt-20">
                 <HeroSection />
                 <LatestSection />
                 <VideosSection title="Learn more from dima.ai on social" videos={[{ src: "/learn-1.svg" }, { src: "/learn-2.svg" }, { src: "/learn-3.svg" }]} />

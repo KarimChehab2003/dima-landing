@@ -9,13 +9,14 @@ import ContentSection from "./ContentSection";
 import BlogCard from "./BlogCard";
 import { notFound } from "next/navigation";
 import LoadingAnimation from "@/components/shared/LoadingAnimation";
+import BlogCardSkeleton from "./BlogCardSkeleton";
 
 
 function BlogContent({ slug }: { slug: string }) {
     const { data: blog, isLoading: blogLoading, isError: blogError } = useBlog(slug);
     const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs();
-    if (blogLoading || blogsLoading) return <LoadingAnimation />
-    if (blogError || blogsError) return notFound()
+    if (blogLoading) return <LoadingAnimation />
+    if (blogError) return notFound()
 
 
     return (
@@ -55,15 +56,26 @@ function BlogContent({ slug }: { slug: string }) {
             {/* Check more blogs  */}
             <SectionWrapper>
                 <div className="container mx-auto">
-                    <ContentSection title="Check More Blogs" hrefViewAll="/blogs">
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                            {blogs?.map((blog) => (
-                                <li key={blog.id}>
-                                    <BlogCard blog={blog} />
-                                </li>
-                            ))}
-                        </ul>
-                    </ContentSection>
+                    <div className="flex-1">
+                        <ContentSection title="Check More Blogs" hrefViewAll="/blogs">
+                            {blogsError && <p>Failed to load more blogs</p>}
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
+                                {
+                                    blogsLoading
+                                        ? Array.from({ length: 4 }).map((_, i) => (
+                                            <li key={`skeleton-blogs-${i}`}>
+                                                <BlogCardSkeleton />
+                                            </li>
+                                        ))
+                                        : blogs?.map((blog) => (
+                                            <li key={blog.id}>
+                                                <BlogCard blog={blog} />
+                                            </li>
+                                        ))
+                                }
+                            </ul>
+                        </ContentSection>
+                    </div>
                 </div>
             </SectionWrapper>
         </article>
