@@ -15,15 +15,15 @@ function ResourcesDropdown() {
     const { data: blogs, isLoading, isError } = useBlogs(2);
     return (
         <div className={`flex justify-between items-center ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
-            <div className={`flex justify-center items-start gap-8 divide-x space-x-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+            <div className={`flex justify-center items-start gap-8 divide-x ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 {/* Blogs Section */}
-                <div className="flex-1 w-full">
+                <div className="flex-1 w-full px-2">
                     <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("blogs.title")}</h2>
                     <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     {isError && <p>Failed to load blogs</p>}
 
                     {/* Blogs */}
-                    <ul className={`grid grid-cols-1 gap-6 w-full ${isRTL ? 'text-right' : ''}`}>
+                    <ul className={`grid grid-cols-1 gap-6 w-full ${isRTL ? 'text-right' : ''}`} dir={isRTL ? "rtl" : "ltr"}>
                         {
                             isLoading
                                 ? Array.from({ length: 2 }).map((_, i) => (
@@ -44,7 +44,7 @@ function ResourcesDropdown() {
                 </div>
 
                 {/* More Resources Section */}
-                <div className="flex-1">
+                <div className="flex-1 px-2">
                     <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("moreResources.title")}</h2>
                     <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     <ul className={`grid grid-cols-1 gap-y-4 gap-x-8 ${isRTL ? 'text-right' : ''}`}>

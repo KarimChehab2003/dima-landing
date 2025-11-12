@@ -9,11 +9,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
         ? requested
         : routing.defaultLocale;
 
-    // const messages = await fetchTranslations(locale);
+    const messages = await fetchTranslations(locale);
 
     return {
         locale,
-        messages: (await import(`../messages/${locale}.json`)).default
-        // messages
+        // messages: (await import(`../messages/${locale}.json`)).default
+        messages
     };
 });
