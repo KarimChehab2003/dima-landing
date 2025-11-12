@@ -1,7 +1,7 @@
 "use client";
-import useDropdownHoverDelay from "@/components/shared/navbar/hooks/useDropdownHoverDelay";
 import { ChevronUp } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import useDropdownHoverDelay from "./hooks/useDropdownHoverDelay";
 
 type CustomDropdownProps = {
     triggerName: string;
@@ -37,7 +37,7 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            className="bg-white fixed top-[90px] left-0 p-8 w-full border-t shadow-xl rounded-2xl"
+                            className="bg-white fixed top-[85px] left-0 p-8 w-full border-t shadow-xl rounded-2xl"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             initial={{

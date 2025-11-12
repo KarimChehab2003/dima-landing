@@ -11,7 +11,7 @@ function useDropdownHoverDelay() {
     }
 
     const handleMouseLeave = () => {
-        timerRef.current = setTimeout(() => setIsOpen(false), 100)
+        timerRef.current = setTimeout(() => setIsOpen(false), 400)
     }
 
     const closeDropdown = () => {

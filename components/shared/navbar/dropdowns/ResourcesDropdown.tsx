@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { blogsLinks, resourcesLinks } from "@/data/constants/links";
+import { resourcesLinks } from "@/data/constants/links";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";

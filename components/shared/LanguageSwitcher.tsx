@@ -69,21 +69,22 @@ export default function LanguageSwitcher() {
                     setOpen(false);
                   }
                 }}
-                className="group"
+                className="group px-0"
               >
-                <Check
-                  className={cn(
-                    "mr-2 h-4 w-4 group-hover:text-white transition-colors duration-200",
-                    currentLanguage?.label === lang.label
-                      ? "opacity-100"
-                      : "opacity-0"
-                  )}
-                />
+
                 <Link
                   href={pathname}
                   locale={lang.locale}
-                  className="flex items-center gap-2 flex-1"
+                  className="flex items-center gap-2 flex-1 px-2"
                 >
+                  <Check
+                    className={cn(
+                      "mr-2 h-4 w-4 group-hover:text-white transition-colors duration-200",
+                      currentLanguage?.label === lang.label
+                        ? "opacity-100"
+                        : "opacity-0"
+                    )}
+                  />
                   <Image
                     src={lang.flag}
                     alt="language flag"
