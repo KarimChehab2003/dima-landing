@@ -24,8 +24,9 @@ export default function CyclicCardRotation({
 
     // Wait until the component is mounted to show the carousel
     useEffect(() => {
-        const timeout = setTimeout(() => setReady(true), 200);
-        return () => clearTimeout(timeout);
+        // const timeout = setTimeout(() => setReady(true), 200);
+        // return () => clearTimeout(timeout);
+        setReady(true);
     }, []);
 
     useEffect(() => {

@@ -261,27 +261,27 @@ export const layeredCardsData: LayeredCardType[] = [
 
 export const heroSlides: HeroSlide[] = [
     {
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-1.svg?alt=media&token=720d043c-71ab-4cb2-9444-7dc32f1a6f59",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-1.webp?alt=media&token=dd8a4b26-0b33-411b-bcd4-ba2e23725661",
         translationKey: "slides.socialListening",
     },
     {
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-2.svg?alt=media&token=7a3ec98e-fcd3-4add-a39e-1dc46797e450",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-2.webp?alt=media&token=01a0296e-8002-4996-9152-3c596c9ec0e0",
         translationKey: "slides.influencerTracking",
     },
     {
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.webp?alt=media&token=596bad9b-049c-4997-a048-4c309dbd21d1",
         translationKey: "slides.sentimentInsights",
     },
     {
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.webp?alt=media&token=596bad9b-049c-4997-a048-4c309dbd21d1",
         translationKey: "slides.competitorBenchmarking",
     },
     {
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.webp?alt=media&token=596bad9b-049c-4997-a048-4c309dbd21d1",
         translationKey: "slides.discoverCreators",
     },
     {
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.svg?alt=media&token=ca672616-0bbb-468f-b3e0-322a86c51227",
+        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FHero%2Fhero-carousel-item-3.webp?alt=media&token=596bad9b-049c-4997-a048-4c309dbd21d1",
         translationKey: "slides.campaignRoi",
     },
 ];
