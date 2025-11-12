@@ -7,13 +7,15 @@ import Link from "next/link";
 import useBlogs from "../hooks/useBlogs";
 import ContentSection from "./ContentSection";
 import BlogCard from "./BlogCard";
+import { notFound } from "next/navigation";
+import LoadingAnimation from "@/components/shared/LoadingAnimation";
 
 
 function BlogContent({ slug }: { slug: string }) {
     const { data: blog, isLoading: blogLoading, isError: blogError } = useBlog(slug);
     const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs();
-    if (blogLoading || blogsLoading) return <p>Loading...</p>
-    if (blogError || blogsError) return <p>Failed to load blog</p>
+    if (blogLoading || blogsLoading) return <LoadingAnimation />
+    if (blogError || blogsError) return notFound()
 
 
     return (
