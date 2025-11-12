@@ -26,11 +26,13 @@
         },
         "influencerMarketing": {
           "title": "Influencer Marketing",
-          "description": "Find the right partners for your brand"
+          "description": "Find the right partners for your brand",
+          "comingSoon": "Coming Soon"
         },
         "customerExperience": {
           "title": "Customer Experience",
-          "description": "Collect & analyze reviews"
+          "description": "Collect & analyze reviews",
+          "comingSoon": "Coming Soon"
         }
       }
     },
