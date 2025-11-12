@@ -1,5 +1,5 @@
 "use client";
-import useDropdownHoverDelay from "@/hooks/useDropdownHoverDelay";
+import useDropdownHoverDelay from "@/components/shared/navbar/hooks/useDropdownHoverDelay";
 import { ChevronUp } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
