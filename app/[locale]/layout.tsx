@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Footer from "@/components/shared/footer/Footer";
 import ReactQueryProvider from "../ReactQueryProvider";
+import PageLoader from "@/components/shared/PageLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,7 @@ export default async function RootLayout({
             <div className="min-h-dvh h-full flex flex-col justify-between">
               <Navbar />
               <div className="flex-1">
+                <PageLoader />
                 {children}
               </div>
               <Footer />

@@ -20,23 +20,21 @@ export default function CyclicCardRotation({
     selectedIndex,
     onIndexChange,
 }: CyclicCardRotationProps) {
-    const [ready, setReady] = useState(false);
 
     // Wait until the component is mounted to show the carousel
-    useEffect(() => {
-        // const timeout = setTimeout(() => setReady(true), 200);
-        // return () => clearTimeout(timeout);
-        setReady(true);
-    }, []);
+    // useEffect(() => {
+    //     // const timeout = setTimeout(() => setReady(true), 200);
+    //     // return () => clearTimeout(timeout);
+    //     setReady(true);
+    // }, []);
 
     useEffect(() => {
-        if (!ready) return;
         const timer = setInterval(() => {
             onIndexChange((prev) => (prev + 1) % cards.length);
         }, interval);
         return () => clearInterval(timer);
-    }, [ready, cards.length, interval, onIndexChange]);
-
+    }, [cards.length, interval, onIndexChange]);
+    // TODO: Optimize carousel items
     const getPositionClass = (index: number) => {
         const diff = (index - selectedIndex + cards.length) % cards.length;
         switch (diff) {
@@ -54,14 +52,6 @@ export default function CyclicCardRotation({
                 return "hidden";
         }
     };
-
-    if (!ready) {
-        return (
-            <div className="flex justify-center items-center w-full h-64">
-                <div className="w-8 h-8 border-4 border-blue-400 border-t-transparent rounded-full animate-spin" />
-            </div>
-        );
-    }
 
     return (
         <div className="relative w-full h-64 flex items-center justify-center overflow-hidden">
