@@ -7,6 +7,7 @@ import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 import { useTranslations, useLocale } from "next-intl";
 import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 import { ownConversationInfo } from "@/data/constants/info";
+import Lottie from "lottie-react";
 
 const textVariants = {
   hidden: { opacity: 0, x: 20 },
@@ -26,7 +27,7 @@ function OwnConversationSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % ownConversationInfo.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -93,12 +94,10 @@ function OwnConversationSection() {
         >
           {/* Image Section */}
           <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-b xl:bg-none from-primary via-[#5FC9E7] to-[#AEEBFF] rounded-2xl sm:order-1 order-2">
-            <Image
-              src={activeFeature.image}
-              alt={activeFeature.translationKey + ' icon'}
-              fill
-              className="object-contain z-10 p-6"
-              priority
+            <Lottie
+              animationData={activeFeature.animation}
+              autoplay
+              className="absolute inset-0 w-full h-full object-contain z-10 p-6"
             />
           </figure>
 

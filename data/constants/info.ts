@@ -1,6 +1,12 @@
-import { CardType, CaseStudyInfo, ConversationInfo, EmpoweringAgenciesInfo, EnterpriseType, HeroSlide, LayeredCardType, QuestionAccordion, SideInfoType, TestimonialType } from "@/types/info";
+import { CardType, BrandCardInfo, ConversationInfo, EmpoweringAgenciesInfo, HeroSlide, LayeredCardType, QuestionAccordion, SideInfoType, TestimonialType } from "@/types/info";
 import { FaChartLine, FaLaptop, FaLayerGroup } from "react-icons/fa6";
 import { PiUserList } from "react-icons/pi";
+
+import elevateAnim from "@/public/animations/elevate-lottie.json";
+import dailyAnim from "@/public/animations/daily-lottie.json";
+import listenAnim from "@/public/animations/listen-lottie.json";
+import benchmarkAnim from "@/public/animations/benchmark-lottie.json";
+import understandAnim from "@/public/animations/understand-lottie.json";
 
 export const empoweringAgenciesInfo: EmpoweringAgenciesInfo[] = [
     {
@@ -32,54 +38,54 @@ export const ownConversationInfo: ConversationInfo[] = [
         title: "Listen, analyze & act",
         subTitle: "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI.",
         icon: FaLaptop,
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
+        animation: listenAnim,
         translationKey: "listen"
     },
     {
         title: "Grow your brand with the right partners",
         subTitle: "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
         icon: FaChartLine,
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
+        animation: listenAnim, // missing
         translationKey: "grow"
     },
     {
         title: "Daily monitoring & coverage reports for all your clients",
         subTitle: "Stay in control of your brand narrative with proactive monitoring and reporting.",
         icon: FaLayerGroup,
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
+        animation: dailyAnim,
         translationKey: "daily"
     },
     {
         title: "Elevate your social presence",
         subTitle: "Turn your owned channels into proof of impact with AI content performance tracking.",
         icon: FaLayerGroup,
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
+        animation: elevateAnim,
         translationKey: "elevate"
     },
     {
         title: "Benchmark performance",
         subTitle: "Outpace your competitors with insights that accelerate decisions and increases your share of voice",
         icon: PiUserList,
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
+        animation: benchmarkAnim,
         translationKey: "benchmark"
     },
     {
         title: "Understand your audience everywhere",
         subTitle: "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact.",
         icon: FaLayerGroup,
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
+        animation: understandAnim,
         translationKey: "understand"
     },
     {
         title: "Collect & analyze reviews",
         subTitle: "Turn feedback into action to protect loyalty and increase customer satisfaction",
         icon: FaLayerGroup,
-        image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FOwnConversation%2Felevating-social-presence.svg?alt=media&token=dc8890f1-7017-4b74-ba45-16854c2dccff",
+        animation: listenAnim, // missing
         translationKey: "collect"
     },
 ]
 
-export const caseStudiesInfo: CaseStudyInfo[] = [
+export const caseStudiesInfo: BrandCardInfo[] = [
     {
         image: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2FCase%20Studies%2Fcase-study-1.png?alt=media&token=45d3f921-923e-4060-b209-a9eb6728b005",
         companyName: "Company Name",

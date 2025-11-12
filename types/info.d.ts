@@ -18,7 +18,7 @@ export type ConversationInfo = {
     title: string;
     subTitle: string;
     icon: IconType;
-    image: string;
+    animation: object;
     translationKey: string;
 }
 
