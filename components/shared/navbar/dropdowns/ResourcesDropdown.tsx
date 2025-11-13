@@ -15,7 +15,7 @@ function ResourcesDropdown() {
     const { data: blogs, isLoading, isError } = useBlogs(2);
     return (
         <div className={`flex justify-between items-center ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
-            <div className={`flex justify-center items-start gap-8 divide-x ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+            <div className={`flex justify-center items-start gap-8 divide-x w-full${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 {/* Blogs Section */}
                 <div className="flex-1 w-full px-2">
                     <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("blogs.title")}</h2>
@@ -37,6 +37,13 @@ function ResourcesDropdown() {
                                     </li>
                                 ))
                         }
+                        {/* {
+                            Array.from({ length: 2 }).map((_, i) => (
+                                <li key={`skeleton-blog-${i}`}>
+                                    <BlogCardSkeleton orientation="horizontal" />
+                                </li>
+                            ))
+                        } */}
                     </ul>
                     <Link href="/blogs">
                         <Button className="mt-4" size={"xl"}>{t("blogs.viewAllBlogs")}</Button>
