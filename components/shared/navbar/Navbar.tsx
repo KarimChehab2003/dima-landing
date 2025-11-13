@@ -66,7 +66,7 @@ function Navbar() {
 
                     {/*  Language Switcher and Request a Demo */}
                     <div className="inline-flex items-center gap-2 order-1 lg:order-3">
-                        <div>
+                        <div dir={locale === "ar" ? "rtl" : "ltr"}>
                             <LanguageSwitcher />
                         </div>
                         <Button className="hidden lg:flex">

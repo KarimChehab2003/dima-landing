@@ -40,7 +40,15 @@ export function timeAgo(date: Date, locale: string = "en") {
   let duration = secondsDiff;
   for (const [unitSeconds, unit] of intervals) {
     if (Math.abs(duration) < unitSeconds) {
-      return rtf.format(Math.round(duration), unit);
+      const value = Math.round(duration);
+      let formatted = rtf.format(value, unit);
+
+      // Replacing kabl to munz
+      if (locale.startsWith("ar") && value < 0) {
+        formatted = formatted.replace("قبل", "منذ");
+      }
+
+      return formatted;
     }
     duration /= unitSeconds;
   }

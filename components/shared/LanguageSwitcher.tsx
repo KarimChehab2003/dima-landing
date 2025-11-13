@@ -37,7 +37,7 @@ export default function LanguageSwitcher() {
       <PopoverTrigger asChild>
         <div
           aria-expanded={open}
-          className="w-fit flex justify-between items-center cursor-pointer px-3 py-2 rounded-lg bg-gray-100! hover:bg-gray-200! transition-colors duration-200"
+          className="w-fit flex justify-between items-center cursor-pointer px-3 py-2 rounded-lg bg-muted transition-colors duration-200"
         >
           <figure className="flex items-center gap-2">
             <Image
