@@ -32,7 +32,7 @@ export default function LogoCarousel() {
                         <div className="flex items-center justify-center 
                                 h-24 sm:h-[100px] md:h-[120px]">
                             <Image
-                                src={`/logo-slider/${index + 1}.svg`}
+                                src={`/logo-slider/${index + 1}.webp`}
                                 alt={`Logo ${index}`}
                                 width={220}
                                 height={110}
