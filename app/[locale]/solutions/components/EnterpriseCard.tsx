@@ -2,9 +2,10 @@ import { EnterpriseType } from "@/types/info";
 import Image from "next/image";
 
 function EntrepriseCard({ icon, title, description }: EnterpriseType) {
+
     return (
         <article className="flex flex-col justify-center items-center bg-[#95DDEE]/50 p-8 rounded-xl min-h-[332px]">
-            <div className="flex-1 flex items-baseline flex-col gap-8">
+            <div className="flex-1 flex flex-col gap-8" >
                 {/* Icon */}
                 <figure className="relative w-8 h-8 bg-[#2B558C] rounded-full">
                     <Image

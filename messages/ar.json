@@ -328,125 +328,121 @@
   "Solutions": {
     "social-listening-analytics": {
       "hero": {
-        "title": "Social Listening & Analytics",
-        "subTitle": "Arabic-First Copilot for Social Listening & Analytics",
+        "title": "رصد وتحليل وسائل التواصل الاجتماعي",
+        "subTitle": "أول مساعد عربي للاستماع والتحليلات الاجتماعية",
         "metrics": [
           {
             "number": 100,
-            "title": "Full Coverage"
+            "title": "تغطية شاملة "
           },
           {
             "number": 97,
-            "title": "Arabic Accuracy"
+            "title": "الدقة بالعربي "
           },
           {
-            "number": 44,
-            "title": "Faster Time-to-Insight"
+            "number": 40,
+            "title": " وقت اسرع لأستخلاص الرؤى"
           }
         ]
       },
       "expandingCards": {
-        "title": "Hear every conversation and turn noise into actionable insights",
+        "title": "اسمع كل حديث وحول العشوائية لمعلومات تفيدك",
         "cards": [
           {
-            "title": "Full Coverage",
-            "description": "Track and analyze coverage across online publications, social media, print, TV, radio & closed communities, so you can get the full picture.",
+            "title": "تغطية شاملة",
+            "description": "تابع الإشارات الموسومة وغير الموسومة، والمكتوبة بأخطاء إملائية، أو غير المباشرة عبر جميع منصات التواصل الاجتماعي، بما في ذلك انستقرام، سناب شات، فيسبوك، تيك توك، إكس، وغيرها من المنصات",
             "highlighted": "online publications, social media, print, TV, radio & closed communities"
           },
           {
-            "title": "Arabic-First AI Copilot",
-            "description": "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic.",
+            "title": "أول مساعد ذكي باللغة العربية",
+            "description": "الرصد بدقة عربية لا مثيل لها تشمل جميع اللهجات، العامية والعربي فرانكو",
             "highlighted": "dialects, slang and Franco-Arabic."
           },
           {
-            "title": "Built for Agencies",
-            "description": "Scale without constraints, Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
+            "title": "مصممة للوكالات",
+            "description": "وسع بدون حدود، كلمات مفتاحية وتقارير ومستخدمين بلا حد. ديما تتأقلم مع احتياجاتك العالية",
             "highlighted": "Unlimited keywords, reports & users."
           }
         ]
       },
       "scrollingSection": {
-        "title": "Stay Ahead Of The Conversation",
-        "subTitle": "Get to the heart of millions of mentions with AI powered insights that drive smarter & faster decisions",
+        "title": "خلك دايم نبيه بالحديث",
+        "subTitle": "تعمق في فهم ملايين الذكر من خلال رؤى مدعومة بالذكاء الاصطناعي تساعدك على اتخاذ قرارات أسرع وأكثر ذكاء",
         "cards": [
           {
-            "title": "Trend Detection",
-            "description": "Identify emerging trends before they gain momentum, giving you the edge to act first"
+            "title": "رصد المواضيع الرائجة ",
+            "description": "قبل لا تنتشر، وخلك دايم سابق بالقرار، ودايم الاول "
           },
           {
-            "title": "Communities",
-            "description": "Track communities conversations to expand coverage and visibility"
+            "title": "المجموعات",
+            "description": "تتبع محادثات المجموعات لتوسيع نطاق التغطية وزيادة الظهور"
           },
           {
-            "title": "Posts Vs Comments analysis",
-            "description": "Separate post and comment section analysis for deeper, more accurate insights."
+            "title": "تحليل المنشورات مقابل التعليقات",
+            "description": "تحليل بشكل منفصل للمنشورات والتعليقات لفهم اوضح وادق"
           },
           {
-            "title": "Be First to Know, First to Act",
-            "description": "Act instantly on real-time alerts to prevent crises, seize opportunities, and accelerate response times."
-          },
-          {
-            "title": "Go beyond mentions",
-            "description": "Seamlessly track sentiment, emotion, topics & more to uncover the true context behind conversations"
+            "title": "افهم ما وراء الحديث",
+            "description": "مو بس مين ذكرك، حتى المشاعر والعواطف والمواضيع وأكثر عشان تكشف السياق الحقيقي ورا الكلام"
           }
         ],
-        "cta": "Turn conversations into insights"
+        "cta": "حول الكلام الرائج إلى رؤى تساعدك في اتخاذ القرار"
       },
       "cardsGrid": {
-        "title": "Built For Enterprises",
+        "title": "مصمم للشركات والمؤسسات الكبرى",
         "cards": [
           {
-            "title": "360° Conversation coverage",
-            "description": "track tagged, untagged, and misspelled mentions across all social media platforms and private groups."
+            "title": "تغطية محادثة بزاوية 360 درجة",
+            "description": "تتبع الإشارات المميزة وغير المميزة والمكتوبة بشكل خاطئ عبر جميع منصات التواصل الاجتماعي والمجموعات الخاصة"
           },
           {
-            "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance."
+            "title": "محرك عربي أولاً",
+            "description": " بدقة 97% في كشف اللهجات العربية، العامية، المكتوبة باللاتينية، مع فهم التهكم والفروق الثقافية، متفرد في فهم التنوع اللغوي والثقافي باحترافية"
           },
           {
-            "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+            "title": "تنبيهات الأزمات",
+            "description": "توصلك تنبيهات فورية على التطبيق أو الواتساب إذا صار فيه ارتفاع مفاجئ، انخفاض بالمشاعر، ذكر مهم، أو خطر ممكن يكبر، قبل لا يتفاقم"
           },
           {
-            "title": "Customizable White-Label Reports",
-            "description": "Generate unlimited reports in branded templates (PPT, PDF, Excel), ready to share instantly"
+            "title": "التقارير القابلة للتخصيص",
+            "description": "إنشاء تقارير غير محدودة في قوالب مخصصة (PPT، PDF، Excel)، جاهزة للمشاركة فوراً"
           },
           {
-            "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your brand and get instant, actionable answers."
+            "title": "مساعد ديما الذكي",
+            "description": "يتيح لك طرح أسئلتك بلغة بسيطة حول التغطية، ويزودك بإجابات فورية تمكنك من اتخاذ الإجراء المطلوب"
           },
           {
-            "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords"
+            "title": "وصول غير محدود",
+            "description": "لا حدود على أعضاء الفريق أو الكلمات المفتاحية"
           },
           {
-            "title": "Visual Listening",
-            "description": "Spot your brand in images, videos and audio to capture the full picture."
+            "title": "الاستماع البصري",
+            "description": "رصد علامتك التجارية في الصور والفيديو والأصوات، عشان تعرف كل شيء يصير حولك وتعطيك الصورة كاملة "
           },
           {
-            "title": "Capture historical data",
-            "description": "dima provides full historical coverage to see the full picture."
+            "title": "جمع بيانات تاريخية",
+            "description": "توفر ديما تغطية تاريخية ، عشان تشوف الصورة كاملة"
           }
         ]
       },
       "testimonial": {
-        "title": "Hear It From Our Clients",
-        "quote": "dima should be the go-to partner for any business serious about customer satisfaction and brand perception. Their ability to blend data, creativity and strategy makes a real difference",
-        "name": "Samer Yassa",
-        "jobRole": "Business Development Manager at Wadi Degla"
+        "title": "تجارب عملائنا",
+        "quote": "ينبغي أن تكون dima الشريك الأول لأي عمل جاد بشأن رضا العملاء وصورة العلامة. قدرتهم على دمج البيانات والإبداع والاستراتيجية تُحدث فرقًا حقيقيًا",
+        "name": "سامر يسى",
+        "jobRole": "مدير تطوير الأعمال في Wadi Degla"
       },
       "faqs": [
         {
-          "question": "Does using dima mean that my data can be leaked to my competitors?",
-          "answer": "dima does not share any account's data. Your account data is stored securely and exclusively for your use. Likewise, no current client's data can ever be accessed or shared with another account."
+          "question": "هل يعني استخدام ديما ان بياناتي قد تسرب الى منافسي؟",
+          "answer": "ديما لا تشارك بيانات اي حساب. بيانات حسابك محفوظة بشكل امن وحصري لاستخدامك فقط. وكذلك، لا يمكن الوصول إلى بيانات اي عميل حالي او مشاركتها مع حساب اخر"
         },
         {
-          "question": "What is the Arabic accuracy for social media listening?",
-          "answer": "dima delivers 97% accuracy in Arabic for social media monitoring listening, and that rate is continuously improving. dima is Arabic-first, built in the region to capture dialects, slang, and Franco-Arabic."
+          "question": "ما مدى دقة اللغة العربية في رصد وسائل التواصل الاجتماعي؟",
+          "answer": "ديما توصل دقتها في رصد التواصل الاجتماعي بالعربي ل 97%، والنسبة هذي دايما في تطور. ديما مبنية على اللغة العربية أولا، ومصممه هنا بالمنطقة لفهم اللهجات، واللغة العامية ، وحتى الفرانكو-عربي"
         },
         {
-          "question": "What platforms does dima monitor?",
-          "answer": "dima covers both traditional and social media platforms. Traditional includes: Online Publications, Print Publications, TV & Radio. Social Media includes: TikTok, X, Snapchat, Facebook, Instagram, LinkedIn & more. There are other sources covered by dima as well like Google Maps Reviews & others in the pipeline. If you don't see the platform you want in the list, contact us to see when it will be available, our team is probably working on it already!"
+          "question": "ما هي المنصات التي تقوم ديما برصدها؟",
+          "answer": "تغطي ديما منصات الإعلام التقليدي ووسائل التواصل الاجتماعي. تشمل المنصات التقليدية المنشورات الإلكترونية، المطبوعات الصحفية، التلفزيون والراديو. أما وسائل التواصل الاجتماعي فتشمل تيك توك، إكس، سناب شات، فيسبوك، إنستغرام ولينكد إن. كما تغطي ديما مصادر أخرى مثل تقييمات خرائط جوجل والمزيد من المصادر قيد التطوير. إذا ما لقيت المنصة اللي تبيها بالقائمة، تواصل معنا لمعرفة متى بتتوفر، وفريقنا على الأرجح يعمل عليها حاليًا !"
         }
       ]
     },
@@ -804,6 +800,126 @@
         {
           "question": "What is the accuracy in Arabic? Does it detect slang, franco and dialects?",
           "answer": "97% and improving! dima is the first regionally built monitoring platform dedicated to leading agencies and enterprises in the region. As such, it is built to handle Arabic written posts, images and videos at its core"
+        }
+      ]
+    },
+    "own-page-intelligence": {
+      "hero": {
+        "title": "Own Page Intelligence",
+        "subTitle": "Own Page Intelligence That Measures What Matters",
+        "metrics": [
+          {
+            "number": 100,
+            "title": "Full Coverage"
+          },
+          {
+            "number": 97,
+            "title": "Arabic Accuracy"
+          },
+          {
+            "number": 40,
+            "title": "Faster Time-to-Insight"
+          }
+        ]
+      },
+      "expandingCards": {
+        "title": "Know Exactly What's Working on Your Channels",
+        "cards": [
+          {
+            "title": "Monitor the full picture",
+            "description": "Capture every engagement across your pages with unified cross-platform metrics on engagement, sentiment, and more",
+            "highlighted": "online publications, social media, print, TV, radio & closed communities"
+          },
+          {
+            "title": "Arabic First AI Copilot",
+            "description": "Analyze your own channels with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic",
+            "highlighted": "dialects, slang and Franco-Arabic"
+          },
+          {
+            "title": "Built for Scale",
+            "description": "Track every post, campaign, and engagement across your own pages, without limits. No caps on reports, metrics, or users. ",
+            "highlighted": "Unlimited keywords, reports & users"
+          }
+        ]
+      },
+      "scrollingSection": {
+        "title": "Own Page Intelligence That Drives Results",
+        "subTitle": "Go beyond surface metrics. Understand your channels, your audience, and the content that drives results.",
+        "cards": [
+          {
+            "title": "Evaluate campaign effectiveness",
+            "description": "Compare post and campaign performance across platforms with sentiment, engagement and reach."
+          },
+          {
+            "title": "Post when it matters",
+            "description": "Discover the best time to post across each platform, based on your audience's engagement patterns not generic benchmarks."
+          },
+          {
+            "title": "Turn Comments Into Insights",
+            "description": "Analyze the tone, sentiment, and conversation patterns in your comment section."
+          },
+          {
+            "title": "Optimize Your Messaging",
+            "description": "See which languages, hashtags, and keywords your audience uses around your brand and optimize your content and communication."
+          }
+        ],
+        "cta": "Know exactly what's working on your channels and why"
+      },
+      "cardsGrid": {
+        "title": "Capabilities That Power Your Owned Channels",
+        "cards": [
+          {
+            "title": "Own Page Analytics",
+            "description": "Track performance across TikTok, Instagram, X, LinkedIn, Facebook, Snapchat and more."
+          },
+          {
+            "title": "Arabic-First Engine",
+            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context."
+          },
+          {
+            "title": "Customizable Reports",
+            "description": "Deliver unlimited PPT, PDF, Excel, or HTML reports in branded templates"
+          },
+          {
+            "title": "Crisis Alerts",
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+          },
+          {
+            "title": "AI Coverage Summaries",
+            "description": "Receive daily, weekly, or monthly briefs that distill every key mention and trend."
+          },
+          {
+            "title": "dima AI Assistant",
+            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+          },
+          {
+            "title": "Unlimited Users & Keywords",
+            "description": "No caps on team members or keywords."
+          },
+          {
+            "title": "Best Time to Post",
+            "description": "Identify the exact times and days your audience is most engaged to boost reach and shareability across your channels "
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "Hear It From Our Clients",
+        "quote": "Working with the team at dima has helped us with understanding the drivers of engagement on our pages and to build an effective strategy across all social platforms through a true understanding of our audience's reactions and comments to everything we post!",
+        "name": "Omar Al Masry",
+        "jobRole": "Senior Brand Manager at Mori International"
+      },
+      "faqs": [
+        {
+          "question": "Do I need to share my organization's official social media page credentials?",
+          "answer": "No. dima does not require clients to share their social media page credentials. You still receive full insights and analytics without compromising account access."
+        },
+        {
+          "question": "Can dima help me improve my social media pages' performance?",
+          "answer": "Yes. dima helps you analyze your past campaigns and page performance to highlight both strengths and weaknesses. By learning from previous trends, dima guides you to replicate what works, avoid past mistakes, and optimize future content and campaigns for stronger results."
+        },
+        {
+          "question": "Can I compare my own official pages' performance to my competitors' ?",
+          "answer": "Yes, dima allows you to compare your social media pages, campaigns, and posts' performance to your competitors’. You can compare your performance to others by platform, by topics or during a specific date range. <link>Explore more</link>"
         }
       ]
     }

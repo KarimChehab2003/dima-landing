@@ -8,8 +8,8 @@ function HeroSection({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.hero`);
     const metrics = t.raw("metrics") as { number: number, title: string }[];
     return (
-        <SectionWrapper className="min-h-dvh mt-4">
-            <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
+        <SectionWrapper className="min-h-dvh mt-20">
+            <div className="container mx-auto flex flex-col justify-center items-center gap-4">
                 {/* Heading */}
                 <h2 className="bg-black text-white uppercase w-fit p-1 rounded-sm italic tracking-wide">{t("title")}</h2>
                 <h1 className="text-2xl lg:text-[48px] font-normal text-center capitalize">{t("subTitle")}</h1>

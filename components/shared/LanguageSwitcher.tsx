@@ -32,6 +32,7 @@ export default function LanguageSwitcher() {
   >(languages.find((l) => l.locale === currentLocale));
 
 
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>

@@ -1,11 +1,13 @@
 import Image from "next/image";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { testimonialAssets } from "@/data/constants/solutionPageAssets";
 
 function TestimonialSection({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.testimonial`)
     const assets = testimonialAssets[slug];
+    const locale = useLocale();
+    const isRTL = locale === "ar";
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col lg:flex-row justify-center items-stretch gap-8  px-4 sm:px-6 lg:px-8">
@@ -23,7 +25,7 @@ function TestimonialSection({ slug }: { slug: string }) {
                     </figure>
 
                     {/* Text */}
-                    <div className="flex-1 flex flex-col justify-between">
+                    <div className={`flex-1 flex flex-col justify-between ${isRTL ? "text-right" : "text-left"}`}>
 
                         <h2 className="text-4xl sm:text-3xl lg:text-[44px] font-semibold capitalize mb-4 leading-snug">
                             {t("title")}

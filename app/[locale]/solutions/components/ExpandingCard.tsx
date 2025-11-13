@@ -2,6 +2,7 @@
 import { renderHighlightedText } from "@/lib/helpers";
 import { CardType } from "@/types/info";
 import { AnimatePresence, motion } from "motion/react";
+import { useLocale } from "next-intl";
 
 type ExpandingCardProps = CardType & {
     isExpanded: boolean;
@@ -13,6 +14,8 @@ function ExpandingCard({ title, description, highlighted, isExpanded, onClick }:
         hidden: { opacity: 0, y: 20, transition: { duration: 0.5 } },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     };
+    const locale = useLocale();
+    const isRTL = locale === "ar";
 
     return (
         <div
@@ -25,7 +28,7 @@ function ExpandingCard({ title, description, highlighted, isExpanded, onClick }:
                 {/* For desktop */}
                 <motion.h3
                     layout
-                    animate={{ textAlign: isExpanded ? "left" : "center" }}
+                    animate={{ textAlign: isExpanded ? isRTL ? "right" : "left" : "center" }}
                     className={`hidden md:block text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
                         } transition-colors duration-300`}
                 >
