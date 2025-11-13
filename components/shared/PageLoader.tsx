@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import Lottie from "lottie-react";
-import loadingAnim from "@/public/animations/blue-loading.json";
 import { motion, AnimatePresence } from "framer-motion";
+import LoadingAnimation from "./LoadingAnimation";
 
 export default function PageLoader() {
     const [loading, setLoading] = useState(true);
@@ -59,7 +58,7 @@ export default function PageLoader() {
                     transition={{ duration: 0.6 }}
                     className="fixed inset-0 z-50 flex items-center justify-center bg-white"
                 >
-                    <Lottie animationData={loadingAnim} loop className="w-32 h-32" />
+                    <LoadingAnimation />
                 </motion.div>
             )}
         </AnimatePresence>

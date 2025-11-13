@@ -21,12 +21,12 @@ export default function CyclicCardRotation({
     onIndexChange,
 }: CyclicCardRotationProps) {
 
+    const [ready, setReady] = useState(false)
+
     // Wait until the component is mounted to show the carousel
-    // useEffect(() => {
-    //     // const timeout = setTimeout(() => setReady(true), 200);
-    //     // return () => clearTimeout(timeout);
-    //     setReady(true);
-    // }, []);
+    useEffect(() => {
+        setReady(true);
+    }, []);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -55,7 +55,7 @@ export default function CyclicCardRotation({
 
     return (
         <div className="relative w-full h-64 flex items-center justify-center overflow-hidden">
-            {cards.map((card, index) => (
+            {ready && cards.map((card, index) => (
                 <div
                     key={card.title}
                     onClick={() => onIndexChange(index)}
