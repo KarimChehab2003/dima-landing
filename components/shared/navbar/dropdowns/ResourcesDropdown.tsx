@@ -37,13 +37,6 @@ function ResourcesDropdown() {
                                     </li>
                                 ))
                         }
-                        {/* {
-                            Array.from({ length: 2 }).map((_, i) => (
-                                <li key={`skeleton-blog-${i}`}>
-                                    <BlogCardSkeleton orientation="horizontal" />
-                                </li>
-                            ))
-                        } */}
                     </ul>
                     <Link href="/blogs">
                         <Button className="mt-4" size={"xl"}>{t("blogs.viewAllBlogs")}</Button>
@@ -56,14 +49,15 @@ function ResourcesDropdown() {
                     <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     <ul className={`grid grid-cols-1 gap-y-4 gap-x-8 ${isRTL ? 'text-right' : ''}`}>
                         {resourcesLinks.map((link) => (
-                            <li key={link.href} className={`inline-flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                            <li key={link.href} className={`inline-flex items-center gap-2 opacity-60 cursor-not-allowed ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                                 <Image
                                     src={link.icon!}
                                     alt={"icon"}
                                     width={20}
                                     height={20}
                                 />
-                                <Link href={link.href}>{t(`moreResources.${link.translationKey}.title`)}</Link>
+                                {/* <Link href={link.href}>{t(`moreResources.${link.translationKey}.title`)}</Link> */}
+                                <span>{t(`moreResources.${link.translationKey}.title`)}</span>
                                 <p className="text-primary text-xs">{t(`moreResources.${link.translationKey}.comingSoon`)}</p>
                             </li>
                         ))}
