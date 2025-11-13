@@ -2,7 +2,6 @@
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 import { useTranslations, useLocale } from "next-intl";
 import RequestDemoButton from "../../../../components/shared/RequestDemoButton";

@@ -24,6 +24,7 @@ function HeroSection({ slug }: { slug: string }) {
                             width={322}
                             height={322}
                             className="w-[300px] md:w-[400px] lg:w-[322px] h-auto transition-all"
+                            priority
                         />
                     </figure>
 
@@ -34,6 +35,7 @@ function HeroSection({ slug }: { slug: string }) {
                             alt="Hero Image 2"
                             width={322}
                             height={322}
+                            priority
                         />
                     </figure>
                 </div>
