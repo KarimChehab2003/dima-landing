@@ -5,8 +5,12 @@ import SectionWrapper from "@/components/shared/SectionWrapper";
 import { CaseStudy } from "@/types/content";
 import Link from "next/link";
 import remarkGfm from "remark-gfm";
+import { useLocale } from "next-intl";
 
 function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
+    const locale = useLocale();
+    const isRTL = locale === "ar";
+
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col lg:flex-row justify-center items-start gap-8">
@@ -59,7 +63,7 @@ function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
                     {/* Used Solutions */}
                     <div className="p-6">
                         <h3 className="text-lg font-semibold border-b border-gray-700 pb-2 mb-4">
-                            Used Solutions:
+                            {isRTL ? "الحلول المستخدمة" : "Used Solutions"}:
                         </h3>
                         <ul className="space-y-3">
                             {caseStudy.content.usedSolutions.map((solution, i) => (

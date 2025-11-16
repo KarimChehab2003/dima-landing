@@ -1,13 +1,15 @@
 import LayeredCard from "../components/LayeredCard";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { CaseStudy } from "@/types/content";
+import { useLocale } from "next-intl";
 
 function StackedCardsSection({ caseStudy }: { caseStudy: CaseStudy }) {
-    console.log(caseStudy);
+    const locale = useLocale();
+    const isRTL = locale === "ar";
     return (
         <SectionWrapper className="mt-24">
             <div className="container mx-auto flex flex-col justify-center items-center gap-8 bg-[#053659] text-white p-6 sm:p-10 lg:p-16 rounded-4xl min-h-[500px]">
-                <div className="flex flex-col justify-center gap-10 lg:gap-12 text-center lg:text-left w-full">
+                <div className={`flex flex-col justify-center gap-10 lg:gap-12 text-center ${isRTL ? "lg:text-right" : "lg:text-left"}  w-full`}>
                     {/* Heading & Description */}
                     <div className="lg:mx-0 space-y-4">
                         <h2 className="text-2xl sm:text-3xl lg:text-[40px] capitalize leading-tight">
