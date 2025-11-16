@@ -27,10 +27,11 @@ export default function TestimonialCarousel({
     const [activeSlide, setActiveSlide] = useState(0);
     const sliderRef = useRef<Slider | null>(null);
     const isRTL = useLocale() === "ar";
+    const isWideScreen = window.innerWidth >= 1024;
 
     const settings = {
         centerMode: true,
-        centerPadding: "15px",
+        centerPadding: isWideScreen ? "15px" : "50px",
         infinite: true,
         slidesToShow,
         slidesToScroll: 1,
