@@ -13,8 +13,8 @@ function SideInfo({ icon, title, description }: SideInfoType) {
                 />
             </figure>
             <div className="flex-1">
-                <h3 className="text-xl font-semibold">{title}</h3>
-                <p>{description}</p>
+                <h3 className="text-xl font-semibold mb-3">{title}:</h3>
+                <p className="text-lg">{description}</p>
             </div>
         </article>
     );

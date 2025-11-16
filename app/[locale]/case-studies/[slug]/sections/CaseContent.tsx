@@ -1,48 +1,47 @@
-import { sideInfoCards } from "@/data/constants/info";
+import ReactMarkdown from "react-markdown";
 import SideInfo from "../components/SideInfo";
 import Image from "next/image";
 import SectionWrapper from "@/components/shared/SectionWrapper";
+import { CaseStudy } from "@/types/content";
+import Link from "next/link";
+import remarkGfm from "remark-gfm";
 
-function CaseContent() {
+function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col lg:flex-row justify-center items-start gap-8">
                 {/* Main Text Content */}
                 <div className="flex flex-col gap-6 flex-1">
-                    {/* Title */}
-                    <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-snug">
-                        A leading Egypt-based PR agency with over 30 years of experience,
-                        serving multinational clients across industries.
+                    {/* Description */}
+                    <h2 className="text-[22px] font-bold leading-snug">
+                        {caseStudy.content.description}
                     </h2>
 
                     {/* Attributes */}
                     <div className="flex flex-col gap-6">
                         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                            <li>
-                                <p className="text-base sm:text-lg font-light text-gray-300">Industry</p>
-                                <p className="text-base sm:text-lg font-medium">Public Relations & Communications</p>
-                            </li>
-                            <li>
-                                <p className="text-base sm:text-lg font-light text-gray-300">Type</p>
-                                <p className="text-base sm:text-lg font-medium">Agency</p>
-                            </li>
-                            <li>
-                                <p className="text-base sm:text-lg font-light text-gray-300">HQ</p>
-                                <p className="text-base sm:text-lg font-medium">Egypt</p>
-                            </li>
-                        </ul>
-
-                        {/* Description List */}
-                        <ul className="list-disc list-inside space-y-3 text-sm sm:text-base leading-relaxed">
-                            {Array.from({ length: 7 }).map((_, i) => (
+                            {caseStudy.content.attributes.map((attribute, i) => (
                                 <li key={i}>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Expedita fuga vero minima quasi ratione sunt dolorem cum.
-                                    Explicabo fugiat aut mollitia! Nemo, eveniet quam pariatur
-                                    sunt quo nihil provident. Possimus!
+                                    <p className="text-base sm:text-xl font-light mb-3">{attribute.title}</p>
+                                    <p className="text-base sm:text-lg font-medium">{attribute.subTitle}</p>
                                 </li>
                             ))}
                         </ul>
+
+                        {/* Body */}
+                        <div className="container max-w-[1536px] mx-auto prose text-lg lg:text-xl">
+                            <ReactMarkdown
+                                remarkPlugins={[remarkGfm]}
+                                components={{
+                                    // Changing a tag into next.js Link tag
+                                    a: ({ href, children, ...props }) => {
+                                        return (
+                                            <Link href={href || "#"} className="text-primary" {...props}>{children}</Link>
+                                        )
+                                    },
+                                }}
+                            >{caseStudy.content.body}</ReactMarkdown>
+                        </div>
                     </div>
                 </div>
 
@@ -50,7 +49,7 @@ function CaseContent() {
                 <aside className="w-full lg:w-1/3 flex flex-col gap-8 mt-10 lg:mt-0">
                     {/* Side Info Cards */}
                     <ul className="overflow-hidden divide-y divide-gray-700">
-                        {sideInfoCards.map((info, i) => (
+                        {caseStudy.content.sideInfo.map((info, i) => (
                             <li key={i}>
                                 <SideInfo {...info} />
                             </li>
@@ -63,17 +62,19 @@ function CaseContent() {
                             Used Solutions:
                         </h3>
                         <ul className="space-y-3">
-                            {Array.from({ length: 3 }).map((_, i) => (
-                                <li key={i} className="flex items-center gap-4">
-                                    <figure className="relative h-10 w-10 shrink-0">
-                                        <Image
-                                            src="/case-study-icons/prComms.svg"
-                                            alt="pr comms icon"
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </figure>
-                                    <p className="text-base sm:text-lg">PR & Comms</p>
+                            {caseStudy.content.usedSolutions.map((solution, i) => (
+                                <li key={i} >
+                                    <Link href={solution.href} className="flex items-center gap-4">
+                                        <figure className="relative w-14 h-14 shrink-0">
+                                            <Image
+                                                src={solution.icon}
+                                                alt={solution.title}
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </figure>
+                                        <p className="text-base sm:text-lg">{solution.title}</p>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

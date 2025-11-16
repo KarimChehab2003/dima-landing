@@ -59,13 +59,11 @@ export type SideInfoType = {
     description: string;
 }
 
-export type LayeredCardType = {
-    text: string;
-    bgColor: string;
-    suffix: string;
-    suffixColor: string;
+export type LayeredCardProps = {
+    index: number;
     value: number;
-    rotation: string;
+    title: string;
+    suffix: string;
 }
 
 export type TestimonialAsset = {
