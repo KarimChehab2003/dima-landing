@@ -59,7 +59,9 @@
         }
       }
     },
+    "blogs": "المدونات",
     "caseStudies": "دراسات الحالة",
+    "tools": "الأدوات",
     "requestDemo": "احجز تجربتك"
   },
   "Footer": {

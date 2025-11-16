@@ -2,7 +2,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { testimonialsInfo } from "@/data/constants/info";
 import TestimonialCard from "./TestimonialCard";
 import { useState, useRef } from "react";
 import { TestimonialType } from "@/types/info";
@@ -59,7 +58,7 @@ export default function TestimonialCarousel({
                     return (
                         <div
                             key={index}
-                            className={`flex justify-center transition-all duration-500 ease-in-out ${scaleOpacityClasses[classIndex]}`}
+                            className={`flex justify-center transition-all duration-500 ease-in-out select-none ${scaleOpacityClasses[classIndex]}`}
                             onClick={() => sliderRef.current?.slickGoTo(index)}
                         >
                             <TestimonialCard {...info} />

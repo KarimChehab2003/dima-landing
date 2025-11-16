@@ -59,7 +59,9 @@
         }
       }
     },
+    "blogs": "Blogs",
     "caseStudies": "Case Studies",
+    "tools": "Tools",
     "requestDemo": "Request a Demo"
   },
   "Footer": {

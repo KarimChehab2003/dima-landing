@@ -17,8 +17,10 @@ function Navbar() {
     const navbarItems = [
         { name: t("home"), href: "/" },
         { name: t("solutions.title"), dropdown: <SolutionsDropdown /> },
-        { name: t("resources.title"), dropdown: <ResourcesDropdown /> },
+        // { name: t("resources.title"), dropdown: <ResourcesDropdown /> },
+        { name: t("blogs"), href: "/blogs" },
         { name: t("caseStudies"), href: "/case-studies" },
+        { name: t("tools"), href: "/tools" },
     ];
 
     // Reverse the order for Arabic locale
