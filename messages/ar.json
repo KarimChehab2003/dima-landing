@@ -689,117 +689,117 @@
     },
     "consumer-insights": {
       "hero": {
-        "title": "Market Insights",
-        "subTitle": "Arabic-First Copilot for Consumer Insights",
+        "title": "رؤى المستهلكين",
+        "subTitle": "مساعد ذكي للغة العربية يوفر رؤى دقيقة عن المستهلكين",
         "metrics": [
           {
             "number": 100,
-            "title": "Full Coverage"
+            "title": "رصد وتغطية الحديث"
           },
           {
             "number": 97,
-            "title": "Arabic Accuracy"
+            "title": "الدقة باللغة العربية"
           },
           {
             "number": 20,
-            "title": "Increase in Ad Efficiency"
+            "title": "تحسين كفاءة الحملات الإعلانيه"
           }
         ]
       },
       "expandingCards": {
-        "title": "Get the Full Consumer Lens and See Beyond Demographics.",
+        "title": "كون منظور شامل عن المستهلك يتعدى حدود التركبية السكانية",
         "cards": [
           {
-            "title": "Full Market Coverage",
-            "description": "Track competitor mentions whether tagged, untagged, misspelled, or indirect across every major platform.",
+            "title": "رؤيه شاملة للمستهلك",
+            "description": "تابع موسومة، غير موسومة، او مكتوب بخطأ إملائي الذكر عبر جميع منصات التواصل الاجتماعي، بما في ذلك انستقرام، سناب شات، فيسبوك، تيك توك، اكس، والمزيد",
             "highlighted": "online publications, social media, print, TV, radio & closed communities"
           },
           {
-            "title": "Arabic First AI Copilot",
-            "description": "Detect competitor mentions and market trends with 97% Arabic accuracy across dialects, slang, and Franco-Arabic",
+            "title": "أول مساعد ذكي باللغة العربية",
+            "description": "ارصد بدقة عربية لا مثيل لها عبر جميع اللهجات، اللغه العاميه ، والفرانكو-عربي",
             "highlighted": "dialects, slang and Franco-Arabic"
           },
           {
-            "title": "Insights Without Limits",
-            "description": "Unlimited keywords, topics, and reports. dima grows with your brand, helping you uncover new consumer segments.",
+            "title": "رؤى بلا حدود",
+            "description": "عدد غير محدود من المستخدمين، والكلمات المفتاحية، والتقارير ديما تنمو مع علامتك التجارية",
             "highlighted": "Unlimited keywords, reports & users"
           }
         ]
       },
       "scrollingSection": {
-        "title": "Consumer Insights that drive growth",
-        "subTitle": "Look past the metrics and discover who your audience is and what drives them.",
+        "title": "رؤى المستهلك التي تحفز النمو",
+        "subTitle": "تجاوز المقاييس واكتشف من هو جمهورك وما الذي يحفزهم",
         "cards": [
           {
-            "title": "Understand your audience",
-            "description": "Identify the people behind the conversation whether organic creators, communities, or true brand advocates and understand their interests, language and behaviors."
+            "title": "افهم جمهورك صح",
+            "description": "حدد من هم الاشخاص اللي ورا هالكلام، سواء كانوا يسوون محتوى طبيعي، او مجتمعات، او ناس صدق يهتمون فعلاً لعلامتك التجارية، وافهم وش اهتماماتهم ولغتهم وكيف يتصرفون"
           },
           {
-            "title": "Uncover What Drives Them",
-            "description": "Analyze language, sentiment, emotions and trending topics to understand what your audience cares about most and why."
+            "title": "اكتشف ما يحفزهم",
+            "description": "حلل اللغة والمشاعر والعواطف والمواضيع الرائجة لفهم ما يهم جمهورك أكثر ولماذا"
           },
           {
-            "title": "Build smarter campaigns",
-            "description": "Speak their language and create content that resonates with your audience by aligning with the language, sentiment, emotions, and trends they respond to most."
+            "title": "بناء حملات أكثر ذكاء",
+            "description": "تحدث بلغتهم وأنشئ محتوى يتناغم مع جمهورك من خلال التوافق مع اللغة والمشاعر والعواطف والاتجاهات التي يستجيبون لها أكثر"
           }
         ],
-        "cta": "Turn data into insights"
+        "cta": "تحويل البيانات إلى رؤى"
       },
       "cardsGrid": {
-        "title": "Built to Understand Audiences at Scale",
+        "title": "مصممة لفهم الجماهير على نطاق واسع",
         "cards": [
           {
-            "title": "Full Coverage",
-            "description": " Track tagged, untagged, and misspelled mentions across all social media platforms and private groups"
+            "title": "رؤيه شاملة للمستهلك",
+            "description": "التقط الصوت الكامل لجمهورك، وتتبع الإشارات المُعلَّمة وغير المُعلَّمة والمكتوبة خطأً عبر جميع منصات وسائل التواصل الاجتماعي والمجموعات الخاصة"
           },
           {
-            "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context."
+            "title": "محرك عربي أولاً",
+            "description": " بدقة 97% في كشف اللهجات العربية، العامية، المكتوبة باللاتينية، مع فهم التهكم والفروق الثقافية، متفرد في فهم التنوع اللغوي والثقافي باحترافية"
           },
           {
-            "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+            "title": "تنبيهات الأزمات",
+            "description": "توصلك تنبيهات فورية على التطبيق أو الواتساب إذا صار فيه ارتفاع مفاجئ، انخفاض بالمشاعر، ذكر مهم، أو خطر ممكن يكبر، قبل لا يتفاقم"
           },
           {
-            "title": "AI Coverage Summaries",
-            "description": "Receive daily, weekly, or monthly briefs that distill every key mention and trend"
+            "title": "ملخصات التغطية بالذكاء الاصطناعي",
+            "description": "يجيك تقرير مختصر،  يومي او اسبوعي او شهري يصفي لك كل كلام مهم انذكر و كل المواضيع الرائجة الي صارت"
           },
           {
-            "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+            "title": "مساعد ديما الذكي",
+            "description": "يتيح لك طرح أسئلتك بلغة بسيطة حول التغطية، ويزودك بإجابات فورية تمكنك من اتخاذ الإجراء المطلوب"
           },
           {
-            "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords."
+            "title": "وصول غير محدود",
+            "description": "لا حدود على أعضاء الفريق أو الكلمات المفتاحية"
           },
           {
-            "title": "Visual Listening",
-            "description": "Spot your brand in images, videos and audio to capture the full picture."
+            "title": "الاستماع البصري",
+            "description": "رصد علامتك التجارية في الصور والفيديو والأصوات، عشان تعرف كل شيء يصير حولك وتعطيك الصورة كاملة "
           },
           {
-            "title": "Trend Radar",
-            "description": "Detect emerging memes, conversations, and cultural shifts so your brand always stays contextually relevant."
+            "title": "رادار الاتجاهات",
+            "description": "اكتشف الميمات الناشئة والمحادثات والتحولات الثقافية حتى تبقى علامتك التجارية ذات صلة سياقية دائماً"
           }
         ]
       },
       "testimonial": {
-        "title": "Hear It From Our Clients",
-        "quote": "Managing over 50 locations in 3 different continents is not easy, but dima makes it easier by providing tailored business insights to our different audiences 24/7 so that we can provide a tailored marketing strategy that targets our various audience segments",
-        "name": "Mostafa AlSagheer",
-        "jobRole": "Vice Chairman at AlSagheer Group"
+        "title": "أسئلتكم مجاب عنها",
+        "quote": "إدارة أكثر من 50 موقعًا في ثلاث قارات ليست سهلة، لكن dima تسهّل الأمر بتقديم رؤى أعمال مخصّصة لمختلف شرائح جمهورنا على مدار الساعة، ما يمكّننا من وضع استراتيجية تسويق موجهة لكل فئة",
+        "name": "مصطفى الصغير",
+        "jobRole": "نائب رئيس مجلس الإدارة في AlSagheer Group"
       },
       "faqs": [
         {
-          "question": "Can I extract social listening data from dima?",
-          "answer": "Yes. dima allows you to export your data in three formats: Table Format (raw data for in-depth analysis), Email Format (Quick snapshot reports) and PPT Format (branded, presentation-ready reports). All reports are customizable and tailored to each client's specific needs."
+          "question": "هل يمكنني استخراج بيانات الاستماع الاجتماعي من ديما؟",
+          "answer": "نعم. يتيح لك ديما تصدير بياناتك بثلاثة صيغ: صيغة الجدول (بيانات خام لتحليل متعمق)، وصيغة البريد الإلكتروني (تقارير سريعة)، وصيغة PPT (تقارير مميزة وجاهزة للعرض التقديمي). جميع التقارير قابلة للتخصيص ومُصممة خصيصًا لتلبية احتياجات كل عميل."
         },
         {
-          "question": "Can I filter data to search & analyze a specific topic, platform, sentiment, etc.?",
-          "answer": "Yes. dima gives you full control and accessibility over your data. You can filter results by topic, platform, sentiment, timeframe, and more."
+          "question": "هل يمكنني تصفية البيانات للبحث وتحليل موضوع معين، او منصة محددة، او نوع معين من المشاعر، وغيرها؟",
+          "answer": "نعم . توفر لك ديما السيطرة الكاملة وسهولة الوصول الى بياناتك يمكنك تصفية النتائج حسب الموضوع، المنصة، المشاعر، الفترة الزمنية، والمزيد"
         },
         {
-          "question": "What is the accuracy in Arabic? Does it detect slang, franco and dialects?",
-          "answer": "97% and improving! dima is the first regionally built monitoring platform dedicated to leading agencies and enterprises in the region. As such, it is built to handle Arabic written posts, images and videos at its core"
+          "question": "ما مدى دقة ديما في اللغة العربية؟ وهل تستطيع التعرف على اللهجات، واللغة العامية، والفرانكو؟",
+          "answer": "نسبة الدقة 97% وما زالت تتحسن! ديما هي اول منصة رصد مبنيه محلياً مخصصة للوكالات والشركات الكبرى في المنطقه وبالتالي، فهي مصممة خصيصاً لمعالجة المنشورات المكتوبة بالعربية، بالإضافة إلى الصور والفيديوهات بشكل أساسي"
         }
       ]
     },
