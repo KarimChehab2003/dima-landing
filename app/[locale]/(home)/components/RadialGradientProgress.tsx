@@ -13,6 +13,7 @@ type RadialGradientProgressProps = {
     duration?: number;
     suffix?: string;
     maxValue?: number;
+    gapValue?: number;
 };
 
 const formatNumber = (num: number, suffix?: string | React.ReactNode) => {
@@ -26,13 +27,14 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
     size = 120,
     strokeWidth = 20,
     progress = 75,
-    innerColor = "#95DDEE",
-    outerColor = "#11A8CF",
+    innerColor = "#11A8CF",
+    outerColor = "#95DDEE",
     trackColor = "#ffffff",
     textColor = "#1f2937",
     duration = 1.5,
     suffix = "%",
     maxValue = 100,
+    gapValue = 0
 }) => {
     const radius = (size - strokeWidth) / 2;
     const circumference = 2 * Math.PI * radius;
@@ -47,7 +49,7 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
     useEffect(() => {
         if (!isInView) return;
 
-        const gap = 0.05 * circumference;
+        const gap = gapValue * circumference;
         const targetOffset = circumference - (progress / maxValue) * (circumference - gap);
 
         const offsetAnimation = animate(offset, targetOffset, {
@@ -76,8 +78,8 @@ const RadialGradientProgress: React.FC<RadialGradientProgressProps> = ({
             <svg width={size} height={size} className="-rotate-90">
                 <defs>
                     <radialGradient id="radialGradient" cx="50%" cy="50%" r="50%">
-                        <stop offset="80%" stopColor={outerColor} />
-                        <stop offset="100%" stopColor={innerColor} />
+                        <stop offset="85%" stopColor={innerColor} />
+                        <stop offset="100%" stopColor={outerColor} />
                     </radialGradient>
                 </defs>
 

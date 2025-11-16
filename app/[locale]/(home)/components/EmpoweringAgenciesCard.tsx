@@ -8,7 +8,8 @@ export default function EmpoweringAgenciesCard({
     value,
     suffix,
     maxValue,
-    translationKey
+    translationKey,
+    gapValue
 }: EmpoweringAgenciesInfo) {
     const locale = useLocale();
     const isRTL = locale === "ar";
@@ -24,6 +25,7 @@ export default function EmpoweringAgenciesCard({
                         strokeWidth={16}
                         suffix={suffix}
                         maxValue={maxValue}
+                        gapValue={gapValue}
                     />
                 </div>
                 <h3 className={`text-lg md:text-2xl capitalize tracking-wide text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>

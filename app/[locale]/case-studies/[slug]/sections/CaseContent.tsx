@@ -33,7 +33,7 @@ function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
                         </ul>
 
                         {/* Body */}
-                        <div className="container max-w-[1536px] mx-auto prose text-lg lg:text-xl">
+                        <div className="container max-w-[1536px] mx-auto prose text-lg lg:text-xl mt-6">
                             <ReactMarkdown
                                 remarkPlugins={[remarkGfm]}
                                 components={{
@@ -44,7 +44,9 @@ function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
                                         )
                                     },
                                 }}
-                            >{caseStudy.content.body}</ReactMarkdown>
+                            >
+                                {caseStudy.content.body}
+                            </ReactMarkdown>
                         </div>
                     </div>
                 </div>

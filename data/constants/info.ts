@@ -21,7 +21,8 @@ export const empoweringAgenciesInfo: EmpoweringAgenciesInfo[] = [
         description: "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic",
         value: 97,
         suffix: "%",
-        translationKey: "accurateArabicAnalysis"
+        translationKey: "accurateArabicAnalysis",
+        gapValue: 0.05
     },
     {
         title: "Mentions Captured",
@@ -42,14 +43,14 @@ export const ownConversationInfo: ConversationInfo[] = [
         translationKey: "listen"
     },
     {
-        title: "Grow your brand with the right partners",
+        title: "Grow your brand",
         subTitle: "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
         icon: FaChartLine,
         animation: listenAnim, // missing
         translationKey: "grow"
     },
     {
-        title: "Daily monitoring & coverage reports for all your clients",
+        title: "Daily monitoring & reports",
         subTitle: "Stay in control of your brand narrative with proactive monitoring and reporting.",
         icon: FaLayerGroup,
         animation: dailyAnim,
@@ -70,7 +71,7 @@ export const ownConversationInfo: ConversationInfo[] = [
         translationKey: "benchmark"
     },
     {
-        title: "Understand your audience everywhere",
+        title: "Understand your audience",
         subTitle: "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact.",
         icon: FaLayerGroup,
         animation: understandAnim,
