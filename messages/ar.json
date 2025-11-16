@@ -805,121 +805,121 @@
     },
     "own-page-intelligence": {
       "hero": {
-        "title": "Own Page Intelligence",
-        "subTitle": "Own Page Intelligence That Measures What Matters",
+        "title": "تحليل الصفحة الرئيسية",
+        "subTitle": "رؤى دقيقة لصفحاتك على وسائل التواصل الاجتماعي",
         "metrics": [
           {
             "number": 100,
-            "title": "Full Coverage"
+            "title": "رصد وتغطية الحديث"
           },
           {
             "number": 97,
-            "title": "Arabic Accuracy"
+            "title": "الدقة باللغة العربية"
           },
           {
             "number": 40,
-            "title": "Faster Time-to-Insight"
+            "title": "اسرع في أستخلاص الرؤى"
           }
         ]
       },
       "expandingCards": {
-        "title": "Know Exactly What's Working on Your Channels",
+        "title": "تعرف بدقه على أداء حساباتك وما ينجح فيها",
         "cards": [
           {
-            "title": "Monitor the full picture",
-            "description": "Capture every engagement across your pages with unified cross-platform metrics on engagement, sentiment, and more",
+            "title": "رصد الصورة الكاملة",
+            "description": "سجل كل تفاعل عبر مع مؤشرات قياس التفاعل، والمشاعر، وغير ذلك ، عبر جميع المنصات",
             "highlighted": "online publications, social media, print, TV, radio & closed communities"
           },
           {
-            "title": "Arabic First AI Copilot",
-            "description": "Analyze your own channels with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic",
+            "title": "أول مساعد ذكي باللغة العربية",
+            "description": "الرصد بدقة عربية لا مثيل لها تشمل جميع اللهجات، العامية والعربي فرانكو",
             "highlighted": "dialects, slang and Franco-Arabic"
           },
           {
-            "title": "Built for Scale",
-            "description": "Track every post, campaign, and engagement across your own pages, without limits. No caps on reports, metrics, or users. ",
+            "title": "مصمم ليدعم النمو والتوسع",
+            "description": "تابع كل منشور، حملة، وتفاعل على حساباتك الرسمية، بلا حدود لا حدود على التقارير، المؤشرات، أو عدد المستخدمين",
             "highlighted": "Unlimited keywords, reports & users"
           }
         ]
       },
       "scrollingSection": {
-        "title": "Own Page Intelligence That Drives Results",
-        "subTitle": "Go beyond surface metrics. Understand your channels, your audience, and the content that drives results.",
+        "title": "ذكاء تحليل الحسابات الرسمية ليعزز أداءك",
+        "subTitle": "تجاوز المقاييس السطحية، وافهم حساباتك الرسمية، جمهورك، والمحتوى الذي يحقق النتائج",
         "cards": [
           {
-            "title": "Evaluate campaign effectiveness",
-            "description": "Compare post and campaign performance across platforms with sentiment, engagement and reach."
+            "title": "تقييم فعالية الحملات",
+            "description": "قارن أداء المنشورات والحملات عبر المنصات من حيث المشاعر والتفاعل والوصول"
           },
           {
-            "title": "Post when it matters",
-            "description": "Discover the best time to post across each platform, based on your audience's engagement patterns not generic benchmarks."
+            "title": "انشر في الوقت المناسب",
+            "description": "اكتشف أفضل وقت للنشر على كل منصة، بناءً على أنماط تفاعل جمهورك وليس المعايير العامة"
           },
           {
-            "title": "Turn Comments Into Insights",
-            "description": "Analyze the tone, sentiment, and conversation patterns in your comment section."
+            "title": "حول التعليقات إلى رؤى",
+            "description": "حلل النبرة والمشاعر والمحادثات في قسم التعليقات الخاص بك"
           },
           {
-            "title": "Optimize Your Messaging",
-            "description": "See which languages, hashtags, and keywords your audience uses around your brand and optimize your content and communication."
+            "title": "حسن رسائلك",
+            "description": "تعرف على اللغات و الوسوم والكلمات المفتاحية التي يستخدمها جمهورك حول علامتك التجارية وحسن محتواك وتواصلك"
           }
         ],
-        "cta": "Know exactly what's working on your channels and why"
+        "cta": "اعرف بالضبط ما الذي يعمل على قنواتك ولماذا"
       },
       "cardsGrid": {
-        "title": "Capabilities That Power Your Owned Channels",
+        "title": "الإمكانيات التي تقوي حساباتك الرسمية",
         "cards": [
           {
-            "title": "Own Page Analytics",
-            "description": "Track performance across TikTok, Instagram, X, LinkedIn, Facebook, Snapchat and more."
+            "title": "تحليلات الصفحة الخاصة",
+            "description": "تتبع الأداء والتفاعل عبر تيك توك وإنستغرام وإكس ولينكد إن وفيسبوك وسناب شات والمزيد"
           },
           {
-            "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context."
+            "title": "محرك عربي أولاً",
+            "description": " بدقة 97% في كشف اللهجات العربية، العامية، المكتوبة باللاتينية، مع فهم التهكم والفروق الثقافية، متفرد في فهم التنوع اللغوي والثقافي باحترافية"
           },
           {
-            "title": "Customizable Reports",
-            "description": "Deliver unlimited PPT, PDF, Excel, or HTML reports in branded templates"
+            "title": "التقارير القابلة للتخصيص",
+            "description": "إنشاء تقارير غير محدودة في قوالب مخصصة (PPT، PDF، Excel)، جاهزة للمشاركة فوراً"
           },
           {
-            "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+            "title": "تنبيهات الأزمات",
+            "description": "توصلك تنبيهات فورية على التطبيق أو الواتساب إذا صار فيه ارتفاع مفاجئ، انخفاض بالمشاعر، ذكر مهم، أو خطر ممكن يكبر، قبل لا يتفاقم"
           },
           {
-            "title": "AI Coverage Summaries",
-            "description": "Receive daily, weekly, or monthly briefs that distill every key mention and trend."
+            "title": "ملخصات التغطية بالذكاء الاصطناعي",
+            "description": "يجيك تقرير مختصر،  يومي او اسبوعي او شهري يصفي لك كل كلام مهم انذكر و كل المواضيع الرائجة الي صارت"
           },
           {
-            "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+            "title": "مساعد ديما الذكي",
+            "description": "يتيح لك طرح أسئلتك بلغة بسيطة حول التغطية، ويزودك بإجابات فورية تمكنك من اتخاذ الإجراء المطلوب"
           },
           {
-            "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords."
+            "title": "وصول غير محدود",
+            "description": "لا حدود على أعضاء الفريق أو الكلمات المفتاحية"
           },
           {
-            "title": "Best Time to Post",
-            "description": "Identify the exact times and days your audience is most engaged to boost reach and shareability across your channels "
+            "title": "أفضل وقت للنشر",
+            "description": "تحديد الأوقات والأيام المثالية التي يكون فيها جمهورك أكثر تفاعلاً لتعزيز الوصول وقابلية المشاركة عبر قنواتك"
           }
         ]
       },
       "testimonial": {
-        "title": "Hear It From Our Clients",
-        "quote": "Working with the team at dima has helped us with understanding the drivers of engagement on our pages and to build an effective strategy across all social platforms through a true understanding of our audience's reactions and comments to everything we post!",
-        "name": "Omar Al Masry",
-        "jobRole": "Senior Brand Manager at Mori International"
+        "title": "تجارب عملائنا",
+        "quote": "العمل مع فريق dima ساعدنا على فهم محركات التفاعل على صفحاتنا وبناء استراتيجية فعّالة عبر جميع المنصات من خلال فهم حقيقي لتفاعلات وتعليقات جمهورنا على كل ما ننشره",
+        "name": "عمر المصري",
+        "jobRole": "مدير علامة تجارية أول في Mori International"
       },
       "faqs": [
         {
-          "question": "Do I need to share my organization's official social media page credentials?",
-          "answer": "No. dima does not require clients to share their social media page credentials. You still receive full insights and analytics without compromising account access."
+          "question": "هل من الضروري تزويدكم ببيانات الدخول الرسمية لحسابات التواصل الاجتماعي الخاصة بمنظمتنا ؟",
+          "answer": "لا، ديما ما تطلب من العملاء مشاركة بيانات الدخول الخاصة لحسابات التواصل الاجتماعي. تظل تستلم تقارير وتحليلات كاملة بدون ما تتطلب الوصول المباشر للحسابات"
         },
         {
-          "question": "Can dima help me improve my social media pages' performance?",
-          "answer": "Yes. dima helps you analyze your past campaigns and page performance to highlight both strengths and weaknesses. By learning from previous trends, dima guides you to replicate what works, avoid past mistakes, and optimize future content and campaigns for stronger results."
+          "question": "هل يمكن لـ ديما مساعدتي في تحسين أداء صفحاتي على وسائل التواصل الاجتماعي؟",
+          "answer": "نعم، تساعدك ديما في تحليل حملاتك السابقة وأداء حساباتك لتسليط الضوء على نقاط القوة والضعف. من خلال التعلم من الاتجاهات السابقة، توجهك ديما لتكرار النجاحات، وتجنب الأخطاء الماضية، وتحسين المحتوى والحملات المستقبلية لتحقيق نتائج أقوى"
         },
         {
-          "question": "Can I compare my own official pages' performance to my competitors' ?",
-          "answer": "Yes, dima allows you to compare your social media pages, campaigns, and posts' performance to your competitors’. You can compare your performance to others by platform, by topics or during a specific date range. <link>Explore more</link>"
+          "question": "هل يمكنني مقارنة أداء صفحاتي الرسمية مع صفحات منافسي؟",
+          "answer": "نعم، تتيح لك ديما مقارنة أداء حساباتك على وسائل التواصل الاجتماعي، وحملاتك، ومنشوراتك مع منافسيك. يمكنك إجراء المقارنة حسب المنصة، أو حسب المواضيع، أو خلال فترة زمنية محددة <link>استكشاف المزيد</link>"
         }
       ]
     }
