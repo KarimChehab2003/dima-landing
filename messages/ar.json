@@ -283,7 +283,7 @@
       }
     },
     "questionsAnswered": {
-      "title": "إجابات على أسئلتك",
+      "title": "أسئلتكم مجاب عنها",
       "description": "احصل على إجابات سريعة لأكثر الأسئلة شيوعاً حول منصتنا وخدماتنا",
       "request a demo": "احجز تجربتك",
       "faqs": [
@@ -448,108 +448,108 @@
     },
     "pr-comms": {
       "hero": {
-        "title": "PR & Comms",
-        "subTitle": "The First Media Monitoring Copilot for PR & Comms",
+        "title": "العلاقات العامة والاتصالات",
+        "subTitle": "أول مساعد ذكي لرصد وسائل الإعلام في العلاقات العامة والاتصالات",
         "metrics": [
           {
             "number": 100,
-            "title": "Full Coverage"
+            "title": "تغطية شاملة "
           },
           {
             "number": 97,
-            "title": "Arabic Accuracy"
+            "title": "الدقة بالعربي"
           },
           {
             "number": 0,
-            "title": "Clients Lost"
+            "title": "فقد في العملاء"
           }
         ]
       },
       "expandingCards": {
-        "title": "Capture every narrative with Arabic accuracy",
+        "title": "رصد كل محتوى بدقة اللغة العربية، مصمم خصيصاً للوكالات على نطاق واسع",
         "cards": [
           {
-            "title": "Full Coverage",
-            "description": "Track and analyze coverage across online publications, social media, print, TV, radio & closed communities, so you can get the full picture.",
+            "title": "تغطية شاملة",
+            "description": "رصد وتحليل التغطية عبر المنشورات الإلكترونية ووسائل التواصل الاجتماعي والمطبوعات والتلفزيون والراديو والمجموعات الخاصة، لتتمكن من الحصول على الصورة الكاملة",
             "highlighted": "online publications, social media, print, TV, radio & closed communities"
           },
           {
-            "title": "Arabic-First AI Copilot",
-            "description": "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic.",
+            "title": "أول مساعد ذكي باللغة العربية",
+            "description": "الرصد بدقة عربية لا مثيل لها تشمل جميع اللهجات، العامية والعربي فرانكو",
             "highlighted": "dialects, slang and Franco-Arabic"
           },
           {
-            "title": "Built for Agencies",
-            "description": "Scale without constraints. Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
+            "title": "مصممة للوكالات",
+            "description": "وسع بدون حدود، كلمات مفتاحية وتقارير ومستخدمين بلا حد. ديما تتأقلم مع احتياجاتك العالية",
             "highlighted": "Unlimited keywords, reports & users"
           }
         ]
       },
       "scrollingSection": {
-        "title": "Steer your PR strategy with dima",
-        "subTitle": "From first mention to final report with the speed, scale, and precision PR & Communications teams need to lead the narrative.",
+        "title": "وجه استراتيجيتك في العلاقات العامة مع ديما",
+        "subTitle": "من أول ذكر إلى التقرير النهائي بسرعة وحجم ودقة تحتاجها فرق العلاقات العامة والاتصالات لتمكينهم من توجيه الرأي العام",
         "cards": [
           {
-            "title": "See the whole narrative",
-            "description": "Analyze & monitor mentions and topics of interest across traditional & social media platforms around the world."
+            "title": "اطلع على المحتوى الكامل",
+            "description": "تحليل ورصد الذكر والمواضيع ذات الاهتمام في وسائل الإعلام التقليدية والاجتماعية حول العالم."
           },
           {
-            "title": "Measure what matters automatically",
-            "description": "Automatically calculate key KPIs like PRV, IMP, OTS, CIRC and customize your own seamlessly."
+            "title": "قياس ما يهم تلقائياً ",
+            "description": "حساب مؤشرات الأداء الرئيسية مثل PRV و IMP و OTS و CIRC تلقائياً مع إمكانية تخصيص مؤشراتك بسهولة"
           },
           {
-            "title": "Be First to Know, First to Act",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball."
+            "title": "كن أول من يعرف وأول من يتصرف",
+            "description": "يجيك تنبيه على الفورعبر التطبيق والواتساب إذا صار ارتفاع، نزول بالمشاعر، ذكر رئيسي، أو مشكلة قبل ان تكبر . "
           },
           {
-            "title": "Client-ready in every format",
-            "description": "Generate white-labeled reports in PPT, PDF, Excel and more with branded templates in a click."
+            "title": "مجهز للعميل بأي شكل",
+            "description": "إنشاء تقارير مخصصة بعلامتك التجارية بصيغ PPT وPDF وExcel والمزيد، عبر ضغطة واحدة"
           }
         ],
-        "cta": "Ready to take control of the narrative"
+        "cta": "هل أنت مستعد للتحكم في مجريات السرد؟"
       },
       "cardsGrid": {
-        "title": "Built For Agencies",
+        "title": "مصممة للوكالات",
         "cards": [
           {
-            "title": "Full Coverage",
-            "description": "Track your brand across online news, print, broadcast and social platforms including closed communities, all in one view."
+            "title": "تغطية شاملة",
+            "description": "رصد علامتك التجارية عبر الأخبار الإلكترونية، الصحف، البث التلفزيوني، ووسائل التواصل الاجتماعي بما في ذلك المجموعات الخاصة، جميعها بواجهة وحده"
           },
           {
-            "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance."
+            "title": "محرك عربي أولاً",
+            "description": " بدقة 97% في كشف اللهجات العربية، العامية، المكتوبة باللاتينية، مع فهم التهكم والفروق الثقافية، متفرد في فهم التنوع اللغوي والثقافي باحترافية"
           },
           {
-            "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball."
+            "title": "تنبيهات الأزمات",
+            "description": "توصلك تنبيهات فورية على التطبيق أو الواتساب إذا صار فيه ارتفاع مفاجئ، انخفاض بالمشاعر، ذكر مهم، أو خطر ممكن يكبر، قبل لا يتفاقم"
           },
           {
-            "title": "Customizable White-Label Reports",
-            "description": "Deliver unlimited PPT, PDF, Excel, or HTML reports in branded templates, tailored for each department or client."
+            "title": "التقارير القابلة للتخصيص",
+            "description": "قدم تقارير غير محدودة بصيغة PPT أو PDF أو Excel أو HTML في قوالب ذات علامة تجارية، مُصممة خصيصاً لكل قسم أو عميل"
           },
           {
-            "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+            "title": "مساعد ديما الذكي",
+            "description": "يتيح لك طرح أسئلتك بلغة بسيطة حول التغطية، ويزودك بإجابات فورية تمكنك من اتخاذ الإجراء المطلوب"
           },
           {
-            "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords."
+            "title": "وصول غير محدود",
+            "description": "لا حدود على أعضاء الفريق أو الكلمات المفتاحية"
           },
           {
-            "title": "Visual Listening",
-            "description": "Spot your brand in images, videos and audio to capture the full picture."
+            "title": "الاستماع البصري",
+            "description": "رصد علامتك التجارية في الصور والفيديو والأصوات، عشان تعرف كل شيء يصير حولك وتعطيك الصورة كاملة "
           },
           {
-            "title": "Influencer & Journalist Finder",
-            "description": "Identify the voices that shape your industry so outreach hits where it matters."
+            "title": "أداة التعرف على المؤثرين والصحفيين",
+            "description": "حدد الأصوات التي تُشكل صناعتك حتى تصل جهود التواصل إلى حيث يهم الأمر"
           }
         ]
       },
       "testimonial": {
-        "title": "Hear It From Our Clients",
-        "quote": "MountPR's partnership with dima revolutionized our PR workflow. We now act faster, report smarter, and stay ahead of every story.",
-        "name": "MountPR",
-        "jobRole": "Communications Agency"
+        "title": "تجارب عملائنا",
+        "quote": "على مدى أكثر من 30 عامًا عملنا عن قرب مع عملائنا لتقديم أحدث حلول العلاقات العامة عبر صناعات وقطاعات متعددة. مكّنتنا dima من تقديم رصد وتحليلات إعلامية أسهل وأسرع وأكثر دقة",
+        "name": "دينا السويفي",
+        "jobRole": "الرئيس التنفيذي في MountPR"
       },
       "form": {
         "title": "Request a Demo",
@@ -558,132 +558,132 @@
       },
       "faqs": [
         {
-          "question": "Is there a limitation on the number of users for the platform?",
-          "answer": "No, dima has no limitation on the number of users per single account."
+          "question": "هل هناك حد لعدد المستخدمين على الأداة؟",
+          "answer": "لا، ديما لا تفرض اي حد على عدد المستخدمين لكل حساب"
         },
         {
-          "question": "Is there a limitation on the number of reports to be extracted from dima per day/month?",
-          "answer": "No, dima has no limitation on the number of reports extracted."
+          "question": "هل هناك حد لعدد التقارير التي يمكن استخراجها من ديما يوميًا أو شهريًا؟",
+          "answer": "لا، ديما لا تفرض أي حد على عدد التقارير التي يمكن استخراجها"
         },
         {
-          "question": "Is there a client view that allows for sharing instant insights, reports, and live monitoring?",
-          "answer": "Yes, dima offers different access levels for the expert and the client, providing the client with easy accessibility and the expert with full control."
+          "question": "هل توجد واجهة مخصصة للعملاء تتيح مشاركة الرؤى الفورية، والتقارير، والرصد المباشر؟",
+          "answer": "نعم، تقدم ديما مستويات وصول مختلفة للخبير والعميل، حيث يتم تزويد العميل بسهولة الوصول، بينما يتم منح الخبير التحكم الكامل"
         }
       ]
     },
     "market-insights": {
       "hero": {
-        "title": "Market Insights",
-        "subTitle": "Stay Ahead of the Market With Arabic-First Intelligence",
+        "title": "رؤى السوق",
+        "subTitle": "تفوق على السوق بالذكاء الاصطناعي العربي أولاً",
         "metrics": [
           {
             "number": 100,
-            "title": "Full Coverage"
+            "title": "رصد وتغطية الحديث"
           },
           {
             "number": 97,
-            "title": "Arabic Accuracy"
+            "title": "الدقة باللغة العربية"
           },
           {
             "number": 30,
-            "title": "Faster Market Response"
+            "title": "أسرع في التفاعل مع تغيرات السوق"
           }
         ]
       },
       "expandingCards": {
-        "title": "From competitor moves to market advantage",
+        "title": "من متابعة تحركات المنافسين إلى تحقيق ميزة تنافسية",
         "cards": [
           {
-            "title": "Full Market Coverage",
-            "description": "Track competitor mentions whether tagged, untagged, misspelled, or indirect across every major platform.",
+            "title": "تغطية شاملة للسوق",
+            "description": "تابع ما يقال عن المنافسين سواءً كانت مذكوره بشكل مباشر، او غير موسومه، او بأخطاء إملائيه، او بطرق غير صريحه في مختلف المنصات الكبرى",
             "highlighted": "online publications, social media, print, TV, radio & closed communities"
           },
           {
-            "title": "Arabic-First AI Copilot",
-            "description": "Detect competitor mentions and market trends with 97% Arabic accuracy across dialects, slang, and Franco-Arabic",
+            "title": "أول مساعد ذكي باللغة العربية",
+            "description": "الرصد بدقة عربية لا مثيل لها تشمل جميع اللهجات، العامية والعربي فرانكو",
             "highlighted": "dialects, slang and Franco-Arabic"
           },
           {
-            "title": "Built for Enterprises ",
-            "description": "Scale without constraints, Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
+            "title": "مصممة للوكالات",
+            "description": "وسع بدون حدود، كلمات مفتاحية وتقارير ومستخدمين بلا حد. ديما تتأقلم مع احتياجاتك العالية",
             "highlighted": "Unlimited keywords, reports & users"
           }
         ]
       },
       "scrollingSection": {
-        "title": "Market Insights That Give You an Edge",
-        "subTitle": "Benchmark competitors, track sentiment shifts, and uncover opportunities",
+        "title": "رؤى سوق تخليك دايم سابق بخطوة",
+        "subTitle": "قارن أداء المنافسين، تابع تغيرات المشاعر، واكتشف الفرص المتاحه",
         "cards": [
           {
-            "title": "Benchmark the Competition",
-            "description": "Compare visibility, engagement, share of voice, and sentiment across social and traditional media, so you know exactly where you lead, where you lag, and where to win."
+            "title": "قارن أداءك مع المنافسين",
+            "description": "قارن مستوى الظهور والتفاعل وحصة التواجد والمشاعر عبر وسائل التواصل الاجتماعي والإعلام التقليدي، لتعرف بالضبط أين تتقدم، وأين تتأخر، وأين يمكنك الفوز"
           },
           {
-            "title": "Capitalize on Market Opportunities",
-            "description": "Spot industry gaps and sentiment shifts and use them to strengthen your market position."
+            "title": "استغل فرص النمو في السوق",
+            "description": "اكتشف الفجوات في الصناعة وتحولات المشاعر واستخدمها لتعزيز موقعك في السوق"
           },
           {
-            "title": "Campaign Impact",
-            "description": "Measure your campaign performance relative to competitors to prove ROI and refine strategy."
+            "title": "تأثير الحملة",
+            "description": "قم بقياس أداء حملتك مقارنةً بالمنافسين"
           }
         ],
-        "cta": "Stay Ahead of Competitors"
+        "cta": "تابع السوق بخطوة تسبق الجميع"
       },
       "cardsGrid": {
-        "title": "Outpace Your Competitors",
+        "title": "تفوق على منافسيك",
         "cards": [
           {
-            "title": "Full Coverage",
-            "description": " Track tagged, untagged, and misspelled mentions across all social media platforms and private groups"
+            "title": "تغطية شاملة",
+            "description": " لكل المحتوى والذكر سواء كانت بشكل مباشر وواضحة او غير واضحة، حتى في حال وجود أخطاء في الكتابة، وعلى جميع منصات التواصل الاجتماعي وكل المجموعات "
           },
           {
-            "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context."
+            "title": "محرك عربي أولاً",
+            "description": " بدقة 97% في كشف اللهجات العربية، العامية، المكتوبة باللاتينية، مع فهم التهكم والفروق الثقافية، متفرد في فهم التنوع اللغوي والثقافي باحترافية"
           },
           {
-            "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+            "title": "تنبيهات الأزمات",
+            "description": "توصلك تنبيهات فورية على التطبيق أو الواتساب إذا صار فيه ارتفاع مفاجئ، انخفاض بالمشاعر، ذكر مهم، أو خطر ممكن يكبر، قبل لا يتفاقم"
           },
           {
-            "title": "AI Coverage Summaries",
-            "description": "Receive daily, weekly, or monthly market briefs that distill competitor performance and sentiment shifts"
+            "title": "ملخصات التغطية بالذكاء الاصطناعي",
+            "description": "يجيك تقرير مختصر،  يومي او اسبوعي او شهري يصفي لك كل كلام مهم انذكر و كل المواضيع الرائجة الي صارت"
           },
           {
-            "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+            "title": "مساعد ديما الذكي",
+            "description": "يتيح لك طرح أسئلتك بلغة بسيطة حول التغطية، ويزودك بإجابات فورية تمكنك من اتخاذ الإجراء المطلوب"
           },
           {
-            "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords."
+            "title": "وصول غير محدود",
+            "description": "لا حدود على أعضاء الفريق أو الكلمات المفتاحية"
           },
           {
-            "title": "Visual Listening",
-            "description": "Spot your brand in images, videos and audio to capture the full picture."
+            "title": "الاستماع البصري",
+            "description": "رصد علامتك التجارية في الصور والفيديو والأصوات، عشان تعرف كل شيء يصير حولك وتعطيك الصورة كاملة "
           },
           {
-            "title": "Competitor Benchmarking",
-            "description": "Compare mentions, sentiment, and engagement across your competitors."
+            "title": "مقارنة المنافسين",
+            "description": "قارن بين الإشارات والمشاعر والتفاعل عبر منافسينك "
           }
         ]
       },
       "testimonial": {
-        "title": "Hear It From Our Clients",
-        "quote": "Being top of mind in the F&B market is difficult, everyday we see new players & trends…dima helps us to truly monitor where we stand in the market at all times and to maintain market leadership by staying in tune with the next big thing",
-        "name": "Mohamed Osman",
-        "jobRole": "Chariman at Tico Group"
+        "title": "تجارب عملائنا",
+        "quote": "الحضور الذهني في سوق الأغذية والمشروبات ليس سهلاً؛ كل يوم نرى لاعبين واتجاهات جديدة... تساعدنا dima على مراقبة موقعنا في السوق باستمرار والحفاظ على الريادة بمواكبة ما هو قادم",
+        "name": "محمد عثمان",
+        "jobRole": "رئيس مجلس الإدارة في Tico Group"
       },
       "faqs": [
         {
-          "question": "Can I compare my brand to competitors in the market?",
-          "answer": "Yes, dima allows you to compare your brand share of voice, engagement rate, brand Sentiment & brand Emotion to other competitor brands in the market."
+          "question": "هل يمكنني مقارنة علامتي التجارية بمنافسي السوق؟",
+          "answer": "نعم، تتيح لك ديما مقارنة حضور علامتك في السوق من حيث نسبة المشاركه، معدل التفاعل، مشاعر الجمهور، والانفعالات المرتبطة بها مقارنه بالمنافسين الاخرين في السوق"
         },
         {
-          "question": "Can I track competitor performance on specific topics or campaigns?",
-          "answer": "Yes. dima allows you to filter and analyze brand mentions on general market conversations or specific campaigns and topics. This helps you understand how your competitors are positioned in areas that matter most to your business."
+          "question": "هل يمكنني تتبع أداء المنافسين في مواضيع أو حملات محددة؟",
+          "answer": "نعم، يُتيح لك ديما تصفية وتحليل الإشارات إلى العلامات التجارية في محادثات السوق العامة أو الحملات والمواضيع المُحددة. يُساعدك هذا على فهم مكانة منافسيك في المجالات الأكثر أهميةً لأعمالك."
         },
         {
-          "question": "Can I view and analyze my competitors' mentions?",
-          "answer": "Yes. dima listens to all mentions of interest, allowing you to view, analyze, and filter competitor mentions just as you would with your own brand."
+          "question": "هل يمكنني عرض وتحليل الذكر المتعلق بمنافسي؟",
+          "answer": "تتابع ديما جميع الذكر المهمه، مما يتيح لك عرض وتحليل وفرز ذكر منافسيك بنفس سهوله التعامل مع علامتك التجاريه"
         }
       ]
     },
