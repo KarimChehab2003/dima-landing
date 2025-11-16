@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import { useTranslations } from "next-intl";
-import { TestimonialType } from "@/types/info";
 import { testimonialsInfo } from "@/data/constants/info";
 
 export default function TestimonialSection() {
@@ -15,7 +14,7 @@ export default function TestimonialSection() {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      if (width <= 768) setSlidesToShow(1);
+      if (width <= 767) setSlidesToShow(1);
       else if (width <= 1024) setSlidesToShow(3);
       else setSlidesToShow(5);
     };

@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { testimonialsInfo } from "@/data/constants/info";
 import TestimonialCard from "./TestimonialCard";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { TestimonialType } from "@/types/info";
 import { useLocale } from "next-intl";
 
@@ -20,15 +20,17 @@ type TestimonialCarouselProps = {
     items?: TestimonialType[];
 };
 
-
 export default function TestimonialCarousel({
     slidesToShow,
     items,
 }: TestimonialCarouselProps) {
     const [activeSlide, setActiveSlide] = useState(0);
-    const isRTL = useLocale() === "ar"
+    const sliderRef = useRef<Slider | null>(null);
+    const isRTL = useLocale() === "ar";
+
     const settings = {
         centerMode: true,
+        centerPadding: "15px",
         infinite: true,
         slidesToShow,
         slidesToScroll: 1,
@@ -46,7 +48,7 @@ export default function TestimonialCarousel({
 
     return (
         <div className="w-full md:px-8 lg:px-12">
-            <Slider {...settings}>
+            <Slider ref={sliderRef} {...settings}>
                 {slides?.map((info, index) => {
                     const total = slides.length;
                     let distance = Math.abs(index - activeSlide);
@@ -57,6 +59,7 @@ export default function TestimonialCarousel({
                         <div
                             key={index}
                             className={`flex justify-center transition-all duration-500 ease-in-out ${scaleOpacityClasses[classIndex]}`}
+                            onClick={() => sliderRef.current?.slickGoTo(index)}
                         >
                             <TestimonialCard {...info} />
                         </div>
