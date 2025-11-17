@@ -15,16 +15,14 @@ function CaseStudyContent({ slug }: { slug: string }) {
     if (isLoading) return Loading();
     if (isError) return notFound();
 
-    async function handleFix() {
-        await copyAndRenameDoc(
-            "case-studies",
-            "how-a-leading-fandb-brand-protected-millions-in-revenue-with-real-time-arabic-first-crisis-detection",
-            slugify("How-a-Leading-F&B-Brand-Protected-Millions-in-Revenue-with-Real-Time-Arabic-First-Crisis-Detection")
-        );
-        alert("Document copied and renamed!");
-    }
-
-    console.log(caseStudy);
+    // async function handleFix() {
+    //     await copyAndRenameDoc(
+    //         "case-studies",
+    //         "how-a-leading-fandb-brand-protected-millions-in-revenue-with-real-time-arabic-first-crisis-detection",
+    //         slugify("How-a-Leading-F&B-Brand-Protected-Millions-in-Revenue-with-Real-Time-Arabic-First-Crisis-Detection")
+    //     );
+    //     alert("Document copied and renamed!");
+    // }
 
     return (
         <article>

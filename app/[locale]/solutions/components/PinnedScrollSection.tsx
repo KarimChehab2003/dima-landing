@@ -1,18 +1,20 @@
 "use client";
 
 import { Scrollama, Step } from "react-scrollama";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { CardType } from "@/types/info";
-import RequestDemoButton from "@/components/shared/RequestDemoButton";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { solutionImages } from "@/data/constants/solutionImages";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function PinnedScrollSection({ cards, slug }: { cards: CardType[], slug: string }) {
     const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);
     const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const [loadedImages, setLoadedImages] = useState<string[]>([]);
     const t = useTranslations(`Solutions.${slug}.scrollingSection`);
 
     const handleStepEnter = ({ data }: { data: number }) => {
@@ -29,30 +31,48 @@ export default function PinnedScrollSection({ cards, slug }: { cards: CardType[]
         }
     };
 
+    useEffect(() => {
+        const urls = solutionImages[slug].scrollingSection;
+        urls.forEach((url) => {
+            const img: HTMLImageElement = new window.Image();
+            img.src = url;
+        })
+
+        setLoadedImages(urls);
+    }, [slug]);
+
     return (
         <div className="relative flex justify-center items-start">
             {/* Sticky image container */}
             <div className="sticky top-0 h-screen w-1/2 flex flex-col justify-center items-center">
-                <figure className="px-4 py-16 rounded-4xl bg-[linear-gradient(-125deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)]">
-                    {currentStepIndex === 0 && (
-                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 1" priority />
-                    )}
-                    {currentStepIndex === 1 && (
-                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 2" priority />
-                    )}
-                    {currentStepIndex === 2 && (
-                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 3" priority />
-                    )}
-                    {currentStepIndex === 3 && (
-                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 4" priority />
-                    )}
-                    {currentStepIndex === 4 && (
-                        <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FPinnedSectionScroll%2Fscroll-image-1.svg?alt=media&token=1a25ed39-39f9-4481-9b2a-8b11808952e4" width={540} height={340} alt="Step 5" priority />
-                    )}
+                <figure
+                    className="rounded-3xl bg-[linear-gradient(-125deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] w-full max-w-[600px] aspect-6/5 relative overflow-hidden"
+                >
+                    <AnimatePresence mode="wait">
+                        {loadedImages[currentStepIndex] && (
+                            <motion.div
+                                key={loadedImages[currentStepIndex]}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.15, ease: "easeIn" }}
+                                className="absolute inset-0"
+                            >
+                                <Image
+                                    src={loadedImages[currentStepIndex]}
+                                    alt=""
+                                    fill
+                                    className="object-contain p-4"
+                                    fetchPriority="high"
+                                />
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </figure>
 
+
                 {/* CTA */}
-                <div className="text-xl text-center font-semibold bg-black rounded-2xl px-6 py-4 mt-8 hidden w-full lg:flex flex-col md:flex-row justify-center items-center gap-2 max-w-[572px]">
+                <div className="text-xl text-center font-semibold bg-black rounded-2xl px-6 py-4 mt-8 hidden w-full lg:flex flex-col md:flex-row justify-center items-center gap-2 max-w-[600px]">
                     <h3 className="text-white">{t("cta")}</h3>
                     <Button className="hidden lg:flex" dir="ltr">
                         <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
@@ -64,7 +84,7 @@ export default function PinnedScrollSection({ cards, slug }: { cards: CardType[]
             </div>
 
             {/* Scroll text section */}
-            <div className="w-1/2 px-4">
+            <div className="w-1/2 px-8">
                 <Scrollama onStepEnter={handleStepEnter} offset={0.6}>
                     {cards.map((card, i) => (
                         <Step data={i} key={card.title}>

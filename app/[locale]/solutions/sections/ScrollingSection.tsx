@@ -21,12 +21,11 @@ function ScrollingSection({ slug }: { slug: string }) {
                 </div>
 
                 {/* Card list for mobile */}
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
+                <ul className="grid grid-cols-1 gap-6 lg:hidden">
                     {
-                        cards.map((card) => (
+                        cards.map((card, i) => (
                             <li key={card.title} className="my-4">
-                                <ScrollingCard
-                                    {...card}
+                                <ScrollingCard {...card} slug={slug} index={i}
                                 />
                             </li>
                         ))

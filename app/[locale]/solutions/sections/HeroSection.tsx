@@ -3,6 +3,7 @@ import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import LogoCarousel from "../../(home)/components/LogoCarousel";
 import CounterPercentage from "../components/CounterPercentage";
 import { useTranslations } from "next-intl";
+import { solutionImages } from "@/data/constants/solutionImages";
 
 function HeroSection({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.hero`);
@@ -16,8 +17,21 @@ function HeroSection({ slug }: { slug: string }) {
 
                 {/* Images */}
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
+
+                    {solutionImages[slug].hero.map((src, index) => (
+                        <figure key={index} className={`relative w-[300px] md:w-[400px] lg:w-[322px] h-[322px] ${index === 1 ? "hidden lg:block" : ""}`}>
+                            <Image
+                                src={src}
+                                alt={`Hero Image ${index + 1}`}
+                                fill
+                                className="w-full h-full object-contain"
+                                priority
+                                fetchPriority="high"
+                            />
+                        </figure>
+                    ))}
                     {/* always shown */}
-                    <figure className="p-1 rounded-lg bg-muted/50">
+                    {/* <figure className="p-1 rounded-lg bg-muted/50">
                         <Image
                             src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FHero%2Fhero-image-1.svg?alt=media&token=f2f62a52-a3a5-451e-8e63-3627066f6a8b"
                             alt="Hero Image 1"
@@ -26,10 +40,10 @@ function HeroSection({ slug }: { slug: string }) {
                             className="w-[300px] md:w-[400px] lg:w-[322px] h-auto transition-all"
                             priority
                         />
-                    </figure>
+                    </figure> */}
 
                     {/* hidden on tablet and mobile */}
-                    <figure className="hidden lg:block p-1 rounded-lg bg-muted/50">
+                    {/* <figure className="hidden lg:block p-1 rounded-lg bg-muted/50">
                         <Image
                             src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Solutions%2FHero%2Fhero-image-2.svg?alt=media&token=ff992d4f-28d8-4136-884a-596b90411b9f"
                             alt="Hero Image 2"
@@ -37,7 +51,7 @@ function HeroSection({ slug }: { slug: string }) {
                             height={322}
                             priority
                         />
-                    </figure>
+                    </figure> */}
                 </div>
 
 
