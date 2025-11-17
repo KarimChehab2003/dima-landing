@@ -80,7 +80,7 @@ function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
                                                 className="object-contain"
                                             />
                                         </figure>
-                                        <p className="text-base sm:text-lg">{usedSolutionsAssets[solution].title}</p>
+                                        <p className="text-base sm:text-lg">{usedSolutionsAssets[solution].title[locale as "en" | "ar"]}</p>
                                     </Link>
                                 </li>
                             ))}
