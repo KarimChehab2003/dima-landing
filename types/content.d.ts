@@ -1,3 +1,4 @@
+import { SolutionKey } from "@/data/constants/caseStudyPageAssets";
 import { Timestamp } from "firebase/firestore";
 
 type BlogContent = {
@@ -31,11 +32,6 @@ type CaseStudySideInfo = {
     description: string;
 }
 
-type CaseStudyUsedSolution = {
-    icon: string;
-    title: string;
-    href: string;
-}
 
 type CaseStudyContent = {
     type: string;
@@ -47,7 +43,7 @@ type CaseStudyContent = {
     body: string;
 
     sideInfo: CaseStudySideInfo[];
-    usedSolutions: CaseStudyUsedSolution[];
+    usedSolutions: SolutionKey[];
 }
 
 export type CaseStudy = {

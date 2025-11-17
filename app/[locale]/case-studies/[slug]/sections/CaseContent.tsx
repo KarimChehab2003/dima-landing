@@ -6,6 +6,7 @@ import { CaseStudy } from "@/types/content";
 import Link from "next/link";
 import remarkGfm from "remark-gfm";
 import { useLocale } from "next-intl";
+import { usedSolutionsAssets } from "@/data/constants/caseStudyPageAssets";
 
 function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
     const locale = useLocale();
@@ -57,7 +58,7 @@ function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
                     <ul className="overflow-hidden divide-y divide-gray-700">
                         {caseStudy.content.sideInfo.map((info, i) => (
                             <li key={i}>
-                                <SideInfo {...info} />
+                                <SideInfo {...info} index={i} />
                             </li>
                         ))}
                     </ul>
@@ -70,16 +71,16 @@ function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
                         <ul className="space-y-3">
                             {caseStudy.content.usedSolutions.map((solution, i) => (
                                 <li key={i} >
-                                    <Link href={solution.href} className="flex items-center gap-4">
+                                    <Link href={usedSolutionsAssets[solution].href} className="flex items-center gap-4">
                                         <figure className="relative w-14 h-14 shrink-0">
                                             <Image
-                                                src={solution.icon}
-                                                alt={solution.title}
+                                                src={usedSolutionsAssets[solution].icon}
+                                                alt={usedSolutionsAssets[solution].href}
                                                 fill
                                                 className="object-contain"
                                             />
                                         </figure>
-                                        <p className="text-base sm:text-lg">{solution.title}</p>
+                                        <p className="text-base sm:text-lg">{usedSolutionsAssets[solution].title}</p>
                                     </Link>
                                 </li>
                             ))}

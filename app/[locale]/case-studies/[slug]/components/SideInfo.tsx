@@ -1,12 +1,13 @@
+import { sideInfoIcons } from "@/data/constants/caseStudyPageAssets";
 import { SideInfoType } from "@/types/info";
 import Image from "next/image";
 
-function SideInfo({ icon, title, description }: SideInfoType) {
+function SideInfo({ index, title, description }: SideInfoType) {
     return (
         <article className="flex gap-4 py-4">
             <figure className="relative w-10 h-10">
                 <Image
-                    src={icon}
+                    src={sideInfoIcons[index]}
                     alt="challenge icon"
                     fill
                     className="object-contain"

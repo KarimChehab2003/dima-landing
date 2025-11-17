@@ -55,7 +55,7 @@ export type EnterpriseType = {
 }
 
 export type SideInfoType = {
-    icon: string;
+    index: number;
     title: string;
     description: string;
 }
