@@ -76,7 +76,7 @@ export default function LanguageSwitcher() {
                 <Link
                   href={pathname}
                   locale={lang.locale}
-                  className="flex items-center gap-2 flex-1 px-2"
+                  className="flex items-center gap-2 flex-1 px-2 py-1.5"
                 >
                   <Check
                     className={cn(
