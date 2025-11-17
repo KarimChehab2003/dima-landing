@@ -388,7 +388,8 @@
             "description": "Seamlessly track sentiment, emotion, topics & more to uncover the true context behind conversations"
           }
         ],
-        "cta": "Turn conversations into insights"
+        "cta": "Turn conversations into insights",
+        "requestDemo": "Request a Demo"
       },
       "cardsGrid": {
         "title": "Built For Enterprises",
@@ -504,7 +505,8 @@
             "description": "Generate white-labeled reports in PPT, PDF, Excel and more with branded templates in a click."
           }
         ],
-        "cta": "Ready to take control of the narrative?"
+        "cta": "Ready to take control of the narrative?",
+        "requestDemo": "Request a Demo"
       },
       "cardsGrid": {
         "title": "Built For Agencies",
@@ -620,7 +622,8 @@
             "description": "Measure your campaign performance relative to competitors to prove ROI and refine strategy."
           }
         ],
-        "cta": "Stay Ahead of Competitors"
+        "cta": "Stay Ahead of Competitors",
+        "requestDemo": "Request a Demo"
       },
       "cardsGrid": {
         "title": "Outpace Your Competitors",
@@ -736,7 +739,8 @@
             "description": "Speak their language and create content that resonates with your audience by aligning with the language, sentiment, emotions, and trends they respond to most."
           }
         ],
-        "cta": "Turn data into insights"
+        "cta": "Turn data into insights",
+        "requestDemo": "Request a Demo"
       },
       "cardsGrid": {
         "title": "Built to Understand Audiences at Scale",
@@ -856,7 +860,8 @@
             "description": "See which languages, hashtags, and keywords your audience uses around your brand and optimize your content and communication."
           }
         ],
-        "cta": "Know exactly what's working on your channels and why"
+        "cta": "Know exactly what's working on your channels and why",
+        "requestDemo": "Request a Demo"
       },
       "cardsGrid": {
         "title": "Capabilities That Power Your Owned Channels",

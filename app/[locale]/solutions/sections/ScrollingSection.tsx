@@ -17,7 +17,7 @@ function ScrollingSection({ slug }: { slug: string }) {
 
                 {/* Pinned Scroll Section for desktop */}
                 <div className="hidden lg:block">
-                    <PinnedScrollSection cards={cards} />
+                    <PinnedScrollSection cards={cards} slug={slug} />
                 </div>
 
                 {/* Card list for mobile */}
