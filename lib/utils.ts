@@ -53,3 +53,13 @@ export function timeAgo(date: Date, locale: string = "en") {
     duration /= unitSeconds;
   }
 }
+
+// Function to format titles into slugs
+export function slugify(str: string) {
+  return str
+    .toLowerCase()
+    .replace(/&/g, "-and-")   // Replace & with "and"
+    .replace(/[^a-z0-9\s-]/g, "")  // Remove any other symbols
+    .trim()
+    .replace(/\s+/g, "-");  // Replace spaces with hyphens
+}
