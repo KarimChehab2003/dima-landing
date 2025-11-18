@@ -28,9 +28,9 @@ export default function HeroSection() {
         id="hero-section"
       >
         {/* Left Side: Dynamic Text */}
-        <div className="flex-1 space-y-6 w-full text-center lg:text-start">
+        <div className="flex-1 space-y-6 w-full">
 
-          <h1 className="text-[24px] md:text-[44px] mb-8 min-h-32 lg:min-h-60 xl:min-h-auto">
+          <h1 className="text-[24px] md:text-[44px] mb-8 min-h-32 md:min-h-[198px] lg:min-h-[264px] xl:min-h-[132px]">
             <span>{t("titlePrefix")}</span>{" "}
             <Typewriter
               options={{

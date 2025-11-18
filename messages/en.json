@@ -310,7 +310,7 @@
     "questionsAnswered": {
       "title": "Your Questions, Answered",
       "description": "Get quick answers to the most common questions about our platform and services.",
-      "request a demo": "Request a Demo",
+      "requestDemo": "Request a Demo",
       "faqs": [
         {
           "question": "What platforms does dima cover?",

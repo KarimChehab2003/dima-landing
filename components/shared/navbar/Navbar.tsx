@@ -5,7 +5,7 @@ import Image from "next/image";
 import NavigationDropdown from "./NavigationDropdown";
 import { ArrowRight } from "lucide-react";
 import SolutionsDropdown from "./dropdowns/SolutionsDropdown";
-import ResourcesDropdown from "./dropdowns/ResourcesDropdown";
+// import ResourcesDropdown from "./dropdowns/ResourcesDropdown";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -71,9 +71,11 @@ function Navbar() {
                         <div dir={locale === "ar" ? "rtl" : "ltr"}>
                             <LanguageSwitcher />
                         </div>
-                        <Button className="hidden lg:flex">
+
+                        {/* CTA */}
+                        <Button className="hidden lg:flex justify-between py-2 pl-4 pr-2.5">
                             <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
-                            <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
+                            <div className="w-7 h-7 rounded-full bg-white flex justify-center items-center">
                                 <ArrowRight color="black" />
                             </div>
                         </Button>

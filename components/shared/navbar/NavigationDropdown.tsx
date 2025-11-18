@@ -20,7 +20,7 @@ function NavigationDropdown({ triggerName, children }: CustomDropdownProps) {
                 onMouseLeave={handleMouseLeave}
             >
                 <div className="relative">
-                    <span>{triggerName}</span>
+                    <span className="text-base">{triggerName}</span>
                     <AnimatePresence>
                         {isOpen && (
                             <motion.div

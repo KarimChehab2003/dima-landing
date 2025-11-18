@@ -20,9 +20,11 @@ function QuestionsAnsweredSection({ slug }: QuestionsAnsweredSectionProps) {
                 <div className="space-y-6">
                     <h2 className="text-2xl lg:text-[44px] font-bold text-primary capitalize">{t("title")}</h2>
                     <p className="text-muted-foreground text-lg">{t("description")}</p>
-                    <Button dir="ltr">
-                        <Link href="/request-demo">{t("request a demo")}</Link>
-                        <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
+
+                    {/* CTA */}
+                    <Button className="hidden lg:flex justify-between py-2 pl-4 pr-2.5">
+                        <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
+                        <div className="w-7 h-7 rounded-full bg-white flex justify-center items-center">
                             <ArrowRight color="black" />
                         </div>
                     </Button>

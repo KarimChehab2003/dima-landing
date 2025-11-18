@@ -44,8 +44,8 @@ export default function LanguageSwitcher() {
             <Image
               src={currentLanguage?.flag || "/flags/en.png"}
               alt="current language flag"
-              width={29}
-              height={29}
+              width={20}
+              height={20}
             />
           </figure>
           <ChevronDown className={`${isRTL ? "mr-2" : "ml-2"} h-4 w-4 shrink-0 opacity-50 text-muted-foreground`} />

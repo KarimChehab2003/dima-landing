@@ -18,7 +18,6 @@ import {
 import { blogsLinks, resourcesLinks, dimaSolutions } from "@/data/constants/links";
 import SolutionNavLink from "./SolutionNavLink";
 import Image from "next/image";
-import LanguageSwitcher from "../LanguageSwitcher";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 
@@ -51,7 +50,7 @@ function NavDrawer() {
                         {/* Solutions Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="solutions">
-                                <AccordionTrigger>{t("solutions.title")}</AccordionTrigger>
+                                <AccordionTrigger className="text-base">{t("solutions.title")}</AccordionTrigger>
                                 <AccordionContent>
                                     <ul className="space-y-2 pl-3">
                                         {dimaSolutions.map((link) => (
@@ -67,7 +66,7 @@ function NavDrawer() {
                         {/* Blogs Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="blogs">
-                                <AccordionTrigger>
+                                <AccordionTrigger className="text-base">
                                     {t("resources.links.blogs.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
@@ -96,7 +95,7 @@ function NavDrawer() {
                         {/* Resources Accordion */}
                         <Accordion type="single" collapsible>
                             <AccordionItem value="resources">
-                                <AccordionTrigger>
+                                <AccordionTrigger className="text-base">
                                     {t("resources.links.moreResources.title")}
                                 </AccordionTrigger>
                                 <AccordionContent>
@@ -136,9 +135,10 @@ function NavDrawer() {
                             {t("caseStudies")}
                         </Link>
 
-                        <Button >
+                        {/* CTA */}
+                        <Button className="lg:hidden flex justify-between py-2 pl-4 pr-2.5">
                             <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
-                            <div className="w-6 h-6 rounded-full bg-white flex justify-center items-center">
+                            <div className="w-7 h-7 rounded-full bg-white flex justify-center items-center">
                                 <ArrowRight color="black" />
                             </div>
                         </Button>
