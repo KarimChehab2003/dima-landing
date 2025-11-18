@@ -63,68 +63,14 @@ function NavDrawer() {
                             </AccordionItem>
                         </Accordion>
 
-                        {/* Blogs Accordion */}
-                        <Accordion type="single" collapsible>
-                            <AccordionItem value="blogs">
-                                <AccordionTrigger className="text-base">
-                                    {t("resources.links.blogs.title")}
-                                </AccordionTrigger>
-                                <AccordionContent>
-                                    <ul className="space-y-4 p-3">
-                                        {blogsLinks.map((link, i) => (
-                                            <li key={link.href}>
-                                                <Link
-                                                    href={link.href}
-                                                    onClick={() => setIsOpen(false)}
-                                                    className={`block text-sm text-muted-foreground hover:text-primary transition ${isRTL ? "text-right" : "text-left"
-                                                        }`}
-                                                >
-                                                    {t(`resources.links.blogs.blog${i + 1}`)}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    <Button className="mt-4" size={"xl"}>
-                                        <Link href="/blogs">{t("resources.links.blogs.viewAllBlogs")}</Link>
-                                    </Button>
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
-
-                        {/* Resources Accordion */}
-                        <Accordion type="single" collapsible>
-                            <AccordionItem value="resources">
-                                <AccordionTrigger className="text-base">
-                                    {t("resources.links.moreResources.title")}
-                                </AccordionTrigger>
-                                <AccordionContent>
-                                    <ul className="space-y-4 p-3">
-                                        {resourcesLinks.map((link) => (
-                                            <li key={link.href} className="flex items-center space-x-2">
-                                                <Link
-                                                    href={link.href}
-                                                    onClick={() => setIsOpen(false)}
-                                                    className={`flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition ${isRTL ? "text-right" : "text-left"
-                                                        }`}
-                                                >
-                                                    {link.icon && (
-                                                        <Image
-                                                            src={link.icon}
-                                                            alt={link.title}
-                                                            width={18}
-                                                            height={18}
-                                                        />
-                                                    )}
-                                                    {t(`resources.links.moreResources.${link.translationKey}.title`)}
-                                                </Link>
-                                                <span className="text-primary text-xs">{t(`resources.links.moreResources.${link.translationKey}.comingSoon`)}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
+                        {/* Blogs */}
+                        <Link
+                            href="/"
+                            onClick={() => setIsOpen(false)}
+                            className="block text-base font-medium hover:text-primary transition"
+                        >
+                            {t("blogs")}
+                        </Link>
 
                         {/* Case Studies */}
                         <Link
@@ -133,6 +79,15 @@ function NavDrawer() {
                             className="block text-base font-medium hover:text-primary transition"
                         >
                             {t("caseStudies")}
+                        </Link>
+
+                        {/* Tools */}
+                        <Link
+                            href="/tools"
+                            onClick={() => setIsOpen(false)}
+                            className="block text-base font-medium hover:text-primary transition"
+                        >
+                            {t("tools")}
                         </Link>
 
                         {/* CTA */}

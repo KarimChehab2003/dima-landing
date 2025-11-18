@@ -36,29 +36,6 @@
         }
       }
     },
-    "resources": {
-      "title": "Resources",
-      "links": {
-        "blogs": {
-          "title": "Blogs",
-          "blog1": "Blog 1",
-          "blog2": "Blog 2",
-          "blog3": "Blog 3",
-          "viewAllBlogs": "View All Blogs"
-        },
-        "moreResources": {
-          "title": "More Resources",
-          "faqs": {
-            "title": "FAQs",
-            "comingSoon": "Coming Soon"
-          },
-          "videos": {
-            "title": "Videos",
-            "comingSoon": "Coming Soon"
-          }
-        }
-      }
-    },
     "blogs": "Blogs",
     "caseStudies": "Case Studies",
     "tools": "Tools",
