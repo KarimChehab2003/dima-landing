@@ -49,6 +49,9 @@ function PaginationLink({
   size = "icon",
   ...props
 }: PaginationLinkProps) {
+  const iconSizes = ["icon", "icon-sm", "icon-lg", "icon-xl"]
+  const shouldForceEvenPadding = !iconSizes.includes(size ?? "default")
+
   return (
     <Link
       aria-current={isActive ? "page" : undefined}
@@ -56,9 +59,11 @@ function PaginationLink({
       data-active={isActive}
       className={cn(
         buttonVariants({
-          variant: isActive ? "outline" : "ghost",
+          variant: isActive ? "default" : "outline",
           size,
         }),
+        "justify-center border border-[#2C2C2C]",
+        shouldForceEvenPadding && "px-4",
         className
       )}
       {...props}
@@ -79,7 +84,6 @@ function PaginationPrevious({
       {...props}
     >
       <ChevronLeftIcon />
-      <span className="hidden sm:block"></span>
     </PaginationLink>
   )
 }
@@ -89,6 +93,7 @@ function PaginationNext({
   size = "icon",
   ...props
 }: React.ComponentProps<typeof PaginationLink>) {
+
   return (
     <PaginationLink
       aria-label="Go to next page"
@@ -96,7 +101,6 @@ function PaginationNext({
       className={cn(buttonVariants({ variant: "ghost", size }), className)}
       {...props}
     >
-      <span className="hidden sm:block"></span>
       <ChevronRightIcon />
     </PaginationLink>
   )

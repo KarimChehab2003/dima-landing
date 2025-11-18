@@ -1,32 +1,102 @@
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
+import { cn } from "@/lib/utils";
+import { ChevronLeftIcon, ChevronRightIcon, Loader2 } from "lucide-react";
+import { useLocale } from "next-intl";
+import { MouseEvent } from "react";
 
-function PaginationWrapper() {
-    return (
-        <Pagination className="mb-4">
-            <PaginationContent className="space-x-4">
-                <PaginationItem>
-                    <PaginationPrevious href="#" />
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">1</PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#" isActive>
-                        2
-                    </PaginationLink>
-                </PaginationItem>
-                <PaginationItem>
-                    <PaginationLink href="#">3</PaginationLink>
-                </PaginationItem>
-                {/* <PaginationItem>
-                    <PaginationEllipsis />
-                </PaginationItem> */}
-                <PaginationItem>
-                    <PaginationNext href="#" />
-                </PaginationItem>
-            </PaginationContent>
-        </Pagination>
-    );
+type PaginationWrapperProps = {
+  currentPage: number;
+  totalPages: number;
+  canGoPrevious: boolean;
+  canGoNext: boolean;
+  onPrevious: () => void;
+  onNext: () => void | Promise<void>;
+  onSelectPage?: (pageNumber: number) => void | Promise<void>;
+  isLoadingNext?: boolean;
+};
+
+function PaginationWrapper({
+  currentPage,
+  totalPages,
+  canGoPrevious,
+  canGoNext,
+  onPrevious,
+  onNext,
+  onSelectPage,
+  isLoadingNext = false
+}: PaginationWrapperProps) {
+  const locale = useLocale();
+  const isRTL = locale === "ar";
+
+  const handlePreviousClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    if (!canGoPrevious) return;
+    onPrevious();
+  };
+
+  const handleNextClick = async (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    if (!canGoNext) return;
+    await onNext();
+  };
+
+  const handlePageClick = async (event: MouseEvent<HTMLAnchorElement>, pageNumber: number) => {
+    event.preventDefault();
+    if (!onSelectPage || pageNumber === currentPage) return;
+    await onSelectPage(pageNumber);
+  };
+
+  const pages = totalPages > 0 ? Array.from({ length: totalPages }, (_, index) => index + 1) : [1];
+
+  return (
+    <Pagination className="mb-4">
+      <PaginationContent className="space-x-2">
+        <PaginationItem>
+          <PaginationLink
+            href="#"
+            size="icon"
+            onClick={handlePreviousClick}
+            aria-disabled={!canGoPrevious}
+            className={cn(
+              "size-10 rounded-full flex items-center justify-center",
+              !canGoPrevious && "pointer-events-none opacity-50"
+            )}
+          >
+            <ChevronLeftIcon className={`size-4 ${isRTL ? "rotate-180" : ""}`} />
+          </PaginationLink>
+        </PaginationItem>
+
+        {pages.map((pageNumber) => (
+          <PaginationItem key={pageNumber}>
+            <PaginationLink
+              href="#"
+              isActive={pageNumber === currentPage}
+              className="tabular-nums"
+              size="default"
+              onClick={(event) => handlePageClick(event, pageNumber)}
+            >
+              {pageNumber}
+            </PaginationLink>
+          </PaginationItem>
+        ))}
+
+        <PaginationItem>
+          <PaginationLink
+            href="#"
+            size="icon"
+            onClick={handleNextClick}
+            aria-disabled={!canGoNext}
+            className={cn(
+              "size-10 rounded-full flex items-center justify-center",
+              !canGoNext && "pointer-events-none opacity-50"
+            )}
+          >
+            {isLoadingNext ? <Loader2 className="size-4 animate-spin" /> : <ChevronRightIcon className={`size-4 ${isRTL ? "rotate-180" : ""}`} />}
+          </PaginationLink>
+        </PaginationItem>
+      </PaginationContent>
+    </Pagination>
+  );
 }
 
 export default PaginationWrapper;

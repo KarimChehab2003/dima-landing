@@ -1,18 +1,19 @@
+import { CaseStudy } from "@/types/content";
 import Link from "next/link";
 
-function CaseStudyCard() {
+function CaseStudyCard(caseStudy: CaseStudy) {
     return (
-        <article className="flex flex-col gap-4 p-8 shadow-[0_0_15px_rgba(0,0,0,0.07)] rounded-xl rounded-br-[96px] max-w-lg">
+        <article className="flex flex-col gap-4 p-8 shadow-[0_0_15px_rgba(0,0,0,0.07)] rounded-xl rounded-br-[96px] max-w-lg h-full">
             {/* Metric */}
             <div className="space-x-2">
-                <span className="text-3xl lg:text-5xl font-bold text-primary">5%</span>
-                <span className="text-lg lg:text-[22px] font-medium text-gray-400">customer growth rate</span>
+                <span className="text-2xl lg:text-4xl font-bold text-primary">{caseStudy.content.metrics[1].value + caseStudy.content.metrics[1].suffix}</span>
+                <span className="font-medium text-gray-400">{caseStudy.content.metrics[1].title}</span>
             </div>
 
             {/* Text */}
-            <h3 className="text-lg lg:text-[22px] font-bold">A leading egypt-based pr agency with over 30 years of experience, serving multinational clients across industries</h3>
-            <p>See how leading companies across MENA trust dima to stay ahead of conversations, protect their reputation, and unlock growth</p>
-            <Link href="#" className="text-primary font-medium">Read more</Link>
+            <h3 className="text-lg lg:text-[22px] font-bold">{caseStudy.content.title}</h3>
+            <p>{caseStudy.content.description}</p>
+            <Link href={`/case-studies/${caseStudy.id}`} className="text-primary font-medium">Read more</Link>
         </article>
     );
 }

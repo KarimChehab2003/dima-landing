@@ -13,29 +13,11 @@ function HeroSection() {
 
     return (
         <div className="container mx-auto flex flex-col justify-center items-start gap-8 ">
-            {/* Header and Search */}
-            <div className="flex justify-between items-center w-full flex-wrap gap-4">
-                <div className="flex items-center gap-6 flex-wrap">
-                    <p className="font-bold">Dima Blog</p>
-                    <p className="font-bold inline-flex items-center gap-1">
-                        Topics <ChevronDown size={18} />
-                    </p>
-                </div>
-
-                <div className="w-full sm:w-auto">
-                    <InputGroup className="w-full sm:w-64">
-                        <InputGroupInput placeholder="Search the blog" />
-                        <InputGroupAddon>
-                            <SearchIcon />
-                        </InputGroupAddon>
-                    </InputGroup>
-                </div>
-            </div>
 
             {/* Content sections */}
             <div className="flex flex-col lg:flex-row gap-8 w-full">
                 {/* Featured Card */}
-                <ContentSection title="Featured Research" className="flex-1 w-full" includeViewAll={false}>
+                <ContentSection title="Featured Case Study" className="flex-1 w-full" includeViewAll={false}>
                     <CaseStudyCard />
                 </ContentSection>
 
