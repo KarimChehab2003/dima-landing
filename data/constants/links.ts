@@ -1,27 +1,6 @@
 import { LanguageLink, NavLink, SocialMediaLink, SolutionLink } from "@/types/link";
 import { FaLinkedin } from "react-icons/fa";
 
-// export const byRoleLinks: NavLink[] = [
-//     { title: "Finance", href: "/by-role/finance" },
-//     { title: "Accounting", href: "/by-role/accounting" },
-//     { title: "Production", href: "/by-role/production" },
-//     { title: "Quality", href: "/by-role/quality" },
-//     { title: "Software Services", href: "/by-role/software-services" },
-//     { title: "Design House", href: "/by-role/design-house" },
-//     { title: "Packaging", href: "/by-role/packaging" },
-//     { title: "Distribution", href: "/by-role/distribution" },
-// ];
-
-// export const byCompanyLinks: NavLink[] = [
-//     { title: "Finance", href: "/by-company/finance" },
-//     { title: "Accounting", href: "/by-company/accounting" },
-//     { title: "Production", href: "/by-company/production" },
-//     { title: "Quality", href: "/by-company/quality" },
-//     { title: "Software Services", href: "/by-company/software-services" },
-//     { title: "Design House", href: "/by-company/design-house" },
-//     { title: "Packaging", href: "/by-company/packaging" },
-//     { title: "Distribution", href: "/by-company/distribution" },
-// ];
 
 export const blogsLinks: NavLink[] = [
     {
@@ -67,11 +46,11 @@ export const footerResourcesLinks: NavLink[] = [
         href: "/blogs",
         translationKey: "blogs"
     },
-    {
-        title: "FAQs",
-        href: "/faqs",
-        translationKey: "faqs"
-    },
+    // {
+    //     title: "FAQs",
+    //     href: "/faqs",
+    //     translationKey: "faqs"
+    // },
 ]
 
 export const dimaSolutions: SolutionLink[] = [
@@ -127,14 +106,6 @@ export const dimaSolutions: SolutionLink[] = [
 ];
 
 export const socialMediaLinks: SocialMediaLink[] = [
-    // {
-    //     href: "#twitter",
-    //     icon: FaXTwitter
-    // },
-    // {
-    //     href: "#instagram",
-    //     icon: FaInstagram
-    // },
     {
         href: "https://www.linkedin.com/company/darwinz-ai",
         icon: FaLinkedin
