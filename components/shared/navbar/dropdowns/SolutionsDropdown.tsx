@@ -33,8 +33,8 @@ function SolutionsDropdown() {
                         />
                     </figure>
                     <div>
-                        <p className={`font-semibold hover:underline ${isRTL ? 'text-right' : ''}`}>{t("solutions.links.consumerInsights.title")}</p>
-                        <p className={`text-muted-foreground text-xs ${isRTL ? 'text-right' : ''}`}>{t("solutions.links.consumerInsights.description")}</p>
+                        <p className={`font-semibold hover:underline text-sm ${isRTL ? 'text-right' : ''}`}>{t("solutions.links.consumerInsights.title")}</p>
+                        <p className={`text-muted-foreground text-[10px] ${isRTL ? 'text-right' : ''}`}>{t("solutions.links.consumerInsights.description")}</p>
                     </div>
                 </Link>
 
@@ -43,7 +43,7 @@ function SolutionsDropdown() {
                     {dimaSolutions
                         .filter((s) => s.translationKey !== "consumerInsights")
                         .map((link) => (
-                            <li key={link.href} className="w-full">
+                            <li key={link.href} className={`w-full flex items-stretch ${isRTL ? 'justify-end' : 'justify-start'}`}>
                                 <SolutionNavLink {...link} isRTL={isRTL} />
                             </li>
                         ))}
