@@ -1,7 +1,21 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import CaseStudyCard from "../../components/CaseStudyCard";
+import CaseStudyCardSkeleton from "../../components/CaseStudyCardSkeleton";
+import { useMoreCaseStudies } from "../../hooks/useMoreCaseStudies";
+
+const MORE_CASES_LIMIT = 2;
 
 function MoreCaseStudies() {
+    const { data: moreCases, isLoading, isError } = useMoreCaseStudies(MORE_CASES_LIMIT);
+
+    if (isError) return null;
+
+    const placeholders = Array.from({ length: MORE_CASES_LIMIT }, (_, idx) => (
+        <li key={`case-study-skeleton-${idx}`}>
+            <CaseStudyCardSkeleton />
+        </li>
+    ));
+
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center">
@@ -10,11 +24,13 @@ function MoreCaseStudies() {
                         <h4 className="uppercase font-mono text-[13px]">more cases</h4>
                         <div className="h-0.5 bg-muted w-[40%]"></div>
                     </li>
-                    {Array.from({ length: 2 }).map((_, i) => (
-                        <li key={i}>
-                            <CaseStudyCard />
-                        </li>
-                    ))}
+                    {isLoading
+                        ? placeholders
+                        : moreCases?.map((caseStudy) => (
+                            <li key={caseStudy.id}>
+                                <CaseStudyCard {...caseStudy} />
+                            </li>
+                        ))}
                 </ul>
             </div>
         </SectionWrapper>

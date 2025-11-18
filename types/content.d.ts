@@ -32,7 +32,6 @@ type CaseStudySideInfo = {
     description: string;
 }
 
-
 type CaseStudyContent = {
     type: string;
     title: string;

@@ -36,7 +36,6 @@ const getCardConfig = (index: number) => {
 
 function LayeredCard({ index, value, title, suffix }: LayeredCardProps) {
     const { bg, text: txt, rotation, suffixColor } = getCardConfig(index);
-
     return (
         <article className="relative w-64 h-64">
 

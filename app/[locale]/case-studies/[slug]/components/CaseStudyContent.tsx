@@ -11,7 +11,7 @@ import { slugify } from "@/lib/utils";
 
 function CaseStudyContent({ slug }: { slug: string }) {
     const { data: caseStudy, isLoading, isError } = useCaseStudy(slug);
-
+    console.log(caseStudy)
     if (isLoading) return Loading();
     if (isError) return notFound();
 
