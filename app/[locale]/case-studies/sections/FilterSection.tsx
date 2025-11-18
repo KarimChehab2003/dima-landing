@@ -96,7 +96,7 @@ function FilterSection() {
     <SectionWrapper>
       <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
         {/* Scrollable Button Row */}
-        <div className="w-full overflow-x-auto lg:flex lg:justify-center py-4">
+        <div className="w-full overflow-x-auto md:flex md:justify-center py-4">
           <ul className="flex items-center gap-4 w-max px-4">
             {["all", "customer success stories", "use cases"].map((text) => (
               <li key={text} className="shrink-0">
@@ -114,7 +114,7 @@ function FilterSection() {
         </div>
 
         {/* Case Studies */}
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16 w-full">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16 w-full">
           {shouldShowSkeletons
             ? skeletonItems
             : filteredCaseStudies.map((caseStudy) => (
