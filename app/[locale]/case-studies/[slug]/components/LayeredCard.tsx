@@ -37,26 +37,21 @@ const getCardConfig = (index: number) => {
 function LayeredCard({ index, value, title, suffix }: LayeredCardProps) {
     const { bg, text: txt, rotation, suffixColor } = getCardConfig(index);
     return (
-        <article className="relative w-64 h-64">
-
+        <article className="relative w-full lg:w-auto aspect-square max-h-[250px]">
             {/* Background card */}
-            <div
-                className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                w-full h-full rounded-2xl z-10 blur-xs
-                ${bg} ${txt} ${rotation}`}
-            ></div>
+            <div className={`absolute inset-0 w-full h-full rounded-2xl -z-10 blur-xs ${bg} ${txt} ${rotation}`}></div>
 
             {/* Foreground card */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full rounded-2xl 
-                z-20 bg-white p-4 flex flex-col justify-between text-black shadow-lg transition-transform duration-300 
+            <div className="relative w-full h-full rounded-2xl 
+                bg-white p-6 flex flex-col items-center justify-between gap-3 text-black shadow-lg transition-transform duration-300 
                 group-hover:rotate-3 group-hover:scale-105">
 
-                <p className="font-bold text-[44px]">
+                <p className="font-bold text-[28px] lg:text-[44px] text-center flex-1 flex items-center">
                     {value}
                     <span className={suffixColor}>{suffix}</span>
                 </p>
 
-                <p className="font-light text-2xl">{title}</p>
+                <p className="font-light lg:text-lg text-left self-start w-full">{title}</p>
             </div>
         </article>
     );
