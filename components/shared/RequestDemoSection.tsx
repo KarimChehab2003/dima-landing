@@ -29,7 +29,7 @@ function RequestDemoSection() {
           {/* Phone Image */}
           <figure className="lg:basis-2/5 hidden lg:flex justify-center items-center bg-[linear-gradient(90deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] rounded-4xl flex-1">
             <Image
-              src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2Fdima-phone.svg?alt=media&token=1e69d363-9700-4b5f-8226-228f82c5c0a6"
+              src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/HomePage%2Fdima-phone.png?alt=media&token=65c3871c-d265-4e63-bf8c-454bb95702e6"
               alt="dima phone"
               width={400}
               height={500}

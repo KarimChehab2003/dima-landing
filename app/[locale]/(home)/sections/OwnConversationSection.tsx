@@ -67,7 +67,7 @@ function OwnConversationSection() {
         {/* Scrollable Buttons */}
         <div
           ref={containerRef}
-          className="w-full overflow-x-auto py-4 md:my-4 hide-scrollbar">
+          className="w-full overflow-x-auto py-4 md:my-4 hide-scrollbar flex xl:justify-center">
           <div className="flex gap-2 sm:gap-3 md:gap-4 px-2 sm:px-4 whitespace-nowrap w-max">
             {ownConversationInfo.map((feature, idx) => (
               <Button

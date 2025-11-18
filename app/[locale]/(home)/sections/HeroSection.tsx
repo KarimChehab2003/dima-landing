@@ -30,8 +30,8 @@ export default function HeroSection() {
         {/* Left Side: Dynamic Text */}
         <div className="flex-1 space-y-6 w-full text-center lg:text-start">
 
-          <h1 className="text-2xl md:text-[44px] mb-8 min-h-32 lg:min-h-60 xl:min-h-auto">
-            {t("titlePrefix")}
+          <h1 className="text-[24px] md:text-[44px] mb-8 min-h-32 lg:min-h-60 xl:min-h-auto">
+            <span>{t("titlePrefix")}</span>{" "}
             <Typewriter
               options={{
                 strings: [slides[selectedIndex].title],
@@ -40,6 +40,7 @@ export default function HeroSection() {
                 deleteSpeed: 25,
                 wrapperClassName: "text-primary",
               }}
+              component={"span"}
             />
           </h1>
           <RequestDemoButton size={"xl"} />

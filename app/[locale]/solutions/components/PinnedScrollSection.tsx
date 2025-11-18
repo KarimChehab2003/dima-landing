@@ -72,7 +72,7 @@ export default function PinnedScrollSection({ cards, slug }: { cards: CardType[]
 
 
                 {/* CTA */}
-                <div className="text-xl text-center font-semibold bg-black rounded-2xl px-6 py-4 mt-8 hidden w-full lg:flex flex-col md:flex-row justify-center items-center gap-2 max-w-[600px]">
+                <div className="text-xl text-center font-semibold bg-black rounded-2xl px-6 py-4 mt-8 hidden w-full lg:flex flex-col md:flex-row justify-between items-center gap-2 max-w-[600px]">
                     <h3 className="text-white">{t("cta")}</h3>
                     <Button className="hidden lg:flex" dir="ltr">
                         <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>

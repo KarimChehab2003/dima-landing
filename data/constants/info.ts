@@ -42,13 +42,13 @@ export const ownConversationInfo: ConversationInfo[] = [
         animation: listenAnim,
         translationKey: "listen"
     },
-    {
-        title: "Grow your brand",
-        subTitle: "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
-        icon: FaChartLine,
-        animation: listenAnim, // missing
-        translationKey: "grow"
-    },
+    // {
+    //     title: "Grow your brand",
+    //     subTitle: "Invest in creators who amplify your reach, drive authentic engagement, and deliver measurable ROI.",
+    //     icon: FaChartLine,
+    //     animation: listenAnim, // missing
+    //     translationKey: "grow"
+    // },
     {
         title: "Daily monitoring & reports",
         subTitle: "Stay in control of your brand narrative with proactive monitoring and reporting.",
@@ -77,13 +77,13 @@ export const ownConversationInfo: ConversationInfo[] = [
         animation: understandAnim,
         translationKey: "understand"
     },
-    {
-        title: "Collect & analyze reviews",
-        subTitle: "Turn feedback into action to protect loyalty and increase customer satisfaction",
-        icon: FaLayerGroup,
-        animation: listenAnim, // missing
-        translationKey: "collect"
-    },
+    // {
+    //     title: "Collect & analyze reviews",
+    //     subTitle: "Turn feedback into action to protect loyalty and increase customer satisfaction",
+    //     icon: FaLayerGroup,
+    //     animation: listenAnim, // missing
+    //     translationKey: "collect"
+    // },
 ]
 
 export const caseStudiesInfo: BrandCardInfo[] = [
@@ -163,46 +163,46 @@ export const testimonialsInfo: TestimonialType[] = [
     },
 ]
 
-export const actionableInsightsCardsInfo: CardType[] = [
-    {
-        title: "Full Coverage",
-        description: "Track and analyze coverage across online publications, social media, print, TV, radio & closed communities, so you can get the full picture.",
-        highlighted: "online publications, social media, print, TV, radio & closed communities"
-    },
-    {
-        title: "Arabic First AI Copilot",
-        description: "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic.",
-        highlighted: "dialects, slang and Franco-Arabic."
-    },
-    {
-        title: "Built for Agencies",
-        description: "Scale without constraints, Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
-        highlighted: "Unlimited keywords, reports & users."
-    },
-]
+// export const actionableInsightsCardsInfo: CardType[] = [
+//     {
+//         title: "Full Coverage",
+//         description: "Track and analyze coverage across online publications, social media, print, TV, radio & closed communities, so you can get the full picture.",
+//         highlighted: "online publications, social media, print, TV, radio & closed communities"
+//     },
+//     {
+//         title: "Arabic First AI Copilot",
+//         description: "Monitor with unmatched Arabic accuracy across all dialects, slang and Franco-Arabic.",
+//         highlighted: "dialects, slang and Franco-Arabic."
+//     },
+//     {
+//         title: "Built for Agencies",
+//         description: "Scale without constraints, Unlimited keywords, reports & users. dima adapts to your high-volume needs.",
+//         highlighted: "Unlimited keywords, reports & users."
+//     },
+// ]
 
-export const scrollingCards: CardType[] = [
-    {
-        title: "Trend Dectection",
-        description: "Identify emerging trends before they gain momentum, giving you the edge to act first"
-    },
-    {
-        title: "Communities",
-        description: "Track communities conversations to expand coverage and visibility"
-    },
-    {
-        title: "Posts Vs Comments analysis",
-        description: "Separate post and comment section analysis for deeper, more accurate insights."
-    },
-    {
-        title: "Be First to Know, First to Act",
-        description: "Act instantly on real-time alerts to prevent crises, seize opportunities, and accelerate response times."
-    },
-    {
-        title: "Go beyond mentions",
-        description: "Seamlessly track sentiment, emotion, topics & more to uncover the true context behind conversations"
-    }
-]
+// export const scrollingCards: CardType[] = [
+//     {
+//         title: "Trend Dectection",
+//         description: "Identify emerging trends before they gain momentum, giving you the edge to act first"
+//     },
+//     {
+//         title: "Communities",
+//         description: "Track communities conversations to expand coverage and visibility"
+//     },
+//     {
+//         title: "Posts Vs Comments analysis",
+//         description: "Separate post and comment section analysis for deeper, more accurate insights."
+//     },
+//     {
+//         title: "Be First to Know, First to Act",
+//         description: "Act instantly on real-time alerts to prevent crises, seize opportunities, and accelerate response times."
+//     },
+//     {
+//         title: "Go beyond mentions",
+//         description: "Seamlessly track sentiment, emotion, topics & more to uncover the true context behind conversations"
+//     }
+// ]
 
 export const enterpriseFeaturesCards: { icon: string, translationKey: string }[] = [
     { icon: "/enterprise-icons/360.png", translationKey: "cards.0" },
