@@ -91,7 +91,7 @@ function PaginationWrapper({
               !canGoNext && "pointer-events-none opacity-50"
             )}
           >
-            {isLoadingNext ? <Loader2 className="size-4 animate-spin" /> : <ChevronRightIcon className={`size-4 ${isRTL ? "rotate-180" : ""}`} />}
+            {<ChevronRightIcon className={`size-4 ${isRTL ? "rotate-180" : ""}`} />}
           </PaginationLink>
         </PaginationItem>
       </PaginationContent>

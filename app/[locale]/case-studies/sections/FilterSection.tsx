@@ -3,9 +3,9 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { Button } from "@/components/ui/button";
 import CaseStudyCard from "../components/CaseStudyCard";
+import CaseStudyCardSkeleton from "../components/CaseStudyCardSkeleton";
 import PaginationWrapper from "../components/PaginationWrapper";
 import { useCaseStudies } from "../hooks/useCaseStudies";
-import Loading from "../../loading";
 import { notFound } from "next/navigation";
 import { useState } from "react";
 
@@ -26,7 +26,6 @@ function FilterSection() {
     totalPages
   } = useCaseStudies(PAGE_SIZE);
 
-  if (isLoading) return Loading();
   if (isError) return notFound();
 
   const pages = data?.pages ?? [];
@@ -86,6 +85,13 @@ function FilterSection() {
   const canGoNext = pageIndex + 1 < totalPages;
   const currentPageNumber = Math.min(pageIndex + 1, totalPages);
 
+  const shouldShowSkeletons = isLoading && pages.length === 0;
+  const skeletonItems = Array.from({ length: PAGE_SIZE }, (_, idx) => (
+    <li key={`case-study-skeleton-${idx}`}>
+      <CaseStudyCardSkeleton />
+    </li>
+  ));
+
   return (
     <SectionWrapper>
       <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
@@ -109,23 +115,27 @@ function FilterSection() {
 
         {/* Case Studies */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16 w-full">
-          {filteredCaseStudies.map((caseStudy) => (
-            <li key={caseStudy.id}>
-              <CaseStudyCard {...caseStudy} />
-            </li>
-          ))}
+          {shouldShowSkeletons
+            ? skeletonItems
+            : filteredCaseStudies.map((caseStudy) => (
+              <li key={caseStudy.id}>
+                <CaseStudyCard {...caseStudy} />
+              </li>
+            ))}
         </ul>
 
-        <PaginationWrapper
-          currentPage={currentPageNumber}
-          totalPages={totalPages}
-          canGoPrevious={canGoPrevious}
-          canGoNext={canGoNext}
-          onPrevious={handlePrevious}
-          onNext={handleNext}
-          onSelectPage={handleSelectPage}
-          isLoadingNext={isFetchingNextPage}
-        />
+        {!shouldShowSkeletons && (
+          <PaginationWrapper
+            currentPage={currentPageNumber}
+            totalPages={totalPages}
+            canGoPrevious={canGoPrevious}
+            canGoNext={canGoNext}
+            onPrevious={handlePrevious}
+            onNext={handleNext}
+            onSelectPage={handleSelectPage}
+            isLoadingNext={isFetchingNextPage}
+          />
+        )}
       </div>
     </SectionWrapper>
   );
