@@ -29,7 +29,7 @@ function ExpandingCard({ title, description, highlighted, isExpanded, onClick }:
                 <motion.h3
                     layout
                     animate={{ textAlign: isExpanded ? isRTL ? "right" : "left" : "center" }}
-                    className={`hidden md:block text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
+                    className={`hidden lg:block text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
                         } transition-colors duration-300`}
                 >
                     {title}
@@ -38,8 +38,8 @@ function ExpandingCard({ title, description, highlighted, isExpanded, onClick }:
                 {/* For mobile */}
                 <motion.h3
                     layout="size"
-                    animate={{ textAlign: isExpanded ? "left" : "center" }}
-                    className={`md:hidden text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
+                    animate={{ textAlign: isExpanded ? isRTL ? "right" : "left" : "" }}
+                    className={`lg:hidden text-2xl font-semibold mb-2 ${isExpanded && "text-primary"
                         } transition-colors duration-300`}
                 >
                     {title}

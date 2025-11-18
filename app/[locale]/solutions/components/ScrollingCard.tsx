@@ -30,7 +30,7 @@ function ScrollingCard({ title, description, slug, index }: CardType) {
             {/* Text */}
             <div className="max-w-[550px]">
                 <h2 className="text-2xl lg:text-[44px]">{title}</h2>
-                <p className="text-xl font-light mt-4">{description}</p>
+                <p className="font-light mt-4">{description}</p>
             </div>
         </article>
 

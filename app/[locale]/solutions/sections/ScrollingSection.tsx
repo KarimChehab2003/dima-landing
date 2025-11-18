@@ -4,6 +4,9 @@ import ScrollingCard from "../components/ScrollingCard";
 import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 import { useTranslations } from "next-intl";
 import { CardType } from "@/types/info";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 function ScrollingSection({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.scrollingSection`);
@@ -33,9 +36,15 @@ function ScrollingSection({ slug }: { slug: string }) {
                 </ul>
 
                 {/* CTA mobile */}
-                <div className="text-xl text-center font-semibold bg-black rounded-2xl px-6 py-4 mt-8 lg:hidden w-full flex flex-col md:flex-row justify-center items-center gap-2">
+                <div className="text-xl text-center font-semibold bg-black rounded-2xl px-6 py-4 mt-8 lg:hidden w-full flex flex-col md:flex-row justify-center items-center gap-4">
                     <h3 className="text-white">{t("cta")}</h3>
-                    <RequestDemoButton />
+
+                    <Button className="lg:hidden flex justify-between py-2 pl-4 pr-2.5">
+                        <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
+                        <div className="w-7 h-7 rounded-full bg-white flex justify-center items-center">
+                            <ArrowRight color="black" />
+                        </div>
+                    </Button>
                 </div>
             </div>
         </SectionWrapper>

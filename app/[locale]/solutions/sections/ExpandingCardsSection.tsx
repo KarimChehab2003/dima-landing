@@ -14,7 +14,7 @@ function ExpandingCardsSection({ slug }: { slug: string }) {
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
                 {/* Heading */}
-                <h2 className="text-2xl lg:text-[44px] text-center capitalize">{t("title")}</h2>
+                <h2 className="text-2xl md:text-[44px] text-center capitalize">{t("title")}</h2>
 
                 {/* Expanding Cards */}
                 <div className="flex flex-col lg:flex-row justify-between items-stretch gap-8 w-full max-w-5xl lg:max-h-52">
