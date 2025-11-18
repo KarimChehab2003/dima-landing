@@ -1,71 +1,113 @@
 "use client";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import TestimonialCard from "./TestimonialCard";
-import { useState, useRef } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { TestimonialType } from "@/types/info";
+import TestimonialCard from "./TestimonialCard";
 import { useLocale } from "next-intl";
 
-const scaleOpacityClasses = [
-    "scale-110 opacity-100 z-20 relative", // active
-    "scale-90 opacity-75 z-10 relative",
-    "scale-75 opacity-50 z-0 relative",
-];
-
-type TestimonialCarouselProps = {
-    slidesToShow: number;
-    setSlidesToShow: React.Dispatch<React.SetStateAction<number>>;
-    items?: TestimonialType[];
+type Props = {
+    items: TestimonialType[];
+    autoplay?: boolean;
+    interval?: number;
 };
 
 export default function TestimonialCarousel({
-    slidesToShow,
     items,
-}: TestimonialCarouselProps) {
-    const [activeSlide, setActiveSlide] = useState(0);
-    const sliderRef = useRef<Slider | null>(null);
-    const isRTL = useLocale() === "ar";
-    const isWideScreen = window.innerWidth >= 1024;
+    autoplay = true,
+    interval = 3500,
+}: Props) {
+    const locale = useLocale();
+    const isRTL = locale === "ar";
 
-    const settings = {
-        centerMode: true,
-        centerPadding: isWideScreen ? "15px" : "50px",
-        infinite: true,
-        slidesToShow,
-        slidesToScroll: 1,
-        swipe: true,
-        autoplay: true,
-        speed: 500,
-        dots: false,
-        arrows: false,
-        adaptiveHeight: true,
-        rtl: isRTL,
-        beforeChange: (_: number, next: number) => setActiveSlide(next),
+    // Duplicate list for smooth infinite looping
+    const cards = useMemo(() => [...items], [items]);
+
+    const [active, setActive] = useState(0);
+
+    // Auto-rotation
+    useEffect(() => {
+        if (!autoplay) return;
+        const t = setInterval(() => {
+            setActive((p) => (p + 1) % cards.length);
+        }, interval);
+        return () => clearInterval(t);
+    }, [cards.length, autoplay, interval]);
+
+    const getPosition = (index: number) => {
+        const len = cards.length;
+
+        // distance relative to active card
+        let diff = (index - active + len) % len;
+        if (isRTL) diff = (active - index + len) % len;
+
+        switch (diff) {
+            case 0:
+                return "center";
+            case 1:
+                return "right";
+            case 2:
+                return "far-right";
+            case len - 1:
+                return "left";
+            case len - 2:
+                return "far-left";
+            default:
+                return "hidden";
+        }
     };
 
-    const slides = items?.concat(items);
-
     return (
-        <div className="w-full md:px-8 lg:px-12">
-            <Slider ref={sliderRef} {...settings}>
-                {slides?.map((info, index) => {
-                    const total = slides.length;
-                    let distance = Math.abs(index - activeSlide);
-                    if (distance > total / 2) distance = total - distance;
-                    const classIndex = Math.min(distance, scaleOpacityClasses.length - 1);
+        <div className="relative w-full h-[500px] flex items-center justify-center overflow-hidden select-none">
+            {cards.map((card, index) => (
+                <div
+                    key={index}
+                    onClick={() => setActive(index)}
+                    className={`absolute transition-all duration-500 ease-out ${getPosition(index)}`}
+                >
+                    <TestimonialCard {...card} />
+                </div>
+            ))}
 
-                    return (
-                        <div
-                            key={index}
-                            className={`flex justify-center transition-all duration-500 ease-in-out select-none ${scaleOpacityClasses[classIndex]}`}
-                            onClick={() => sliderRef.current?.slickGoTo(index)}
-                        >
-                            <TestimonialCard {...info} />
-                        </div>
-                    );
-                })}
-            </Slider>
+            {/* Positioning & Animations */}
+            <style jsx>
+                {`.center {
+  transform: translateX(0) scale(1);
+  z-index: 30;
+}
+
+.left {
+  transform: translateX(-240px) scale(0.9);
+  z-index: 20;
+}
+.right {
+  transform: translateX(240px) scale(0.9);
+  z-index: 20;
+}
+
+.far-left {
+  transform: translateX(-440px) scale(0.8);
+  z-index: 10;
+}
+.far-right {
+  transform: translateX(440px) scale(0.8);
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  .left { transform: translateX(-200px) scale(0.9); }
+  .right { transform: translateX(200px) scale(0.9); }
+  .far-left { transform: translateX(-360px) scale(0.8); }
+  .far-right { transform: translateX(360px) scale(0.8); }
+}
+
+@media (max-width: 640px) {
+  .left { transform: translateX(-150px) scale(0.9); }
+  .right { transform: translateX(150px) scale(0.9); }
+  .far-left { transform: translateX(-260px) scale(0.8); }
+  .far-right { transform: translateX(260px) scale(0.8); }
+}
+
+            `}
+            </style>
         </div>
     );
 }

@@ -7,7 +7,7 @@ function TestimonialCard({ companyLogo, translationKey }: TestimonialType) {
     const isRTL = locale === 'ar';
     const t = useTranslations("Home.testimonials.items")
     return (
-        <article className="w-[300px] h-[400px] relative flex flex-col p-6 bg-white rounded-xl shadow-md -mx-4 my-8">
+        <article className="w-[340px] h-[460px] relative flex flex-col p-6 bg-white rounded-xl shadow-md mx-1 my-8">
             <div className={`flex gap-4 items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <figure className="relative w-6 h-6 shrink-0">
                     <Image
