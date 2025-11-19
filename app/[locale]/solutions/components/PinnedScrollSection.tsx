@@ -63,6 +63,7 @@ export default function PinnedScrollSection({ cards, slug }: { cards: CardType[]
                                     alt=""
                                     fill
                                     className="object-contain p-4"
+                                    priority
                                     fetchPriority="high"
                                 />
                             </motion.div>
