@@ -65,7 +65,7 @@ function NavDrawer() {
 
                         {/* Blogs */}
                         <Link
-                            href="/"
+                            href="/blogs"
                             onClick={() => setIsOpen(false)}
                             className="block text-base font-medium hover:text-primary transition"
                         >

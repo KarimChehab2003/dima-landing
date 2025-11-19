@@ -45,7 +45,7 @@ function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
                             </ul>
 
                             {/* Used Solutions */}
-                            <div className="p-6">
+                            <div className="py-6">
                                 <h3 className="text-lg font-semibold border-b border-gray-700 pb-2 mb-4">
                                     {isRTL ? "الحلول المستخدمة" : "Used Solutions"}:
                                 </h3>
