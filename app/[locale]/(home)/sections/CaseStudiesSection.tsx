@@ -12,7 +12,6 @@ function CaseStudiesSection() {
     const t = useTranslations("Home.caseStudies");
     const { data: caseStudies, isLoading, isError, error } = useCaseStudies(4);
     const placeholders = Array.from({ length: 4 }).map((_, i) => (<li key={i}><CaseStudyCardSkeleton /></li>))
-    console.log("error:", error)
     return (
         <SectionWrapper>
             <div className="container mx-auto max-w-5xl flex flex-col gap-6">
