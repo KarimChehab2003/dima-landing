@@ -21,12 +21,18 @@ function StackedCardsSection({ caseStudy }: { caseStudy: CaseStudy }) {
                     </div>
 
                     {/* Layered Cards */}
-                    <ul className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-4">
-                        {caseStudy.content.metrics.map((data, i) => (
-                            <li key={i} className={`flex justify-center  ${i === 2 ? "col-span-2 lg:col-span-1" : ""}`}>
-                                <LayeredCard {...data} index={i} />
-                            </li>
-                        ))}
+                    <ul className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-4 w-full">
+                        {caseStudy.content.metrics.map((data, i, arr) => {
+                            const isLast = i === arr.length - 1;
+                            return (
+                                <li
+                                    key={`${data.title}-${i}`}
+                                    className={`flex justify-center ${isLast ? "col-span-2 lg:col-span-1" : ""}`}
+                                >
+                                    <LayeredCard {...data} index={i} />
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
             </div>

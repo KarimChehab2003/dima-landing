@@ -1,4 +1,5 @@
 import { LayeredCardProps } from "@/types/info";
+import { useLocale } from "next-intl";
 
 const getCardConfig = (index: number) => {
     switch (index) {
@@ -20,7 +21,7 @@ const getCardConfig = (index: number) => {
             return {
                 bg: "bg-purple-700",
                 text: "text-purple-700",
-                rotation: "-rotate-12",
+                rotation: "-rotate-4 lg:-rotate-12",
                 suffixColor: "text-purple-700"
             };
         default:
@@ -36,22 +37,21 @@ const getCardConfig = (index: number) => {
 
 function LayeredCard({ index, value, title, suffix }: LayeredCardProps) {
     const { bg, text: txt, rotation, suffixColor } = getCardConfig(index);
+    const locale = useLocale();
+    const isRTL = locale === "ar";
     return (
-        <article className="relative w-full lg:w-auto aspect-square max-h-[250px]">
+        <article className="relative w-full min-h-[200px] max-h-[230px] lg:max-w-[280px] aspect-4/5 sm:aspect-5/6 lg:aspect-square group">
             {/* Background card */}
-            <div className={`absolute inset-0 w-full h-full rounded-2xl -z-10 blur-xs ${bg} ${txt} ${rotation}`}></div>
+            <div className={`absolute inset-1 rounded-2xl -z-10 blur-xs pointer-events-none ${bg} ${txt} ${rotation}`}></div>
 
             {/* Foreground card */}
-            <div className="relative w-full h-full rounded-2xl 
-                bg-white p-6 flex flex-col items-center justify-between gap-3 text-black shadow-lg transition-transform duration-300 
-                group-hover:rotate-3 group-hover:scale-105">
-
-                <p className="font-bold text-[28px] lg:text-[44px] text-center flex-1 flex items-center">
+            <div className="relative flex h-full w-full rounded-2xl bg-white p-6 lg:p-8 flex-col items-center justify-between gap-3 text-black shadow-lg transition-transform duration-300 group-hover:rotate-1 group-hover:scale-[1.02]">
+                <p className="font-bold text-[28px] lg:text-[44px] text-center flex-1 flex items-center leading-tight" dir="ltr">
                     {value}
-                    <span className={suffixColor}>{suffix}</span>
+                    <span className={`${suffixColor} ml-1`}>{suffix}</span>
                 </p>
 
-                <p className="font-light lg:text-lg text-left self-start w-full">{title}</p>
+                <p className={`font-light lg:text-lg self-start w-full text-center`}>{title}</p>
             </div>
         </article>
     );
