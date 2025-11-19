@@ -20,9 +20,11 @@ type CaseStudyAttributes = {
     subTitle: string;
 }
 
+type CaseStudyValue = number | string;
+
 type CaseStudyMetrics = {
     title: string;
-    value: number;
+    value: CaseStudyValue;
     suffix: string;
 }
 
@@ -45,8 +47,14 @@ type CaseStudyContent = {
     usedSolutions: SolutionKey[];
 }
 
+type CaseStudyFlags = {
+    featured: boolean;
+    active: boolean;
+}
+
 export type CaseStudy = {
     id: string;
     content: CaseStudyContent;
+    flags: CaseStudyFlags;
     dateCreated: Timestamp;
 }

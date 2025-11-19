@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import CaseStudyCard from "../components/CaseStudyCard";
 import CaseStudyCardSkeleton from "../components/CaseStudyCardSkeleton";
 import PaginationWrapper from "../components/PaginationWrapper";
-import { useCaseStudies } from "../hooks/useCaseStudies";
+import { usePaginatedCaseStudies } from "../hooks/usePaginatedCaseStudies";
 import { notFound } from "next/navigation";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ function FilterSection() {
     hasNextPage,
     isFetchingNextPage,
     totalPages
-  } = useCaseStudies(PAGE_SIZE);
+  } = usePaginatedCaseStudies(PAGE_SIZE);
 
   if (isError) return notFound();
 

@@ -6,6 +6,7 @@ import VideosSection from "./sections/VideosSection";
 import SocialMediaAnalyticsSection from "./sections/SocialMediaAnalyticsSection";
 import RequestDemoSection from "@/components/shared/RequestDemoSection";
 
+
 function BlogsPage() {
     return (
         <main>

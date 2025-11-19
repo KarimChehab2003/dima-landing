@@ -35,8 +35,6 @@ export default function TestimonialSection() {
           {t("title")}
         </h2>
         <TestimonialCarousel
-          slidesToShow={slidesToShow}
-          setSlidesToShow={setSlidesToShow}
           items={testimonialsInfo}
         />
       </div>

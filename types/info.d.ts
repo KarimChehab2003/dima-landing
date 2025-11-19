@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { CaseStudyValue } from "./content";
 
 export type HeroSlide = {
     image: string;
@@ -64,7 +65,7 @@ export type SideInfoType = {
 
 export type LayeredCardProps = {
     index: number;
-    value: number;
+    value: CaseStudyValue;
     title: string;
     suffix: string;
 }

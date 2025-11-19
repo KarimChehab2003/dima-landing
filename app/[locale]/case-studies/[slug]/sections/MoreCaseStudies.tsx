@@ -1,12 +1,12 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import CaseStudyCard from "../../components/CaseStudyCard";
 import CaseStudyCardSkeleton from "../../components/CaseStudyCardSkeleton";
-import { useMoreCaseStudies } from "../../hooks/useMoreCaseStudies";
+import { useCaseStudies } from "../../hooks/useCaseStudies";
 
 const MORE_CASES_LIMIT = 2;
 
 function MoreCaseStudies() {
-    const { data: moreCases, isLoading, isError } = useMoreCaseStudies(MORE_CASES_LIMIT);
+    const { data: moreCases, isLoading, isError } = useCaseStudies(MORE_CASES_LIMIT);
 
     if (isError) return null;
 
