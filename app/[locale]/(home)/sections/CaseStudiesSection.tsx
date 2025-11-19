@@ -20,7 +20,7 @@ function CaseStudiesSection() {
                 <h2 className="text-[24px] lg:text-[44px] font-normal text-center">{t("title")}</h2>
                 <p className="text-base lg:text-lg lg:font-light text-muted-foreground text-center">{t("description")}</p>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-muted p-3 rounded-xl">
-                    {isError && <p></p>}
+                    {isError && <p>{error.message}</p>}
                     {
                         isLoading ? placeholders : caseStudies?.map((caseStudy) => (
                             <li key={caseStudy.id}>
