@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 
 type ContentSectionProps = {
@@ -12,6 +12,7 @@ type ContentSectionProps = {
 }
 
 function ContentSection({ className, children, title, includeViewAll = true, hrefViewAll = "#" }: ContentSectionProps) {
+    const t = useTranslations("Blogs")
     const locale = useLocale();
     const isRTL = locale === "ar";
     return (
@@ -24,7 +25,7 @@ function ContentSection({ className, children, title, includeViewAll = true, hre
                 <h2 className="text-lg sm:text-xl font-bold">{title}</h2>
                 {includeViewAll && (
                     <Link href={hrefViewAll} className="text-primary text-sm inline-flex items-center font-bold">
-                        View all {isRTL ? <ChevronLeft /> : <ChevronRight />}
+                        {t("viewAll")} {isRTL ? <ChevronLeft /> : <ChevronRight />}
                     </Link>
                 )}
             </div>

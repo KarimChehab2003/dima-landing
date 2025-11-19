@@ -7,23 +7,11 @@ import { testimonialsInfo } from "@/data/constants/info";
 
 export default function TestimonialSection() {
   const t = useTranslations("Home.testimonials");
-  const [slidesToShow, setSlidesToShow] = useState(1);
+
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-
-      if (width <= 767) setSlidesToShow(1);
-      else if (width <= 1024) setSlidesToShow(3);
-      else setSlidesToShow(5);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
     setMounted(true);
-
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (!mounted) return null;

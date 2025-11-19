@@ -3,17 +3,19 @@ import ContentSection from "../components/ContentSection";
 import BlogCard from "../components/BlogCard";
 import BlogCardSkeleton from "../components/BlogCardSkeleton";
 import useBlogs from "../hooks/useBlogs";
+import { useTranslations } from "next-intl";
 
 function GuideSection() {
     const { data: guideBlogs, isLoading: guideBlogsLoading, isError: guideBlogsError } = useBlogs(2);
     const { data: reportBlogs, isLoading: reportBlogsLoading, isError: reportBlogsError } = useBlogs(2);
     const { data: marketingBlogs, isLoading: marketingBlogsLoading, isError: marketingBlogsError } = useBlogs(2);
+    const t = useTranslations("Blogs");
 
     return (
         <div className="container mx-auto flex flex-col xl:flex-row justify-center items-start gap-8 ">
             {/* Guides */}
             <div className="flex-1 w-full">
-                <ContentSection title="Guides">
+                <ContentSection title={t("guides")}>
                     {guideBlogsError && <p>Failed to load guide blogs</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {guideBlogsLoading
@@ -33,7 +35,7 @@ function GuideSection() {
 
             {/* Data Reports */}
             <div className="flex-1 w-full">
-                <ContentSection title="Data Reports">
+                <ContentSection title={t("dataReports")}>
                     {reportBlogsError && <p>Failed to load data reports</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {reportBlogsLoading
@@ -53,7 +55,7 @@ function GuideSection() {
 
             {/* All Marketing Insights */}
             <div className="flex-1 w-full">
-                <ContentSection title="All Marketing Insights">
+                <ContentSection title={t("allMarketingInsights")}>
                     {marketingBlogsError && <p>Failed to load marketing insights</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {marketingBlogsLoading

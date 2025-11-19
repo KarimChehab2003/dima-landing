@@ -10,9 +10,11 @@ import BlogCard from "./BlogCard";
 import { notFound } from "next/navigation";
 import LoadingAnimation from "@/components/shared/LoadingAnimation";
 import BlogCardSkeleton from "./BlogCardSkeleton";
+import { useTranslations } from "next-intl";
 
 
 function BlogContent({ slug }: { slug: string }) {
+    const t = useTranslations("Blog")
     const { data: blog, isLoading: blogLoading, isError: blogError } = useBlog(slug);
     const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs();
     if (blogLoading) return <LoadingAnimation />
@@ -24,7 +26,7 @@ function BlogContent({ slug }: { slug: string }) {
             <SectionWrapper className="mt-24">
                 {/* Heading */}
                 <div className="container mx-auto flex flex-col justify-center items-start gap-8 ">
-                    <h2 className="bg-black text-white uppercase w-fit py-1 px-2 rounded-sm italic tracking-wide">DIMA BLOGS</h2>
+                    <h2 className="bg-black text-white uppercase w-fit py-1 px-2 rounded-sm italic tracking-wide">{t("dimaBlogs")}</h2>
                     <h1 className="text-2xl lg:text-[48px] font-normal">{blog?.content.title}</h1>
                 </div>
             </SectionWrapper>
@@ -57,7 +59,7 @@ function BlogContent({ slug }: { slug: string }) {
             <SectionWrapper>
                 <div className="container mx-auto">
                     <div className="flex-1">
-                        <ContentSection title="Check More Blogs" hrefViewAll="/blogs">
+                        <ContentSection title={t("checkMoreBlogs")} hrefViewAll="/blogs">
                             {blogsError && <p>Failed to load more blogs</p>}
                             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
                                 {

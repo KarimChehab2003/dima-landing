@@ -7,18 +7,19 @@ import useBlogs from "../hooks/useBlogs";
 import CaseStudyCard from "../../case-studies/components/CaseStudyCard";
 import CaseStudyCardSkeleton from "../../case-studies/components/CaseStudyCardSkeleton";
 import { useCaseStudies } from "../../case-studies/hooks/useCaseStudies";
+import { useTranslations } from "next-intl";
 
 function HeroSection() {
     const { data: blogs, isLoading, isError } = useBlogs(3);
-    const { data: caseStudy, isLoading: caseStudyLoading, isError: caseStudyError, error } = useCaseStudies(1, { featured: true })
-
+    const { data: caseStudy, isLoading: caseStudyLoading, isError: caseStudyError } = useCaseStudies(1, { featured: true })
+    const t = useTranslations("Blogs");
     return (
         <div className="container mx-auto flex flex-col justify-center items-start gap-8 ">
 
             {/* Content sections */}
             <div className="flex flex-col lg:flex-row gap-8 w-full">
                 {/* Featured Card */}
-                <ContentSection title="Featured Case Study" className="flex-1 w-full lg:min-w-[512px]" includeViewAll={false}>
+                <ContentSection title={t("featuredCaseStudy")} className="flex-1 w-full lg:min-w-[512px]" includeViewAll={false}>
                     {caseStudyError && <p>Failed to load featured case study</p>}
 
                     {caseStudyLoading ? <CaseStudyCardSkeleton /> : <CaseStudyCard {...caseStudy![0]} />}
@@ -26,7 +27,7 @@ function HeroSection() {
 
                 {/* Editor's Picks */}
                 <div className="flex-1">
-                    <ContentSection title="Editor's Pick" className="items-start">
+                    <ContentSection title={t("editorsPick")} className="items-start">
                         {isError && <p>Failed to load editor&apos;s pick blogs</p>}
 
                         <ul className="grid grid-cols-1 gap-4 divide-y w-full">

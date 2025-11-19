@@ -1,9 +1,11 @@
 import { CaseStudy } from "@/types/content";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 function CaseStudyCard(caseStudy: CaseStudy) {
+    const t = useTranslations("CaseStudies");
     return (
-        <article className="flex flex-col gap-4 p-8 shadow-[0_0_15px_rgba(0,0,0,0.07)] rounded-xl rounded-br-[96px] max-w-lg h-full">
+        <article className="flex flex-col gap-4 p-8 shadow-[0_0_15px_rgba(0,0,0,0.07)] rounded-xl rounded-br-[96px] max-w-lg h-full bg-white">
             {/* Metric */}
             <div className="space-x-2">
                 <span className="text-2xl lg:text-4xl font-bold text-primary">{caseStudy.content.metrics[1].value + caseStudy.content.metrics[1].suffix}</span>
@@ -13,7 +15,7 @@ function CaseStudyCard(caseStudy: CaseStudy) {
             {/* Text */}
             <h3 className="text-lg lg:text-[22px] font-bold">{caseStudy.content.title}</h3>
             <p>{caseStudy.content.description}</p>
-            <Link href={`/case-studies/${caseStudy.id}`} className="text-primary font-medium">Read more</Link>
+            <Link href={`/case-studies/${caseStudy.id}`} className="text-primary font-medium">{t("readMore")}</Link>
         </article>
     );
 }

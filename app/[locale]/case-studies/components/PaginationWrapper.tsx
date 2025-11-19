@@ -1,6 +1,6 @@
 import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
 import { cn } from "@/lib/utils";
-import { ChevronLeftIcon, ChevronRightIcon, Loader2 } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { useLocale } from "next-intl";
 import { MouseEvent } from "react";
 
@@ -23,7 +23,6 @@ function PaginationWrapper({
   onPrevious,
   onNext,
   onSelectPage,
-  isLoadingNext = false
 }: PaginationWrapperProps) {
   const locale = useLocale();
   const isRTL = locale === "ar";

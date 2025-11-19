@@ -899,8 +899,41 @@
       ]
     }
   },
+  "Blogs": {
+    "featuredCaseStudy": "Featured Case Study",
+    "editorsPick": "Editor's Pick",
+    "theLatest": "The Latest",
+    "videosSection": {
+      "title": "Learn more from dima.ai on social",
+      "follow": "Follow us on social"
+    },
+    "socialMediaAnalytics": "Social Media Analytics",
+    "guides": "Guides",
+    "dataReports": "Data Reports",
+    "allMarketingInsights": "All Marketing Insights",
+    "viewAll": "View all"
+  },
+  "Blog": {
+    "dimaBlogs": "DIMA BLOGS",
+    "checkMoreBlogs": "Check More Blogs"
+  },
+  "CaseStudies": {
+    "title": "Case Studies",
+    "description": "Discover how dima's arabic-first AI copilot helps your team unlock deeper insights, respond faster, protect reputation, and scale impact",
+    "typeFilter": ["all", "customer success stories", "use cases"],
+    "boostBusiness": {
+      "title": "Boost your business with dima AI",
+      "description": "Whether you're an agency or an enterprise, dima empowers you to monitor every mention, predict crises before they escalate, analyze conversations in real time, benchmark performance across competitors and deliver more accurate coverage with seamless reporting. Get your personalized demo today.",
+      "requestDemo": "Request a Demo"
+    },
+    "readMore": "Read more"
+  },
+  "CaseStudy": {
+    "moreCases": "MORE CASES"
+  },
   "LanguageSwitcher": {
     "searchPlaceholder": "Search language...",
     "emptyFind": "No languages found."
-  }
+  },
+  "Loading": "Loading..."
 }

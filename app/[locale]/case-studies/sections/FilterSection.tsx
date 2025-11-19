@@ -8,13 +8,16 @@ import PaginationWrapper from "../components/PaginationWrapper";
 import { usePaginatedCaseStudies } from "../hooks/usePaginatedCaseStudies";
 import { notFound } from "next/navigation";
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 
 type FilterType = "all" | "use cases" | "customer success stories";
 
 const PAGE_SIZE = 6;
 
 function FilterSection() {
-  const [type, setType] = useState<FilterType>("all");
+  const t = useTranslations("CaseStudies")
+  const locale = useLocale();
+  const [type, setType] = useState<string>(locale === "ar" ? "الكل" : "all");
   const [pageIndex, setPageIndex] = useState(0);
   const {
     data,
@@ -31,7 +34,7 @@ function FilterSection() {
   const pages = data?.pages ?? [];
   const currentPage = pages[pageIndex]?.caseStudies ?? [];
   const filteredCaseStudies = currentPage.filter((caseStudy) => {
-    if (type === "all") return true;
+    if (type === "all" || type === "الكل") return true;
 
     return caseStudy.content.type.trim().toLocaleLowerCase() === type;
   });
@@ -98,7 +101,7 @@ function FilterSection() {
         {/* Scrollable Button Row */}
         <div className="w-full overflow-x-auto md:flex md:justify-center py-4">
           <ul className="flex items-center gap-4 w-max px-4">
-            {["all", "customer success stories", "use cases"].map((text) => (
+            {(t.raw("typeFilter") as FilterType[]).map((text) => (
               <li key={text} className="shrink-0">
                 <Button
                   size={"xl"}

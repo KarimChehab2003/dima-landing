@@ -15,9 +15,8 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer";
-import { blogsLinks, resourcesLinks, dimaSolutions } from "@/data/constants/links";
+import { dimaSolutions } from "@/data/constants/links";
 import SolutionNavLink from "./SolutionNavLink";
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 

@@ -2,7 +2,10 @@
 // import Lottie from "lottie-react";
 // import loadingAnim from "@/public/animations/blue-loading.json"
 
+import { useTranslations } from "next-intl";
+
 function LoadingAnimation() {
+    const t = useTranslations();
     return (
         // Lottie file Loader
         // <div className="min-h-dvh flex justify-center items-center">
@@ -37,7 +40,7 @@ function LoadingAnimation() {
         // Text + Spinner
         <div className="flex flex-col items-center justify-center min-h-screen bg-white">
             <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-            <p className="text-gray-600 text-lg font-medium">Loading...</p>
+            <p className="text-gray-600 text-lg font-medium">{t("Loading")}</p>
         </div>
     );
 }

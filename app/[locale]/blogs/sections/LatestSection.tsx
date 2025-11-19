@@ -3,15 +3,16 @@ import ContentSection from "../components/ContentSection";
 import BlogCard from "../components/BlogCard";
 import useBlogs from "../hooks/useBlogs";
 import BlogCardSkeleton from "../components/BlogCardSkeleton";
+import { useTranslations } from "next-intl";
 
 function LatestSection() {
     const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs(6);
     const { data: sideBlogs, isLoading: sideBlogsLoading, isError: sideBlogsError } = useBlogs(4);
-
+    const t = useTranslations("Blogs");
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 w-full">
             <div className="flex-1">
-                <ContentSection title="The Latest" className="items-start gap-8">
+                <ContentSection title={t("theLatest")} className="items-start gap-8">
                     {blogsError && <p>Failed to load latest blogs</p>}
                     {/* Blogs */}
                     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 w-full md:basis-3/4">

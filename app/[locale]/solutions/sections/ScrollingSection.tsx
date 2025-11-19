@@ -1,7 +1,6 @@
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import PinnedScrollSection from "../components/PinnedScrollSection";
 import ScrollingCard from "../components/ScrollingCard";
-import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 import { useTranslations } from "next-intl";
 import { CardType } from "@/types/info";
 import { Button } from "@/components/ui/button";

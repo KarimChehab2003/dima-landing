@@ -1,5 +1,4 @@
 import { LayeredCardProps } from "@/types/info";
-import { useLocale } from "next-intl";
 
 const getCardConfig = (index: number) => {
     switch (index) {
@@ -37,15 +36,13 @@ const getCardConfig = (index: number) => {
 
 function LayeredCard({ index, value, title, suffix }: LayeredCardProps) {
     const { bg, text: txt, rotation, suffixColor } = getCardConfig(index);
-    const locale = useLocale();
-    const isRTL = locale === "ar";
     return (
-        <article className="relative w-full min-h-[200px] max-h-[230px] lg:max-w-[280px] aspect-4/5 sm:aspect-5/6 lg:aspect-square group">
+        <article className="relative w-full min-h-[200px] max-h-[230px] lg:max-w-[280px] aspect-4/5 sm:aspect-5/6 lg:aspect-square">
             {/* Background card */}
             <div className={`absolute inset-1 rounded-2xl -z-10 blur-xs pointer-events-none ${bg} ${txt} ${rotation}`}></div>
 
             {/* Foreground card */}
-            <div className="relative flex h-full w-full rounded-2xl bg-white p-6 lg:p-8 flex-col items-center justify-between gap-3 text-black shadow-lg transition-transform duration-300 group-hover:rotate-1 group-hover:scale-[1.02]">
+            <div className="relative flex h-full w-full rounded-2xl bg-white p-6 lg:p-8 flex-col items-center justify-between gap-3 text-black shadow-lg">
                 <p className="font-bold text-[28px] lg:text-[44px] text-center flex-1 flex items-center leading-tight" dir="ltr">
                     {value}
                     <span className={`${suffixColor} ml-1`}>{suffix}</span>

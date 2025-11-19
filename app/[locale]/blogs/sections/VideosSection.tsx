@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa6";
@@ -13,6 +14,7 @@ type VideosSectionProps = {
 };
 
 function VideosSection({ title, videos }: VideosSectionProps) {
+    const t = useTranslations("Blogs.videosSection");
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 rounded-4xl bg-muted py-12 my-8">
             <div className="flex flex-col justify-center gap-8 p-4 max-w-6xl w-full">
@@ -40,7 +42,7 @@ function VideosSection({ title, videos }: VideosSectionProps) {
                 </ul>
 
                 <div className="inline-flex justify-end items-center gap-2">
-                    <p className="text-lg font-bold text-end">Follow us on social:</p>
+                    <p className="text-lg font-bold text-end">{t("follow")}:</p>
                     <div className="inline-flex items-center gap-2">
                         <Link
                             href="https://www.linkedin.com/company/darwinz-ai/"
