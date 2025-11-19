@@ -4,18 +4,13 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    remotePatterns: [{
+    remotePatterns: [
+      {
       protocol: "https",
-      hostname: "firebasestorage.googleapis.com"
+      hostname: "firebasestorage.googleapis.com",
+      pathname: '/v0/b/**',
+
     },
-    {
-      protocol: "https",
-      hostname: "placehold.co"
-    },
-    {
-      protocol: "https",
-      hostname: "images.unsplash.com"
-    }
     ]
   }
 };

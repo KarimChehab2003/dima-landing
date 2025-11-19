@@ -30,6 +30,7 @@ function SolutionsDropdown() {
                             alt="customer insights"
                             width={200}
                             height={200}
+                            priority
                         />
                     </figure>
                     <div>
