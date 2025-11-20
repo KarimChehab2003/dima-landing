@@ -24,6 +24,8 @@ const buttonVariants = cva(
           "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-sm hover:shadow-md hover:opacity-90 focus-visible:ring-purple-400/40",
         glass:
           "backdrop-blur-md bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-colors",
+        questionDefault: "bg-primary text-primary-foreground hover:bg-primary/90",
+        questionOutline: "border border-input bg-background hover:bg-primary hover:text-primary-foreground"
       },
       size: {
         default: "py-4 px-6 p-2 pl-4",

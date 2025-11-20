@@ -931,6 +931,12 @@
   "CaseStudy": {
     "moreCases": "MORE CASES"
   },
+  "Tools":{
+    "arabic-mention-analyser":{
+      "title":"Lost Mentions & Missed Sentiment Calculator",
+      "description":"Estimate how many Arabic posts are being missed or misclassified with current tooling"
+    }
+  }
   "LanguageSwitcher": {
     "searchPlaceholder": "Search language...",
     "emptyFind": "No languages found."
