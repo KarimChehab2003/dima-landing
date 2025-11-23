@@ -1131,7 +1131,7 @@
         "consolidatedCost": "Estimated consolidated annual cost",
         "consolidatedCostHelp": "One unified platform, unlimited users",
         "annualSavings": "Estimated annual savings",
-        "savingsPercentage": "{pct} cost reduction",
+        "savingsPercentage": "{pct}% cost reduction",
         "breakEven": "Break-Even Period",
         "breakEvenMonthsUnit": "months"
       },

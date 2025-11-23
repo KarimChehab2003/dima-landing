@@ -28,26 +28,28 @@ function Footer() {
             <h2 className="capitalize text-2xl">{t("dima.description")}</h2>
 
             {/* CTA Button */}
-            <Button className="group bg-white! text-black! hover:text-white! hover:bg-black! transition-colors duration-300 w-fit" size="xl">
-              <div className="relative w-[30px] h-[30px]">
-                {/* Black icon (default) */}
-                <Image
-                  src="/computer-black.svg"
-                  alt="black computer icon"
-                  fill
-                  className="object-contain transition-opacity duration-300 group-hover:opacity-0"
-                />
-                {/* White icon (shown on hover) */}
-                <Image
-                  src="/computer.svg"
-                  alt="white computer icon"
-                  fill
-                  className="object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100 absolute top-0 left-0"
-                />
-              </div>
+            <Link href="/request-demo" className="w-fit">
+              <Button className="group bg-white! text-black! hover:text-white! hover:bg-black! transition-colors duration-300 w-fit" size="xl">
+                <div className="relative w-[30px] h-[30px]">
+                  {/* Black icon (default) */}
+                  <Image
+                    src="/computer-black.svg"
+                    alt="black computer icon"
+                    fill
+                    className="object-contain transition-opacity duration-300 group-hover:opacity-0"
+                  />
+                  {/* White icon (shown on hover) */}
+                  <Image
+                    src="/computer.svg"
+                    alt="white computer icon"
+                    fill
+                    className="object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100 absolute top-0 left-0"
+                  />
+                </div>
 
-              <span className="tracking-wide">{t("dima.requestDemo")}</span>
-            </Button>
+                <span className="tracking-wide">{t("dima.requestDemo")}</span>
+              </Button>
+            </Link>
 
           </div>
 

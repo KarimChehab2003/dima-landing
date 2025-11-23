@@ -1159,7 +1159,7 @@
         "consolidatedCost": "التكلفة السنوية التقديرية بعد التوحيد",
         "consolidatedCostHelp": "منصة موحدة واحدة، بعدد مستخدمين غير محدود",
         "annualSavings": "الوفورات السنوية المتوقعة",
-        "savingsPercentage": "نسبة خفض التكلفة: {pct}",
+        "savingsPercentage": "نسبة خفض التكلفة: {pct}%",
         "breakEven": "فترة استرجاع التكلفة",
         "breakEvenMonthsUnit": "أشهر"
       },

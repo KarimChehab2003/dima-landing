@@ -1,7 +1,7 @@
 "use client";
 import ReactMarkdown from "react-markdown";
-import useBlog from "../hooks/useBlog";
 import remarkGfm from "remark-gfm"
+import useBlog from "../hooks/useBlog";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import Link from "next/link";
 import useBlogs from "../hooks/useBlogs";
