@@ -932,7 +932,7 @@
     "moreCases": "MORE CASES"
   },
   "Tools": {
-    "arabic-mention-analyser": {
+    "arabic-mention-analyzer": {
       "title": "Lost Mentions & Missed Sentiment Calculator",
       "description": "Estimate how many Arabic posts are being missed or misclassified with current tooling",
       "input": {
@@ -1016,6 +1016,81 @@
         "title": "Close Your Arabic Coverage Gap With dima",
         "description": "dima is the Middle East's leading Arabic-first social listening and analytics platform. We deliver 95%+ accuracy in Arabic sentiment analysis and capture insights other tools miss.",
         "learnMore": "Learn More About dima"
+      }
+    },
+    "crisis-readiness-score": {
+      "title": "Crisis Readiness Scorecard",
+      "subtitle": "GCC Edition",
+      "description": "A 5-minute self-assessment to evaluate your crisis detection, escalation speed, channel coverage, and Arabic sentiment accuracy.",
+      "audience": {
+        "item1": "✓ For PR & Comms Directors",
+        "item2": "✓ Senior PR Executives",
+        "item3": "✓ Brand Managers"
+      },
+      "questions": {
+        "crisisDetection": {
+          "category": "Crisis Detection",
+          "q1": "Do you monitor social media mentions in real-time?",
+          "q2": "Can you detect sentiment shifts in Arabic content?",
+          "q3": "How quickly can you identify emerging issues?"
+        },
+        "escalationSpeed": {
+          "category": "Escalation Speed",
+          "q5": "Is there a clear crisis escalation protocol?",
+          "q6": "Can stakeholders be notified within 15 minutes?",
+          "q7": "How efficient is your internal communication?"
+        },
+        "channelCoverage": {
+          "category": "Channel Coverage",
+          "q9": "Do you monitor all major Arabic social platforms?",
+          "q10": "Are news outlets and blogs tracked?",
+          "q11": "How comprehensive is your channel monitoring?"
+        },
+        "arabicSentiment": {
+          "category": "Arabic Sentiment",
+          "q13": "Can you accurately analyze Arabic dialects?",
+          "q14": "Do you understand cultural context in Arabic content?",
+          "q15": "How accurate is your Arabic sentiment analysis?"
+        }
+      },
+      "buttons": {
+        "yes": "Yes",
+        "no": "No",
+        "poor": "Poor",
+        "excellent": "Excellent",
+        "calculate": "Calculate My Score",
+        "download": "Download Action Plan",
+        "retake": "Retake Assessment",
+        "learnMore": "Learn More About dima"
+      },
+      "resultsView": {
+        "scoreTitle": "Your Crisis Readiness Score",
+        "gapAnalysis": "Gap Analysis",
+        "priorityActions": "Priority Actions",
+        "pleaseAnswerAll": "Please answer all questions to see your results"
+      },
+      "scoreLabels": {
+        "strong": "Strong",
+        "moderate": "Moderate",
+        "needsImprovement": "Needs Improvement"
+      },
+      "dimaValueProp": {
+        "title": "Stop Crisis Management. Start Crisis Prevention.",
+        "description": "dima is the Arabic-first crisis intelligence platform that detects threats before they explode. We monitor every channel, understand every dialect, and alert you in real-time—so you can protect your brand before the damage is done."
+      },
+      "pdf": {
+        "title": "CRISIS READINESS SCORECARD",
+        "actionPlan": "Action Plan",
+        "generated": "Generated:",
+        "overallScore": "Overall Score",
+        "categoryBreakdown": "Category Breakdown",
+        "recommendedActions": "Recommended Actions",
+        "action1": "Implement real-time monitoring for all critical channels",
+        "action2": "Establish clear escalation protocols with defined response times",
+        "action3": "Invest in Arabic-first sentiment analysis tools",
+        "action4": "Create crisis response templates and playbooks",
+        "action5": "Schedule regular crisis simulation exercises",
+        "footer": "Powered by dima - Arabic-First Crisis Intelligence"
       }
     }
   },

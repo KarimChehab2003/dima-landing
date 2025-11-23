@@ -5,11 +5,11 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Progress } from "@/components/ui/progress";
-import logo from "@/assets/dima-logo.png";
 import { Download, CheckCircle2, XCircle, ExternalLink } from "lucide-react";
 import { jsPDF } from "jspdf";
 import Image from "next/image";
 import SectionWrapper from "@/components/shared/SectionWrapper";
+import { useTranslations } from "next-intl";
 
 interface Question {
     id: string;
@@ -21,30 +21,30 @@ interface Question {
 
 const questions: Question[] = [
     // Crisis Detection (25%)
-    { id: "q1", category: "Crisis Detection", text: "Do you monitor social media mentions in real-time?", type: "boolean", weight: 8.33 },
-    { id: "q2", category: "Crisis Detection", text: "Can you detect sentiment shifts in Arabic content?", type: "boolean", weight: 8.33 },
-    { id: "q3", category: "Crisis Detection", text: "How quickly can you identify emerging issues?", type: "slider", weight: 8.34 },
+    { id: "q1", category: "crisisDetection", text: "q1", type: "boolean", weight: 8.33 },
+    { id: "q2", category: "crisisDetection", text: "q2", type: "boolean", weight: 8.33 },
+    { id: "q3", category: "crisisDetection", text: "q3", type: "slider", weight: 8.34 },
 
     // Escalation Speed (25%)
-    { id: "q5", category: "Escalation Speed", text: "Is there a clear crisis escalation protocol?", type: "boolean", weight: 8.33 },
-    { id: "q6", category: "Escalation Speed", text: "Can stakeholders be notified within 15 minutes?", type: "boolean", weight: 8.33 },
-    { id: "q7", category: "Escalation Speed", text: "How efficient is your internal communication?", type: "slider", weight: 8.34 },
+    { id: "q5", category: "escalationSpeed", text: "q5", type: "boolean", weight: 8.33 },
+    { id: "q6", category: "escalationSpeed", text: "q6", type: "boolean", weight: 8.33 },
+    { id: "q7", category: "escalationSpeed", text: "q7", type: "slider", weight: 8.34 },
 
     // Channel Coverage (25%)
-    { id: "q9", category: "Channel Coverage", text: "Do you monitor all major Arabic social platforms?", type: "boolean", weight: 8.33 },
-    { id: "q10", category: "Channel Coverage", text: "Are news outlets and blogs tracked?", type: "boolean", weight: 8.33 },
-    { id: "q11", category: "Channel Coverage", text: "How comprehensive is your channel monitoring?", type: "slider", weight: 8.34 },
+    { id: "q9", category: "channelCoverage", text: "q9", type: "boolean", weight: 8.33 },
+    { id: "q10", category: "channelCoverage", text: "q10", type: "boolean", weight: 8.33 },
+    { id: "q11", category: "channelCoverage", text: "q11", type: "slider", weight: 8.34 },
 
     // Arabic Sentiment Accuracy (25%)
-    { id: "q13", category: "Arabic Sentiment", text: "Can you accurately analyze Arabic dialects?", type: "boolean", weight: 8.33 },
-    { id: "q14", category: "Arabic Sentiment", text: "Do you understand cultural context in Arabic content?", type: "boolean", weight: 8.33 },
-    { id: "q15", category: "Arabic Sentiment", text: "How accurate is your Arabic sentiment analysis?", type: "slider", weight: 8.34 },
+    { id: "q13", category: "arabicSentiment", text: "q13", type: "boolean", weight: 8.33 },
+    { id: "q14", category: "arabicSentiment", text: "q14", type: "boolean", weight: 8.33 },
+    { id: "q15", category: "arabicSentiment", text: "q15", type: "slider", weight: 8.34 },
 ];
 
 const Index = () => {
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [showResults, setShowResults] = useState(false);
-
+    const t = useTranslations("Tools.crisis-readiness-score");
     // Initialize slider questions with default value of 50
     useEffect(() => {
         const sliderDefaults: Record<string, number> = {};
@@ -90,9 +90,9 @@ const Index = () => {
     };
 
     const getScoreLabel = (score: number) => {
-        if (score >= 75) return "Strong";
-        if (score >= 50) return "Moderate";
-        return "Needs Improvement";
+        if (score >= 75) return t('scoreLabels.strong');
+        if (score >= 50) return t('scoreLabels.moderate');
+        return t('scoreLabels.needsImprovement');
     };
 
     const handleSubmit = () => {
@@ -102,7 +102,7 @@ const Index = () => {
 
     const downloadActionPlan = () => {
         const score = calculateScore();
-        const categories = ["Crisis Detection", "Escalation Speed", "Channel Coverage", "Arabic Sentiment"];
+        const categoryKeys = ["crisisDetection", "escalationSpeed", "channelCoverage", "arabicSentiment"];
 
         const pdf = new jsPDF();
         const pageWidth = pdf.internal.pageSize.getWidth();
@@ -114,20 +114,20 @@ const Index = () => {
         pdf.setTextColor(255, 255, 255);
         pdf.setFontSize(22);
         pdf.setFont("geist", 'bold');
-        pdf.text('CRISIS READINESS SCORECARD', pageWidth / 2, 15, { align: 'center' });
+        pdf.text(t('pdf.title'), pageWidth / 2, 15, { align: 'center' });
         pdf.setFontSize(12);
-        pdf.text('Action Plan', pageWidth / 2, 22, { align: 'center' });
+        pdf.text(t('pdf.actionPlan'), pageWidth / 2, 22, { align: 'center' });
 
         yPosition = 45;
         pdf.setTextColor(0, 0, 0);
         pdf.setFontSize(10);
-        pdf.text(`Generated: ${new Date().toLocaleDateString()}`, 20, yPosition);
+        pdf.text(`${t('pdf.generated')} ${new Date().toLocaleDateString()}`, 20, yPosition);
 
         // Overall Score
         yPosition += 15;
         pdf.setFontSize(16);
         pdf.setFont("geist", 'bold');
-        pdf.text('Overall Score', 20, yPosition);
+        pdf.text(t('pdf.overallScore'), 20, yPosition);
 
         yPosition += 10;
         pdf.setFontSize(32);
@@ -142,11 +142,12 @@ const Index = () => {
         yPosition += 20;
         pdf.setFontSize(16);
         pdf.setFont("geist", 'bold');
-        pdf.text('Category Breakdown', 20, yPosition);
+        pdf.text(t('pdf.categoryBreakdown'), 20, yPosition);
         pdf.setFont("geist", 'normal');
 
-        categories.forEach(category => {
-            const catScore = calculateCategoryScore(category);
+        categoryKeys.forEach(categoryKey => {
+            const categoryLabel = t(`questions.${categoryKey}.category`);
+            const catScore = calculateCategoryScore(categoryKey);
             yPosition += 12;
 
             if (yPosition > 270) {
@@ -156,7 +157,7 @@ const Index = () => {
 
             pdf.setFontSize(12);
             pdf.setFont("geist", 'bold');
-            pdf.text(`${category}:`, 20, yPosition);
+            pdf.text(`${categoryLabel}:`, 20, yPosition);
 
             const catScoreColor = catScore * 4 >= 75 ? [76, 175, 80] : catScore * 4 >= 50 ? [255, 152, 0] : [244, 67, 54];
             pdf.setTextColor(catScoreColor[0], catScoreColor[1], catScoreColor[2]);
@@ -165,7 +166,7 @@ const Index = () => {
             pdf.setFont("geist", 'normal');
             pdf.text(`- ${getScoreLabel(catScore * 4)}`, 100, yPosition);
 
-            const categoryQuestions = questions.filter(q => q.category === category);
+            const categoryQuestions = questions.filter(q => q.category === categoryKey);
             categoryQuestions.forEach(q => {
                 const answer = answers[q.id] ?? 0;
                 if (answer < 100) {
@@ -176,7 +177,7 @@ const Index = () => {
                     }
                     pdf.setFontSize(9);
                     pdf.setTextColor(150, 150, 150);
-                    pdf.text(`• ${q.text}`, 25, yPosition);
+                    pdf.text(`• ${t(`questions.${categoryKey}.${q.id}`)}`, 25, yPosition);
                     pdf.setTextColor(0, 0, 0);
                 }
             });
@@ -192,15 +193,15 @@ const Index = () => {
 
             pdf.setFontSize(16);
             pdf.setFont("geist", 'bold');
-            pdf.text('Recommended Actions', 20, yPosition);
+            pdf.text(t('pdf.recommendedActions'), 20, yPosition);
             pdf.setFont("geist", 'normal');
 
             const actions = [
-                'Implement real-time monitoring for all critical channels',
-                'Establish clear escalation protocols with defined response times',
-                'Invest in Arabic-first sentiment analysis tools',
-                'Create crisis response templates and playbooks',
-                'Schedule regular crisis simulation exercises'
+                t('pdf.action1'),
+                t('pdf.action2'),
+                t('pdf.action3'),
+                t('pdf.action4'),
+                t('pdf.action5')
             ];
 
             actions.forEach((action, index) => {
@@ -224,14 +225,14 @@ const Index = () => {
         pdf.rect(0, yPosition, pageWidth, 20, 'F');
         pdf.setTextColor(255, 255, 255);
         pdf.setFontSize(10);
-        pdf.text('Powered by dima - Arabic-First Crisis Intelligence', pageWidth / 2, yPosition + 10, { align: 'center' });
+        pdf.text(t('pdf.footer'), pageWidth / 2, yPosition + 10, { align: 'center' });
         pdf.text('thedar.ai', pageWidth / 2, yPosition + 15, { align: 'center' });
 
         pdf.save('crisis-readiness-action-plan.pdf');
     };
 
     const totalScore = calculateScore();
-    const categories = ["Crisis Detection", "Escalation Speed", "Channel Coverage", "Arabic Sentiment"];
+    const categoryKeys = ["crisisDetection", "escalationSpeed", "channelCoverage", "arabicSentiment"];
 
     return (
         <SectionWrapper className="min-h-dvh mt-24">
@@ -251,7 +252,7 @@ const Index = () => {
                     /* Results View */
                     <div className="space-y-8">
                         <Card className="p-8 border-2 border-primary">
-                            <h1 className="text-4xl font-bold text-center mb-2">Your Crisis Readiness Score</h1>
+                            <h1 className="text-4xl font-bold text-center mb-2">{t('resultsView.scoreTitle')}</h1>
                             <div className="flex items-center justify-center gap-4 my-8">
                                 <div className="text-7xl font-bold" style={{ color: getScoreColor(totalScore) }}>
                                     {totalScore}
@@ -264,14 +265,14 @@ const Index = () => {
 
                         {/* Category Heatmap */}
                         <Card className="p-8">
-                            <h2 className="text-2xl font-bold mb-6">Gap Analysis</h2>
+                            <h2 className="text-2xl font-bold mb-6">{t('resultsView.gapAnalysis')}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {categories.map(category => {
-                                    const score = calculateCategoryScore(category);
+                                {categoryKeys.map(categoryKey => {
+                                    const score = calculateCategoryScore(categoryKey);
                                     return (
-                                        <div key={category} className="space-y-3">
+                                        <div key={categoryKey} className="space-y-3">
                                             <div className="flex justify-between items-center">
-                                                <h3 className="font-semibold">{category}</h3>
+                                                <h3 className="font-semibold">{t(`questions.${categoryKey}.category`)}</h3>
                                                 <span className="text-lg font-bold" style={{ color: getScoreColor(score * 4) }}>
                                                     {score}/25
                                                 </span>
@@ -286,7 +287,7 @@ const Index = () => {
 
                         {/* Action Items */}
                         <Card className="p-8">
-                            <h2 className="text-2xl font-bold mb-6">Priority Actions</h2>
+                            <h2 className="text-2xl font-bold mb-6">{t('resultsView.priorityActions')}</h2>
                             <div className="space-y-4">
                                 {questions
                                     .filter(q => (answers[q.id] ?? 0) < 100)
@@ -295,8 +296,8 @@ const Index = () => {
                                         <div key={q.id} className="flex items-start gap-3 p-4 bg-muted rounded-lg">
                                             <XCircle className="w-5 h-5 text-error mt-0.5 shrink-0" />
                                             <div>
-                                                <p className="font-medium">{q.category}</p>
-                                                <p className="text-sm text-muted-foreground">{q.text}</p>
+                                                <p className="font-medium">{t(`questions.${q.category}.category`)}</p>
+                                                <p className="text-sm text-muted-foreground">{t(`questions.${q.category}.${q.id}`)}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -307,26 +308,22 @@ const Index = () => {
                         <div className="flex flex-col md:flex-row gap-4 justify-center">
                             <Button onClick={downloadActionPlan} size="lg" className="gap-2">
                                 <Download className="w-5 h-5" />
-                                Download Action Plan
+                                {t('buttons.download')}
                             </Button>
                             <Button onClick={() => setShowResults(false)} variant="outline" size="lg">
-                                Retake Assessment
+                                {t('buttons.retake')}
                             </Button>
                         </div>
 
                         {/* Dima Value Proposition */}
                         <Card className="p-8 bg-primary/5 border-primary/20 mt-8">
                             <div className="text-center space-y-4">
-                                <h3 className="text-2xl font-bold text-primary">Stop Crisis Management. Start Crisis Prevention.</h3>
-                                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                                    dima is the Arabic-first crisis intelligence platform that detects threats before they explode.
-                                    We monitor every channel, understand every dialect, and alert you in real-time—so you can protect
-                                    your brand before the damage is done.
-                                </p>
+                                <h3 className="text-2xl font-bold text-primary">{t('dimaValueProp.title')}</h3>
+                                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{t('dimaValueProp.description')}</p>
                                 <div className="pt-4">
                                     <Button asChild size="lg" className="gap-2">
                                         <a href="https://thedar.ai/" target="_blank" rel="noopener noreferrer">
-                                            Learn More About dima
+                                            {t('buttons.learnMore')}
                                             <ExternalLink className="w-4 h-4" />
                                         </a>
                                     </Button>
@@ -338,32 +335,29 @@ const Index = () => {
                     /* Assessment View */
                     <div className="space-y-8">
                         <div className="text-center space-y-4">
-                            <h1 className="text-4xl font-bold">Crisis Readiness Scorecard</h1>
-                            <p className="text-xl text-primary font-semibold">GCC Edition</p>
-                            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                                A 5-minute self-assessment to evaluate your crisis detection, escalation speed,
-                                channel coverage, and Arabic sentiment accuracy.
-                            </p>
+                            <h1 className="text-4xl font-bold">{t('title')}</h1>
+                            <p className="text-xl text-primary font-semibold">{t('subtitle')}</p>
+                            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t('description')}</p>
                             <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground pt-4">
-                                <span>✓ For PR & Comms Directors</span>
-                                <span>✓ Senior PR Executives</span>
-                                <span>✓ Brand Managers</span>
+                                <span>{t('audience.item1')}</span>
+                                <span>{t('audience.item2')}</span>
+                                <span>{t('audience.item3')}</span>
                             </div>
                         </div>
 
                         <Card className="p-8">
                             <div className="space-y-8">
-                                {categories.map((category, catIndex) => (
-                                    <div key={category} className="space-y-6">
+                                {categoryKeys.map((categoryKey, catIndex) => (
+                                    <div key={categoryKey} className="space-y-6">
                                         <h2 className="text-2xl font-bold text-primary border-b-2 border-primary pb-2">
-                                            {catIndex + 1}. {category}
+                                            {catIndex + 1}. {t(`questions.${categoryKey}.category`)}
                                         </h2>
                                         {questions
-                                            .filter(q => q.category === category)
+                                            .filter(q => q.category === categoryKey)
                                             .map((question, qIndex) => (
                                                 <div key={question.id} className="space-y-3 pl-4">
                                                     <label className="text-lg font-medium block">
-                                                        {catIndex + 1}.{qIndex + 1} {question.text}
+                                                        {catIndex + 1}.{qIndex + 1} {t(`questions.${categoryKey}.${question.id}`)}
                                                     </label>
                                                     {question.type === "boolean" ? (
                                                         <div className="flex gap-4">
@@ -374,7 +368,7 @@ const Index = () => {
                                                                 className={`flex-1 gap-2 ${answers[question.id] === 100}`}
                                                             >
                                                                 <CheckCircle2 className="w-4 h-4" />
-                                                                Yes
+                                                                {t('buttons.yes')}
                                                             </Button>
                                                             <Button
                                                                 type="button"
@@ -383,7 +377,7 @@ const Index = () => {
                                                                 className={`flex-1 gap-2 ${answers[question.id] === 100}`}
                                                             >
                                                                 <XCircle className="w-4 h-4" />
-                                                                No
+                                                                {t('buttons.no')}
                                                             </Button>
                                                         </div>
                                                     ) : (
@@ -396,8 +390,8 @@ const Index = () => {
                                                                 className="py-4"
                                                             />
                                                             <div className="flex justify-between text-sm text-muted-foreground">
-                                                                <span>Poor</span>
-                                                                <span>Excellent</span>
+                                                                <span>{t('buttons.poor')}</span>
+                                                                <span>{t('buttons.excellent')}</span>
                                                             </div>
                                                         </div>
                                                     )}
@@ -415,12 +409,12 @@ const Index = () => {
                                 disabled={Object.keys(answers).length < questions.length}
                                 className="px-12 bg-primary!"
                             >
-                                Calculate My Score
+                                {t('buttons.calculate')}
                             </Button>
                         </div>
                         {Object.keys(answers).length < questions.length && (
                             <p className="text-center text-sm text-muted-foreground">
-                                Please answer all questions to see your results
+                                {t('resultsView.pleaseAnswerAll')}
                             </p>
                         )}
                     </div>

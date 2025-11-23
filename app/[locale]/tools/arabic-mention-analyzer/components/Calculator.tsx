@@ -43,7 +43,7 @@ const Calculator = () => {
   const [currentTool, setCurrentTool] = useState("");
   const [sector, setSector] = useState("");
   const [results, setResults] = useState<CalculatorResults | null>(null);
-  const t = useTranslations("Tools.arabic-mention-analyser");
+  const t = useTranslations("Tools.arabic-mention-analyzer");
 
   const platformMixLabels = (t.raw("input.platformMix.values") as string[]) ?? [];
   const toolLabels = (t.raw("input.currentTools.values") as string[]) ?? [];
