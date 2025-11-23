@@ -1092,6 +1092,63 @@
         "action5": "Schedule regular crisis simulation exercises",
         "footer": "Powered by dima - Arabic-First Crisis Intelligence"
       }
+    },
+    "stack-consolidation-calculator": {
+      "title": "Monitoring Stack Consolidation Calculator",
+      "description": "Compare your current 3-4 tool stack (social + online press + broadcast) against one Arabic-first AI copilot and discover your potential savings.",
+      "form": {
+        "title": "Current Stack Details",
+        "vendors": {
+          "label": "Number of current vendors",
+          "help": "How many separate tools are you currently using?"
+        },
+        "license": {
+          "label": "Average annual license cost per vendor (USD)",
+          "help": "Including data caps and user limits"
+        },
+        "users": {
+          "label": "Number of users"
+        },
+        "hours": {
+          "label": "Weekly manual reporting hours",
+          "help": "Total hours spent per week on manual reporting and data consolidation."
+        },
+        "rate": {
+          "label": "Average hourly rate (USD)"
+        }
+      },
+      "buttons": {
+        "calculate": "Calculate Savings",
+        "reset": "Reset"
+      },
+      "results": {
+        "title": "Your Consolidation Savings",
+        "currentAnnualCost": "Current annual license cost",
+        "currentAnnualCostHelp": "Sum of yearly license fees across all vendors.",
+        "manualHoursCost": "Annual cost of manual reporting",
+        "manualHoursCostHelp": "Cost for {hours} weekly hours spent on reporting (annualized).",
+        "totalCurrentCost": "Total current annual cost",
+        "consolidatedCost": "Estimated consolidated annual cost",
+        "consolidatedCostHelp": "One unified platform, unlimited users",
+        "annualSavings": "Estimated annual savings",
+        "savingsPercentage": "{pct} cost reduction",
+        "breakEven": "Break-Even Period",
+        "breakEvenMonthsUnit": "months"
+      },
+      "additional": {
+        "title": "Additional benefits",
+        "benefit1": "No user or report limits",
+        "benefit2": "97% Arabic analysis accuracy",
+        "benefit3": "Simplified operations & vendor management",
+        "benefit4": "Real-time unified dashboard"
+      },
+      "emptyState": "Add your inputs to see results here",
+      "footerNote": "* Calculations are estimates based on typical consolidation scenarios. Actual savings may vary based on your specific requirements and usage patterns.",
+      "dima": {
+        "title": "Ready to Transform Your Media Monitoring?",
+        "description": "dima consolidates social, online press, and broadcast monitoring into one powerful Arabic-first AI copilot. No user limits. No report caps. Just unified insights that save time and money.",
+        "learnMore": "Learn More About dima"
+      }
     }
   },
   "LanguageSwitcher": {

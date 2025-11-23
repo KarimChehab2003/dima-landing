@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import dimaLogo from "@/assets/dima-logo.png";
 import Image from "next/image";
+import SectionWrapper from "@/components/shared/SectionWrapper";
+import { useTranslations } from "next-intl";
 
 interface CalculatorInputs {
   currentVendors: number;
@@ -26,6 +28,8 @@ interface CalculatorResults {
 }
 
 export const TCOCalculator = () => {
+  const t = useTranslations("Tools.stack-consolidation-calculator");
+
   const [inputs, setInputs] = useState<CalculatorInputs>({
     currentVendors: 3,
     licenseCost: 50000,
@@ -87,7 +91,7 @@ export const TCOCalculator = () => {
         {/* Logo */}
         <div className="flex justify-center mb-12">
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Navbar%2Fdima-logo.svg?alt=media&token=a19b03d0-fa21-41d9-8906-d62760f6c331"
+            src="/dima-logo.svg"
             alt="dima"
             width={200}
             height={60}
@@ -98,11 +102,10 @@ export const TCOCalculator = () => {
         {/* Main Content */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-foreground mb-4">
-            Monitoring Stack Consolidation Calculator
+            {t('title')}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Compare your current 3-4 tool stack (social + online press + broadcast)
-            against one Arabic-first AI copilot and discover your potential savings.
+            {t('description')}
           </p>
         </div>
 
@@ -110,13 +113,13 @@ export const TCOCalculator = () => {
           {/* Input Form */}
           <Card className="p-8 self-start">
             <h2 className="text-2xl font-bold text-foreground mb-6">
-              Current Stack Details
+              {t('form.title')}
             </h2>
             <form className="space-y-6" onSubmit={calculateTCO}>
               {/* Number of current vendors */}
               <div>
                 <Label htmlFor="vendors" className="text-base font-medium">
-                  Number of Current Vendors
+                  {t('form.vendors.label')}
                 </Label>
                 <Input
                   id="vendors"
@@ -128,14 +131,14 @@ export const TCOCalculator = () => {
                   className="mt-2"
                 />
                 <p className="text-sm text-muted-foreground mt-1">
-                  Social, online press, broadcast monitoring tools
+                  {t('form.vendors.help')}
                 </p>
               </div>
 
               {/* Average annual license cost per vendor */}
               <div>
                 <Label htmlFor="license" className="text-base font-medium">
-                  Average Annual License Cost per Vendor
+                  {t('form.license.label')}
                 </Label>
                 <Input
                   id="license"
@@ -147,14 +150,14 @@ export const TCOCalculator = () => {
                   className="mt-2"
                 />
                 <p className="text-sm text-muted-foreground mt-1">
-                  Including data caps and user limits
+                  {t('form.license.help')}
                 </p>
               </div>
 
               {/* Number of users */}
               <div>
                 <Label htmlFor="users" className="text-base font-medium">
-                  Number of Users
+                  {t('form.users.label')}
                 </Label>
                 <Input
                   id="users"
@@ -170,24 +173,25 @@ export const TCOCalculator = () => {
               {/* Weekly manual reporting hours */}
               <div>
                 <Label htmlFor="hours" className="text-base font-medium">
-                  Weekly Manual Reporting Hours
+                  {t('form.hours.label')}
                 </Label>
                 <Input
                   id="hours"
                   type="number"
                   min="0"
+                  max={"168"}
                   value={inputs.reportingHours}
                   onChange={(e) => handleInputChange("reportingHours", e.target.value)}
                   className="mt-2"
                 />
                 <p className="text-sm text-muted-foreground mt-1">
-                  Time spent on data consolidation and reporting
+                  {t('form.hours.help')}
                 </p>
               </div>
 
               <div>
                 <Label htmlFor="rate" className="text-base font-medium">
-                  Average Hourly Rate ($)
+                  {t('form.rate.label')}
                 </Label>
                 <Input
                   id="rate"
@@ -204,7 +208,7 @@ export const TCOCalculator = () => {
                 size="lg"
                 type="submit"
               >
-                Calculate Savings
+                {t('buttons.calculate')}
               </Button>
               <Button
                 className="w-full text-lg py-6"
@@ -213,7 +217,7 @@ export const TCOCalculator = () => {
                 variant={"outline"}
                 onClick={resetForm}
               >
-                Reset
+                {t('buttons.reset')}
               </Button>
             </form>
           </Card>
@@ -222,36 +226,36 @@ export const TCOCalculator = () => {
           {results ? (
             <Card className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
               <h2 className="text-2xl font-bold text-foreground mb-6">
-                Your Consolidation Savings
+                {t('results.title')}
               </h2>
               <div className="space-y-6">
                 <div className="p-4 bg-card rounded-lg">
                   <p className="text-sm text-muted-foreground mb-1">
-                    Current Annual Cost
+                    {t('results.currentAnnualCost')}
                   </p>
                   <p className="text-2xl font-bold text-foreground">
                     {formatCurrency(results.currentAnnualCost)}
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    License costs across all vendors
+                    {t('results.currentAnnualCostHelp')}
                   </p>
                 </div>
 
                 <div className="p-4 bg-card rounded-lg">
                   <p className="text-sm text-muted-foreground mb-1">
-                    Hidden Manual Hours Cost
+                    {t('results.manualHoursCost')}
                   </p>
                   <p className="text-2xl font-bold text-destructive">
                     {formatCurrency(results.manualHoursCost)}
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {inputs.reportingHours} hours/week × 52 weeks
+                    {t('results.manualHoursCostHelp', { hours: inputs.reportingHours })}
                   </p>
                 </div>
 
                 <div className="p-4 bg-card rounded-lg border-2 border-primary/30">
                   <p className="text-sm text-muted-foreground mb-1">
-                    Total Current Annual Cost
+                    {t('results.totalCurrentCost')}
                   </p>
                   <p className="text-3xl font-bold text-foreground">
                     {formatCurrency(results.totalCurrentCost)}
@@ -262,55 +266,55 @@ export const TCOCalculator = () => {
 
                 <div className="p-4 bg-card rounded-lg">
                   <p className="text-sm text-muted-foreground mb-1">
-                    Consolidated Solution Cost
+                    {t('results.consolidatedCost')}
                   </p>
                   <p className="text-2xl font-bold text-primary">
                     {formatCurrency(results.consolidatedCost)}
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    One unified platform, unlimited users
+                    {t('results.consolidatedCostHelp')}
                   </p>
                 </div>
 
                 <div className="p-6 bg-primary text-primary-foreground rounded-lg">
-                  <p className="text-sm opacity-90 mb-2">Annual Savings</p>
+                  <p className="text-sm opacity-90 mb-2">{t('results.annualSavings')}</p>
                   <p className="text-4xl font-bold mb-2">
                     {formatCurrency(results.annualSavings)}
                   </p>
                   <p className="text-lg opacity-90">
-                    {results.savingsPercentage.toFixed(1)}% cost reduction
+                    {t('results.savingsPercentage', { pct: results.savingsPercentage.toFixed(1) })}
                   </p>
                 </div>
 
                 <div className="p-4 bg-card rounded-lg">
                   <p className="text-sm text-muted-foreground mb-1">
-                    Break-Even Period
+                    {t('results.breakEven')}
                   </p>
                   <p className="text-2xl font-bold text-foreground">
-                    {results.breakEvenMonths.toFixed(1)} months
+                    {results.breakEvenMonths.toFixed(1)} {t('results.breakEvenMonthsUnit')}
                   </p>
                 </div>
 
                 <div className="p-4 rounded-lg">
                   <h3 className="font-semibold text-foreground mb-2">
-                    Additional Benefits:
+                    {t('additional.title')}
                   </h3>
                   <ul className="space-y-2 text-sm text-foreground">
-                    <li className="flex items-start">
+                    <li className="flex items-start gap-1">
                       <span className="text-primary mr-2">✓</span>
-                      <span>No user or report limits</span>
+                      <span>{t('additional.benefit1')}</span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-start gap-1">
                       <span className="text-primary mr-2">✓</span>
-                      <span>97% Arabic analysis accuracy</span>
+                      <span>{t('additional.benefit2')}</span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-start gap-1">
                       <span className="text-primary mr-2">✓</span>
-                      <span>Simplified operations & vendor management</span>
+                      <span>{t('additional.benefit3')}</span>
                     </li>
-                    <li className="flex items-start">
+                    <li className="flex items-start gap-1">
                       <span className="text-primary mr-2">✓</span>
-                      <span>Real-time unified dashboard</span>
+                      <span>{t('additional.benefit4')}</span>
                     </li>
                   </ul>
                 </div>
@@ -320,7 +324,7 @@ export const TCOCalculator = () => {
             <Card className="p-8 flex items-center justify-center min-h-[600px] bg-muted/30">
               <div className="text-center">
                 <p className="text-xl text-muted-foreground">
-                  Add your inputs to see results here
+                  {t('emptyState')}
                 </p>
               </div>
             </Card>
@@ -330,8 +334,7 @@ export const TCOCalculator = () => {
         {/* Footer Note */}
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            * Calculations are estimates based on typical consolidation scenarios.
-            Actual savings may vary based on your specific requirements and usage patterns.
+            {t('footerNote')}
           </p>
         </div>
 
@@ -340,21 +343,22 @@ export const TCOCalculator = () => {
           <div className="mt-16 text-center">
             <Card className="p-8 max-w-3xl mx-auto bg-gradient-to-br from-primary/10 to-primary/5">
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Ready to Transform Your Media Monitoring?
+                {t('dima.title')}
               </h3>
               <p className="text-lg text-muted-foreground mb-6">
-                Dima consolidates social, online press, and broadcast monitoring into one powerful Arabic-first AI copilot.
-                No user limits. No report caps. Just unified insights that save time and money.
+                {t('dima.description')}
               </p>
-              <Button
-                asChild
-                size="lg"
-                className="text-lg px-8 py-6"
-              >
-                <a href="https://thedar.ai/" target="_blank" rel="noopener noreferrer">
-                  Learn More About Dima
-                </a>
-              </Button>
+              <div className="flex justify-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="text-lg px-8 py-6 bg-primary!"
+                >
+                  <a href="https://thedar.ai/" target="_blank" rel="noopener noreferrer">
+                    {t('dima.learnMore')}
+                  </a>
+                </Button>
+              </div>
             </Card>
           </div>
         )}

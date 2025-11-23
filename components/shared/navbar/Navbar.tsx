@@ -32,7 +32,7 @@ function Navbar() {
                 <Link href="/" className="order-1">
                     <figure>
                         <Image
-                            src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Navbar%2Fdima-logo.svg?alt=media&token=a19b03d0-fa21-41d9-8906-d62760f6c331"
+                            src="/dima-logo.svg"
                             alt="Dima logo"
                             width={74}
                             height={30}
