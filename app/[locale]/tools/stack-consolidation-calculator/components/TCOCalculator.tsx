@@ -4,9 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import dimaLogo from "@/assets/dima-logo.png";
 import Image from "next/image";
-import SectionWrapper from "@/components/shared/SectionWrapper";
 import { useTranslations } from "next-intl";
 
 interface CalculatorInputs {
