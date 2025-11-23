@@ -1,8 +1,10 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { ArabicCoverageWizard } from "./components/ArabicCoverageWizard";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function ArabicCoverageGapAudit() {
+    const t = useTranslations("Tools.arabic-coverage-gap-audit")
     return (
         <main>
             <SectionWrapper className="min-h-dvh mt-24">
@@ -21,11 +23,10 @@ function ArabicCoverageGapAudit() {
                     {/* Main heading */}
                     <div className="text-center mb-12 space-y-4">
                         <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-                            Arabic Coverage Gap Audit
+                            {t("title")}
                         </h1>
                         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                            A guided wizard that maps keyword lists to dialect variations, common misspellings,
-                            and colloquialisms by country — saving time and reducing blind spots in media monitoring.
+                            {t("description")}
                         </p>
                     </div>
 

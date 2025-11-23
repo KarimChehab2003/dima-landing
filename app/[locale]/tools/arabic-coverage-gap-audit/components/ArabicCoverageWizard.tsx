@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { ArrowRight, ArrowLeft, Check, FileText, Globe, Sparkles, Download } from "lucide-react";
 import jsPDF from "jspdf";
 import { RawKeywordResult } from "@/types/content";
+import { useTranslations } from "next-intl";
 
 type Step = 1 | 2 | 3;
 
@@ -45,6 +46,8 @@ export const ArabicCoverageWizard = () => {
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
   const [results, setResults] = useState<ExpandedKeyword[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
+  const t = useTranslations("Tools.arabic-coverage-gap-audit.steps")
+
 
   const handleCountryToggle = (country: string) => {
     setSelectedCountries((prev) =>
@@ -275,15 +278,15 @@ export const ArabicCoverageWizard = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
                 <FileText className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-3xl font-bold text-foreground">Enter Your Keywords</h2>
+              <h2 className="text-3xl font-bold text-foreground">{t("1.title")}</h2>
               <p className="text-muted-foreground text-lg">
-                Paste your current keyword taxonomy (one keyword per line)
+                {t("1.description")}
               </p>
             </div>
             <Textarea
               value={keywords}
               onChange={(e) => setKeywords(e.target.value)}
-              placeholder="Example:&#10;سوشيال ميديا&#10;تسويق رقمي&#10;إعلانات&#10;محتوى"
+              placeholder={t("1.placeholder")}
               className="min-h-[300px] text-lg font-mono resize-none"
               dir="rtl"
             />
@@ -294,7 +297,7 @@ export const ArabicCoverageWizard = () => {
                 size="lg"
                 className="gap-2"
               >
-                Continue
+                {t("1.continue")}
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
@@ -307,9 +310,9 @@ export const ArabicCoverageWizard = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
                 <Globe className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-3xl font-bold text-foreground">Select Target Countries</h2>
+              <h2 className="text-3xl font-bold text-foreground">{t("2.title")}</h2>
               <p className="text-muted-foreground text-lg">
-                Choose countries to map dialect variations and colloquialisms
+                {t("2.description")}
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -332,7 +335,7 @@ export const ArabicCoverageWizard = () => {
             <div className="flex justify-between gap-4">
               <Button onClick={() => setStep(1)} variant="outline" size="lg" className="gap-2">
                 <ArrowLeft className="w-5 h-5" />
-                Back
+                {t("2.back")}
               </Button>
               <Button
                 onClick={handleProcess}
@@ -341,10 +344,10 @@ export const ArabicCoverageWizard = () => {
                 className="gap-2"
               >
                 {isProcessing ? (
-                  <>Processing...</>
+                  <>{t("2.processing")}</>
                 ) : (
                   <>
-                    Generate Results
+                    {t("2.generate")}
                     <Sparkles className="w-5 h-5" />
                   </>
                 )}
@@ -359,17 +362,17 @@ export const ArabicCoverageWizard = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
                 <Check className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-3xl font-bold text-foreground">Expanded Arabic Queries</h2>
+              <h2 className="text-3xl font-bold text-foreground">{t("3.title")}</h2>
               <p className="text-muted-foreground text-lg">
-                Your comprehensive keyword coverage report
+                {t("3.description")}
               </p>
             </div>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-4">
               <div className="flex items-center justify-between">
-                <h3 className="font-semibold text-foreground text-lg">Coverage Summary</h3>
+                <h3 className="font-semibold text-foreground text-lg">{t("3.coverageSummary")}</h3>
                 <Badge variant="default" className="text-base px-4 py-2">
-                  {results.length} Keywords Expanded
+                  {t("3.keywordsExpanded", { count: results.length })}
                 </Badge>
               </div>
               <div className="grid grid-cols-3 gap-4 text-center">
@@ -377,19 +380,19 @@ export const ArabicCoverageWizard = () => {
                   <div className="text-3xl font-bold text-primary">
                     {results.reduce((acc, r) => acc + r.variations.length, 0)}
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">Variations</div>
+                  <div className="text-sm text-muted-foreground mt-1">{t("3.metrics.variations")}</div>
                 </div>
                 <div className="bg-card rounded-lg p-4">
                   <div className="text-3xl font-bold text-primary">
                     {results.reduce((acc, r) => acc + r.dialects.length, 0)}
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">Dialect Terms</div>
+                  <div className="text-sm text-muted-foreground mt-1">{t("3.metrics.dialectTerms")}</div>
                 </div>
                 <div className="bg-card rounded-lg p-4">
                   <div className="text-3xl font-bold text-primary">
                     {results.reduce((acc, r) => acc + r.misspellings.length, 0)}
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">Misspellings</div>
+                  <div className="text-sm text-muted-foreground mt-1">{t("3.metrics.misspellings")}</div>
                 </div>
               </div>
             </div>
@@ -400,13 +403,13 @@ export const ArabicCoverageWizard = () => {
                   <div className="space-y-4">
                     <div className="flex items-start justify-between">
                       <h4 className="text-xl font-semibold text-foreground">{result.original}</h4>
-                      <Badge className="bg-primary text-primary-foreground">Original</Badge>
+                      <Badge className="bg-primary text-primary-foreground">{t("3.badges.original")}</Badge>
                     </div>
 
                     <div className="space-y-3">
                       <div>
                         <h5 className="text-sm font-semibold text-muted-foreground mb-2">
-                          Variations
+                          {t("3.sections.variationsHeader")}
                         </h5>
                         <div className="flex flex-wrap gap-2">
                           {result.variations.map((v, i) => (
@@ -419,7 +422,7 @@ export const ArabicCoverageWizard = () => {
 
                       <div>
                         <h5 className="text-sm font-semibold text-muted-foreground mb-2">
-                          Dialect Terms
+                          {t("3.sections.dialectTermsHeader")}
                         </h5>
                         <div className="flex flex-wrap gap-2">
                           {result.dialects.map((d, i) => (
@@ -432,7 +435,7 @@ export const ArabicCoverageWizard = () => {
 
                       <div>
                         <h5 className="text-sm font-semibold text-muted-foreground mb-2">
-                          Common Misspellings
+                          {t("3.sections.misspellingsHeader")}
                         </h5>
                         <div className="flex flex-wrap gap-2">
                           {result.misspellings.map((m, i) => (
@@ -451,31 +454,31 @@ export const ArabicCoverageWizard = () => {
             <div className="bg-primary/5 rounded-lg p-6 border border-primary/20">
               <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
                 <Check className="w-5 h-5 text-primary" />
-                No Missing Mentions Checklist
+                {t("3.checklistTitle")}
               </h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  All dialect variations mapped across {selectedCountries.length} countries
+                  {t("3.checklist.mappedDialects", { count: selectedCountries.length })}
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  Common misspellings and colloquialisms identified
+                  {t("3.checklist.misspellingsIdentified")}
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  Duplicate terms removed from expanded list
+                  {t("3.checklist.duplicatesRemoved")}
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  Ready for media monitoring implementation
+                  {t("3.checklist.ready")}
                 </li>
               </ul>
             </div>
 
             <div className="flex justify-end gap-4">
               <Button onClick={handleReset} variant="outline" size="lg">
-                Start New Audit
+                {t("3.actions.startNew")}
               </Button>
               {/* <Button onClick={handleExportPDF} size="lg" className="gap-2">
                 Export PDF
@@ -490,8 +493,7 @@ export const ArabicCoverageWizard = () => {
       {step === 3 && results.length > 0 && (
         <div className="mt-8 pt-8 border-t border-border text-center space-y-3">
           <p className="text-sm text-muted-foreground">
-            This tool is powered by <span className="font-semibold text-foreground">dima</span> —
-            your AI-powered media intelligence platform for comprehensive Arabic-language monitoring across MENA.
+            {t("3.footer.poweredBy")}
           </p>
           <a
             href="https://thedar.ai/"
@@ -499,7 +501,7 @@ export const ArabicCoverageWizard = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline transition-colors"
           >
-            Learn more about dima
+            {t("3.footer.learnMore")}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>

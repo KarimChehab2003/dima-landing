@@ -1149,6 +1149,59 @@
         "description": "dima consolidates social, online press, and broadcast monitoring into one powerful Arabic-first AI copilot. No user limits. No report caps. Just unified insights that save time and money.",
         "learnMore": "Learn More About dima"
       }
+    },
+    "arabic-coverage-gap-audit": {
+      "title": "Arabic Coverage Gap Audit",
+      "description": "A guided wizard that maps keyword lists to dialect variations, common misspellings, and colloquialisms by country — saving time and reducing blind spots in media monitoring.",
+      "steps": {
+        "1": {
+          "title": "Enter Your Keywords",
+          "description": "Paste your current keyword taxonomy (one keyword per line)",
+          "placeholder": "Example:\nسوشيال ميديا\nتسويق رقمي\nإعلانات\nمحتوى",
+          "continue": "Continue"
+        },
+        "2": {
+          "title": "Select Target Countries",
+          "description": "Choose countries to map dialect variations and colloquialisms",
+          "back": "Back",
+          "generate": "Generate Results",
+          "processing": "Processing..."
+        },
+        "3": {
+          "title": "Expanded Arabic Queries",
+          "description": "Your comprehensive keyword coverage report",
+          "coverageSummary": "Coverage Summary",
+          "keywordsExpanded": "{count} Keywords Expanded",
+          "metrics": {
+            "variations": "Variations",
+            "dialectTerms": "Dialect Terms",
+            "misspellings": "Misspellings"
+          },
+          "badges": {
+            "original": "Original"
+          },
+          "sections": {
+            "variationsHeader": "Variations",
+            "dialectTermsHeader": "Dialect Terms",
+            "misspellingsHeader": "Common Misspellings"
+          },
+          "checklistTitle": "No Missing Mentions Checklist",
+          "checklist": {
+            "mappedDialects": "All dialect variations mapped across {count} countries",
+            "misspellingsIdentified": "Common misspellings and colloquialisms identified",
+            "duplicatesRemoved": "Duplicate terms removed from expanded list",
+            "ready": "Ready for media monitoring implementation"
+          },
+          "actions": {
+            "startNew": "Start New Audit",
+            "exportPdf": "Export PDF"
+          },
+          "footer": {
+            "poweredBy": "This tool is powered by dima — your AI-powered media intelligence platform for comprehensive Arabic-language monitoring across MENA.",
+            "learnMore": "Learn more about dima"
+          }
+        }
+      }
     }
   },
   "LanguageSwitcher": {
