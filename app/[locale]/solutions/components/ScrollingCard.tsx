@@ -11,7 +11,6 @@ function ScrollingCard({ title, description, slug, index }: CardType) {
             <figure
                 key={index}
                 className="
-            
             w-full sm:w-[340px]
             h-[340px] sm:h-[240px]
             shrink-0
