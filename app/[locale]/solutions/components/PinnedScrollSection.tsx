@@ -1,20 +1,19 @@
 "use client";
 
 import { Scrollama, Step } from "react-scrollama";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { CardType } from "@/types/info";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { solutionImages } from "@/data/constants/solutionImages";
 import { AnimatePresence, motion } from "motion/react";
+import { solutionImages } from "@/data/constants/solutionImages";
 
 export default function PinnedScrollSection({ cards, slug }: { cards: CardType[], slug: string }) {
     const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);
     const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const [loadedImages, setLoadedImages] = useState<string[]>([]);
     const t = useTranslations(`Solutions.${slug}.scrollingSection`);
 
     const handleStepEnter = ({ data }: { data: number }) => {
@@ -30,17 +29,7 @@ export default function PinnedScrollSection({ cards, slug }: { cards: CardType[]
             });
         }
     };
-
-    useEffect(() => {
-        const urls = solutionImages[slug].scrollingSection;
-        urls.forEach((url) => {
-            const img: HTMLImageElement = new window.Image();
-            img.src = url;
-        })
-
-        setLoadedImages(urls);
-    }, [slug]);
-
+    const images = solutionImages[slug].scrollingSection;
     return (
         <div className="relative flex justify-center items-start">
             {/* Sticky image container */}
@@ -49,21 +38,21 @@ export default function PinnedScrollSection({ cards, slug }: { cards: CardType[]
                     className="rounded-3xl bg-[linear-gradient(-125deg,#95DDEE_0%,#11A8CF_32%,#95DDEE_46%,#11A8CF_100%)] w-full max-w-[600px] aspect-6/5 relative overflow-hidden"
                 >
                     <AnimatePresence mode="wait">
-                        {loadedImages[currentStepIndex] && (
+                        {images && (
                             <motion.div
-                                key={loadedImages[currentStepIndex]}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
+                                key={images[currentStepIndex]}
+                                initial={{ opacity: 0, y: 15 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.15, ease: "easeIn" }}
                                 className="absolute inset-0"
                             >
                                 <Image
-                                    src={loadedImages[currentStepIndex]}
+                                    src={images[currentStepIndex]}
                                     alt=""
                                     fill
                                     className="object-contain p-4"
-                                    priority
+                                    priority={true}
                                     fetchPriority="high"
                                 />
                             </motion.div>

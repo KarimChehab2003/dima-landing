@@ -1,11 +1,11 @@
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import PinnedScrollSection from "../components/PinnedScrollSection";
-import ScrollingCard from "../components/ScrollingCard";
 import { useTranslations } from "next-intl";
 import { CardType } from "@/types/info";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import MobileScrollingCard from "../components/MobileScrollingCard";
 
 function ScrollingSection({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.scrollingSection`);
@@ -27,7 +27,7 @@ function ScrollingSection({ slug }: { slug: string }) {
                     {
                         cards.map((card, i) => (
                             <li key={card.title} className="my-4">
-                                <ScrollingCard {...card} slug={slug} index={i}
+                                <MobileScrollingCard {...card} slug={slug} index={i}
                                 />
                             </li>
                         ))

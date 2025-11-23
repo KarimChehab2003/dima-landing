@@ -25,7 +25,7 @@ function HeroSection({ slug }: { slug: string }) {
                                 alt={`Hero Image ${index + 1}`}
                                 fill
                                 className="w-full h-full object-contain"
-                                priority
+                                priority={true}
                                 fetchPriority="high"
                             />
                         </figure>

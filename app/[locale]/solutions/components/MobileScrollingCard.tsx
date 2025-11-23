@@ -2,7 +2,7 @@ import { solutionImages } from "@/data/constants/solutionImages";
 import { CardType } from "@/types/info";
 import Image from "next/image";
 
-function ScrollingCard({ title, description, slug, index }: CardType) {
+function MobileScrollingCard({ title, description, slug, index }: CardType) {
     const image = solutionImages[slug].scrollingSection[index];
 
     return (
@@ -23,6 +23,8 @@ function ScrollingCard({ title, description, slug, index }: CardType) {
                     alt={`Step ${index + 1}`}
                     fill
                     className="object-contain p-4"
+                    priority={true}
+                    fetchPriority="high"
                 />
             </figure>
 
@@ -36,4 +38,4 @@ function ScrollingCard({ title, description, slug, index }: CardType) {
     );
 }
 
-export default ScrollingCard;
+export default MobileScrollingCard;
