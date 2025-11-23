@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -42,6 +43,37 @@ const Calculator = () => {
   const [currentTool, setCurrentTool] = useState("");
   const [sector, setSector] = useState("");
   const [results, setResults] = useState<CalculatorResults | null>(null);
+  const t = useTranslations("Tools.arabic-mention-analyser");
+
+  const platformMixLabels = (t.raw("input.platformMix.values") as string[]) ?? [];
+  const toolLabels = (t.raw("input.currentTools.values") as string[]) ?? [];
+  const sectorLabels = (t.raw("input.sector.values") as string[]) ?? [];
+  const whoBenefitsCards =
+    (t.raw("whoBenefits.cards") as { role: string; description: string }[]) ?? [];
+
+  const platformOptions = [
+    { value: "twitter", label: platformMixLabels[0] ?? "Twitter/X" },
+    { value: "instagram", label: platformMixLabels[1] ?? "Instagram" },
+    { value: "facebook", label: platformMixLabels[2] ?? "Facebook" },
+    { value: "tiktok", label: platformMixLabels[3] ?? "TikTok" },
+    { value: "mixed", label: platformMixLabels[4] ?? "Mixed Platforms" },
+    { value: "other", label: platformMixLabels[5] ?? "Other" },
+  ];
+
+  const toolOptions = [
+    { value: "brandwatch", label: toolLabels[0] ?? "Brandwatch" },
+    { value: "talkwalker", label: toolLabels[1] ?? "Talkwalker" },
+    { value: "meltwater", label: toolLabels[2] ?? "Meltwater" },
+    { value: "other", label: toolLabels[3] ?? "Other" },
+  ];
+
+  const sectorOptions = [
+    { value: "finance", label: sectorLabels[0] ?? "Finance" },
+    { value: "healthcare", label: sectorLabels[1] ?? "Healthcare" },
+    { value: "retail", label: sectorLabels[2] ?? "Retail" },
+    { value: "government", label: sectorLabels[3] ?? "Government" },
+    { value: "other", label: sectorLabels[4] ?? "Other" },
+  ];
 
   const calculateResults = (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,49 +119,44 @@ const Calculator = () => {
   return (
     <div className="w-full max-w-5xl mx-auto space-y-8">
       <div className="text-center space-y-3">
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-          Lost Mentions & Missed Sentiment Calculator
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Estimate how many Arabic posts are being missed or misclassified with current tooling
-        </p>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground">{t("title")}</h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("description")}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card className="p-8 bg-card border-2 flex">
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-foreground">Calculator Inputs</h2>
-            <p className="text-sm text-muted-foreground">Enter your current monitoring setup</p>
+            <h2 className="text-2xl font-semibold text-foreground">{t("input.title")}</h2>
+            <p className="text-sm text-muted-foreground">{t("input.description")}</p>
           </div>
 
           <form className="space-y-5 flex-1 flex flex-col justify-center" onSubmit={calculateResults}>
             <div className="space-y-2">
               <Label htmlFor="platform" className="text-base font-medium">
-                Platform Mix
+                {t("input.platformMix.title")}
               </Label>
               <Select value={platform} onValueChange={setPlatform}>
                 <SelectTrigger id="platform" className="h-12 w-full">
-                  <SelectValue placeholder="Select platform" />
+                  <SelectValue placeholder={t("input.platformMix.placeholder")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="twitter">Twitter/X</SelectItem>
-                  <SelectItem value="instagram">Instagram</SelectItem>
-                  <SelectItem value="facebook">Facebook</SelectItem>
-                  <SelectItem value="tiktok">TikTok</SelectItem>
-                  <SelectItem value="mixed">Mixed Platforms</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
+                  {platformOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="arabic-content" className="text-base font-medium">
-                % Arabic Content
+                {t("input.arabicContent.title")}
               </Label>
               <Input
                 id="arabic-content"
                 type="number"
-                placeholder="e.g., 65"
+                placeholder={t("input.arabicContent.placeholder")}
                 value={arabicContent}
                 onChange={(e) => setArabicContent(e.target.value)}
                 className="h-12"
@@ -140,37 +167,36 @@ const Calculator = () => {
 
             <div className="space-y-2">
               <Label htmlFor="current-tool" className="text-base font-medium">
-                Current Tool(s)
+                {t("input.currentTools.title")}
               </Label>
               <Select value={currentTool} onValueChange={setCurrentTool}>
                 <SelectTrigger id="current-tool" className="h-12 w-full">
-                  <SelectValue placeholder="Select tool" />
+                  <SelectValue placeholder={t("input.currentTools.placeholder")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="brandwatch">Brandwatch</SelectItem>
-                  <SelectItem value="talkwalker">Talkwalker</SelectItem>
-                  <SelectItem value="meltwater">Meltwater</SelectItem>
-                  {/* <SelectItem value="sprinklr">Sprinklr</SelectItem> */}
-                  <SelectItem value="other">Other</SelectItem>
+                  {toolOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="sector" className="text-base font-medium">
-                Sector
+                {t("input.sector.title")}
               </Label>
               <Select value={sector} onValueChange={setSector}>
                 <SelectTrigger id="sector" className="h-12 w-full">
-                  <SelectValue placeholder="Select sector" />
+                  <SelectValue placeholder={t("input.sector.placeholder")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="finance">Finance</SelectItem>
-                  <SelectItem value="healthcare">Healthcare</SelectItem>
-                  <SelectItem value="retail">Retail</SelectItem>
-                  <SelectItem value="government">Government</SelectItem>
-                  {/* <SelectItem value="technology">Technology</SelectItem> */}
-                  <SelectItem value="other">Other</SelectItem>
+                  {sectorOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             </div>
@@ -181,7 +207,7 @@ const Calculator = () => {
                 className="flex-1 h-12 text-base font-semibold bg-primary! p-2"
                 type="submit"
               >
-                Calculate Impact
+                {t("input.buttons.calculate")}
               </Button>
               <Button
                 onClick={handleReset}
@@ -189,7 +215,7 @@ const Calculator = () => {
                 className="h-12 px-6 font-normal"
                 type="reset"
               >
-                Reset
+                {t("input.buttons.reset")}
               </Button>
             </div>
           </form>
@@ -197,9 +223,9 @@ const Calculator = () => {
 
         <div className="space-y-4">
           <div className="space-y-2 mb-6">
-            <h2 className="text-2xl font-semibold text-foreground">Results</h2>
+            <h2 className="text-2xl font-semibold text-foreground">{t("results.title")}</h2>
             <p className="text-sm text-muted-foreground">
-              {results ? "Your coverage gap analysis" : "Fill in the inputs to see results"}
+              {results ? t("results.resultState.description") : t("results.emptyState.description")}
             </p>
           </div>
 
@@ -209,13 +235,13 @@ const Calculator = () => {
               <Card className="p-6 bg-linear-to-br from-primary/10 to-primary/5 border-2 border-primary/20">
                 <div className="space-y-2">
                   <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-                    Missed Mentions (Monthly)
+                    {t("results.resultState.missedMentions.title")}
                   </p>
                   <p className="text-5xl font-bold text-primary">
                     {results.missedMentions.toLocaleString()}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Arabic posts not captured by your current tools
+                    {t("results.resultState.missedMentions.description")}
                   </p>
                 </div>
               </Card>
@@ -224,13 +250,13 @@ const Calculator = () => {
               <Card className="p-6 bg-linear-to-br from-primary/10 to-primary/5 border-2 border-primary/20">
                 <div className="space-y-2">
                   <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-                    Sentiment Skew
+                    {t("results.resultState.sentimentSkew.title")}
                   </p>
                   <p className="text-5xl font-bold text-primary">
                     {results.sentimentSkew}%
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Potential inaccuracy in sentiment analysis
+                    {t("results.resultState.sentimentSkew.description")}
                   </p>
                 </div>
               </Card>
@@ -239,22 +265,21 @@ const Calculator = () => {
               <Card className="p-6 bg-linear-to-br from-destructive/10 to-destructive/5 border-2 border-destructive/20">
                 <div className="space-y-2">
                   <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-                    Risk-Adjusted Cost
+                    {t("results.resultState.riskCost.title")}
                   </p>
                   <p className="text-5xl font-bold text-destructive">
                     ${results.riskAdjustedCost.toLocaleString()}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Estimated monthly cost of coverage gaps
+                    {t("results.resultState.riskCost.description")}
                   </p>
                 </div>
               </Card>
 
               <div className="mt-6 p-4 rounded-lg bg-primary/10">
                 <p className="text-sm text-foreground font-medium">
-                  💡 <span className="font-semibold">Business Impact:</span> With{" "}
-                  {arabicContent}% Arabic content, you're potentially missing critical
-                  insights that could affect brand reputation and customer engagement.
+                  💡 <span className="font-semibold">{t("results.resultState.businessImpact.label")}:</span>{" "}
+                  {t("results.resultState.businessImpact.text", { arabicContent })}
                 </p>
               </div>
             </div>
@@ -277,7 +302,7 @@ const Calculator = () => {
                   </svg>
                 </div>
                 <p className="text-muted-foreground text-lg font-medium">
-                  Enter your details to calculate
+                  {t("results.emptyState.placeholder")}
                 </p>
               </div>
             </Card>
@@ -287,46 +312,29 @@ const Calculator = () => {
 
       <Card className="p-6 bg-muted/30">
         <div className="space-y-3">
-          <h3 className="text-lg font-semibold text-foreground">Who benefits from this analysis?</h3>
+          <h3 className="text-lg font-semibold text-foreground">{t("whoBenefits.title")}</h3>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
-            <div className="space-y-1">
-              <p className="font-semibold text-primary">CMOs</p>
-              <p className="text-muted-foreground">
-                Understand the true scope of brand conversation in Arabic markets
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="font-semibold text-primary">Heads of Insights</p>
-              <p className="text-muted-foreground">
-                Quantify data quality gaps and justify tool improvements
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="font-semibold text-primary">Agency MDs</p>
-              <p className="text-muted-foreground">
-                Demonstrate ROI of specialized Arabic monitoring solutions
-              </p>
-            </div>
+            {whoBenefitsCards.map((card) => (
+              <div key={card.role} className="space-y-1">
+                <p className="font-semibold text-primary">{card.role}</p>
+                <p className="text-muted-foreground">{card.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Card>
 
       <Card className="p-8 bg-linear-to-br from-primary/5 to-primary/10 border-2 border-primary/20">
         <div className="text-center space-y-4">
-          <h3 className="text-2xl font-bold text-foreground">
-            Close Your Arabic Coverage Gap with dima
-          </h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            dima is the Middle East's leading Arabic-first social listening and analytics platform.
-            We deliver 95%+ accuracy in Arabic sentiment analysis and capture insights other tools miss.
-          </p>
+          <h3 className="text-2xl font-bold text-foreground">{t("closeGap.title")}</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{t("closeGap.description")}</p>
           <a
             href="https://thedar.ai/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-12 px-8 rounded-md bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
           >
-            Learn More About dima
+            {t("closeGap.learnMore")}
           </a>
         </div>
       </Card>

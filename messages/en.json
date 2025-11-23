@@ -931,12 +931,94 @@
   "CaseStudy": {
     "moreCases": "MORE CASES"
   },
-  "Tools":{
-    "arabic-mention-analyser":{
-      "title":"Lost Mentions & Missed Sentiment Calculator",
-      "description":"Estimate how many Arabic posts are being missed or misclassified with current tooling"
+  "Tools": {
+    "arabic-mention-analyser": {
+      "title": "Lost Mentions & Missed Sentiment Calculator",
+      "description": "Estimate how many Arabic posts are being missed or misclassified with current tooling",
+      "input": {
+        "title": "Calculator Inputs",
+        "description": "Enter your current monitoring setup",
+        "platformMix": {
+          "title": "Platform Mix",
+          "placeholder": "Select platform",
+          "values": [
+            "Twitter/X",
+            "Instagram",
+            "Facebook",
+            "TikTok",
+            "Mixed Platforms",
+            "Other"
+          ]
+        },
+        "arabicContent": {
+          "title": "% Arabic Content",
+          "placeholder": "e.g. 65"
+        },
+        "currentTools": {
+          "title": "Current Tool(s)",
+          "placeholder": "Select tool",
+          "values": ["Brandwatch", "Talkwalker", "Meltwater", "Other"]
+        },
+        "sector": {
+          "title": "Sector",
+          "placeholder": "Select sector",
+          "values": ["Finance", "Healthcare", "Retail", "Government", "Other"]
+        },
+        "buttons": {
+          "calculate": "Calculate Impact",
+          "reset": "Reset"
+        }
+      },
+      "results": {
+        "title": "Results",
+        "emptyState": {
+          "description": "Fill in the inputs to see results",
+          "placeholder": "Enter your details to calculate"
+        },
+        "resultState": {
+          "description": "Your coverage gap analysis",
+          "missedMentions": {
+            "title": "Missed Mentions (Monthly)",
+            "description": "Arabic posts not captured by your current tools"
+          },
+          "sentimentSkew": {
+            "title": "Sentiment Skew",
+            "description": "Potential inaccuracy in sentiment analysis"
+          },
+          "riskCost": {
+            "title": "Risk-Adjusted Cost",
+            "description": "Estimated monthly cost of coverage gaps"
+          },
+          "businessImpact": {
+            "label": "Business Impact",
+            "text": "With {arabicContent}% Arabic content, you're potentially missing critical insights that could affect brand reputation and customer engagement."
+          }
+        }
+      },
+      "whoBenefits": {
+        "title": "Who benefits from this analysis",
+        "cards": [
+          {
+            "role": "CMOs",
+            "description": "Understand the true scope of brand conversation in Arabic markets"
+          },
+          {
+            "role": "Heads of Insights",
+            "description": "Quantify data quality gaps and justify tool improvements"
+          },
+          {
+            "role": "Agency MDs",
+            "description": "Demonstrate ROI of specialized Arabic monitoring solutions"
+          }
+        ]
+      },
+      "closeGap": {
+        "title": "Close Your Arabic Coverage Gap With dima",
+        "description": "dima is the Middle East's leading Arabic-first social listening and analytics platform. We deliver 95%+ accuracy in Arabic sentiment analysis and capture insights other tools miss.",
+        "learnMore": "Learn More About dima"
+      }
     }
-  }
+  },
   "LanguageSwitcher": {
     "searchPlaceholder": "Search language...",
     "emptyFind": "No languages found."
