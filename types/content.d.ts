@@ -58,3 +58,13 @@ export type CaseStudy = {
     flags: CaseStudyFlags;
     dateCreated: Timestamp;
 }
+
+interface RawKeywordResult {
+    keyword: string;
+    variations: string[];
+    dialectTerms?: {
+        dialect: string;
+        terms: string[];
+    }[];
+    misspellings: string[];
+}
