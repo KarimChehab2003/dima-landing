@@ -6,8 +6,8 @@ import useBlogs from "../hooks/useBlogs";
 import { useTranslations } from "next-intl";
 
 function GuideSection() {
-    const { data: guideBlogs, isLoading: guideBlogsLoading, isError: guideBlogsError } = useBlogs(2);
-    const { data: reportBlogs, isLoading: reportBlogsLoading, isError: reportBlogsError } = useBlogs(2);
+    const { data: guideBlogs, isLoading: guideBlogsLoading, isError: guideBlogsError } = useBlogs(2, ["guides"]);
+    const { data: reportBlogs, isLoading: reportBlogsLoading, isError: reportBlogsError } = useBlogs(2, ["data reports"]);
     const { data: marketingBlogs, isLoading: marketingBlogsLoading, isError: marketingBlogsError } = useBlogs(2);
     const t = useTranslations("Blogs");
 
@@ -15,7 +15,7 @@ function GuideSection() {
         <div className="container mx-auto flex flex-col xl:flex-row justify-center items-start gap-8 ">
             {/* Guides */}
             <div className="flex-1 w-full">
-                <ContentSection title={t("guides")}>
+                <ContentSection title={t("guides")} includeViewAll={false}>
                     {guideBlogsError && <p>Failed to load guide blogs</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {guideBlogsLoading
@@ -35,7 +35,7 @@ function GuideSection() {
 
             {/* Data Reports */}
             <div className="flex-1 w-full">
-                <ContentSection title={t("dataReports")}>
+                <ContentSection title={t("dataReports")} includeViewAll={false}>
                     {reportBlogsError && <p>Failed to load data reports</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {reportBlogsLoading
@@ -55,7 +55,7 @@ function GuideSection() {
 
             {/* All Marketing Insights */}
             <div className="flex-1 w-full">
-                <ContentSection title={t("allMarketingInsights")}>
+                <ContentSection title={t("allMarketingInsights")} includeViewAll={false}>
                     {marketingBlogsError && <p>Failed to load marketing insights</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {marketingBlogsLoading

@@ -10,7 +10,7 @@ import { useCaseStudies } from "../../case-studies/hooks/useCaseStudies";
 import { useTranslations } from "next-intl";
 
 function HeroSection() {
-    const { data: blogs, isLoading, isError } = useBlogs(3);
+    const { data: blogs, isLoading, isError } = useBlogs(3, ["editor's pick"]);
     const { data: caseStudy, isLoading: caseStudyLoading, isError: caseStudyError } = useCaseStudies(1, { featured: true })
     const t = useTranslations("Blogs");
     return (
@@ -27,7 +27,7 @@ function HeroSection() {
 
                 {/* Editor's Picks */}
                 <div className="flex-1">
-                    <ContentSection title={t("editorsPick")} className="items-start">
+                    <ContentSection title={t("editorsPick")} className="items-start" includeViewAll={false}>
                         {isError && <p>Failed to load editor&apos;s pick blogs</p>}
 
                         <ul className="grid grid-cols-1 gap-4 divide-y w-full">

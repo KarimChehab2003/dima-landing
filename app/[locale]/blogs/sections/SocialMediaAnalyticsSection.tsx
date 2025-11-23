@@ -6,12 +6,12 @@ import BlogCardSkeleton from "../components/BlogCardSkeleton";
 import { useTranslations } from "next-intl";
 
 function SocialMediaAnalyticsSection() {
-    const { data: blogs, isLoading, isError } = useBlogs(4);
+    const { data: blogs, isLoading, isError } = useBlogs(4, ["social media analytics"]);
     const t = useTranslations("Blogs");
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 ">
             <div className="flex-1">
-                <ContentSection title={t("socialMediaAnalytics")}>
+                <ContentSection title={t("socialMediaAnalytics")} includeViewAll={false}>
                     {isError && <p>Failed to load social media analytics blogs</p>}
                     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
                         {

@@ -12,7 +12,7 @@ function LatestSection() {
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 w-full">
             <div className="flex-1">
-                <ContentSection title={t("theLatest")} className="items-start gap-8">
+                <ContentSection title={t("theLatest")} includeViewAll={false} className="items-start gap-8" >
                     {blogsError && <p>Failed to load latest blogs</p>}
                     {/* Blogs */}
                     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 w-full md:basis-3/4">
