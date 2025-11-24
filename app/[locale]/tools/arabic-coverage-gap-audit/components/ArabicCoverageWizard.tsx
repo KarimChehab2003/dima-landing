@@ -11,6 +11,7 @@ import jsPDF from "jspdf";
 import { RawKeywordResult } from "@/types/content";
 import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
+import { analyzeKeywords } from "@/app/actions/analyze-keywords/analyzeKeywords";
 
 type Step = 1 | 2 | 3;
 
@@ -81,45 +82,19 @@ export const ArabicCoverageWizard = () => {
   const handleProcess = async () => {
     setIsProcessing(true);
 
+    const keywordList = keywords
+      .split("\n")
+      .filter((k) => k.trim())
+      .map((k) => k.trim());
+
     try {
-      const keywordList = keywords
-        .split("\n")
-        .filter((k) => k.trim())
-        .map((k) => k.trim());
 
-      const response = await fetch("/api/analyze", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          keywords: keywordList,
-          countries: selectedCountries
-        })
-      })
+      const data = await analyzeKeywords(keywordList, selectedCountries);
+      console.log(data);
 
-      if (!response.ok) {
-        if (response.status === 429) {
-          toast.error(t("toast.status-429.title"), {
-            description: t("toast.status-429.description"),
-          })
-        } else if (response.status === 402) {
-          toast.info(t("toast.status-402.title"), {
-            description: t("toast.status-402.description"),
-          })
-        } else {
-          toast.error(t("toast.analysis-failed.title"), {
-            description: t("toast.analysis-failed.description"),
-          })
-        }
-
-        setIsProcessing(false);
-        return;
-      }
-
-      const data = await response.json();
-
-      if (data.results && Array.isArray(data.results)) {
+      if (data.length > 0) {
         // Transform AI response to match our interface
-        const transformedResults: ExpandedKeyword[] = (data.results as RawKeywordResult[]).map((item) => ({
+        const transformedResults: ExpandedKeyword[] = (data as RawKeywordResult[]).map((item) => ({
           original: item.keyword,
           variations: item.variations || [],
           dialects: selectedCountries.map((country) => {
