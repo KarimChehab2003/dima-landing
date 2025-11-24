@@ -9,29 +9,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { ArrowRight, ArrowLeft, Check, FileText, Globe, Sparkles, Download } from "lucide-react";
 import jsPDF from "jspdf";
 import { RawKeywordResult } from "@/types/content";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { toast } from "sonner";
 
 type Step = 1 | 2 | 3;
 
-const countries = [
-  "Saudi Arabia",
-  "United Arab Emirates",
-  "Egypt",
-  "Jordan",
-  "Lebanon",
-  "Kuwait",
-  "Qatar",
-  "Bahrain",
-  "Oman",
-  "Iraq",
-  "Palestine",
-  "Morocco",
-  "Algeria",
-  "Tunisia",
-  "Libya",
-  "Sudan",
-  "Yemen",
-];
+
 
 interface ExpandedKeyword {
   original: string;
@@ -41,18 +24,58 @@ interface ExpandedKeyword {
 }
 
 export const ArabicCoverageWizard = () => {
+
   const [step, setStep] = useState<Step>(1);
   const [keywords, setKeywords] = useState("");
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
   const [results, setResults] = useState<ExpandedKeyword[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
-  const t = useTranslations("Tools.arabic-coverage-gap-audit.steps")
+  const locale = useLocale();
+  const t = useTranslations("Tools.arabic-coverage-gap-audit")
+  const countries = locale === "ar" ? [
+    "السعودية",
+    "الإمارات",
+    "مصر",
+    "الأردن",
+    "لبنان",
+    "الكويت",
+    "قطر",
+    "البحرين",
+    "عُمان",
+    "العراق",
+    "فلسطين",
+    "المغرب",
+    "الجزائر",
+    "تونس",
+    "ليبيا",
+    "السودان",
+    "اليمن"
+  ] : [
+    "Saudi Arabia",
+    "United Arab Emirates",
+    "Egypt",
+    "Jordan",
+    "Lebanon",
+    "Kuwait",
+    "Qatar",
+    "Bahrain",
+    "Oman",
+    "Iraq",
+    "Palestine",
+    "Morocco",
+    "Algeria",
+    "Tunisia",
+    "Libya",
+    "Sudan",
+    "Yemen",
+  ];
 
 
   const handleCountryToggle = (country: string) => {
     setSelectedCountries((prev) =>
       prev.includes(country) ? prev.filter((c) => c !== country) : [...prev, country]
     );
+    console.log(selectedCountries)
   };
 
   const handleProcess = async () => {
@@ -75,11 +98,17 @@ export const ArabicCoverageWizard = () => {
 
       if (!response.ok) {
         if (response.status === 429) {
-          console.log("too many requests")
+          toast.error(t("toast.status-429.title"), {
+            description: t("toast.status-429.description"),
+          })
         } else if (response.status === 402) {
-          console.log("Please add credits")
+          toast.info(t("toast.status-402.title"), {
+            description: t("toast.status-402.description"),
+          })
         } else {
-          console.log("analysis failed")
+          toast.error(t("toast.analysis-failed.title"), {
+            description: t("toast.analysis-failed.description"),
+          })
         }
 
         setIsProcessing(false);
@@ -103,16 +132,20 @@ export const ArabicCoverageWizard = () => {
           misspellings: item.misspellings || [],
         }));
 
-
         setResults(transformedResults);
         setStep(3);
-        console.log("analysis complete")
+
+
+        toast.success(t("toast.success.title"), {
+          description: t("toast.success.description", { count: transformedResults.length })
+        })
       } else {
         throw new Error("Invalid response format");
       }
     } catch (error) {
-      console.error("Error analyzing keywords:", error);
-      console.log("error")
+      toast.error(t("toast.error-analyzing.title"), {
+        description: t("toast.error-analyzing.description")
+      })
     } finally {
       setIsProcessing(false);
     }
@@ -278,15 +311,15 @@ export const ArabicCoverageWizard = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
                 <FileText className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-3xl font-bold text-foreground">{t("1.title")}</h2>
+              <h2 className="text-3xl font-bold text-foreground">{t("steps.1.title")}</h2>
               <p className="text-muted-foreground text-lg">
-                {t("1.description")}
+                {t("steps.1.description")}
               </p>
             </div>
             <Textarea
               value={keywords}
               onChange={(e) => setKeywords(e.target.value)}
-              placeholder={t("1.placeholder")}
+              placeholder={t("steps.1.placeholder")}
               className="min-h-[300px] text-lg font-mono resize-none"
               dir="rtl"
             />
@@ -297,7 +330,7 @@ export const ArabicCoverageWizard = () => {
                 size="lg"
                 className="gap-2"
               >
-                {t("1.continue")}
+                {t("steps.1.continue")}
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
@@ -310,13 +343,13 @@ export const ArabicCoverageWizard = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
                 <Globe className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-3xl font-bold text-foreground">{t("2.title")}</h2>
+              <h2 className="text-3xl font-bold text-foreground">{t("steps.2.title")}</h2>
               <p className="text-muted-foreground text-lg">
-                {t("2.description")}
+                {t("steps.2.description")}
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {countries.map((country) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {countries.sort().map((country) => (
                 <label
                   key={country}
                   className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all ${selectedCountries.includes(country)
@@ -332,22 +365,22 @@ export const ArabicCoverageWizard = () => {
                 </label>
               ))}
             </div>
-            <div className="flex justify-between gap-4">
-              <Button onClick={() => setStep(1)} variant="outline" size="lg" className="gap-2">
+            <div className="flex flex-col sm:flex-row justify-between gap-4">
+              <Button onClick={() => setStep(1)} variant="outline" size="lg" className="gap-2 order-2 sm:order-1">
                 <ArrowLeft className="w-5 h-5" />
-                {t("2.back")}
+                {t("steps.2.back")}
               </Button>
               <Button
                 onClick={handleProcess}
                 disabled={selectedCountries.length === 0 || isProcessing}
                 size="lg"
-                className="gap-2"
+                className="gap-2 order-1 sm:order-2"
               >
                 {isProcessing ? (
-                  <>{t("2.processing")}</>
+                  <>{t("steps.2.processing")}</>
                 ) : (
                   <>
-                    {t("2.generate")}
+                    {t("steps.2.generate")}
                     <Sparkles className="w-5 h-5" />
                   </>
                 )}
@@ -362,37 +395,37 @@ export const ArabicCoverageWizard = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
                 <Check className="w-8 h-8 text-primary" />
               </div>
-              <h2 className="text-3xl font-bold text-foreground">{t("3.title")}</h2>
+              <h2 className="text-3xl font-bold text-foreground">{t("steps.3.title")}</h2>
               <p className="text-muted-foreground text-lg">
-                {t("3.description")}
+                {t("steps.3.description")}
               </p>
             </div>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-semibold text-foreground text-lg">{t("3.coverageSummary")}</h3>
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                <h3 className="font-semibold text-foreground text-lg">{t("steps.3.coverageSummary")}</h3>
                 <Badge variant="default" className="text-base px-4 py-2">
-                  {t("3.keywordsExpanded", { count: results.length })}
+                  {t("steps.3.keywordsExpanded", { count: results.length })}
                 </Badge>
               </div>
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center">
                 <div className="bg-card rounded-lg p-4">
                   <div className="text-3xl font-bold text-primary">
                     {results.reduce((acc, r) => acc + r.variations.length, 0)}
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">{t("3.metrics.variations")}</div>
+                  <div className="text-sm text-muted-foreground mt-1">{t("steps.3.metrics.variations")}</div>
                 </div>
                 <div className="bg-card rounded-lg p-4">
                   <div className="text-3xl font-bold text-primary">
                     {results.reduce((acc, r) => acc + r.dialects.length, 0)}
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">{t("3.metrics.dialectTerms")}</div>
+                  <div className="text-sm text-muted-foreground mt-1">{t("steps.3.metrics.dialectTerms")}</div>
                 </div>
                 <div className="bg-card rounded-lg p-4">
                   <div className="text-3xl font-bold text-primary">
                     {results.reduce((acc, r) => acc + r.misspellings.length, 0)}
                   </div>
-                  <div className="text-sm text-muted-foreground mt-1">{t("3.metrics.misspellings")}</div>
+                  <div className="text-sm text-muted-foreground mt-1">{t("steps.3.metrics.misspellings")}</div>
                 </div>
               </div>
             </div>
@@ -403,13 +436,13 @@ export const ArabicCoverageWizard = () => {
                   <div className="space-y-4">
                     <div className="flex items-start justify-between">
                       <h4 className="text-xl font-semibold text-foreground">{result.original}</h4>
-                      <Badge className="bg-primary text-primary-foreground">{t("3.badges.original")}</Badge>
+                      <Badge className="bg-primary text-primary-foreground">{t("steps.3.badges.original")}</Badge>
                     </div>
 
                     <div className="space-y-3">
                       <div>
                         <h5 className="text-sm font-semibold text-muted-foreground mb-2">
-                          {t("3.sections.variationsHeader")}
+                          {t("steps.3.sections.variationsHeader")}
                         </h5>
                         <div className="flex flex-wrap gap-2">
                           {result.variations.map((v, i) => (
@@ -422,12 +455,12 @@ export const ArabicCoverageWizard = () => {
 
                       <div>
                         <h5 className="text-sm font-semibold text-muted-foreground mb-2">
-                          {t("3.sections.dialectTermsHeader")}
+                          {t("steps.3.sections.dialectTermsHeader")}
                         </h5>
                         <div className="flex flex-wrap gap-2">
                           {result.dialects.map((d, i) => (
                             <Badge key={i} variant="outline">
-                              {d.country}: {d.term}
+                              {d.term}
                             </Badge>
                           ))}
                         </div>
@@ -435,7 +468,7 @@ export const ArabicCoverageWizard = () => {
 
                       <div>
                         <h5 className="text-sm font-semibold text-muted-foreground mb-2">
-                          {t("3.sections.misspellingsHeader")}
+                          {t("steps.3.sections.misspellingsHeader")}
                         </h5>
                         <div className="flex flex-wrap gap-2">
                           {result.misspellings.map((m, i) => (
@@ -454,31 +487,31 @@ export const ArabicCoverageWizard = () => {
             <div className="bg-primary/5 rounded-lg p-6 border border-primary/20">
               <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
                 <Check className="w-5 h-5 text-primary" />
-                {t("3.checklistTitle")}
+                {t("steps.3.checklistTitle")}
               </h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  {t("3.checklist.mappedDialects", { count: selectedCountries.length })}
+                  {t("steps.3.checklist.mappedDialects", { count: selectedCountries.length })}
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  {t("3.checklist.misspellingsIdentified")}
+                  {t("steps.3.checklist.misspellingsIdentified")}
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  {t("3.checklist.duplicatesRemoved")}
+                  {t("steps.3.checklist.duplicatesRemoved")}
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
-                  {t("3.checklist.ready")}
+                  {t("steps.3.checklist.ready")}
                 </li>
               </ul>
             </div>
 
             <div className="flex justify-end gap-4">
               <Button onClick={handleReset} variant="outline" size="lg">
-                {t("3.actions.startNew")}
+                {t("steps.3.actions.startNew")}
               </Button>
               {/* <Button onClick={handleExportPDF} size="lg" className="gap-2">
                 Export PDF
@@ -493,7 +526,7 @@ export const ArabicCoverageWizard = () => {
       {step === 3 && results.length > 0 && (
         <div className="mt-8 pt-8 border-t border-border text-center space-y-3">
           <p className="text-sm text-muted-foreground">
-            {t("3.footer.poweredBy")}
+            {t("steps.3.footer.poweredBy")}
           </p>
           <a
             href="https://thedar.ai/"
@@ -501,7 +534,7 @@ export const ArabicCoverageWizard = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline transition-colors"
           >
-            {t("3.footer.learnMore")}
+            {t("steps.3.footer.learnMore")}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>

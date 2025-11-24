@@ -1157,7 +1157,7 @@
         "1": {
           "title": "Enter Your Keywords",
           "description": "Paste your current keyword taxonomy (one keyword per line)",
-          "placeholder": "Example:\nسوشيال ميديا\nتسويق رقمي\nإعلانات\nمحتوى",
+          "placeholder": ":Example\nسوشيال ميديا\nتسويق رقمي\nإعلانات\nمحتوى",
           "continue": "Continue"
         },
         "2": {
@@ -1200,6 +1200,28 @@
             "poweredBy": "This tool is powered by dima — your AI-powered media intelligence platform for comprehensive Arabic-language monitoring across MENA.",
             "learnMore": "Learn more about dima"
           }
+        }
+      },
+      "toast": {
+        "status-429": {
+          "title": "Rate Limit Exceeded",
+          "description": "Too many requests. Please try again in a moment"
+        },
+        "status-402": {
+          "title": "Free Trial Ended",
+          "description": "Thanks for trying dima AI! Your free trial has ended. Learn more about our features or consider subscribing to continue."
+        },
+        "analysis-failed": {
+          "title": "Analysis Failed",
+          "description": "Failed to analyze keywords. Please try again."
+        },
+        "error-analyzing": {
+          "title": "Error Analyzing Keywords",
+          "description": "An unexpected error occurred. Please try again."
+        },
+        "success": {
+          "title": "Analysis Complete",
+          "description": "Successfully analyzed {count} keywords with AI-powered dialect coverage."
         }
       }
     }

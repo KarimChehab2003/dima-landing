@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import Footer from "@/components/shared/footer/Footer";
 import ReactQueryProvider from "../ReactQueryProvider";
 import PageLoader from "@/components/shared/PageLoader";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default async function RootLayout({
               <div className="flex-1">
                 <PageLoader />
                 {children}
+                <Toaster />
               </div>
               <Footer />
             </div>
