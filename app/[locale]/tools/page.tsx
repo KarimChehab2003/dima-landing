@@ -21,9 +21,9 @@ function ToolsPage() {
                             toolLinks.map((tool) => (
                                 <Link key={tool.href} href={tool.href}>
                                     <article className="h-full space-y-4 rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.07)] p-6">
-                                        <Badge className="capitalize">try it now</Badge>
+                                        <Badge className="capitalize">{t("tryNow")}</Badge>
                                         <h2 className="text-lg sm:text-2xl font-medium">{t(`${tool.translationKey}.title`)}</h2>
-                                        <p>{t(`${tool.translationKey}.description`)}</p>
+                                        <p className="text-[#6d6d6d]">{t(`${tool.translationKey}.description`)}</p>
                                     </article>
                                 </Link>
                             ))

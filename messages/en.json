@@ -1230,7 +1230,43 @@
     },
     "arabic-dialect": {
       "title": "Arabic Dialect Accuracy Lab",
-      "description": "Live sandbox for testing sentiment and entity extraction across KSA, Egyptian, Levantine, Maghrebi, and Gulf Arabic dialects"
+      "description": "Live sandbox for testing sentiment and entity extraction across KSA, Egyptian, Levantine, Maghrebi, and Gulf Arabic dialects",
+      "input": {
+        "selectDialect": "select arabic dialect",
+        "dialects": ["KSA", "Egyptian", "Levantine", "Maghrebi", "Gulf"],
+        "pasteText": "paste arabic text",
+        "placeholder": "Enter arabic text here for processing",
+        "analyze": "analyze text",
+        "analyzing": "Analyzing..."
+      },
+      "result": {
+        "sentiment": "Sentiment Analysis",
+        "result": "Result:",
+        "confidence": "Confidence Score",
+        "entity": "Entity Extraction",
+        "noEntity": "No entities detected",
+        "misreadTitle": "Common Misreads in {selectedDialect}",
+        "commonMisread": "common misread",
+        "whyThisHappens": "why this happens"
+      },
+      "dima": {
+        "title": "Ready for Production-Grade Arabic Intelligence?",
+        "description": "This demo shows what's possible with dialect-aware AI. dima delivers enterprise-ready Arabic NLP with multi-dialect support, custom model training, and seamless API integration for your business.",
+        "learnMore": "Learn More About dima"
+      },
+      "benefits": {
+        "title": "who benefits from this tool?",
+        "people": [
+          {
+            "role": "Insights & Research Leaders",
+            "reason": "Validate accuracy and reduce campaign risk"
+          },
+          {
+            "role": "Media Monitoring Specialists",
+            "reason": "Save time with accurate dialect interpretation"
+          }
+        ]
+      }
     }
   },
   "LanguageSwitcher": {

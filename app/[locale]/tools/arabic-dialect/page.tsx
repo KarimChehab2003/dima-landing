@@ -1,8 +1,10 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import Image from "next/image";
 import { DialectAnalyzer } from "./components/DialectAnalyzer";
+import { useTranslations } from "next-intl";
 
 function ArabicDialectTool() {
+    const t = useTranslations("Tools.arabic-dialect")
     return (
         <main>
             <SectionWrapper className="min-h-dvh mt-24">
@@ -21,11 +23,10 @@ function ArabicDialectTool() {
                     {/* Title Section */}
                     <div className="text-center mb-8 sm:mb-12 px-4">
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3">
-                            Arabic Dialect Accuracy Lab
+                            {t("title")}
                         </h1>
                         <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-                            Live sandbox for testing sentiment and entity extraction across KSA, Egyptian,
-                            Levantine, Maghrebi, and Gulf Arabic dialects
+                            {t("description")}
                         </p>
                     </div>
 

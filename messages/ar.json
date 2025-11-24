@@ -1257,8 +1257,44 @@
       }
     },
     "arabic-dialect": {
-      "title": "Arabic Dialect Accuracy Lab",
-      "description": "Live sandbox for testing sentiment and entity extraction across KSA, Egyptian, Levantine, Maghrebi, and Gulf Arabic dialects"
+      "title": "مختبر دقة اللهجات العربية",
+      "description": "بيئة تجريبية مباشرة لاختبار التحليل العاطفي واستخراج الكيانات عبر اللهجات العربية: السعودية، المصرية، الشامية، المغاربية، والخليجية",
+      "input": {
+        "selectDialect": "اختر لهجة عربية",
+        "dialects": ["السعودية", "المصرية", "الشامية", "المغاربية", "الخليجية"],
+        "pasteText": "الصق النص العربي",
+        "placeholder": "أدخل النص العربي هنا للمعالجة",
+        "analyze": "حلّل النص",
+        "analyzing": "جاري التحليل..."
+      },
+      "result": {
+        "sentiment": "تحليل العاطفة",
+        "result": "النتيجة:",
+        "confidence": "درجة الثقة",
+        "entity": "استخراج الكيانات",
+        "noEntity": "لم يتم اكتشاف أي كيان",
+        "misreadTitle": "الأخطاء الشائعة في {selectedDialect}",
+        "commonMisread": "خطأ شائع",
+        "whyThisHappens": "سبب حدوث هذا"
+      },
+      "dima": {
+        "title": "جاهز لاستخدام ذكاء عربي على مستوى الإنتاج؟",
+        "description": "يعرض هذا العرض ما يمكن تحقيقه باستخدام الذكاء الاصطناعي المدرك للهجات. تقدّم ديمة معالجة اللغة العربية للشركات مع دعم متعدد اللهجات، تدريب نماذج مخصصة، وتكامل سلس مع واجهات API لأعمالك.",
+        "learnMore": "اعرف المزيد عن ديما"
+      },
+      "benefits": {
+        "title": "من يستفيد من هذه الأداة؟",
+        "people": [
+          {
+            "role": "قادة التحليل والأبحاث",
+            "reason": "تحقق من الدقة وتقليل مخاطر الحملات"
+          },
+          {
+            "role": "أخصائيو مراقبة الإعلام",
+            "reason": "توفير الوقت مع تفسير دقيق للهجات"
+          }
+        ]
+      }
     }
   },
   "LanguageSwitcher": {
