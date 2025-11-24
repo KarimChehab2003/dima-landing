@@ -960,6 +960,9 @@
     "moreCases": "مزيد من الحالات"
   },
   "Tools": {
+    "title": "موارد سريعة وسهلة ومجانية لإنجاز المهام",
+    "badge": "أدوات وحاسبات",
+    "tryNow": "جرّب الآن",
     "arabic-mention-analyzer": {
       "title": "حساب المنشورات الضايعة وتحيّز المشاعر",
       "description": "قدّر كم عدد المنشورات العربية اللي ما تنرصد أو تنفهم غلط مع الأدوات الحالية",
@@ -1252,6 +1255,10 @@
           "description": "تم تحليل {count} كلمة بنجاح مع تغطية اللهجات بالذكاء الاصطناعي."
         }
       }
+    },
+    "arabic-dialect": {
+      "title": "Arabic Dialect Accuracy Lab",
+      "description": "Live sandbox for testing sentiment and entity extraction across KSA, Egyptian, Levantine, Maghrebi, and Gulf Arabic dialects"
     }
   },
   "LanguageSwitcher": {

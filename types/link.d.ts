@@ -25,3 +25,8 @@ export type LanguageLink = {
     label: string;
     flag: string;
 }
+
+export type ToolLink = {
+    href: string;
+    translationKey: string;
+}

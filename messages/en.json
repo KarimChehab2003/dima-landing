@@ -932,6 +932,9 @@
     "moreCases": "MORE CASES"
   },
   "Tools": {
+    "title": "Quick, Easy, and Free Resources to Get Things Done",
+    "badge": "Tools & Calculators",
+    "tryNow": "try it now",
     "arabic-mention-analyzer": {
       "title": "Lost Mentions & Missed Sentiment Calculator",
       "description": "Estimate how many Arabic posts are being missed or misclassified with current tooling",
@@ -1224,6 +1227,10 @@
           "description": "Successfully analyzed {count} keywords with AI-powered dialect coverage."
         }
       }
+    },
+    "arabic-dialect": {
+      "title": "Arabic Dialect Accuracy Lab",
+      "description": "Live sandbox for testing sentiment and entity extraction across KSA, Egyptian, Levantine, Maghrebi, and Gulf Arabic dialects"
     }
   },
   "LanguageSwitcher": {
