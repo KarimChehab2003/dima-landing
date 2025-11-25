@@ -2,6 +2,43 @@ import SectionWrapper from "@/components/shared/SectionWrapper";
 import Image from "next/image";
 import { DialectAnalyzer } from "./components/DialectAnalyzer";
 import { useTranslations } from "next-intl";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Arabic Dialect Accuracy Lab - dima Tool",
+    description:
+        "Live sandbox for testing sentiment and entity extraction across KSA, Egyptian, Levantine, Maghrebi, and Gulf Arabic dialects.",
+
+    openGraph: {
+        title: "Arabic Dialect Accuracy Lab - dima Tool",
+        description:
+            "Use dima's Arabic Dialect Accuracy Lab to test sentiment analysis and entity extraction for multiple Arabic dialects, including KSA, Egyptian, Levantine, Maghrebi, and Gulf Arabic.",
+        url: "https://thedar.ai/tools/arabic-dialect",
+        siteName: "dima",
+        type: "website",
+        images: [
+            {
+                url: "/og/tools/arabic-dialect.png",
+                width: 1200,
+                height: 630,
+                alt: "Arabic Dialect Accuracy Lab Tool OG Image",
+            },
+        ],
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "Arabic Dialect Accuracy Lab - dima Tool",
+        description:
+            "Test sentiment and entity extraction across multiple Arabic dialects with dima's Arabic Dialect Accuracy Lab.",
+        images: ["/og/tools/arabic-dialect.png"],
+    },
+
+    alternates: {
+        canonical: "https://thedar.ai/tools/arabic-dialect",
+    },
+};
+
 
 function ArabicDialectTool() {
     const t = useTranslations("Tools.arabic-dialect")
