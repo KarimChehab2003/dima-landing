@@ -2,8 +2,10 @@ import SectionWrapper from "@/components/shared/SectionWrapper";
 import { Input } from "@/components/ui/input";
 import RequestDemoButton from "../../../components/shared/RequestDemoButton";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function RequestDemoPage() {
+    const t = useTranslations("RequestDemo");
     return (
         <main
             style={{
@@ -15,27 +17,26 @@ function RequestDemoPage() {
             className="bg-white"
         >
             <SectionWrapper className="min-h-dvh justify-stretch">
-                <div className="container mx-auto flex flex-col-reverse lg:flex-row justify-center items-center lg:items-stretch gap-12  flex-1">
+                <div className="container mx-auto flex flex-col-reverse lg:flex-row justify-center items-center lg:items-stretch gap-12 flex-1">
                     {/* Text & Form Section */}
-                    <div className="flex-1 flex flex-col justify-center gap-4 text-center lg:text-left">
-                        <p className="text-primary font-medium mb-4">— REQUEST A DEMO</p>
-                        <h1 className="text-3xl sm:text-4xl font-bold">See dima AI in Action</h1>
+                    <div className="flex-1 flex flex-col justify-center gap-4">
+                        <p className="text-primary font-medium mb-4">{t("titlePrefix")}</p>
+                        <h1 className="text-3xl sm:text-4xl font-bold">{t("title")}</h1>
                         <div className="text-lg sm:text-xl space-y-4">
                             <p className="font-semibold tracking-wide">
-                                Ready to explore how Dima AI can transform the way your team works?
+                                {t("subTitle")}
                             </p>
                             <p>
-                                Whether you&apos;re looking to automate tasks, analyze data at scale, or enhance your workflows with
-                                cutting-edge AI, our team is here to walk you through it. No pressure — just insights tailored to your business.
+                                {t("description")}
                             </p>
                         </div>
 
                         <form className="flex flex-col gap-4 mt-6">
-                            <Input type="text" placeholder="Name" />
-                            <Input type="email" placeholder="Email" />
-                            <Input type="text" placeholder="Company" />
-                            <Input type="text" placeholder="Country" />
-                            <Input type="text" placeholder="Phone Number" />
+                            <Input type="text" placeholder={t("form.name")} />
+                            <Input type="email" placeholder={t("form.email")} />
+                            <Input type="text" placeholder={t("form.company")} />
+                            <Input type="text" placeholder={t("form.country")} />
+                            <Input type="text" placeholder={t("form.phoneNumber")} />
                             <RequestDemoButton className="w-full mt-4 capitalize" size="xl" />
                         </form>
                     </div>

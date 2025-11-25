@@ -1269,6 +1269,19 @@
       }
     }
   },
+  "RequestDemo": {
+    "titlePrefix": "— REQUEST A DEMO",
+    "title": "See dima AI in Action",
+    "subTitle": "Ready to explore how Dima AI can transform the way your team works?",
+    "description": " Whether you're looking to automate tasks, analyze data at scale, or enhance your workflows with cutting-edge AI, our team is here to walk you through it. No pressure — just insights tailored to your business.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "country": "Country",
+      "phoneNumber": "Phone Number"
+    }
+  },
   "LanguageSwitcher": {
     "searchPlaceholder": "Search language...",
     "emptyFind": "No languages found."
