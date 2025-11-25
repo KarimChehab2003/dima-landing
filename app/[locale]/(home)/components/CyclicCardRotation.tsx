@@ -67,7 +67,8 @@ export default function CyclicCardRotation({
                             alt={card.title}
                             fill
                             className="object-contain drop-shadow-xl"
-                            priority
+                            priority={true}
+                            fetchPriority="high"
                         />
                     </div>
                 </div>
