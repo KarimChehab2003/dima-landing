@@ -57,6 +57,7 @@ export type CaseStudy = {
     content: CaseStudyContent;
     flags: CaseStudyFlags;
     dateCreated: Timestamp;
+    ogImage?: string
 }
 
 interface RawKeywordResult {
