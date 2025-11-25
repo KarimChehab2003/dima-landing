@@ -230,15 +230,15 @@ export const heroSlides: HeroSlide[] = [
         translationKey: "slides.sentimentInsights",
     },
     {
-        image: "/hero-carousel-item-3.webp",
+        image: "/hero-carousel-item-4.webp",
         translationKey: "slides.competitorBenchmarking",
     },
     {
-        image: "/hero-carousel-item-3.webp",
+        image: "/hero-carousel-item-5.webp",
         translationKey: "slides.discoverCreators",
     },
     {
-        image: "/hero-carousel-item-3.webp",
+        image: "/hero-carousel-item-6.webp",
         translationKey: "slides.campaignRoi",
     },
 ];
