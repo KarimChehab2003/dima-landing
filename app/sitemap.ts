@@ -6,37 +6,37 @@ export default async function sitemap() {
     // Case Studies (en)
     const caseStudies = await fetchCaseStudies("en", {}, null);
     const caseStudiesUrls = caseStudies.map((study) => ({
-        url: `https://thedar.ai/case-studies/${study.id}`,
-        lastModified: study.dateCreated,
+        url: `https://thedar.ai/en/case-studies/${study.id}`,
+        lastModified: study.dateCreated.toDate(),
         changeFrequency: "monthly",
-        priority: 0.8
+        priority: 0.5
     }))
 
     // Case Studies (ar)
     const caseStudiesAr = await fetchCaseStudies("ar", {}, null);
     const caseStudiesArUrls = caseStudiesAr.map((study) => ({
-        url: `https://thedar.ai/case-studies/${study.id}`,
-        lastModified: study.dateCreated,
+        url: `https://thedar.ai/ar/case-studies/${study.id}`,
+        lastModified: study.dateCreated.toDate(),
         changeFrequency: "monthly",
-        priority: 0.8
+        priority: 0.5
     }))
 
     // Blogs (en)
     const blogs = await fetchBlogs("en", [], null);
     const blogsUrls = blogs.map((blog) => ({
-        url: `https://thedar.ai/blogs/${blog.id}`,
-        lastModified: blog.dateCreated,
+        url: `https://thedar.ai/en/blogs/${blog.id}`,
+        lastModified: blog.dateCreated.toDate(),
         changeFrequency: "monthly",
-        priority: 0.3
+        priority: 0.5
     }))
 
     // Blogs (ar)
     const blogsAr = await fetchBlogs("ar", [], null);
     const blogsArUrls = blogsAr.map((blog) => ({
-        url: `https://thedar.ai/blogs/${blog.id}`,
-        lastModified: blog.dateCreated,
+        url: `https://thedar.ai/ar/blogs/${blog.id}`,
+        lastModified: blog.dateCreated.toDate(),
         changeFrequency: "monthly",
-        priority: 0.3
+        priority: 0.5
     }))
 
     return [
@@ -62,7 +62,7 @@ export default async function sitemap() {
                 }
             },
             changeFrequency: "yearly",
-            priority: 0.8
+            priority: 0.7
         },
         {
             url: "https://thedar.ai/solutions/pr-comms",
@@ -74,7 +74,7 @@ export default async function sitemap() {
                 }
             },
             changeFrequency: "yearly",
-            priority: 0.8
+            priority: 0.7
         },
         {
             url: "https://thedar.ai/solutions/market-insights",
@@ -86,7 +86,7 @@ export default async function sitemap() {
                 }
             },
             changeFrequency: "yearly",
-            priority: 0.8
+            priority: 0.7
         },
         {
             url: "https://thedar.ai/solutions/consumer-insights",
@@ -98,7 +98,7 @@ export default async function sitemap() {
                 }
             },
             changeFrequency: "yearly",
-            priority: 0.8
+            priority: 0.7
         },
         {
             url: "https://thedar.ai/solutions/own-page-intelligence",
@@ -110,7 +110,7 @@ export default async function sitemap() {
                 }
             },
             changeFrequency: "yearly",
-            priority: 0.8
+            priority: 0.7
         },
         {
             url: "https://thedar.ai/blogs",
@@ -122,7 +122,7 @@ export default async function sitemap() {
                 }
             },
             changeFrequency: "weekly",
-            priority: 0.3
+            priority: 0.7
         },
         ...blogsUrls,
         ...blogsArUrls,
@@ -136,7 +136,7 @@ export default async function sitemap() {
                 }
             },
             changeFrequency: "weekly",
-            priority: 0.8
+            priority: 0.7
         },
         ...caseStudiesUrls,
         ...caseStudiesArUrls,
