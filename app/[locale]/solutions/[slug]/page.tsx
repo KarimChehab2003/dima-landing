@@ -18,27 +18,27 @@ const SOLUTIONS_METADATA: Record<string, { title: string; description: string, i
     "social-listening-analytics": {
         title: "Social Listening & Analytics - dima",
         description: "Monitor social media mentions, analyze sentiment, and get actionable insights with dima's AI-powered social listening solution.",
-        image: "/og/sl.png"
+        image: "/og/solutions/sl.png"
     },
     "pr-comms": {
         title: "PR & Comms - dima",
         description: "Manage public relations, track press coverage, and detect PR crises faster with dima's AI PR tools.",
-        image: "/og/pr.png"
+        image: "/og/solutions/pr.png"
     },
     "market-insights": {
         title: "Market Insights - dima",
         description: "Gain deep market insights, monitor competitors, and track trends with AI-powered analytics from dima.",
-        image: "/og/mi.png"
+        image: "/og/solutions/mi.png"
     },
     "consumer-insights": {
         title: "Consumer Insights - dima",
         description: "Understand customer behavior and sentiment, and make data-driven decisions with dima's consumer insights solution.",
-        image: "/og/ci.png"
+        image: "/og/solutions/ci.png"
     },
     "own-page-intelligence": {
         title: "Own Page Intelligence - dima",
         description: "Analyze your own digital presence, measure content performance, and optimize engagement with AI insights.",
-        image: "/og/oi.png"
+        image: "/og/solutions/oi.png"
     },
 };
 

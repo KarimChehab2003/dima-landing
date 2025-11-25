@@ -218,27 +218,27 @@ export const enterpriseFeaturesCards: { icon: string, translationKey: string }[]
 
 export const heroSlides: HeroSlide[] = [
     {
-        image: "/hero-carousel-item-1.webp",
+        image: "/hero-carousel/hero-carousel-item-1.webp",
         translationKey: "slides.socialListening",
     },
     {
-        image: "/hero-carousel-item-2.webp",
+        image: "/hero-carousel/hero-carousel-item-2.webp",
         translationKey: "slides.influencerTracking",
     },
     {
-        image: "/hero-carousel-item-3.webp",
+        image: "/hero-carousel/hero-carousel-item-3.webp",
         translationKey: "slides.sentimentInsights",
     },
     {
-        image: "/hero-carousel-item-4.webp",
+        image: "/hero-carousel/hero-carousel-item-4.webp",
         translationKey: "slides.competitorBenchmarking",
     },
     {
-        image: "/hero-carousel-item-5.webp",
+        image: "/hero-carousel/hero-carousel-item-5.webp",
         translationKey: "slides.discoverCreators",
     },
     {
-        image: "/hero-carousel-item-6.webp",
+        image: "/hero-carousel/hero-carousel-item-6.webp",
         translationKey: "slides.campaignRoi",
     },
 ];
