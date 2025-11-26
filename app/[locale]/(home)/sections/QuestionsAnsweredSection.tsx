@@ -22,12 +22,16 @@ function QuestionsAnsweredSection({ slug }: QuestionsAnsweredSectionProps) {
                     <p className="text-muted-foreground text-lg">{t("description")}</p>
 
                     {/* CTA */}
-                    <Button className="hidden lg:flex justify-between py-2 pl-4 pr-2.5">
-                        <Link href="/request-demo" className="text-[15px]">{t("requestDemo")}</Link>
-                        <div className="w-7 h-7 rounded-full bg-white flex justify-center items-center">
-                            <ArrowRight color="black" />
-                        </div>
-                    </Button>
+                    <div className="w-fit">
+                        <Link href="/request-demo" className="text-[15px]">
+                            <Button className="flex justify-between py-2 pl-4 pr-2.5">
+                                {t("requestDemo")}
+                                <div className="w-7 h-7 rounded-full bg-white flex justify-center items-center">
+                                    <ArrowRight color="black" />
+                                </div>
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* FAQs */}
