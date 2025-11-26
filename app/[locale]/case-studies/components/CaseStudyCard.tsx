@@ -15,7 +15,7 @@ function CaseStudyCard(caseStudy: CaseStudy) {
             {/* Text */}
             <h3 className="text-lg lg:text-[22px] font-bold">{caseStudy.content.title}</h3>
             <p>{caseStudy.content.description}</p>
-            <Link href={`/case-studies/${caseStudy.id}`} className="text-primary font-medium">{t("readMore")}</Link>
+            <Link href={`/case-studies/${caseStudy.id}`} aria-label={`Read more about ${caseStudy.content.title}`} className="text-primary font-medium">{t("readMore")}</Link>
         </article>
     );
 }
