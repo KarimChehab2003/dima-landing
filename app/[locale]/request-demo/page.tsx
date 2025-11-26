@@ -1,8 +1,7 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
-import { Input } from "@/components/ui/input";
-import RequestDemoButton from "../../../components/shared/RequestDemoButton";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import RequestDemoForm from "../(home)/components/RequestDemoForm";
 
 function RequestDemoPage() {
     const t = useTranslations("RequestDemo");
@@ -16,7 +15,7 @@ function RequestDemoPage() {
             }}
             className="bg-white"
         >
-            <SectionWrapper className="min-h-dvh justify-stretch">
+            <SectionWrapper className="min-h-dvh mt-12">
                 <div className="container mx-auto flex flex-col-reverse lg:flex-row justify-center items-center lg:items-stretch gap-12 flex-1">
                     {/* Text & Form Section */}
                     <div className="flex-1 flex flex-col justify-center gap-4">
@@ -31,14 +30,11 @@ function RequestDemoPage() {
                             </p>
                         </div>
 
-                        <form className="flex flex-col gap-4 mt-6">
-                            <Input type="text" placeholder={t("form.name")} />
-                            <Input type="email" placeholder={t("form.email")} />
-                            <Input type="text" placeholder={t("form.company")} />
-                            <Input type="text" placeholder={t("form.country")} />
-                            <Input type="text" placeholder={t("form.phoneNumber")} />
-                            <RequestDemoButton className="w-full mt-4 capitalize" size="xl" />
-                        </form>
+                        {/* Form */}
+                        <div>
+                            <RequestDemoForm className="p-0 mt-4" />
+                        </div>
+
                     </div>
 
                     {/* Image Section */}

@@ -265,9 +265,13 @@
       "title": "Request a Demo",
       "description": "Discover how dima's Arabic-first AI empowers your team with unparalleled monitoring, real-time insights, and competitive benchmarking",
       "form": {
-        "name": {
-          "title": "Name",
-          "placeholder": "Jane Smith"
+        "firstName": {
+          "title": "First Name",
+          "placeholder": "Jane"
+        },
+        "lastName": {
+          "title": "Last Name",
+          "placeholder": "Smith"
         },
         "email": {
           "title": "Email",
@@ -281,6 +285,14 @@
           "title": "Company Name",
           "placeholder": "Your company name"
         },
+        "errors": {
+          "firstNameTooShort": "First name must be at least 2 characters",
+          "lastNameTooShort": "Last name must be at least 2 characters",
+          "invalidEmail": "Invalid email address",
+          "invalidPhone": "Invalid phone number",
+          "companyNameTooShort": "Company name must be at least 2 characters"
+        },
+        "success": "Mail sent successfully!",
         "submit": "Submit"
       }
     },

@@ -1,17 +1,25 @@
 "use client"
 
-import { useState } from "react"
+import { Dispatch, SetStateAction } from "react"
 import { ButtonGroup } from "../ui/button-group"
 import { Select, SelectContent, SelectItem, SelectTrigger } from "../ui/select"
 import { Input } from "../ui/input"
+import { UseFormRegister } from "react-hook-form"
+import { FormInputs } from "@/app/[locale]/(home)/components/RequestDemoForm"
+
+type PhoneNumberInputProps = {
+    register: UseFormRegister<FormInputs>,
+    countryCode: string,
+    setCountryCode: Dispatch<SetStateAction<string>>
+}
 
 const countryCodes = [
     { value: "+966", label: "Saudi Arabia" },
     { value: "+20", label: "Egypt" },
 ]
 
-function PhoneNumberInput() {
-    const [countryCode, setCountryCode] = useState("+966")
+function PhoneNumberInput({ register, countryCode, setCountryCode }: PhoneNumberInputProps) {
+
     return (
         <ButtonGroup className="w-full" dir="ltr">
             {/* Select */}
@@ -32,8 +40,8 @@ function PhoneNumberInput() {
             <Input
                 type="tel"
                 id="formPhoneNumInput"
-                name="phoneNum"
                 className={`flex-1 text-sm h-10`}
+                {...register("phoneNumber")}
             />
         </ButtonGroup>
     )
