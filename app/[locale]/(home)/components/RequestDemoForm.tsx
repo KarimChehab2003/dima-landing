@@ -37,13 +37,31 @@ function RequestDemoForm({ className }: { className?: string }) {
     const [countryCode, setCountryCode] = useState("+966")
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm<FormInputs>({ resolver: zodResolver(FormSchema) });
-    const onSubmit: SubmitHandler<FormInputs> = (data) => {
+
+    const onSubmit: SubmitHandler<FormInputs> = async (data) => {
         const fullPhoneNumber = `${countryCode}${data.phoneNumber}`;
+        try {
+            const response = await fetch("https://dimabackend-dev-34652492755.us-central1.run.app/api/v1/feedback/request-demo", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    ...data,
+                    phoneNumber: fullPhoneNumber
+                })
+            })
 
-        console.log({ ...data, phoneNumber: fullPhoneNumber })
+            if (!response.ok) {
+                toast.error(t("form.somethingWentWrong"))
+                return null;
+            }
 
-        toast.success(t("form.success"))
-        reset();
+            toast.success(t("form.success"));
+            reset();
+        } catch (error) {
+            console.error(error);
+            toast.error(t("form.errorOccurred"))
+            return null;
+        }
     }
     return (
         <form className={cn("space-y-6 rounded-4xl lg:rounded-2xl p-8 bg-white h-full flex flex-col justify-between", className)} onSubmit={handleSubmit(onSubmit)}>

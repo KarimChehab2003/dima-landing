@@ -293,6 +293,8 @@
           "companyNameTooShort": "Company name must be at least 2 characters"
         },
         "success": "Mail sent successfully!",
+        "somethingWentWrong": "Something went wrong",
+        "errorOccurred": "An error occurred",
         "submit": "Submit"
       }
     },

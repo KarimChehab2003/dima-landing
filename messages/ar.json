@@ -335,6 +335,8 @@
           "companyNameTooShort": "يجب أن يكون اسم الشركة على الأقل حرفين"
         },
         "success": "تم إرسال البريد بنجاح!",
+        "somethingWentWrong": "حدث خطأ ما",
+        "errorOccurred": "وقع خطأ",
         "submit": "إرسال"
       }
     }
