@@ -901,16 +901,16 @@
   },
   "Blogs": {
     "featuredCaseStudy": "Featured Case Study",
-    "editorsPick": "Editor's Pick",
-    "theLatest": "The Latest",
+    "editorsPick": "editor's pick",
+    "theLatest": "the latest",
     "videosSection": {
       "title": "Learn more from dima.ai on social",
       "follow": "Follow us on social"
     },
-    "socialMediaAnalytics": "Social Media Analytics",
-    "guides": "Guides",
-    "dataReports": "Data Reports",
-    "allMarketingInsights": "All Marketing Insights",
+    "socialMediaAnalytics": "social media analytics",
+    "guides": "guides",
+    "dataReports": "data reports",
+    "allMarketingInsights": "all marketing insights",
     "viewAll": "View all"
   },
   "Blog": {
@@ -1272,7 +1272,7 @@
   "RequestDemo": {
     "titlePrefix": "— REQUEST A DEMO",
     "title": "See dima AI in Action",
-    "subTitle": "Ready to explore how Dima AI can transform the way your team works?",
+    "subTitle": "Ready to explore how dima AI can transform the way your team works?",
     "description": " Whether you're looking to automate tasks, analyze data at scale, or enhance your workflows with cutting-edge AI, our team is here to walk you through it. No pressure — just insights tailored to your business.",
     "form": {
       "name": "Name",

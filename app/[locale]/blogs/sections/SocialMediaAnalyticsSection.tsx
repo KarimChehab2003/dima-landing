@@ -6,8 +6,8 @@ import BlogCardSkeleton from "../components/BlogCardSkeleton";
 import { useTranslations } from "next-intl";
 
 function SocialMediaAnalyticsSection() {
-    const { data: blogs, isLoading, isError } = useBlogs(4, ["social media analytics"]);
     const t = useTranslations("Blogs");
+    const { data: blogs, isLoading, isError } = useBlogs(4, [t("socialMediaAnalytics")]);
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 ">
             <div className="flex-1">

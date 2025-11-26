@@ -76,7 +76,6 @@ export const ArabicCoverageWizard = () => {
     setSelectedCountries((prev) =>
       prev.includes(country) ? prev.filter((c) => c !== country) : [...prev, country]
     );
-    console.log(selectedCountries)
   };
 
   const handleProcess = async () => {
@@ -90,7 +89,6 @@ export const ArabicCoverageWizard = () => {
     try {
 
       const data = await analyzeKeywords(keywordList, selectedCountries);
-      console.log(data);
 
       if (data.length > 0) {
         // Transform AI response to match our interface

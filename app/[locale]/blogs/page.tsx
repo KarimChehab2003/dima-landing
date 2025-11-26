@@ -8,6 +8,7 @@ import RequestDemoSection from "@/components/shared/RequestDemoSection";
 import { useTranslations } from "next-intl";
 
 
+
 function BlogsPage() {
     const t = useTranslations("Blogs");
     return (
@@ -15,7 +16,7 @@ function BlogsPage() {
             <SectionWrapper className="mt-20">
                 <HeroSection />
                 <LatestSection />
-                <VideosSection title={t("videosSection.title")} videos={[{ src: "/learn-1.svg" }, { src: "/learn-2.svg" }, { src: "/learn-3.svg" }]} />
+                <VideosSection title={t("videosSection.title")} />
                 <SocialMediaAnalyticsSection />
                 <GuideSection />
             </SectionWrapper>

@@ -7,6 +7,7 @@ import dailyAnim from "@/public/animations/daily-lottie.json";
 import listenAnim from "@/public/animations/listen-lottie.json";
 import benchmarkAnim from "@/public/animations/benchmark-lottie.json";
 import understandAnim from "@/public/animations/understand-lottie.json";
+import { Video } from "@/types/content";
 
 export const empoweringAgenciesInfo: EmpoweringAgenciesInfo[] = [
     {
@@ -242,3 +243,8 @@ export const heroSlides: HeroSlide[] = [
         translationKey: "slides.campaignRoi",
     },
 ];
+
+export const learnVideos: Video[] = [
+    { src: "/vid1.jpg", href: "https://www.youtube.com/watch?v=ESvD7kkBems" },
+    { src: "/vid2.jpg", href: "https://www.youtube.com/watch?v=0yGxp5J2hZ8" },
+]

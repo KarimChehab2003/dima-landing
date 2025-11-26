@@ -1,45 +1,57 @@
+import { learnVideos } from "@/data/constants/info";
+import { Play } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa6";
 
-type Video = {
-    src: string;
-    alt?: string;
-};
 
-type VideosSectionProps = {
-    title: string;
-    videos: Video[];
-};
-
-function VideosSection({ title, videos }: VideosSectionProps) {
+function VideosSection({ title }: { title: string }) {
     const t = useTranslations("Blogs.videosSection");
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 rounded-4xl bg-muted py-12 my-8">
             <div className="flex flex-col justify-center gap-8 p-4 max-w-6xl w-full">
                 {/* Title */}
-                <h2 className="text-2xl font-bold">{title}</h2>
+                <h2 className="text-lg md:text-2xl font-bold">{title}</h2>
 
                 {/* Videos grid */}
-                <ul
-                    className={`grid gap-8 ${videos.length === 1
-                        ? "grid-cols-1" : videos.length === 2
-                            ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                        }`}>
-                    {videos.map((video, i) => (
-                        <li key={i}>
-                            <figure className="flex justify-center items-center">
-                                <Image
-                                    src={video.src}
-                                    alt={video.alt || `video ${i + 1}`}
-                                    width={270}
-                                    height={500}
-                                />
+                <ul className={"grid grid-cols-1 lg:grid-cols-2 gap-8"}>
+                    {learnVideos.map((video, i) => {
+                        const Thumbnail = (
+                            <figure className="flex justify-center items-center group">
+                                <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                                    <Image
+                                        src={video.src}
+                                        alt={video.alt || `video ${i + 1}`}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                    {
+                                        video.href && (
+                                            <div className="absolute inset-0 flex justify-center items-center">
+                                                <div className="bg-black/50 p-4 rounded-full group-hover:bg-black/70 transition">
+                                                    <Play className="text-white" />
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                </div>
                             </figure>
-                        </li>
-                    ))}
+                        );
+
+                        return (
+                            <li key={i}>
+                                {video.href ? (
+                                    <Link href={video.href} target="_blank">{Thumbnail}</Link>
+                                ) : (
+                                    Thumbnail
+                                )}
+                            </li>
+                        );
+                    })}
+
                 </ul>
+
 
                 <div className="inline-flex justify-end items-center gap-2">
                     <p className="text-lg font-bold text-end">{t("follow")}:</p>

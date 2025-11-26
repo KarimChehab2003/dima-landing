@@ -6,11 +6,10 @@ import useBlogs from "../hooks/useBlogs";
 import { useTranslations } from "next-intl";
 
 function GuideSection() {
-    const { data: guideBlogs, isLoading: guideBlogsLoading, isError: guideBlogsError } = useBlogs(2, ["guides"]);
-    const { data: reportBlogs, isLoading: reportBlogsLoading, isError: reportBlogsError } = useBlogs(2, ["data reports"]);
-    const { data: marketingBlogs, isLoading: marketingBlogsLoading, isError: marketingBlogsError } = useBlogs(2);
     const t = useTranslations("Blogs");
-
+    const { data: guideBlogs, isLoading: guideBlogsLoading, isError: guideBlogsError } = useBlogs(2, [t("guides")]);
+    const { data: reportBlogs, isLoading: reportBlogsLoading, isError: reportBlogsError } = useBlogs(2, [t("dataReports")]);
+    const { data: marketingBlogs, isLoading: marketingBlogsLoading, isError: marketingBlogsError } = useBlogs(2, [t("allMarketingInsights")]);
     return (
         <div className="container mx-auto flex flex-col xl:flex-row justify-center items-start gap-8 ">
             {/* Guides */}

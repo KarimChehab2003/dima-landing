@@ -10,16 +10,16 @@ import { useCaseStudies } from "../../case-studies/hooks/useCaseStudies";
 import { useTranslations } from "next-intl";
 
 function HeroSection() {
-    const { data: blogs, isLoading, isError } = useBlogs(3, ["editor's pick"]);
-    const { data: caseStudy, isLoading: caseStudyLoading, isError: caseStudyError } = useCaseStudies(1, { featured: true })
     const t = useTranslations("Blogs");
+    const { data: blogs, isLoading, isError } = useBlogs(3, [t("editorsPick")]);
+    const { data: caseStudy, isLoading: caseStudyLoading, isError: caseStudyError } = useCaseStudies(1, { featured: true })
     return (
         <div className="container mx-auto flex flex-col justify-center items-start gap-8 ">
 
             {/* Content sections */}
             <div className="flex flex-col lg:flex-row gap-8 w-full">
                 {/* Featured Card */}
-                <ContentSection title={t("featuredCaseStudy")} className="flex-1 w-full lg:min-w-[512px]" includeViewAll={false}>
+                <ContentSection title={t("featuredCaseStudy")} className="flex-1 w-full lg:min-w-lg" includeViewAll={false}>
                     {caseStudyError && <p>Failed to load featured case study</p>}
 
                     {caseStudyLoading ? <CaseStudyCardSkeleton /> : <CaseStudyCard {...caseStudy![0]} />}

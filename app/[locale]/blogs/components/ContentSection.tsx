@@ -22,7 +22,7 @@ function ContentSection({ className, children, title, includeViewAll = true, hre
 
             {/* Title and View All */}
             <div className="flex flex-wrap justify-between items-center gap-2 mb-4">
-                <h2 className="text-lg sm:text-xl font-bold">{title}</h2>
+                <h2 className="text-lg sm:text-xl font-bold capitalize">{title}</h2>
                 {includeViewAll && (
                     <Link href={hrefViewAll} className="text-primary text-sm inline-flex items-center font-bold">
                         {t("viewAll")} {isRTL ? <ChevronLeft /> : <ChevronRight />}

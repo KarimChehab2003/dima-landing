@@ -114,7 +114,6 @@ const Calculator = () => {
     setResults(null);
   };
 
-  console.log(results)
 
   return (
     <div className="w-full max-w-5xl mx-auto space-y-8">

@@ -45,7 +45,6 @@ export const DialectAnalyzer = () => {
 
     try {
       const data = await analyzeDialect(inputText, selectedDialect, locale);
-      console.log(data);
       setResult(data);
     } catch (error) {
       console.error('Analysis error:', error);

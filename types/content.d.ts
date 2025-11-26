@@ -69,3 +69,9 @@ interface RawKeywordResult {
     }[];
     misspellings: string[];
 }
+
+type Video = {
+    src: string;
+    href?: string;
+    alt?: string;
+};

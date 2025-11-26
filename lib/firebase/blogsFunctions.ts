@@ -6,10 +6,11 @@ import { Blog } from "@/types/content";
 
 export const fetchBlogs = async (locale: string, tags: string[], limitCount: number | null = null) => {
     const collectionRef = collection(db, "blogs");
-    const constraints: QueryConstraint[] = [orderBy("dateCreated", "desc")];
+    const constraints: QueryConstraint[] = [orderBy("dateCreated", "desc"), where("active", "==", true)];
 
     if (tags.length > 0) {
-        constraints.unshift(where("tags", "array-contains-any", tags));
+        const tagField = `tags.${locale}`;
+        constraints.unshift(where(tagField, "array-contains-any", tags));
     }
 
     if (limitCount) {
@@ -21,10 +22,12 @@ export const fetchBlogs = async (locale: string, tags: string[], limitCount: num
 
     return querySnapshot.docs.map((doc) => {
         const data = doc.data();
+
         return {
             id: doc.id,
             ...data,
             content: data.content?.[locale] || data.content?.en,
+            tags: data.tags?.[locale] || data.tags?.[locale]
         } as Blog;
     });
 };
