@@ -3,16 +3,16 @@ import CaseStudyContent from "./components/CaseStudyContent";
 import { fetchSingleCaseStudy } from "@/lib/firebase/caseStudiesFunctions";
 
 type SingleViewCaseStudiesPageProps = {
-    params: Promise<{ slug: string }>
+    params: Promise<{ slug: string, locale: string }>
 }
 
 export async function generateMetadata(
     { params }: SingleViewCaseStudiesPageProps
 ): Promise<Metadata> {
-    const { slug } = await params;
+    const { slug, locale } = await params;
 
     // Fetch case study data
-    const caseStudy = await fetchSingleCaseStudy("en", slug);
+    const caseStudy = await fetchSingleCaseStudy(locale, slug);
 
     if (!caseStudy) {
         return {
