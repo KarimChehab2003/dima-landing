@@ -55,49 +55,49 @@ export const footerResourcesLinks: NavLink[] = [
 
 export const dimaSolutions: SolutionLink[] = [
     {
-        logo: "/nav-links/pr.svg",
+        logo: "/nav-links/pr.png",
         title: "PR & Comms",
         description: "Daily monitoring & coverage reports",
         href: "/solutions/pr-comms",
         translationKey: "prComms"
     },
     {
-        logo: "/nav-links/mi.svg",
+        logo: "/nav-links/mi.png",
         title: "Market Insights",
         description: "Benchmark performance",
         href: "/solutions/market-insights",
         translationKey: "marketInsights"
     },
     {
-        logo: "/nav-links/sl.svg",
+        logo: "/nav-links/sl.png",
         title: "Social Listening & Analytics",
         description: "Listen, analyze & act",
         href: "/solutions/social-listening-analytics",
         translationKey: "socialListening"
     },
     {
-        logo: "/nav-links/ci.svg",
+        logo: "/nav-links/ci.png",
         title: "Consumer Insights",
         description: "Understand your audience everywhere",
         href: "/solutions/consumer-insights",
         translationKey: "consumerInsights"
     },
     {
-        logo: "/nav-links/oi.svg",
+        logo: "/nav-links/oi.png",
         title: "Own Page Intelligence",
         description: "Elevate your social presence",
         href: "/solutions/own-page-intelligence",
         translationKey: "ownIntelligence"
     },
     {
-        logo: "/nav-links/im.svg",
+        logo: "/nav-links/im.png",
         title: "Influencer Marketing",
         description: "Find the right partners for your brand",
         href: "/solutions/influencer-marketing",
         translationKey: "influencerMarketing"
     },
     {
-        logo: "/nav-links/ce.svg",
+        logo: "/nav-links/ce.png",
         title: "Customer Experience",
         description: "Collect & analyze reviews",
         href: "/solutions/customer-experience",

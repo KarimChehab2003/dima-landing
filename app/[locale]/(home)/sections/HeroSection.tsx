@@ -30,7 +30,7 @@ export default function HeroSection() {
     return () => {
       clearInterval(interval);
     }
-  }, [])
+  }, [slides.length])
 
   return (
     <SectionWrapper className="flex-col justify-between min-h-dvh my-12">

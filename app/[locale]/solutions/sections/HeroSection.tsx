@@ -17,14 +17,13 @@ function HeroSection({ slug }: { slug: string }) {
 
                 {/* Images */}
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
-
                     {solutionImages[slug].hero.map((src, index) => (
                         <figure key={index} className={`relative w-[300px] md:w-[400px] lg:w-[322px] h-[322px] ${index === 1 ? "hidden lg:block" : ""}`}>
                             <Image
                                 src={src}
                                 alt={`Hero Image ${index + 1}`}
                                 fill
-                                className="w-full h-full object-cover"
+                                className="object-fill"
                                 priority={true}
                                 fetchPriority="high"
                             />
