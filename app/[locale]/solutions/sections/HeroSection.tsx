@@ -17,20 +17,30 @@ function HeroSection({ slug }: { slug: string }) {
 
                 {/* Images */}
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
-                    {solutionImages[slug].hero.map((src, index) => (
-                        <figure key={index} className={`relative w-[300px] md:w-[400px] lg:w-[322px] h-[322px] ${index === 1 ? "hidden lg:block" : ""}`}>
-                            <Image
-                                src={src}
-                                alt={`Hero Image ${index + 1}`}
-                                fill
-                                className="object-fill"
-                                priority={true}
-                                fetchPriority="high"
-                            />
-                        </figure>
-                    ))}
-                </div>
+                    {/* Mobile View - Single Hero Image */}
+                    <figure className="relative w-[300px] md:w-[400px] lg:hidden h-[322px]">
+                        <Image
+                            src={solutionImages[slug].heroSingle}
+                            alt="Hero Image Mobile"
+                            fill
+                            className="object-fill"
+                            priority={true}
+                            fetchPriority="high"
+                        />
+                    </figure>
 
+                    {/* Desktop View - Grouped Hero Images */}
+                    <figure className="hidden lg:block relative w-[711px] h-[383px]">
+                        <Image
+                            src={solutionImages[slug].heroGrouped}
+                            alt="Hero Image Desktop"
+                            fill
+                            className="object-contain"
+                            priority={true}
+                            fetchPriority="high"
+                        />
+                    </figure>
+                </div>
 
                 {/* Logo Carousel */}
                 <LogoCarousel />
