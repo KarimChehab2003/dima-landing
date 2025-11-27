@@ -8,7 +8,7 @@ function DimaSection() {
     const t = useTranslations("CaseStudies.boostBusiness")
     return (
         <div className="bg-[#053A60]">
-            <div className="container mx-auto flex flex-col justify-center items-center gap-8 text-white min-h-[740px] px-4">
+            <div className="container mx-auto flex flex-col justify-center items-center gap-8 text-white py-24 px-4">
                 <h2 className="text-4xl g:text-[66px] font-bold text-center">{t("title")}</h2>
                 <p className="text-lg lg:text-2xl font-medium max-w-2xl text-center">{t("description")}</p>
 
