@@ -41,7 +41,7 @@ export default function HeroSection() {
         {/* Left Side: Dynamic Text */}
         <div className="flex-1 space-y-6 w-full">
 
-          <h1 className="text-[24px] md:text-[44px] mb-8 min-h-32 md:min-h-[198px] lg:min-h-[264px] xl:min-h-[198px]">
+          <h1 className="text-[24px] md:text-[44px] mb-8 min-h-32 md:min-h-[198px] lg:min-h-[264px] xl:min-h-[198px] 2xl:min-h-[132px]">
             <span>{t("titlePrefix")}</span>{" "}
             <Typewriter
               options={{
@@ -74,7 +74,7 @@ export default function HeroSection() {
         </div> */}
 
         {/* Right Side: Image */}
-        <figure className="relative flex-1 aspect-2624/2144">
+        <figure className="relative w-full lg:flex-1 aspect-2624/2144 h-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-auto">
           <Image
             src={`/hero-bg-${locale}.png`}
             alt="Hero image"
