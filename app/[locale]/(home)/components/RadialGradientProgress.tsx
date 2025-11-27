@@ -17,9 +17,9 @@ type RadialGradientProgressProps = {
 };
 
 const formatNumber = (num: number, suffix?: string | React.ReactNode) => {
-    if (suffix === "M") return `${(num / 1_000_000).toFixed(0)}M`;
-    if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1)}M`;
-    if (num >= 1_000) return `${(num / 1_000).toFixed(1)}K`;
+    if (suffix === "M") return `${(num / 1_000_000).toFixed(0)}M+`;
+    if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1)}M+`;
+    if (num >= 1_000) return `${(num / 1_000).toFixed(1)}K+`;
     return Math.round(num).toString() + "%";
 };
 
