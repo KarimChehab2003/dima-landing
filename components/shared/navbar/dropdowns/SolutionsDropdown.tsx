@@ -2,7 +2,7 @@ import SolutionNavLink from "../SolutionNavLink";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import { dimaSolutions } from "@/data/constants/links";
+import { dimaSolutions } from "@/data/home-page";
 
 function SolutionsDropdown() {
     const t = useTranslations("Navbar");

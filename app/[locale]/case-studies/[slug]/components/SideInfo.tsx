@@ -1,8 +1,9 @@
-import { sideInfoIcons } from "@/data/constants/caseStudyPageAssets";
-import { SideInfoType } from "@/types/info";
+
+import { sideInfoIcons } from "@/data/case-studies";
+import { CaseStudySideInfo } from "@/types";
 import Image from "next/image";
 
-function SideInfo({ index, title, description }: SideInfoType) {
+function SideInfo({ index, title, description }: CaseStudySideInfo) {
     return (
         <article className="flex gap-4 py-4">
             <figure className="relative w-10 h-10">

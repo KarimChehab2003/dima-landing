@@ -1,5 +1,4 @@
 "use client";
-import { renderHighlightedText } from "@/lib/helpers";
 import { CardType } from "@/types/info";
 import { AnimatePresence, motion } from "motion/react";
 import { useLocale } from "next-intl";
@@ -16,6 +15,20 @@ function ExpandingCard({ title, description, highlighted, isExpanded, onClick }:
     };
     const locale = useLocale();
     const isRTL = locale === "ar";
+
+    const renderHighlightedText = (text: string, highlight?: string) => {
+        if (!highlight) return text;
+
+        const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
+        return parts.map((part, index) =>
+            part.toLowerCase() === highlight?.toLowerCase() ? (
+                <span key={index} className="text-primary">{part}</span>
+            ) : (
+                <span key={index}>{part}</span>
+            )
+        );
+    };
+
 
     return (
         <div

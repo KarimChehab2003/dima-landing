@@ -3,13 +3,13 @@
 import { Scrollama, Step } from "react-scrollama";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { CardType } from "@/types/info";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { solutionImages } from "@/data/constants/solutionImages";
+import { CardType } from "@/types";
+import { solutionImages } from "@/data/solutions";
 
 export default function PinnedScrollSection({ cards, slug }: { cards: CardType[], slug: string }) {
     const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);

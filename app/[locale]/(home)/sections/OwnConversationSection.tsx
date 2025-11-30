@@ -5,8 +5,8 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 import { useTranslations, useLocale } from "next-intl";
 import RequestDemoButton from "../../../../components/shared/form/RequestDemoButton";
-import { ownConversationInfo } from "@/data/constants/info";
 import Lottie from "lottie-react";
+import { ownConversationInfo } from "@/data/home-page";
 
 const textVariants = {
   hidden: { opacity: 0, x: 20 },

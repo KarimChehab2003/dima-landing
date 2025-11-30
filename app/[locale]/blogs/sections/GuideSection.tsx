@@ -1,5 +1,5 @@
 "use client";
-import ContentSection from "../components/ContentSection";
+import GroupedBlogs from "../components/GroupedBlogs";
 import BlogCard from "../components/BlogCard";
 import BlogCardSkeleton from "../components/BlogCardSkeleton";
 import useBlogs from "../hooks/useBlogs";
@@ -14,7 +14,7 @@ function GuideSection() {
         <div className="container mx-auto flex flex-col xl:flex-row justify-center items-start gap-8 ">
             {/* Guides */}
             <div className="flex-1 w-full">
-                <ContentSection title={t("guides")} includeViewAll={false}>
+                <GroupedBlogs title={t("guides")} includeViewAll={false}>
                     {guideBlogsError && <p>Failed to load guide blogs</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {guideBlogsLoading
@@ -29,12 +29,12 @@ function GuideSection() {
                                 </li>
                             ))}
                     </ul>
-                </ContentSection>
+                </GroupedBlogs>
             </div>
 
             {/* Data Reports */}
             <div className="flex-1 w-full">
-                <ContentSection title={t("dataReports")} includeViewAll={false}>
+                <GroupedBlogs title={t("dataReports")} includeViewAll={false}>
                     {reportBlogsError && <p>Failed to load data reports</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {reportBlogsLoading
@@ -49,12 +49,12 @@ function GuideSection() {
                                 </li>
                             ))}
                     </ul>
-                </ContentSection>
+                </GroupedBlogs>
             </div>
 
             {/* All Marketing Insights */}
             <div className="flex-1 w-full">
-                <ContentSection title={t("allMarketingInsights")} includeViewAll={false}>
+                <GroupedBlogs title={t("allMarketingInsights")} includeViewAll={false}>
                     {marketingBlogsError && <p>Failed to load marketing insights</p>}
                     <ul className="grid grid-cols-1 gap-4 divide-y w-full">
                         {marketingBlogsLoading
@@ -69,7 +69,7 @@ function GuideSection() {
                                 </li>
                             ))}
                     </ul>
-                </ContentSection>
+                </GroupedBlogs>
             </div>
         </div>
     );

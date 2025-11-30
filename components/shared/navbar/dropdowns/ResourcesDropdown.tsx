@@ -1,12 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { resourcesLinks } from "@/data/constants/links";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import useBlogs from "@/app/[locale]/blogs/hooks/useBlogs";
 import BlogCard from "@/app/[locale]/blogs/components/BlogCard";
 import BlogCardSkeleton from "@/app/[locale]/blogs/components/BlogCardSkeleton";
+import { footerResourcesLinks } from "@/data/home-page";
 
 function ResourcesDropdown() {
     const t = useTranslations("Navbar.resources.links");
@@ -48,7 +48,7 @@ function ResourcesDropdown() {
                     <h2 className={`text-3xl font-semibold ${isRTL ? 'text-right' : ''}`}>{t("moreResources.title")}</h2>
                     <div className={`w-8 h-0.5 bg-primary mb-4 flex ${isRTL ? 'ml-auto' : 'mr-auto'}`}></div>
                     <ul className={`grid grid-cols-1 gap-y-4 gap-x-8 ${isRTL ? 'text-right' : ''}`}>
-                        {resourcesLinks.map((link) => (
+                        {footerResourcesLinks.map((link) => (
                             <li key={link.href} className={`inline-flex items-center gap-2 opacity-60 cursor-not-allowed ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                                 <Image
                                     src={link.icon!}

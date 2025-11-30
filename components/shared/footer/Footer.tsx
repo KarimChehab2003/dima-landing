@@ -6,8 +6,8 @@ import SocialMediaLinks from "./SocialMediaLinks";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { dimaSolutions, footerResourcesLinks } from "@/data/constants/links";
 import { Button } from "@/components/ui/button";
+import { dimaSolutions, footerResourcesLinks } from "@/data/home-page";
 
 function Footer() {
   const t = useTranslations("Footer");

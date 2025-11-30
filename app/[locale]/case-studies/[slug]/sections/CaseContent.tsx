@@ -2,11 +2,11 @@ import ReactMarkdown from "react-markdown";
 import SideInfo from "../components/SideInfo";
 import Image from "next/image";
 import SectionWrapper from "@/components/shared/SectionWrapper";
-import { CaseStudy } from "@/types/content";
 import Link from "next/link";
 import remarkGfm from "remark-gfm";
 import { useLocale } from "next-intl";
-import { usedSolutionsAssets } from "@/data/constants/caseStudyPageAssets";
+import { CaseStudy } from "@/types";
+import { usedSolutionsAssets } from "@/data/case-studies";
 
 function CaseContent({ caseStudy }: { caseStudy: CaseStudy }) {
     const locale = useLocale();

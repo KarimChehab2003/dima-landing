@@ -1,6 +1,6 @@
 import LayeredCard from "../components/LayeredCard";
 import SectionWrapper from "@/components/shared/SectionWrapper";
-import { CaseStudy } from "@/types/content";
+import { CaseStudy } from "@/types";
 import { useLocale } from "next-intl";
 
 function StackedCardsSection({ caseStudy }: { caseStudy: CaseStudy }) {

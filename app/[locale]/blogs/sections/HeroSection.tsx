@@ -1,6 +1,6 @@
 "use client";
 
-import ContentSection from "../components/ContentSection";
+import GroupedBlogs from "../components/GroupedBlogs";
 import BlogCard from "../components/BlogCard";
 import BlogCardSkeleton from "../components/BlogCardSkeleton";
 import useBlogs from "../hooks/useBlogs";
@@ -19,15 +19,15 @@ function HeroSection() {
             {/* Content sections */}
             <div className="flex flex-col lg:flex-row gap-8 w-full">
                 {/* Featured Card */}
-                <ContentSection title={t("featuredCaseStudy")} className="flex-1 w-full lg:min-w-lg" includeViewAll={false}>
+                <GroupedBlogs title={t("featuredCaseStudy")} className="flex-1 w-full lg:min-w-lg" includeViewAll={false}>
                     {caseStudyError && <p>Failed to load featured case study</p>}
 
                     {caseStudyLoading ? <CaseStudyCardSkeleton /> : <CaseStudyCard {...caseStudy![0]} />}
-                </ContentSection>
+                </GroupedBlogs>
 
                 {/* Editor's Picks */}
                 <div className="flex-1">
-                    <ContentSection title={t("editorsPick")} className="items-start" includeViewAll={false}>
+                    <GroupedBlogs title={t("editorsPick")} className="items-start" includeViewAll={false}>
                         {isError && <p>Failed to load editor&apos;s pick blogs</p>}
 
                         <ul className="grid grid-cols-1 gap-4 divide-y w-full">
@@ -43,7 +43,7 @@ function HeroSection() {
                                     </li>
                                 ))}
                         </ul>
-                    </ContentSection>
+                    </GroupedBlogs>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { socialMediaLinks } from "@/data/constants/links";
+import { socialMediaLinks } from "@/data/home-page";
 
 function SocialMediaLinksList() {
     return (

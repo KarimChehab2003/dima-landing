@@ -1,8 +1,8 @@
-import { EnterpriseType } from "@/types/info";
+import { CardType } from "@/types";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 
-function EntrepriseCard({ icon, title, description }: EnterpriseType) {
+function EntrepriseCard({ icon, title, description }: CardType) {
     const locale = useLocale();
     const isRTL = locale === "ar";
     return (
@@ -12,7 +12,7 @@ function EntrepriseCard({ icon, title, description }: EnterpriseType) {
                 <div className={`flex lg:flex-col items-center ${isRTL ? "md:items-end" : "md:items-start"} gap-4`}>
                     <figure className="relative w-8 h-8 min-w-8 min-h-8 bg-[#2B558C] rounded-full">
                         <Image
-                            src={icon}
+                            src={icon!}
                             alt="icon"
                             fill
                             className="object-contain p-1"

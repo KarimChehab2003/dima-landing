@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import { useTranslations } from "next-intl";
-import { testimonialsInfo } from "@/data/constants/info";
+import { testimonialsInfo } from "@/data/home-page";
 
 export default function TestimonialSection() {
   const t = useTranslations("Home.testimonials");

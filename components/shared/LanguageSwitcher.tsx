@@ -16,10 +16,11 @@ import {
   CommandItem,
 } from "@/components/ui/command";
 import { Link, usePathname } from "@/i18n/navigation";
-import { languages } from "@/data/constants/links";
-import { LanguageLink } from "@/types/link";
+
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { LanguageLink } from "@/types";
+import { languages } from "@/data/home-page";
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();

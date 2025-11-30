@@ -1,4 +1,4 @@
-import { LayeredCardProps } from "@/types/info";
+import { LayeredCardProps } from "@/types";
 
 const getCardConfig = (index: number) => {
     switch (index) {

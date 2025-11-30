@@ -1,4 +1,4 @@
-import { BrandCardInfo } from "@/types/info";
+import { BrandCardInfo } from "@/types";
 import Image from "next/image";
 
 function BrandCard({ image, companyName, description }: BrandCardInfo) {

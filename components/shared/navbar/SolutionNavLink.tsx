@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { SolutionLink } from "@/types/link";
 import { useTranslations } from "next-intl";
+import { SolutionLink } from "@/types";
 
 function SolutionNavLink({ logo, href, translationKey, isRTL }: SolutionLink & { isRTL?: boolean }) {
     const t = useTranslations("Navbar.solutions.links");

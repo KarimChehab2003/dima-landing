@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { CaseStudy } from "@/types/content";
+import { CaseStudy } from "@/types";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 

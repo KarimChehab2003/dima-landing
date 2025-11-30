@@ -3,7 +3,7 @@ import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import LogoCarousel from "../../(home)/components/LogoCarousel";
 import CounterPercentage from "../components/CounterPercentage";
 import { useTranslations } from "next-intl";
-import { solutionImages } from "@/data/constants/solutionImages";
+import { solutionImages } from "@/data/solutions";
 
 function HeroSection({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.hero`);

@@ -1,8 +1,8 @@
-import { enterpriseFeaturesCards } from "@/data/constants/info";
+import { CardType } from "@/types";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import EntrepriseCard from "../components/EnterpriseCard";
 import { useTranslations } from "next-intl";
-import { CardType } from "@/types/info";
+import { enterpriseFeaturesCards } from "@/data/solutions/assets";
 
 function CardsGrid({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.cardsGrid`)

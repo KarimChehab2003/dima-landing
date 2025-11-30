@@ -1,11 +1,11 @@
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import PinnedScrollSection from "../components/PinnedScrollSection";
 import { useTranslations } from "next-intl";
-import { CardType } from "@/types/info";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import MobileScrollingCard from "../components/MobileScrollingCard";
+import { CardType } from "@/types";
 
 function ScrollingSection({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.scrollingSection`);

@@ -15,10 +15,10 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer";
-import { dimaSolutions } from "@/data/constants/links";
 import SolutionNavLink from "./SolutionNavLink";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { dimaSolutions } from "@/data/home-page";
 
 function NavDrawer() {
     const [isOpen, setIsOpen] = useState<boolean>(false);

@@ -8,14 +8,18 @@ import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ArrowRight, ArrowLeft, Check, FileText, Globe, Sparkles, Download } from "lucide-react";
 import jsPDF from "jspdf";
-import { RawKeywordResult } from "@/types/content";
 import { useLocale, useTranslations } from "next-intl";
 import { toast } from "sonner";
-import { analyzeKeywords } from "@/app/actions/analyze-keywords/analyzeKeywords";
+import { analyzeKeywords } from "../../actions";
 
 type Step = 1 | 2 | 3;
 
-
+interface RawKeywordResult {
+  keyword: string;
+  variations: string[];
+  dialectTerms?: { dialect: string; terms: string[]; }[];
+  misspellings: string[];
+}
 
 interface ExpandedKeyword {
   original: string;

@@ -1,7 +1,7 @@
+import { empoweringAgenciesInfo } from "@/data/home-page";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import EmpoweringAgenciesCard from "../components/EmpoweringAgenciesCard";
 import { useTranslations } from "next-intl";
-import { empoweringAgenciesInfo } from "@/data/constants/info";
 
 function EmpoweringAgenciesSection() {
     const t = useTranslations("Home.empoweringAgencies");

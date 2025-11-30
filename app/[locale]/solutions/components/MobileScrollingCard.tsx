@@ -1,9 +1,10 @@
-import { solutionImages } from "@/data/constants/solutionImages";
-import { CardType } from "@/types/info";
+
+import { solutionImages } from "@/data/solutions";
+import { CardType } from "@/types";
 import Image from "next/image";
 
 function MobileScrollingCard({ title, description, slug, index }: CardType) {
-    const image = solutionImages[slug].scrollingSection[index];
+    const image = solutionImages[slug!].scrollingSection[index];
 
     return (
         <article className="flex flex-col sm:flex-row justify-center items-center gap-6">

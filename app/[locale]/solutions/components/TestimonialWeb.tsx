@@ -1,4 +1,4 @@
-import { testimonialAssets } from "@/data/constants/solutionPageAssets";
+import { testimonialAssets } from "@/data/solutions";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 

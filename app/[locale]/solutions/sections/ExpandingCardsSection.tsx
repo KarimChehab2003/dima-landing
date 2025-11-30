@@ -4,7 +4,7 @@ import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import ExpandingCard from "../components/ExpandingCard";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { CardType } from "@/types/info";
+import { CardType } from "@/types";
 
 function ExpandingCardsSection({ slug }: { slug: string }) {
     const [expandedIndex, setExpandedIndex] = useState<number>(0);

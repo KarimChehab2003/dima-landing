@@ -1,10 +1,10 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { Badge } from "@/components/ui/badge";
-import { toolLinks } from "@/data/constants/links";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Metadata } from "next";
 import RequestDemoSection from "@/components/shared/form/RequestDemoSection";
+import { toolLinks } from "@/data/tools";
 
 export const metadata: Metadata = {
     title: "Tools & Calculators - dima",

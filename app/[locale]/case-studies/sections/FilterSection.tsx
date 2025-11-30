@@ -6,7 +6,6 @@ import CaseStudyCard from "../components/CaseStudyCard";
 import CaseStudyCardSkeleton from "../components/CaseStudyCardSkeleton";
 import PaginationWrapper from "../components/PaginationWrapper";
 import { usePaginatedCaseStudies } from "../hooks/usePaginatedCaseStudies";
-import { notFound } from "next/navigation";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 

@@ -7,8 +7,8 @@ import { useTranslations, useLocale } from "next-intl";
 // import CyclicSwapCards from "../components/CyclicCardRotation";
 import Typewriter from "typewriter-effect";
 import RequestDemoButton from "../../../../components/shared/form/RequestDemoButton";
-import { heroSlides } from "@/data/constants/info";
 import Image from "next/image";
+import { heroSlides } from "@/data/home-page";
 
 //TODO: Continue working on hero section
 

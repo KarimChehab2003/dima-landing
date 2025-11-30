@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { cn, timeAgo } from "@/lib/utils";
-import { Blog } from "@/types/content";
+import { Blog } from "@/types/blog";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";

@@ -5,7 +5,7 @@ import useBlog from "../hooks/useBlog";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import Link from "next/link";
 import useBlogs from "../hooks/useBlogs";
-import ContentSection from "./ContentSection";
+import ContentSection from "./GroupedBlogs";
 import BlogCard from "./BlogCard";
 import { notFound } from "next/navigation";
 import LoadingAnimation from "@/components/shared/LoadingAnimation";

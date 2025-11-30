@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { NavLink, SolutionLink } from "@/types/link";
+import { NavLink, SolutionLink } from "@/types";
 import { useTranslations } from "next-intl";
 
 type FooterLinksProps = {

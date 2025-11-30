@@ -11,7 +11,7 @@ type ContentSectionProps = {
     hrefViewAll?: string;
 }
 
-function ContentSection({ className, children, title, includeViewAll = true, hrefViewAll = "#" }: ContentSectionProps) {
+function GroupedBlogs({ className, children, title, includeViewAll = true, hrefViewAll = "#" }: ContentSectionProps) {
     const t = useTranslations("Blogs")
     const locale = useLocale();
     const isRTL = locale === "ar";
@@ -38,4 +38,4 @@ function ContentSection({ className, children, title, includeViewAll = true, hre
     );
 }
 
-export default ContentSection;
+export default GroupedBlogs;

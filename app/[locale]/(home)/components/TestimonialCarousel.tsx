@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
-import { TestimonialType } from "@/types/info";
 import TestimonialCard from "./TestimonialCard";
 import { useLocale } from "next-intl";
+import { TestimonialType } from "@/types";
 
 type Props = {
     items: TestimonialType[];

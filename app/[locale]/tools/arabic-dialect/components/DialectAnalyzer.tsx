@@ -5,9 +5,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { analyzeDialect } from "@/app/actions/analyze-dialect/analyzeDialect";
 import { useLocale } from "next-intl";
 import { useTranslations } from "use-intl";
+import { analyzeDialect } from "../../actions";
 
 
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { EmpoweringAgenciesInfo } from "@/types/info";
+import { EmpoweringAgenciesInfo } from "@/types";
 import RadialGradientProgress from "./RadialGradientProgress";
 import { useLocale, useTranslations } from "next-intl";
 

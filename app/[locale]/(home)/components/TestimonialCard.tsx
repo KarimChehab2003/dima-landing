@@ -1,4 +1,4 @@
-import { TestimonialType } from "@/types/info";
+import { TestimonialType } from "@/types";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 

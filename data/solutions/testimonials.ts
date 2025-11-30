@@ -1,4 +1,4 @@
-import { TestimonialAsset } from "@/types/info";
+import { TestimonialAsset } from "@/types";
 
 export const testimonialAssets: Record<string, TestimonialAsset> = {
     "social-listening-analytics": {

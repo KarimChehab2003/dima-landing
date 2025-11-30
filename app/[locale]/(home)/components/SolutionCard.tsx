@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
-import { SolutionLink } from "@/types/link";
+import { SolutionLink } from "@/types";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Image from "next/image";

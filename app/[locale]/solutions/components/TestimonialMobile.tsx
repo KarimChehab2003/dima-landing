@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { testimonialAssets } from "@/data/constants/solutionPageAssets";
 import { useLocale, useTranslations } from "next-intl";
+import { testimonialAssets } from "@/data/solutions";
 
 function TestimonialMobile({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.testimonial`)
