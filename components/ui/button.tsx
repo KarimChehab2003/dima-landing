@@ -31,7 +31,7 @@ const buttonVariants = cva(
         default: "py-4 px-6 p-2 pl-4",
         sm: "h-8 rounded-full gap-1.5 px-3 has-[>svg]:px-2.5 text-xs",
         lg: "h-11 rounded-full px-6 has-[>svg]:px-4 text-base",
-        xl: "h-14 rounded-full py-[14px] px-[26px] md:py-[19px] md:px-[35px] font-normal tracking-widest has-[>svg]:px-6",
+        xl: "h-14 rounded-full py-[14px] px-[24px] md:py-[19px] md:px-[35px] font-normal tracking-widest has-[>svg]:px-6",
         "2xl": "h-16 rounded-full px-10 text-xl font-bold has-[>svg]:px-8",
         icon: "size-9 rounded-full",
         "icon-sm": "size-8 rounded-full",

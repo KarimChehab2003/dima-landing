@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import LogoCarousel from "../components/LogoCarousel";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import { useTranslations, useLocale } from "next-intl";
-import CyclicSwapCards from "../components/CyclicCardRotation";
+// import CyclicSwapCards from "../components/CyclicCardRotation";
 import Typewriter from "typewriter-effect";
 import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
 import { heroSlides } from "@/data/constants/info";
@@ -86,7 +86,7 @@ export default function HeroSection() {
         </figure>
       </div>
       <div className="container mx-auto">
-        <h2 className="text-2xl sm:text-3xl text-center">{t("trustedBy")}</h2>
+        <h2 className="text-[14px] sm:text-3xl text-center">{t("trustedBy")}</h2>
         <LogoCarousel />
       </div>
     </SectionWrapper>

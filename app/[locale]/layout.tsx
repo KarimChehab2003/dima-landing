@@ -9,6 +9,7 @@ import Footer from "@/components/shared/footer/Footer";
 import ReactQueryProvider from "../ReactQueryProvider";
 import PageLoader from "@/components/shared/PageLoader";
 import { Toaster } from "sonner";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +82,7 @@ export default async function RootLayout({
             </div>
           </ReactQueryProvider>
         </NextIntlClientProvider>
+        <Script src="https://static.claydar.com/init.v1.js?id=cxOAeXXAB5"></Script>
       </body>
     </html>
   );

@@ -92,7 +92,7 @@ function OwnConversationSection() {
           dir="ltr"
         >
           {/* Image Section */}
-          <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-b xl:bg-none from-primary via-[#5FC9E7] to-[#AEEBFF] rounded-2xl sm:order-1 order-2">
+          <figure className="relative w-full max-w-[900px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden bg-linear-to-b xl:bg-none from-primary via-[#5FC9E7] to-[#AEEBFF] rounded-2xl">
             <Lottie
               animationData={activeFeature.animation}
               autoplay
@@ -102,7 +102,7 @@ function OwnConversationSection() {
 
           {/* Info + Button */}
           <div
-            className={`flex flex-col justify-start text-center w-full xl:max-w-md z-30  lg:h-[500px] xl:h-[600px] xl:pl-22 sm:order-2 pb-4 ${isRTL
+            className={`flex flex-col justify-start text-center w-full xl:max-w-md z-30  lg:h-[500px] xl:h-[600px] xl:pl-22 pb-4 ${isRTL
               ? 'text-right items-end xl:pr-6'
               : 'items-start text-left'
               }`}
@@ -128,7 +128,7 @@ function OwnConversationSection() {
             </AnimatePresence>
 
             <div
-              className={`xl:my-4 w-full xl:flex-1 flex justify-center ${isRTL ? 'md:justify-end' : 'md:justify-start'}`}>
+              className={`xl:my-4 w-full xl:flex-1 flex ${isRTL ? 'justify-end' : 'justify-start'}`}>
               <RequestDemoButton size={"xl"} className="mt-4" />
             </div>
           </div>

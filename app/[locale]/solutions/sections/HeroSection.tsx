@@ -23,7 +23,7 @@ function HeroSection({ slug }: { slug: string }) {
                             src={solutionImages[slug].heroSingle}
                             alt="Hero Image Mobile"
                             fill
-                            className="object-fill"
+                            className="object-contain"
                             priority={true}
                             fetchPriority="high"
                         />

@@ -12,7 +12,7 @@ function SolutionCard({ logo, href, translationKey }: SolutionLink) {
 
   return (
     <article
-      className={`flex flex-col justify-between h-full gap-3 shadow-[0_0_15px_rgba(0,0,0,0.08)] rounded-3xl p-8 ${isRTL ? "items-end text-right" : "items-start text-left"
+      className={`flex flex-col justify-between h-full gap-3 shadow-[0_0_15px_rgba(0,0,0,0.08)] rounded-3xl py-[30px] px-6 ${isRTL ? "items-end text-right" : "items-start text-left"
         }`}
       dir="ltr"
     >
@@ -42,7 +42,7 @@ function SolutionCard({ logo, href, translationKey }: SolutionLink) {
           <p className="text-primary">{t("comingSoon")}</p>
         ) : (
           <Link href={href}>
-            <Button variant="outline" className="px-3 font-normal">
+            <Button variant="outline" className="px-3 py-2 h-[34px] font-normal">
               {t("explore")}
             </Button>
           </Link>
