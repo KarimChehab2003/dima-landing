@@ -25,41 +25,69 @@ export const fetchTranslations = async (locale: string) => {
 export function timeAgo(date: Date, locale: string = "en") {
   const rtf = new Intl.RelativeTimeFormat(locale, { numeric: "auto" });
   const now = new Date();
-  const secondsDiff = Math.floor((date.getTime() - now.getTime()) / 1000);
 
-  const intervals: [number, Intl.RelativeTimeFormatUnit][] = [
-    [60, "second"],
-    [60, "minute"],
-    [24, "hour"],
-    [7, "day"],
-    [4, "week"],
-    [12, "month"],
-    [Number.POSITIVE_INFINITY, "year"]
-  ];
+  // Raw time differences
+  const diffMs = now.getTime() - date.getTime();
+  const seconds = Math.round(diffMs / 1000);
+  const minutes = Math.round(diffMs / 60000);
+  const hours = Math.round(diffMs / 3600000);
+  const days = Math.round(diffMs / 86400000);
 
-  let duration = secondsDiff;
-  for (const [unitSeconds, unit] of intervals) {
-    if (Math.abs(duration) < unitSeconds) {
-      const value = Math.round(duration);
-      let formatted = rtf.format(value, unit);
+  // Calendar-correct months difference
+  const months =
+    (now.getFullYear() - date.getFullYear()) * 12 +
+    (now.getMonth() - date.getMonth()) -
+    (now.getDate() < date.getDate() ? 1 : 0);
 
-      // Replacing kabl to munz
-      if (locale.startsWith("ar") && value < 0) {
-        formatted = formatted.replace("قبل", "منذ");
-      }
+  // Calendar-correct years difference
+  const years =
+    now.getFullYear() -
+    date.getFullYear() -
+    (now.getMonth() < date.getMonth() ||
+      (now.getMonth() === date.getMonth() && now.getDate() < date.getDate())
+      ? 1
+      : 0);
 
-      return formatted;
-    }
-    duration /= unitSeconds;
+  // Choose accurate unit
+  let value: number;
+  let unit: Intl.RelativeTimeFormatUnit;
+
+  if (Math.abs(seconds) < 60) {
+    value = -seconds;
+    unit = "second";
+  } else if (Math.abs(minutes) < 60) {
+    value = -minutes;
+    unit = "minute";
+  } else if (Math.abs(hours) < 24) {
+    value = -hours;
+    unit = "hour";
+  } else if (Math.abs(days) < 30) {
+    value = -days;
+    unit = "day";
+  } else if (Math.abs(months) < 12) {
+    value = -months;
+    unit = "month";
+  } else {
+    value = -years;
+    unit = "year";
   }
+
+  let formatted = rtf.format(value, unit);
+
+  if (locale.startsWith("ar") && value < 0) {
+    formatted = formatted.replace("قبل", "منذ");
+  }
+
+  return formatted;
 }
+
 
 // Function to format titles into slugs
 export function slugify(str: string) {
   return str
     .toLowerCase()
-    .replace(/&/g, "-and-")   // Replace & with "and"
-    .replace(/[^a-z0-9\s-]/g, "")  // Remove any other symbols
+    .replace(/&/g, "-and-")   // Replaces & with "and"
+    .replace(/[^a-z0-9\s-]/g, "")  // Removes any other symbols
     .trim()
-    .replace(/\s+/g, "-");  // Replace spaces with hyphens
+    .replace(/\s+/g, "-");  // Replaces spaces with hyphens
 }
