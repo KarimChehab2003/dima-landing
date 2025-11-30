@@ -6,37 +6,45 @@ type SingleViewCaseStudiesPageProps = {
     params: Promise<{ slug: string, locale: string }>
 }
 
+// Metadata
 export async function generateMetadata(
     { params }: SingleViewCaseStudiesPageProps
 ): Promise<Metadata> {
-    const { slug, locale } = await params;
+    try {
+        const { slug, locale } = await params;
 
-    // Fetch case study data
-    const caseStudy = await fetchSingleCaseStudy(locale, slug);
+        const caseStudy = await fetchSingleCaseStudy(locale, slug);
 
-    if (!caseStudy) {
         return {
-            title: "Case Study Not Found - dima",
-        };
-    }
-
-    return {
-        title: `${caseStudy.content.title} - dima`,
-        description: caseStudy.content.description,
-        openGraph: {
             title: `${caseStudy.content.title} - dima`,
             description: caseStudy.content.description,
-            url: `https://thedar.ai/case-studies/${slug}`,
-            images: [
-                {
-                    url: caseStudy.ogImage || "/og/caseStudy.png",
-                    width: 1200,
-                    height: 630,
-                },
-            ],
-        },
-    };
+            openGraph: {
+                title: `${caseStudy.content.title} - dima`,
+                description: caseStudy.content.description,
+                url: `https://thedar.ai/case-studies/${slug}`,
+                images: [
+                    {
+                        url: caseStudy.ogImage || "/og/caseStudy.png",
+                        width: 1200,
+                        height: 630,
+                    },
+                ],
+            },
+        };
+
+    } catch (error) {
+        return {
+            title: "Case Study Not Found - dima",
+            description: "The requested case study does not exist.",
+            openGraph: {
+                title: "Case Study Not Found - dima",
+                description: "The requested case study does not exist.",
+                images: ["/og/caseStudy.png"],
+            },
+        };
+    }
 }
+
 
 
 async function SingleViewCaseStudiesPage({ params }: SingleViewCaseStudiesPageProps) {
