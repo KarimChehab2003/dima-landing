@@ -2,6 +2,36 @@ import SectionWrapper from "@/components/shared/SectionWrapper";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import RequestDemoForm from "../../../components/shared/form/RequestDemoForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Request a Demo | dima AI",
+    description: "Request a personalized demo of the dima AI platform. See how our AI tools can streamline workflows, boost efficiency, and empower your agency.",
+    openGraph: {
+        title: "Request a Demo | dima AI",
+        description: "Get a personalized demo of the dima AI platform and discover how it can optimize your agency’s operations.",
+        url: "https://your-domain.com/request-demo",
+        type: "website",
+        images: [
+            {
+                url: "/requestDemo.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Request Demo Page Preview",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Request a Demo | dima AI",
+        description: "See dima AI in action and request your personalized platform demo.",
+        images: ["/requestDemo.jpg"],
+    },
+    alternates: {
+        canonical: "https://thedar.ai/request-demo",
+    },
+};
+
 
 function RequestDemoPage() {
     const t = useTranslations("RequestDemo");
