@@ -64,8 +64,8 @@ function RequestDemoForm({ className }: { className?: string }) {
         }
     }
     return (
-        <form className={cn("space-y-6 rounded-4xl lg:rounded-2xl p-8 bg-white h-full flex flex-col justify-between", className)} onSubmit={handleSubmit(onSubmit)}>
-            <div className="grid grid-cols-2 gap-4">
+        <form className={cn("md:space-y-6 rounded-[22px] lg:rounded-2xl p-8 bg-white h-full flex flex-col justify-between", className)} onSubmit={handleSubmit(onSubmit)}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* First Name */}
                 <div className="flex flex-col w-full gap-3">
                     <Label
@@ -153,7 +153,7 @@ function RequestDemoForm({ className }: { className?: string }) {
             </div>
 
             <div className="flex justify-center items-center">
-                <Button className="bg-linear-to-r from-black to-[#6D6D6D] hover:scale-102 w-full max-w-xs" >
+                <Button className="bg-linear-to-r from-black to-[#6D6D6D] hover:scale-102 w-full max-w-[200px] p-2 font-normal" >
                     {t("form.submit")}
                 </Button>
             </div>

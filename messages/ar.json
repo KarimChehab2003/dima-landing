@@ -317,7 +317,7 @@
         },
         "email": {
           "title": "البريد الإلكتروني",
-          "placeholder": "jane@framer.com"
+          "placeholder": "jane@gmail.com"
         },
         "phoneNumber": {
           "title": "رقم الهاتف",

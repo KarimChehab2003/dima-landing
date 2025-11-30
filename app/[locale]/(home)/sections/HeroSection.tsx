@@ -79,7 +79,6 @@ export default function HeroSection() {
             src={`/hero-bg-${locale}.png`}
             alt="Hero image"
             fill
-            className="object-contain"
             priority={true}
             fetchPriority="high"
           />

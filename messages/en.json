@@ -275,7 +275,7 @@
         },
         "email": {
           "title": "Email",
-          "placeholder": "jane@framer.com"
+          "placeholder": "jane@gmail.com"
         },
         "phoneNumber": {
           "title": "Phone Number",
