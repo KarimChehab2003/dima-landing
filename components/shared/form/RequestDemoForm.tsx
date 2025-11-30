@@ -64,7 +64,7 @@ function RequestDemoForm({ className }: { className?: string }) {
         }
     }
     return (
-        <form className={cn("md:space-y-6 rounded-[22px] lg:rounded-2xl p-8 bg-white h-full flex flex-col justify-between", className)} onSubmit={handleSubmit(onSubmit)}>
+        <form className={cn("space-y-6 rounded-[22px] lg:rounded-2xl p-8 bg-white h-full flex flex-col justify-between", className)} onSubmit={handleSubmit(onSubmit)}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* First Name */}
                 <div className="flex flex-col w-full gap-3">
