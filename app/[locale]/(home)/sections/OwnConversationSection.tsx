@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, easeOut, easeIn } from "motion/react";
 import { useTranslations, useLocale } from "next-intl";
-import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
+import RequestDemoButton from "../../../../components/shared/form/RequestDemoButton";
 import { ownConversationInfo } from "@/data/constants/info";
 import Lottie from "lottie-react";
 

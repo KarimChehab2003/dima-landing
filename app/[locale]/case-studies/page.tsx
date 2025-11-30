@@ -2,8 +2,8 @@ import LogoCarousel from "../(home)/components/LogoCarousel";
 import HeroSection from "./sections/HeroSection";
 import FilterSection from "./sections/FilterSection";
 import DimaSection from "./sections/DimaSection";
-import RequestDemoSection from "@/components/shared/RequestDemoSection";
 import { Metadata } from "next";
+import RequestDemoSection from "@/components/shared/form/RequestDemoSection";
 
 export const metadata: Metadata = {
     title: "Case Studies - How Teams Use dima",

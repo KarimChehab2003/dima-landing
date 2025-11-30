@@ -1,6 +1,6 @@
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import SolutionCard from "../components/SolutionCard";
-import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
+import RequestDemoButton from "../../../../components/shared/form/RequestDemoButton";
 import { useTranslations } from "next-intl";
 import { dimaSolutions } from "@/data/constants/links";
 

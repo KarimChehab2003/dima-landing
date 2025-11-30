@@ -5,9 +5,9 @@ import DimaAiSection from "./sections/DimaAiSection";
 import DimaSuiteSection from "./sections/DimaSuiteSection";
 import CaseStudiesSection from "./sections/CaseStudiesSection";
 import TestimonialSection from "./sections/TestimonialSection";
-import RequestDemoSection from "@/components/shared/RequestDemoSection";
 import QuestionsAnsweredSection from "@/app/[locale]/(home)/sections/QuestionsAnsweredSection";
 import { Metadata } from "next";
+import RequestDemoSection from "@/components/shared/form/RequestDemoSection";
 
 export const metadata: Metadata = {
   title: "dima - Your Media Monitoring Copilot",

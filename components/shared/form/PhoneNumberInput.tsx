@@ -1,11 +1,12 @@
 "use client"
 
 import { Dispatch, SetStateAction } from "react"
-import { ButtonGroup } from "../ui/button-group"
-import { Select, SelectContent, SelectItem, SelectTrigger } from "../ui/select"
-import { Input } from "../ui/input"
+
 import { UseFormRegister } from "react-hook-form"
-import { FormInputs } from "@/app/[locale]/(home)/components/RequestDemoForm"
+import { FormInputs } from "@/components/shared/form/RequestDemoForm"
+import { ButtonGroup } from "@/components/ui/button-group"
+import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
+import { Input } from "@/components/ui/input"
 
 type PhoneNumberInputProps = {
     register: UseFormRegister<FormInputs>,

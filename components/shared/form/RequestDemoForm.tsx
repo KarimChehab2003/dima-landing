@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useLocale, useTranslations } from "use-intl";
 import { useForm, SubmitHandler } from "react-hook-form";
-import PhoneNumberInput from "@/components/shared/PhoneNumberInput";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import PhoneNumberInput from "./PhoneNumberInput";
 
 // Form Type
 export type FormInputs = {

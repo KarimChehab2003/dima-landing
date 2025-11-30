@@ -4,9 +4,9 @@ import HeroSection from "./sections/HeroSection";
 import LatestSection from "./sections/LatestSection";
 import VideosSection from "./sections/VideosSection";
 import SocialMediaAnalyticsSection from "./sections/SocialMediaAnalyticsSection";
-import RequestDemoSection from "@/components/shared/RequestDemoSection";
 import { useTranslations } from "next-intl";
 import { Metadata } from "next";
+import RequestDemoSection from "@/components/shared/form/RequestDemoSection";
 
 export const metadata: Metadata = {
     title: "Blogs - dima",

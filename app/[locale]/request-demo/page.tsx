@@ -1,7 +1,7 @@
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import RequestDemoForm from "../(home)/components/RequestDemoForm";
+import RequestDemoForm from "../../../components/shared/form/RequestDemoForm";
 
 function RequestDemoPage() {
     const t = useTranslations("RequestDemo");

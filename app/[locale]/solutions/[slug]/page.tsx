@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import RequestDemoSection from "@/components/shared/RequestDemoSection";
 import ExpandingCardsSection from "../sections/ExpandingCardsSection";
 import CardsGrid from "../sections/CardsGrid";
 import HeroSection from "../sections/HeroSection";
@@ -7,6 +6,7 @@ import ScrollingSection from "../sections/ScrollingSection";
 import TestimonialSection from "../sections/TestimonialSection";
 import QuestionsAnsweredSection from "@/app/[locale]/(home)/sections/QuestionsAnsweredSection";
 import { notFound } from "next/navigation";
+import RequestDemoSection from "@/components/shared/form/RequestDemoSection";
 
 type SolutionPageProps = {
     params: Promise<{ slug: string }>;

@@ -6,7 +6,7 @@ import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import { useTranslations, useLocale } from "next-intl";
 // import CyclicSwapCards from "../components/CyclicCardRotation";
 import Typewriter from "typewriter-effect";
-import RequestDemoButton from "../../../../components/shared/RequestDemoButton";
+import RequestDemoButton from "../../../../components/shared/form/RequestDemoButton";
 import { heroSlides } from "@/data/constants/info";
 import Image from "next/image";
 
