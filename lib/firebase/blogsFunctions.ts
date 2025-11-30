@@ -1,6 +1,6 @@
 import { collection, doc, getDoc, getDocs, limit, orderBy, query, QueryConstraint, where } from "firebase/firestore";
 import { db } from "../firebase";
-import { Blog } from "@/types/content";
+import { Blog } from "@/types/blog";
 
 
 

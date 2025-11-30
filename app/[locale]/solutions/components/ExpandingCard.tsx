@@ -1,5 +1,5 @@
 "use client";
-import { CardType } from "@/types/info";
+import { CardType } from "@/types";
 import { AnimatePresence, motion } from "motion/react";
 import { useLocale } from "next-intl";
 

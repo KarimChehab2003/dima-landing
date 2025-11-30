@@ -1,3 +1,5 @@
+import { HeroSlide } from "@/types";
+
 export const heroSlides: HeroSlide[] = [
     {
         image: "/hero-carousel/hero-carousel-item-1.webp",

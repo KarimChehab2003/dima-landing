@@ -1,6 +1,6 @@
 import { collection, doc, getDoc, getDocs, limit, orderBy, query, QueryConstraint, where } from "firebase/firestore";
 import { db } from "../firebase";
-import { CaseStudy } from "@/types/content";
+import { CaseStudy } from "@/types";
 
 
 export const fetchSingleCaseStudy = async (locale: string, slug: string) => {

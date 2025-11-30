@@ -1,7 +1,7 @@
 "use client";
 
 import { db } from "@/lib/firebase";
-import { CaseStudy } from "@/types/content";
+import { CaseStudy } from "@/types";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import {
     collection,
