@@ -18,18 +18,17 @@ function Footer() {
   return (
     <footer className="bg-[#2C2C2C] text-white rounded-t-4xl" dir={isRTL ? "rtl" : "ltr"}>
       <div className="container mx-auto flex flex-col px-6 md:px-0 py-12 space-y-8">
-        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ${isRTL ? "text-right" : "text-left"}`}>
-          <div className="flex flex-col gap-4">
-
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-8 ${isRTL ? "text-right" : "text-left"}`}>
+          <div className="flex flex-col gap-4 mb-8">
             {/* Dima logo */}
             <figure>
               <Image src="https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/Footer%2Fdima-logo-white.svg?alt=media&token=e9b4ea82-a30b-4187-97a7-15ef531dc17d" alt="dima logo white" width={120} height={50} />
             </figure>
-            <h2 className="capitalize text-2xl">{t("dima.description")}</h2>
+            <h2 className="capitalize md:text-2xl">{t("dima.description")}</h2>
 
             {/* CTA Button */}
             <Link href="/request-demo" className="w-fit">
-              <Button className="group bg-white! text-black! hover:text-white! hover:bg-black! transition-colors duration-300 w-fit" size="xl">
+              <Button className="group bg-white! text-black! hover:text-white! hover:bg-black! transition-colors duration-300 w-fit h-12" size="xl">
                 <div className="relative w-[30px] h-[30px]">
                   {/* Black icon (default) */}
                   <Image
@@ -59,7 +58,7 @@ function Footer() {
 
           {/* Get In Touch */}
           <div>
-            <h3 className="text-xl font-medium mb-4">{t("getInTouch.title")}</h3>
+            <h3 className="md:text-xl font-medium mb-4">{t("getInTouch.title")}</h3>
             <a
               href={`mailto:${t("getInTouch.mail")}`}
               className="font-light hover:text-primary transition-colors duration-200"

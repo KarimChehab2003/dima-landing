@@ -68,6 +68,7 @@ export type LayeredCardProps = {
     value: CaseStudyValue;
     title: string;
     suffix: string;
+    isLast: boolean
 }
 
 export type TestimonialAsset = {

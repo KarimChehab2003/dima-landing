@@ -13,14 +13,14 @@ function FooterLinks({ title, links, section }: FooterLinksProps) {
 
     return (
         <div>
-            <h3 className="text-xl font-medium mb-4">{title}</h3>
+            <h3 className="md:text-xl font-medium mb-4">{title}</h3>
             <ul className="space-y-1">
                 {links.map((link) => {
                     if (link.href !== "/solutions/influencer-marketing" && link.href !== "/solutions/customer-experience")
                         return (
                             <li
                                 key={link.href}
-                                className="hover:text-primary transition-colors duration-200 cursor-pointer my-2"
+                                className="hover:text-primary transition-colors duration-200 cursor-pointer my-4"
                             >
                                 <Link className="font-light" href={link.href}>
                                     {t(`${section}.links.${link.translationKey}.title`)}

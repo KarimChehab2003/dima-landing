@@ -15,7 +15,7 @@ type FilterType = "all" | "use cases" | "customer success stories";
 const PAGE_SIZE = 6;
 
 function FilterSection() {
-  const t = useTranslations("CaseStudies")
+  const t = useTranslations("CaseStudies");
   const locale = useLocale();
   const [type, setType] = useState<string>(locale === "ar" ? "الكل" : "all");
   const [pageIndex, setPageIndex] = useState(0);
@@ -26,10 +26,9 @@ function FilterSection() {
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-    totalPages
+    totalPages,
+    error
   } = usePaginatedCaseStudies(PAGE_SIZE);
-
-  if (isError) return notFound();
 
   const pages = data?.pages ?? [];
   const currentPage = pages[pageIndex]?.caseStudies ?? [];
@@ -99,13 +98,21 @@ function FilterSection() {
     <SectionWrapper>
       <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
         {/* Scrollable Button Row */}
-        <div className="w-full overflow-x-auto md:flex md:justify-center py-4">
+        <div className="md:flex justify-center py-4">
           <ul className="flex items-center gap-4 w-max px-4">
             {(t.raw("typeFilter") as FilterType[]).map((text) => (
               <li key={text} className="shrink-0">
                 <Button
-                  size={"xl"}
-                  className="capitalize"
+                  size="sm"
+                  className="md:hidden capitalize"
+                  variant={type === text ? "default" : "outline"}
+                  onClick={() => handleFilterChange(text as FilterType)}
+                >
+                  {text}
+                </Button>
+                <Button
+                  size="lg"
+                  className="hidden md:block capitalize"
                   variant={type === text ? "default" : "outline"}
                   onClick={() => handleFilterChange(text as FilterType)}
                 >
@@ -116,28 +123,41 @@ function FilterSection() {
           </ul>
         </div>
 
-        {/* Case Studies */}
-        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16 w-full">
-          {shouldShowSkeletons
-            ? skeletonItems
-            : filteredCaseStudies.map((caseStudy) => (
-              <li key={caseStudy.id}>
-                <CaseStudyCard {...caseStudy} />
-              </li>
-            ))}
-        </ul>
+        {/* Error Message */}
+        {isError && (
+          <div className="w-full py-12 text-center">
+            <p className="text-lg text-red-600 font-semibold">
+              An error has occurred: {error?.message || "Failed to load case studies. Please try again later."}
+            </p>
+          </div>
+        )}
 
-        {!shouldShowSkeletons && (
-          <PaginationWrapper
-            currentPage={currentPageNumber}
-            totalPages={totalPages}
-            canGoPrevious={canGoPrevious}
-            canGoNext={canGoNext}
-            onPrevious={handlePrevious}
-            onNext={handleNext}
-            onSelectPage={handleSelectPage}
-            isLoadingNext={isFetchingNextPage}
-          />
+        {/* Case Studies */}
+        {!isError && (
+          <>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16 w-full">
+              {shouldShowSkeletons
+                ? skeletonItems
+                : filteredCaseStudies.map((caseStudy) => (
+                  <li key={caseStudy.id}>
+                    <CaseStudyCard {...caseStudy} />
+                  </li>
+                ))}
+            </ul>
+
+            {!shouldShowSkeletons && (
+              <PaginationWrapper
+                currentPage={currentPageNumber}
+                totalPages={totalPages}
+                canGoPrevious={canGoPrevious}
+                canGoNext={canGoNext}
+                onPrevious={handlePrevious}
+                onNext={handleNext}
+                onSelectPage={handleSelectPage}
+                isLoadingNext={isFetchingNextPage}
+              />
+            )}
+          </>
         )}
       </div>
     </SectionWrapper>

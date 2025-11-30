@@ -38,7 +38,7 @@ export default function QuestionsAccordion({ pageSlug }: QuestionAccordionProps)
                         className="bg-white rounded-xl py-4 px-6"
                     >
                         <AccordionTrigger
-                            className={`text-lg transition-all hover:no-underline ${isOpen ? "font-bold" : "font-medium"
+                            className={`md:text-lg transition-all hover:no-underline ${isOpen ? "font-bold" : "font-medium"
                                 } ${isRTL ? "text-right" : "text-left"}`}
                         >
                             {question}
