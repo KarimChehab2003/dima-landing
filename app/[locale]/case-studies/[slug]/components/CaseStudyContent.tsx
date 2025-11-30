@@ -13,8 +13,6 @@ function CaseStudyContent({ slug }: { slug: string }) {
     if (isLoading) return Loading();
     if (isError) return notFound();
 
-
-
     return (
         <article>
             <StackedCardsSection caseStudy={caseStudy!} />

@@ -37,12 +37,12 @@ const getCardConfig = (index: number) => {
 function LayeredCard({ index, value, title, suffix, isLast }: LayeredCardProps) {
     const { bg, text: txt, rotation, suffixColor } = getCardConfig(index);
     return (
-        <article className="relative md:h-50 md:aspect-square w-full h-full md:w-fit">
+        <article className="relative md:h-58 md:aspect-square w-full h-full md:w-fit">
             {/* Background card */}
             <div className={`absolute inset-0.5 rounded-2xl -z-10 blur-xs pointer-events-none ${bg} ${txt} ${rotation}`}></div>
 
             {/* Foreground card */}
-            <div className={`relative flex h-full w-full rounded-2xl p-4 bg-white flex-col justify-between ${isLast && "items-center justify-center  md:items-start"} gap-3 text-black shadow-lg`}>
+            <div className={`relative flex h-full w-full rounded-2xl p-4 bg-white flex-col ${isLast ? "items-center justify-center md:items-start md:justify-between" : "justify-between"} gap-3 text-black shadow-lg`}>
                 <p className="font-bold text-[22px] md:text-[44px] leading-tight flex" dir="ltr">
                     {value}
                     <span className={`${suffixColor}`}>{suffix}</span>
