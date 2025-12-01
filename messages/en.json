@@ -986,8 +986,11 @@
     "moreCases": "MORE CASES"
   },
   "Tools": {
-    "title": "Quick, Easy, and Free Resources to Get Things Done",
     "badge": "Tools & Calculators",
+    "title": "Your Media Intelligence Toolkit",
+    "description": "From crisis readiness to influencer risk checks and Arabic accuracy tests — tools built to give you clarity, not complexity.",
+    "trustedBy": "Trusted by 250+ leading agencies & enterprises in GCC & MENA",
+    "toolsTitle": "Everything you need to assess, validate, and optimize",
     "tryNow": "try it now",
     "arabic-mention-analyzer": {
       "title": "Lost Mentions & Missed Sentiment Calculator",

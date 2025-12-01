@@ -28,7 +28,7 @@ export default function EmpoweringAgenciesCard({
                         gapValue={gapValue}
                     />
                 </div>
-                <h3 className={`text-lg md:text-2xl capitalize tracking-wide text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
+                <h3 className={`text-lg lg:text-2xl capitalize tracking-wide text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
                     {t(`${translationKey}.title`)}
                 </h3>
             </div>

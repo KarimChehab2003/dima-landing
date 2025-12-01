@@ -7,8 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 
 // Translation Map
 const translationsMap: Record<string, string> = {
-  en: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/en.json?alt=media&token=58c96586-410d-40d3-baba-b0931c58feb3",
-  ar: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/ar.json?alt=media&token=ae5cb79b-1572-4981-92e1-64a1a8b9b288"
+  en: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/en.json?alt=media&token=d0534951-a94b-40b7-aaa6-bf9d2d7a9baf",
+  ar: "https://firebasestorage.googleapis.com/v0/b/dima-landing.firebasestorage.app/o/ar.json?alt=media&token=8d238860-c564-47b4-877e-5ec2208e59db"
 }
 
 // Fetching translation files

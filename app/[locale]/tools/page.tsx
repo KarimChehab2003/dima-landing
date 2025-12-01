@@ -5,6 +5,9 @@ import Link from "next/link";
 import { Metadata } from "next";
 import RequestDemoSection from "@/components/shared/form/RequestDemoSection";
 import { toolLinks } from "@/data/tools";
+import RequestDemoButton from "@/components/shared/form/RequestDemoButton";
+import LogoCarousel from "../(home)/components/LogoCarousel";
+import EmpoweringAgenciesSection from "../(home)/sections/EmpoweringAgenciesSection";
 
 export const metadata: Metadata = {
     title: "Tools & Calculators - dima",
@@ -46,29 +49,39 @@ function ToolsPage() {
     const t = useTranslations("Tools");
     return (
         <main>
-            <SectionWrapper className="min-h-dvh mt-12">
-                <div className="container mx-auto flex flex-col items-center">
-                    {/* Header */}
-                    <h4 className="text-sm md:text-base text-primary uppercase font-semibold tracking-widest mb-4">{t("badge")}</h4>
-                    <h1 className="text-[24px] md:text-[44px] text-center max-w-2xl">{t("title")}</h1>
-
-                    {/* Tools */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mt-12">
-                        {
-                            toolLinks.map((tool) => (
-                                <Link key={tool.href} href={tool.href}>
-                                    <article className="h-full space-y-4 rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.07)] p-6">
-                                        <Badge className="capitalize">{t("tryNow")}</Badge>
-                                        <h2 className="text-lg sm:text-2xl font-medium">{t(`${tool.translationKey}.title`)}</h2>
-                                        <p className="text-[#6d6d6d]">{t(`${tool.translationKey}.description`)}</p>
-                                    </article>
-                                </Link>
-                            ))
-                        }
-                    </div>
-
+            {/* Header */}
+            <SectionWrapper className="min-h-dvh lg:py-0 px-0">
+                <div className="flex-1 w-full flex flex-col justify-center items-center text-center gap-4 bg-muted rounded-b-4xl md:rounded-b-[80px] pt-24 pb-12 basis-2/3">
+                    <h2 className="bg-black text-white uppercase py-1 px-2 rounded-sm italic tracking-wide font-semibold w-60 text-sm mb-4">{t("badge")}</h2>
+                    <h1 className="text-2xl md:text-[44px] lg:text-[60px] text-[#142828] font-semibold">{t("title")}</h1>
+                    <p className="text-lg md:text-2xl lg:text-[35px] max-w-7xl">{t("description")}</p>
+                    <RequestDemoButton className="px-4 mt-4" size={"xl"} />
+                </div>
+                <div className="container mx-auto basis-1/3 py-10 px-6">
+                    <h2 className="text-[14px] sm:text-3xl text-center">{t("trustedBy")}</h2>
+                    <LogoCarousel />
                 </div>
             </SectionWrapper>
+
+            {/* Tools */}
+            <SectionWrapper>
+                <h3 className="text-[22px] md:text-[44px] text-center max-w-5xl">{t("toolsTitle")}</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mt-12">
+                    {
+                        toolLinks.map((tool) => (
+                            <Link key={tool.href} href={tool.href}>
+                                <article className="h-full space-y-4 rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.07)] p-6">
+                                    <Badge className="capitalize">{t("tryNow")}</Badge>
+                                    <h2 className="text-lg sm:text-2xl font-medium">{t(`${tool.translationKey}.title`)}</h2>
+                                    <p className="text-[#6d6d6d]">{t(`${tool.translationKey}.description`)}</p>
+                                </article>
+                            </Link>
+                        ))
+                    }
+                </div>
+            </SectionWrapper>
+
+            <EmpoweringAgenciesSection />
             <RequestDemoSection />
         </main>
     );

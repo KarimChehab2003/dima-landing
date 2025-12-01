@@ -17,7 +17,7 @@ function Footer() {
 
   return (
     <footer className="bg-[#2C2C2C] text-white rounded-t-4xl" dir={isRTL ? "rtl" : "ltr"}>
-      <div className="container mx-auto flex flex-col px-6 md:px-0 py-12 space-y-8">
+      <div className="container mx-auto flex flex-col px-6 py-12 space-y-8">
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-8 ${isRTL ? "text-right" : "text-left"}`}>
           <div className="flex flex-col gap-4 mb-8">
             {/* Dima logo */}
