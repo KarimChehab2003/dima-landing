@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import { Icon } from "@tabler/icons-react";
 import { CaseStudyValue } from "./case-studies";
 
 export type HeroSlide = {
@@ -19,7 +19,7 @@ export type EmpoweringAgenciesInfo = {
 export type ConversationInfo = {
     title: string;
     subTitle: string;
-    icon: IconType;
+    icon: Icon;
     animation: object;
     translationKey: string;
 };

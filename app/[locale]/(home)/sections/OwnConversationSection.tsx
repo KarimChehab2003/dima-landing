@@ -78,7 +78,7 @@ function OwnConversationSection() {
                 ref={(el) => { buttonRefs.current[idx] = el }}
                 className="inline-flex items-center gap-2 text-sm sm:text-base px-3 sm:px-4 md:px-6 shrink-0 tracking-normal"
               >
-                <feature.icon size={16} />
+                <feature.icon className="w-6! h-6!" />
                 <span>{t(`features.${feature.translationKey}.title`)}</span>
               </Button>
             ))}

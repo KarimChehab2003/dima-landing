@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import { Icon } from "@tabler/icons-react";
 
 export type NavLink = {
     title: string;
@@ -17,7 +17,7 @@ export type SolutionLink = {
 
 export type SocialMediaLink = {
     href: string;
-    icon: IconType;
+    icon: Icon;
 };
 
 export type LanguageLink = {

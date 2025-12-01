@@ -3,8 +3,7 @@ import { Play } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedin } from "react-icons/fa6";
-
+import { IconBrandLinkedin } from "@tabler/icons-react";
 
 function VideosSection({ title }: { title: string }) {
     const t = useTranslations("Blogs.videosSection");
@@ -61,7 +60,7 @@ function VideosSection({ title }: { title: string }) {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <FaLinkedin size={24} />
+                            <IconBrandLinkedin size={32} />
                         </Link>
                     </div>
                 </div>

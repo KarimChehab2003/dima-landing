@@ -4,8 +4,7 @@ import listenAnim from "@/public/animations/listen-lottie.json";
 import benchmarkAnim from "@/public/animations/benchmark-lottie.json";
 import understandAnim from "@/public/animations/understand-lottie.json";
 import { BrandCardInfo, ConversationInfo, EmpoweringAgenciesInfo, QuestionAccordion, TestimonialType } from "@/types";
-import { FaLaptop, FaLayerGroup } from "react-icons/fa6";
-import { PiUserList } from "react-icons/pi";
+import { IconDeviceLaptop, IconStack2Filled, IconUsersGroup } from "@tabler/icons-react";
 
 
 export const empoweringAgenciesInfo: EmpoweringAgenciesInfo[] = [
@@ -38,35 +37,35 @@ export const ownConversationInfo: ConversationInfo[] = [
     {
         title: "Listen, analyze & act",
         subTitle: "Cut through the noise of millions of unfiltered conversations to uncover the insights that matter most powered by AI.",
-        icon: FaLaptop,
+        icon: IconDeviceLaptop,
         animation: listenAnim,
         translationKey: "listen"
     },
     {
         title: "Daily monitoring & reports",
         subTitle: "Stay in control of your brand narrative with proactive monitoring and reporting.",
-        icon: FaLayerGroup,
+        icon: IconStack2Filled,
         animation: dailyAnim,
         translationKey: "daily"
     },
     {
         title: "Elevate your social presence",
         subTitle: "Turn your owned channels into proof of impact with AI content performance tracking.",
-        icon: FaLayerGroup,
+        icon: IconStack2Filled,
         animation: elevateAnim,
         translationKey: "elevate"
     },
     {
         title: "Benchmark performance",
         subTitle: "Outpace your competitors with insights that accelerate decisions and increases your share of voice",
-        icon: PiUserList,
+        icon: IconUsersGroup,
         animation: benchmarkAnim,
         translationKey: "benchmark"
     },
     {
         title: "Understand your audience",
         subTitle: "Go beyond demographics, uncover what truly drives your audience and turn those insights into measurable impact.",
-        icon: FaLayerGroup,
+        icon: IconStack2Filled,
         animation: understandAnim,
         translationKey: "understand"
     }

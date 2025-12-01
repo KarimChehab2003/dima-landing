@@ -1,5 +1,5 @@
 import { LanguageLink, NavLink, SocialMediaLink, SolutionLink } from "@/types";
-import { FaLinkedin } from "react-icons/fa6";
+import { IconBrandLinkedin } from "@tabler/icons-react";
 
 export const footerResourcesLinks: NavLink[] = [
     {
@@ -69,7 +69,7 @@ export const dimaSolutions: SolutionLink[] = [
 export const socialMediaLinks: SocialMediaLink[] = [
     {
         href: "https://www.linkedin.com/company/darwinz-ai",
-        icon: FaLinkedin
+        icon: IconBrandLinkedin
     }
 ]
 
