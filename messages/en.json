@@ -387,35 +387,43 @@
         "cards": [
           {
             "title": "360° Conversation coverage",
-            "description": "track tagged, untagged, and misspelled mentions across all social media platforms and private groups."
+            "description": "track tagged, untagged, and misspelled mentions across all social media platforms and private groups.",
+            "icon": "360"
           },
           {
             "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance."
+            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance.",
+            "icon": "arabic"
           },
           {
             "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball",
+            "icon": "crisis"
           },
           {
             "title": "Customizable White-Label Reports",
-            "description": "Generate unlimited reports in branded templates (PPT, PDF, Excel), ready to share instantly"
+            "description": "Generate unlimited reports in branded templates (PPT, PDF, Excel), ready to share instantly",
+            "icon": "reports"
           },
           {
             "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your brand and get instant, actionable answers."
+            "description": "Ask plain-language questions about your brand and get instant, actionable answers.",
+            "icon": "dima"
           },
           {
             "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords"
+            "description": "No caps on team members or keywords",
+            "icon": "users"
           },
           {
             "title": "Visual Listening",
-            "description": "Spot your brand in images, videos and audio to capture the full picture."
+            "description": "Spot your brand in images, videos and audio to capture the full picture.",
+            "icon": "eye"
           },
           {
             "title": "Capture historical data",
-            "description": "dima provides full historical coverage to see the full picture."
+            "description": "dima provides full historical coverage to see the full picture.",
+            "icon": "hourglass"
           }
         ]
       },
@@ -504,35 +512,43 @@
         "cards": [
           {
             "title": "Full Coverage",
-            "description": "Track your brand across online news, print, broadcast and social platforms including closed communities, all in one view."
+            "description": "Track your brand across online news, print, broadcast and social platforms including closed communities, all in one view.",
+            "icon": "360"
           },
           {
             "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance."
+            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural nuance.",
+            "icon": "arabic"
           },
           {
             "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball."
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball.",
+            "icon": "crisis"
           },
           {
             "title": "Customizable White-Label Reports",
-            "description": "Deliver unlimited PPT, PDF, Excel, or HTML reports in branded templates, tailored for each department or client."
+            "description": "Deliver unlimited PPT, PDF, Excel, or HTML reports in branded templates, tailored for each department or client.",
+            "icon": "reports"
           },
           {
             "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+            "description": "Ask plain-language questions about your coverage and get instant, actionable answers.",
+            "icon": "dima"
           },
           {
             "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords."
+            "description": "No caps on team members or keywords.",
+            "icon": "users"
           },
           {
             "title": "Visual Listening",
-            "description": "Spot your brand in images, videos and audio to capture the full picture."
+            "description": "Spot your brand in images, videos and audio to capture the full picture.",
+            "icon": "eye"
           },
           {
             "title": "Influencer & Journalist Finder",
-            "description": "Identify the voices that shape your industry so outreach hits where it matters."
+            "description": "Identify the voices that shape your industry so outreach hits where it matters.",
+            "icon": "search"
           }
         ]
       },
@@ -621,35 +637,43 @@
         "cards": [
           {
             "title": "Full Coverage",
-            "description": " Track tagged, untagged, and misspelled mentions across all social media platforms and private groups"
+            "description": " Track tagged, untagged, and misspelled mentions across all social media platforms and private groups",
+            "icon": "360"
           },
           {
             "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context."
+            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context.",
+            "icon": "arabic"
           },
           {
             "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball",
+            "icon": "crisis"
           },
           {
             "title": "AI Coverage Summaries",
-            "description": "Receive daily, weekly, or monthly market briefs that distill competitor performance and sentiment shifts"
+            "description": "Receive daily, weekly, or monthly market briefs that distill competitor performance and sentiment shifts",
+            "icon": "coverage"
           },
           {
             "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+            "description": "Ask plain-language questions about your coverage and get instant, actionable answers.",
+            "icon": "dima"
           },
           {
             "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords."
+            "description": "No caps on team members or keywords.",
+            "icon": "users"
           },
           {
             "title": "Visual Listening",
-            "description": "Spot your brand in images, videos and audio to capture the full picture."
+            "description": "Spot your brand in images, videos and audio to capture the full picture.",
+            "icon": "eye"
           },
           {
             "title": "Competitor Benchmarking",
-            "description": "Compare mentions, sentiment, and engagement across your competitors."
+            "description": "Compare mentions, sentiment, and engagement across your competitors.",
+            "icon": "benchmarking"
           }
         ]
       },
@@ -738,35 +762,43 @@
         "cards": [
           {
             "title": "Full Consumer Lens",
-            "description": "Capture the complete voice of your audience, track tagged, untagged, and misspelled mentions across all social media platforms and private groups"
+            "description": "Capture the complete voice of your audience, track tagged, untagged, and misspelled mentions across all social media platforms and private groups",
+            "icon": "360"
           },
           {
             "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context."
+            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context.",
+            "icon": "arabic"
           },
           {
             "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball",
+            "icon": "crisis"
           },
           {
             "title": "AI Coverage Summaries",
-            "description": "Receive daily, weekly, or monthly briefs that distill every key mention and trend"
+            "description": "Receive daily, weekly, or monthly briefs that distill every key mention and trend",
+            "icon": "coverage"
           },
           {
             "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+            "description": "Ask plain-language questions about your coverage and get instant, actionable answers.",
+            "icon": "dima"
           },
           {
             "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords."
+            "description": "No caps on team members or keywords.",
+            "icon": "users"
           },
           {
             "title": "Visual Listening",
-            "description": "Spot your brand in images, videos and audio to capture the full picture."
+            "description": "Spot your brand in images, videos and audio to capture the full picture.",
+            "icon": "eye"
           },
           {
             "title": "Trend Radar",
-            "description": "Detect emerging memes, conversations, and cultural shifts so your brand always stays contextually relevant."
+            "description": "Detect emerging memes, conversations, and cultural shifts so your brand always stays contextually relevant.",
+            "icon": "reports"
           }
         ]
       },
@@ -859,35 +891,43 @@
         "cards": [
           {
             "title": "Own Page Analytics",
-            "description": "Track performance across TikTok, Instagram, X, LinkedIn, Facebook, Snapchat and more."
+            "description": "Track performance across TikTok, Instagram, X, LinkedIn, Facebook, Snapchat and more.",
+            "icon": "360"
           },
           {
             "title": "Arabic-First Engine",
-            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context."
+            "description": "97% accuracy in detecting Arabic dialects, slang, Franco-Arabic, sarcasm & cultural context.",
+            "icon": "arabic"
           },
           {
             "title": "Customizable Reports",
-            "description": "Deliver unlimited PPT, PDF, Excel, or HTML reports in branded templates"
+            "description": "Deliver unlimited PPT, PDF, Excel, or HTML reports in branded templates",
+            "icon": "reports"
           },
           {
             "title": "Crisis Alerts",
-            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball"
+            "description": "Get real-time alerts via app and WhatsApp for spikes, sentiment drops, key mentions, or emerging risks, before they snowball",
+            "icon": "crisis"
           },
           {
             "title": "AI Coverage Summaries",
-            "description": "Receive daily, weekly, or monthly briefs that distill every key mention and trend."
+            "description": "Receive daily, weekly, or monthly briefs that distill every key mention and trend.",
+            "icon": "coverage"
           },
           {
             "title": "dima AI Assistant",
-            "description": "Ask plain-language questions about your coverage and get instant, actionable answers."
+            "description": "Ask plain-language questions about your coverage and get instant, actionable answers.",
+            "icon": "dima"
           },
           {
             "title": "Unlimited Users & Keywords",
-            "description": "No caps on team members or keywords."
+            "description": "No caps on team members or keywords.",
+            "icon": "users"
           },
           {
             "title": "Best Time to Post",
-            "description": "Identify the exact times and days your audience is most engaged to boost reach and shareability across your channels "
+            "description": "Identify the exact times and days your audience is most engaged to boost reach and shareability across your channels ",
+            "icon": "hourglass"
           }
         ]
       },

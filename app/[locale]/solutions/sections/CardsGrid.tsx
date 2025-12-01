@@ -2,11 +2,11 @@ import { CardType } from "@/types";
 import SectionWrapper from "../../../../components/shared/SectionWrapper";
 import EntrepriseCard from "../components/EnterpriseCard";
 import { useTranslations } from "next-intl";
-import { enterpriseFeaturesCards } from "@/data/solutions/assets";
 
 function CardsGrid({ slug }: { slug: string }) {
     const t = useTranslations(`Solutions.${slug}.cardsGrid`)
     const cards = t.raw("cards") as CardType[];
+    console.log(cards)
     return (
         <SectionWrapper>
             <div className="container mx-auto flex flex-col justify-center items-center gap-8 ">
@@ -15,9 +15,9 @@ function CardsGrid({ slug }: { slug: string }) {
 
                 {/* Cards */}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
-                    {cards.map((card, i) => (
+                    {cards.map((card) => (
                         <li key={card.title}>
-                            <EntrepriseCard icon={enterpriseFeaturesCards[i].icon} {...card} />
+                            <EntrepriseCard  {...card} />
                         </li>
                     ))}
                 </ul>
