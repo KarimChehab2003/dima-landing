@@ -63,13 +63,13 @@ function NavDrawer() {
                         </Accordion>
 
                         {/* Blogs */}
-                        <Link
+                        {/* <Link
                             href="/blogs"
                             onClick={() => setIsOpen(false)}
                             className="block text-base font-medium hover:text-primary transition"
                         >
                             {t("blogs")}
-                        </Link>
+                        </Link> */}
 
                         {/* Case Studies */}
                         <Link

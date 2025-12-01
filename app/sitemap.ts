@@ -1,4 +1,4 @@
-import { fetchBlogs } from "@/lib/firebase/blogsFunctions";
+// import { fetchBlogs } from "@/lib/firebase/blogsFunctions";
 import { fetchCaseStudies } from "@/lib/firebase/caseStudiesFunctions";
 
 
@@ -21,23 +21,23 @@ export default async function sitemap() {
         priority: 0.5
     }))
 
-    // Blogs (en)
-    const blogs = await fetchBlogs("en", [], null);
-    const blogsUrls = blogs.map((blog) => ({
-        url: `https://thedar.ai/en/blogs/${blog.id}`,
-        lastModified: blog.dateCreated.toDate(),
-        changeFrequency: "monthly",
-        priority: 0.5
-    }))
+    // // Blogs (en)
+    // const blogs = await fetchBlogs("en", [], null);
+    // const blogsUrls = blogs.map((blog) => ({
+    //     url: `https://thedar.ai/en/blogs/${blog.id}`,
+    //     lastModified: blog.dateCreated.toDate(),
+    //     changeFrequency: "monthly",
+    //     priority: 0.5
+    // }))
 
-    // Blogs (ar)
-    const blogsAr = await fetchBlogs("ar", [], null);
-    const blogsArUrls = blogsAr.map((blog) => ({
-        url: `https://thedar.ai/ar/blogs/${blog.id}`,
-        lastModified: blog.dateCreated.toDate(),
-        changeFrequency: "monthly",
-        priority: 0.5
-    }))
+    // // Blogs (ar)
+    // const blogsAr = await fetchBlogs("ar", [], null);
+    // const blogsArUrls = blogsAr.map((blog) => ({
+    //     url: `https://thedar.ai/ar/blogs/${blog.id}`,
+    //     lastModified: blog.dateCreated.toDate(),
+    //     changeFrequency: "monthly",
+    //     priority: 0.5
+    // }))
 
     return [
         {
@@ -112,20 +112,20 @@ export default async function sitemap() {
             changeFrequency: "yearly",
             priority: 0.7
         },
-        {
-            url: "https://thedar.ai/blogs",
-            lastModified: new Date(),
-            alternates: {
-                languages: {
-                    "en": "https://thedar.ai/en/blogs",
-                    "ar": "https://thedar.ai/ar/blogs",
-                }
-            },
-            changeFrequency: "weekly",
-            priority: 0.7
-        },
-        ...blogsUrls,
-        ...blogsArUrls,
+        // {
+        //     url: "https://thedar.ai/blogs",
+        //     lastModified: new Date(),
+        //     alternates: {
+        //         languages: {
+        //             "en": "https://thedar.ai/en/blogs",
+        //             "ar": "https://thedar.ai/ar/blogs",
+        //         }
+        //     },
+        //     changeFrequency: "weekly",
+        //     priority: 0.7
+        // },
+        // ...blogsUrls,
+        // ...blogsArUrls,
         {
             url: "https://thedar.ai/case-studies",
             lastModified: new Date(),
