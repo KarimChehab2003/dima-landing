@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Request a Demo | dima AI",
         description: "Get a personalized demo of the dima AI platform and discover how it can optimize your agency’s operations.",
-        url: "https://your-domain.com/request-demo",
+        url: "https://thedar.ai/request-demo",
         type: "website",
         images: [
             {
@@ -70,7 +70,7 @@ function RequestDemoPage() {
                     <div className="flex-1 flex justify-center lg:justify-end w-full">
                         <figure className="relative w-full h-72 sm:h-96 lg:h-full">
                             <Image
-                                src="/request-demo-image.svg"
+                                src="/request-demo-image.png"
                                 alt="phone image"
                                 fill
                                 className="object-contain"
