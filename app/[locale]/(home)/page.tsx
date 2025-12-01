@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 function HomePage() {
   return (
     <main className="h-full">
-      <HeroSection />
+      {/* <HeroSection /> */}
       <EmpoweringAgenciesSection />
       <OwnConversationSection />
       <DimaAiSection />
