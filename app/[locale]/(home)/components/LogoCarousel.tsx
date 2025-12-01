@@ -36,7 +36,7 @@ export default function LogoCarousel() {
                                 alt={`Logo ${index}`}
                                 width={220}
                                 height={110}
-                                className="object-contain w-auto h-full"
+                                className="object-contain w-auto h-full bg-white"
                             />
                         </div>
                     </CarouselItem>
