@@ -81,6 +81,7 @@ export default function HeroSection() {
             fill
             priority={true}
             fetchPriority="high"
+            className="object-contain"
           />
         </figure>
       </div>

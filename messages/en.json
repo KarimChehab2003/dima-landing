@@ -275,7 +275,7 @@
         },
         "email": {
           "title": "Email",
-          "placeholder": "jane@gmail.com"
+          "placeholder": "jane@company.com"
         },
         "phoneNumber": {
           "title": "Phone Number",
