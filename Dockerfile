@@ -14,7 +14,7 @@ RUN npm ci
 COPY . .
 
 # Build for production
-RUN npm run builder
+RUN npm run build
 
 # ---------------------------------------------------------
 # 2. Runner — lightweight prod server
