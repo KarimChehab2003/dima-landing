@@ -44,23 +44,25 @@ export const metadata: Metadata = {
     },
 };
 
-
 function ToolsPage() {
     const t = useTranslations("Tools");
     return (
         <main>
             {/* Header */}
-            <SectionWrapper className="min-h-dvh lg:py-0 px-0">
-                <div className="flex-1 w-full flex flex-col justify-center items-center text-center gap-4 bg-muted rounded-b-4xl md:rounded-b-[80px] pt-24 pb-12 basis-2/3">
-                    <h2 className="bg-black text-white uppercase py-1 px-2 rounded-sm italic tracking-wide font-semibold w-60 text-sm mb-4">{t("badge")}</h2>
-                    <h1 className="text-2xl md:text-[44px] lg:text-[60px] text-[#142828] font-semibold">{t("title")}</h1>
-                    <p className="text-lg md:text-2xl lg:text-[35px] max-w-7xl">{t("description")}</p>
-                    <RequestDemoButton className="px-4 mt-4" size={"xl"} />
+            <SectionWrapper className="lg:py-0 px-0 justify-start">
+                <div className="w-full lg:pt-12 bg-muted rounded-b-[80px]">
+                    <div className="flex flex-col justify-center items-center text-center gap-4 py-24">
+                        <h2 className="bg-black text-white uppercase py-1 px-2 rounded-sm italic tracking-wide font-semibold w-60 text-sm mb-4">{t("badge")}</h2>
+                        <h1 className="text-2xl md:text-[44px] lg:text-[60px] text-[#142828] font-semibold">{t("title")}</h1>
+                        <p className="text-lg md:text-2xl lg:text-[35px] max-w-7xl">{t("description")}</p>
+                        <RequestDemoButton className="px-4 mt-4" size={"xl"} />
+                    </div>
                 </div>
-                <div className="container mx-auto basis-1/3 py-10 px-6">
+                <div className="container mx-auto pt-10 px-6">
                     <h2 className="text-[14px] sm:text-3xl text-center">{t("trustedBy")}</h2>
                     <LogoCarousel />
                 </div>
+
             </SectionWrapper>
 
             {/* Tools */}
