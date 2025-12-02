@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@carousel-ui/react-spin-carousel-3d": "^1.0.18",
     "@genkit-ai/googleai": "^1.24.0",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -25,7 +24,6 @@
     "@radix-ui/react-slot": "^1.2.4",
     "@tabler/icons-react": "^3.35.0",
     "@tanstack/react-query": "^5.90.7",
-    "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",

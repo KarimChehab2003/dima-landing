@@ -10,7 +10,6 @@ import ReactQueryProvider from "../ReactQueryProvider";
 import PageLoader from "@/components/shared/PageLoader";
 import { Toaster } from "sonner";
 import Script from "next/script";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -78,7 +77,6 @@ export default async function RootLayout({
                 <PageLoader />
                 {children}
                 <Toaster richColors />
-                <SpeedInsights />
               </div>
               <Footer />
             </div>
