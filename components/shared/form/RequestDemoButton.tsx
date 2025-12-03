@@ -30,8 +30,8 @@ function RequestDemoButton({
               : "/computer-black.svg"
           }
           alt="monitor icon"
-          width={30}
-          height={30}
+          width={28}
+          height={28}
         />
         <span className="tracking-wide">{t("cta")}</span>
       </Button>
