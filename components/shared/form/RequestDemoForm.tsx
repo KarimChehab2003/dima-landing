@@ -84,7 +84,7 @@ function RequestDemoForm({ className }: { className?: string }) {
                     {errors.firstName && <p className="text-destructive text-sm">{t(`form.${errors.firstName.message}`)}</p>}
                 </div>
 
-                {/* Last Nmae */}
+                {/* Last Name */}
                 <div className="flex flex-col w-full gap-3">
                     <Label
                         htmlFor="formLastNameInput"
