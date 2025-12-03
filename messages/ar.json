@@ -327,6 +327,10 @@
           "title": "اسم الشركة",
           "placeholder": "اسم شركتك"
         },
+        "countryLabel": {
+          "saudi": "السعودية",
+          "egypt": "مصر"
+        },
         "errors": {
           "firstNameTooShort": "يجب أن يكون الاسم الأول على الأقل حرفين",
           "lastNameTooShort": "يجب أن يكون اسم العائلة على الأقل حرفين",

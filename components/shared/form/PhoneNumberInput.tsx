@@ -7,6 +7,7 @@ import { FormInputs } from "@/components/shared/form/RequestDemoForm"
 import { ButtonGroup } from "@/components/ui/button-group"
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
+import { useTranslations } from "next-intl"
 
 type PhoneNumberInputProps = {
     register: UseFormRegister<FormInputs>,
@@ -15,12 +16,12 @@ type PhoneNumberInputProps = {
 }
 
 const countryCodes = [
-    { value: "+966", label: "Saudi Arabia" },
-    { value: "+20", label: "Egypt" },
+    { value: "+966", label: "saudi" },
+    { value: "+20", label: "egypt" },
 ]
 
 function PhoneNumberInput({ register, countryCode, setCountryCode }: PhoneNumberInputProps) {
-
+    const t = useTranslations("Home.requestDemo.form.countryLabel")
     return (
         <ButtonGroup className="w-full" dir="ltr">
             {/* Select */}
@@ -31,7 +32,7 @@ function PhoneNumberInput({ register, countryCode, setCountryCode }: PhoneNumber
                 <SelectContent className="min-w-[120px]">
                     {countryCodes.map((code) => (
                         <SelectItem key={code.value} value={code.value}>
-                            {code.value} <span>{code.label}</span>
+                            {code.value} <span>{t(code.label)}</span>
                         </SelectItem>
                     ))}
                 </SelectContent>
