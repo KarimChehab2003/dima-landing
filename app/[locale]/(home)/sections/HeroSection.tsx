@@ -10,7 +10,6 @@ import RequestDemoButton from "../../../../components/shared/form/RequestDemoBut
 import Image from "next/image";
 import { heroSlides } from "@/data/home-page";
 
-//TODO: Continue working on hero section
 
 export default function HeroSection() {
   const [selectedIndex, setSelectedIndex] = useState(0);

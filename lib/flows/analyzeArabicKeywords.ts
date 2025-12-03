@@ -18,7 +18,15 @@ const countryDialects: Record<string, string> = {
 };
 
 export const analyzeKeywordsFlow = ai.defineFlow(
-    "analyzeKeywordsFlow",
+    {
+        name: "analyzeKeywordsFlow",
+        metadata: {
+            labels: {
+                flow: "analyzeKeywordsFlow",
+                feature: "arabic-coverage-gap"
+            }
+        }
+    },
     async ({ keywords, countries }: { keywords: string[]; countries: string[] }) => {
         if (!Array.isArray(keywords) || keywords.length === 0) {
             throw new Error("Invalid keywords array");

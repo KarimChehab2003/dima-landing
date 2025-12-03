@@ -34,7 +34,6 @@ export default function CyclicCardRotation({
         }, interval);
         return () => clearInterval(timer);
     }, [cards.length, interval, onIndexChange]);
-    // TODO: Optimize carousel items
     const getPositionClass = (index: number) => {
         const diff = (index - selectedIndex + cards.length) % cards.length;
         switch (diff) {

@@ -3,7 +3,7 @@ import SectionWrapper from "@/components/shared/SectionWrapper";
 import Image from "next/image";
 import { PRCalculator } from "./components/PRCalculator";
 import { useTranslations } from "use-intl";
-// TODO: Add label to each api call for each tool
+
 function PrCalculator() {
     const t = useTranslations("Tools.pr-calculator");
     return (

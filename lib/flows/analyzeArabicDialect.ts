@@ -1,10 +1,19 @@
 // lib/flows/analyzeDialectFlow.ts
 import { ai } from "../genkit/config";
 
-export const analyzeDialectFlow = ai.defineFlow(
-  "analyzeDialectFlow",
+export const analyzeDialectFlow = ai.defineFlow({
+  name: "analyzeDialectFlow",
+  metadata: {
+    labels: {
+      flow: "analyzeDialectFlow",
+      feature: "arabic-dialect-analysis"
+    }
+  }
+},
   async ({ text, dialect, language }: { text: string; dialect: string, language: "en" | "ar" }) => {
     if (!text || !dialect || !language) throw new Error("Text, dialect and language are required");
+
+
 
     const languageInstruction = language === "ar"
       ? "Return your result in JSON. Keep all JSON keys in English, but translate all text content (like 'reasoning', 'misread', and entity text) into Arabic (Saudi dialect)."
