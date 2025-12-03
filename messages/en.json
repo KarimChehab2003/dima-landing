@@ -1324,6 +1324,47 @@
           }
         ]
       }
+    },
+    "pr-calculator": {
+      "title": "Impressions, Reach & AVE Calculator",
+      "description": "For PR & Communications Professionals",
+      "calculator": {
+        "cardTitle": "Find a Publication",
+        "cardDescription": "Search for a publication or add a custom one",
+        "addCustom": "Add Custom Publication",
+        "cancel": "Cancel",
+        "selectPublication": {
+          "selectPlaceholder": "Select Publication",
+          "searchPlaceholder": "Search publications..."
+        },
+        "customPublication": {
+          "publicationName": {
+            "label": "Publication Name",
+            "placeholder": "Ex: Forbes"
+          },
+          "type": {
+            "label": "Type",
+            "placeholder": "Select type",
+            "items": ["Traditional Media", "Social Media"]
+          },
+          "impressions": {
+            "label": "Impressions",
+            "placeholder": "Ex: 25000000"
+          },
+          "calculate": "Calculate Metrics"
+        },
+        "errors": {
+          "invalidName": "Name must be greather than 2 characters",
+          "invalidType": "Please choose a suitable type",
+          "minImpressions": "Impressions should be at least greater than 1",
+          "maxImpressions": "Max impressions limit reached"
+        },
+        "result": {
+          "impressions": "Impressions",
+          "ave": "AVE",
+          "reach": "Reach"
+        }
+      }
     }
   },
   "RequestDemo": {

@@ -1352,6 +1352,47 @@
           }
         ]
       }
+    },
+    "pr-calculator": {
+      "title": "حاسبة الانطباعات والوصول و القيمة الإعلانية (AVE)",
+      "description": "لمتخصصي العلاقات العامة والتواصل",
+      "calculator": {
+        "cardTitle": "ابحث عن منصة إعلامية",
+        "cardDescription": "دور على منصة إعلامية أو أضِف وحدة مخصصة",
+        "addCustom": "إضافة منصة مخصصة",
+        "cancel": "إلغاء",
+        "selectPublication": {
+          "selectPlaceholder": "اختر منصة إعلامية",
+          "searchPlaceholder": "ابحث عن المنصات..."
+        },
+        "customPublication": {
+          "publicationName": {
+            "label": "اسم المنصة",
+            "placeholder": "مثال: Forbes"
+          },
+          "type": {
+            "label": "النوع",
+            "placeholder": "اختر النوع",
+            "items": ["الإعلام التقليدي", "وسائل التواصل الاجتماعي"]
+          },
+          "impressions": {
+            "label": "عدد الانطباعات",
+            "placeholder": "مثال: 25000000"
+          },
+          "calculate": "احسب المؤشرات"
+        },
+        "errors": {
+          "invalidName": "الاسم لازم يكون أطول من حرفين",
+          "invalidType": "فضلاً اختر النوع المناسب",
+          "minImpressions": "عدد الانطباعات لازم يكون أكثر من 1",
+          "maxImpressions": "وصلت للحد الأعلى للانطباعات"
+        },
+        "result": {
+          "impressions": "الانطباعات",
+          "ave": "القيمة الإعلانية (AVE)",
+          "reach": "الوصول"
+        }
+      }
     }
   },
   "RequestDemo": {
