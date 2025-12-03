@@ -1365,6 +1365,43 @@
           "reach": "Reach"
         }
       }
+    },
+    "influencer-risk-assessment": {
+      "title": "Influer Risk Assessment",
+      "edition": "GCC Edition",
+      "description": "A free, interactive checker that flags risk before you pay an influencer: identity ambiguity, brand-safety red flags, and campaign fit. Designed for Arabic and English workflows.",
+      "roles": [
+        "CMOs & Marketing Directors",
+        "PR & Comms Teams",
+        "Agency Social Leads"
+      ],
+      "riskAssessment": {
+        "cardTitle": "Enter Influencer Details",
+        "cardDescription": "Provide the influencer's username and platform to begin the risk assessment",
+        "fields": {
+          "username": {
+            "label": "Username / Handle",
+            "placeholder": "@influencer_name"
+          },
+          "platform": {
+            "label": "Platform",
+            "placeholder": "Instagram, TikTok, X (Twitter), etc."
+          }
+        },
+        "run": "Run Risk Assessment",
+        "analyzing": "Analyzing...",
+        "resultTitle": "Risk Assessment Results",
+        "risk": "RISK",
+        "assessmentSummary": {
+          "title": "Assessment Summary",
+          "description": " This analysis provides a preliminary risk assessment. For comprehensive influencer vetting including advanced metrics, audience demographics, and historical performance data, consider using Dima's full platform capabilities."
+        },
+        "dima": {
+          "title": "Ready for Comprehensive Influencer Intelligence ?",
+          "description": "dima provides enterprise-grade influencer vetting with real-time metrics, audience authenticity verification, and campaign performance tracking across all major platforms.",
+          "explore": "Explore dima platform"
+        }
+      }
     }
   },
   "RequestDemo": {
