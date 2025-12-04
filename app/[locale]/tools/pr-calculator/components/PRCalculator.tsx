@@ -32,7 +32,6 @@ const PublicationFormSchema = z.object({
   impressions: z.string().min(1, "errors.minImpressions").max(10, "errors.maxImpressions").transform((v) => Number(v)),
 })
 
-// TODO: Translate this tool
 
 // Mock data
 const MOCK_PUBLICATIONS: Publication[] = [
