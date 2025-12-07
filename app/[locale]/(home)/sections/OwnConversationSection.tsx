@@ -96,6 +96,7 @@ function OwnConversationSection() {
             <Lottie
               animationData={activeFeature.animation}
               autoplay
+              loop={false}
               className="absolute inset-0 w-full h-full object-contain z-10 p-6"
             />
           </figure>

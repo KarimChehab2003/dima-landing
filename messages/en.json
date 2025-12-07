@@ -229,7 +229,7 @@
           "description": "Partnered with VitaHealth to set up their first operations team from the ground up."
         }
       },
-      "cta": "Read More"
+      "cta": "Read More Case Studies"
     },
     "testimonials": {
       "title": "Hear It From Our Clients",
@@ -267,15 +267,15 @@
       "form": {
         "firstName": {
           "title": "First Name",
-          "placeholder": "Jane"
+          "placeholder": "Mohy"
         },
         "lastName": {
           "title": "Last Name",
-          "placeholder": "Smith"
+          "placeholder": "Aboualam"
         },
         "email": {
           "title": "Email",
-          "placeholder": "jane@company.com"
+          "placeholder": "maboualam@darwinz.ai"
         },
         "phoneNumber": {
           "title": "Phone Number",
@@ -287,7 +287,17 @@
         },
         "countryLabel": {
           "saudi": "Saudi Arabia",
-          "egypt": "Egypt"
+          "uae": "United Arab Emirates",
+          "bahrain": "Bahrain",
+          "oman": "Oman",
+          "qatar": "Qatar",
+          "kuwait": "Kuwait",
+          "egypt": "Egypt",
+          "morocco": "Morocco",
+          "algeria": "Algeria",
+          "tunisia": "Tunisia",
+          "libya": "Libya",
+          "mauritania": "Mauritania"
         },
         "errors": {
           "firstNameTooShort": "First name must be at least 2 characters",

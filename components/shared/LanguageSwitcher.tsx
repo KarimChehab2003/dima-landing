@@ -15,7 +15,7 @@ import {
   CommandInput,
   CommandItem,
 } from "@/components/ui/command";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -27,6 +27,7 @@ export default function LanguageSwitcher() {
   const currentLocale = useLocale();
   const isRTL = currentLocale === "ar";
   const t = useTranslations("LanguageSwitcher");
+  const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
   const [currentLanguage, setCurrentLanguage] = useState<
     LanguageLink | undefined
@@ -67,6 +68,7 @@ export default function LanguageSwitcher() {
                     (l) => l.label === currentLabel
                   );
                   if (selected) {
+                    router.refresh();
                     setCurrentLanguage(selected);
                     setOpen(false);
                   }

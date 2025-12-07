@@ -24,12 +24,12 @@ function BlogCard({ orientation = "vertical", includeImage = true, blog }: BlogC
             )}>
                 {/* Image */}
                 {includeImage && (
-                    <figure className={cn(
-                        "relative rounded-xl overflow-hidden",
-                        isHorizontal
-                            ? "w-full sm:w-48 h-48 sm:h-28"
-                            : "w-full min-h-[200px]"
-                    )}>
+                    <figure
+                        className={cn(
+                            "relative aspect-square rounded-xl overflow-hidden",
+                            isHorizontal ? "w-full sm:w-40" : "w-full"
+                        )}
+                    >
                         <Image
                             src={blog.thumbnail}
                             alt="blog image"
@@ -37,6 +37,7 @@ function BlogCard({ orientation = "vertical", includeImage = true, blog }: BlogC
                             className="object-cover"
                         />
                     </figure>
+
                 )}
 
                 {/* Text content */}

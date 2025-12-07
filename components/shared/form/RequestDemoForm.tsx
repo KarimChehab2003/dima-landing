@@ -130,7 +130,7 @@ function RequestDemoForm({ className }: { className?: string }) {
                 >
                     {t("form.phoneNumber.title")}
                 </Label>
-                <PhoneNumberInput register={register} countryCode={countryCode} setCountryCode={setCountryCode} />
+                <PhoneNumberInput register={register} countryCode={countryCode} setCountryCode={setCountryCode} placeholder={t("form.phoneNumber.title")} />
                 {errors.phoneNumber && <p className="text-destructive text-sm">{t(`form.${errors.phoneNumber.message}`)}</p>}
             </div>
 

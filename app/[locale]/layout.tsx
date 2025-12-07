@@ -65,7 +65,7 @@ export default async function RootLayout({
     notFound()
   }
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} suppressHydrationWarning>
       <body
         className={`${geistSans.className} antialiased`}
       >

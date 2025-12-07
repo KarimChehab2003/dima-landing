@@ -7,21 +7,21 @@ import { FormInputs } from "@/components/shared/form/RequestDemoForm"
 import { ButtonGroup } from "@/components/ui/button-group"
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+import { countryCodes } from "@/data/form"
 
 type PhoneNumberInputProps = {
     register: UseFormRegister<FormInputs>,
     countryCode: string,
-    setCountryCode: Dispatch<SetStateAction<string>>
+    setCountryCode: Dispatch<SetStateAction<string>>,
+    placeholder: string
 }
 
-const countryCodes = [
-    { value: "+966", label: "saudi" },
-    { value: "+20", label: "egypt" },
-]
 
-function PhoneNumberInput({ register, countryCode, setCountryCode }: PhoneNumberInputProps) {
+function PhoneNumberInput({ register, countryCode, setCountryCode, placeholder }: PhoneNumberInputProps) {
     const t = useTranslations("Home.requestDemo.form.countryLabel")
+    const locale = useLocale();
+    const isRTL = locale === "ar";
     return (
         <ButtonGroup className="w-full" dir="ltr">
             {/* Select */}
@@ -44,6 +44,8 @@ function PhoneNumberInput({ register, countryCode, setCountryCode }: PhoneNumber
                 id="formPhoneNumInput"
                 className={`flex-1 text-sm h-10`}
                 {...register("phoneNumber")}
+                placeholder={placeholder}
+                dir={isRTL ? "rtl" : "ltr"}
             />
         </ButtonGroup>
     )
