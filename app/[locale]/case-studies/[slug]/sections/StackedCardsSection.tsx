@@ -27,7 +27,7 @@ function StackedCardsSection({ caseStudy }: { caseStudy: CaseStudy }) {
                             return (
                                 <li
                                     key={`${data.title}-${i}`}
-                                    className={`flex justify-center ${isLast ? "col-span-2 md:col-span-1 h-[145px]" : ""}`}
+                                    className={`flex justify-center ${isLast ? "col-span-2 md:col-span-1 h-[145px] md:h-auto" : ""}`}
                                 >
                                     <LayeredCard {...data} index={i} isLast={isLast} />
                                 </li>
