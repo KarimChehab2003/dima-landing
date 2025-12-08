@@ -7,6 +7,7 @@ import SocialMediaAnalyticsSection from "./sections/SocialMediaAnalyticsSection"
 import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 import RequestDemoSection from "@/components/shared/form/RequestDemoSection";
+import AllArticlesSection from "./sections/AllArticlesSection";
 
 export const metadata: Metadata = {
     title: "Blogs - dima",
@@ -46,15 +47,16 @@ export const metadata: Metadata = {
 };
 
 function BlogsPage() {
-    const t = useTranslations("Blogs");
+    // const t = useTranslations("Blogs");
     return (
         <main>
             <SectionWrapper className="mt-20">
                 <HeroSection />
-                <LatestSection />
-                <VideosSection title={t("videosSection.title")} />
-                <SocialMediaAnalyticsSection />
-                <GuideSection />
+                {/* <LatestSection /> */}
+                {/* <VideosSection title={t("videosSection.title")} /> */}
+                {/* <SocialMediaAnalyticsSection /> */}
+                {/* <GuideSection /> */}
+                <AllArticlesSection />
             </SectionWrapper>
             <RequestDemoSection />
         </main>
