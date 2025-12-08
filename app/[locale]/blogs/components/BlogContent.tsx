@@ -16,7 +16,7 @@ import { useTranslations } from "next-intl";
 function BlogContent({ slug }: { slug: string }) {
     const t = useTranslations("Blog")
     const { data: blog, isLoading: blogLoading, isError: blogError } = useBlog(slug);
-    const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs();
+    const { data: blogs, isLoading: blogsLoading, isError: blogsError } = useBlogs(4);
     if (blogLoading) return <LoadingAnimation />
     if (blogError) return notFound()
 
