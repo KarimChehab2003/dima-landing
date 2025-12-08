@@ -5,7 +5,8 @@ export const analyzeDialectFlow = ai.defineFlow({
   name: "analyzeDialectFlow",
   metadata: {
     labels: {
-      flow: "analyzeDialectFlow",
+      service_name: "dima landing",
+      function_name: "Analyze Arabic Dialect Flow",
       feature: "arabic-dialect-analysis"
     }
   }
@@ -48,7 +49,16 @@ Rules:
 - Common misreads must be mistakes a non-dialect-aware AI would make.
     `;
 
-    const result = await ai.generate(prompt);
+    const result = await ai.generate({
+      prompt,
+      metadata: {
+        labels: {
+          service_name: "dima landing",
+          function_name: "Analyze Arabic Dialect Flow",
+          feature: "arabic-dialect-analysis"
+        }
+      }
+    });
     const raw = result.text.trim();
 
     // Extract JSON if wrapped in code fences

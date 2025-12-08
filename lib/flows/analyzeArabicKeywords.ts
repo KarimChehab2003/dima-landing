@@ -22,7 +22,8 @@ export const analyzeKeywordsFlow = ai.defineFlow(
         name: "analyzeKeywordsFlow",
         metadata: {
             labels: {
-                flow: "analyzeKeywordsFlow",
+                service_name: "dima landing",
+                function_name: "Analyze Arabic Keywords Flow",
                 feature: "arabic-coverage-gap"
             }
         }
@@ -76,7 +77,16 @@ export const analyzeKeywordsFlow = ai.defineFlow(
             - Use proper Arabic script
             - Consider how people actually type on mobile keyboards`;
 
-        const result = await ai.generate(prompt);
+        const result = await ai.generate({
+            prompt,
+            metadata: {
+                labels: {
+                    service_name: "dima landing",
+                    function_name: "Analyze Arabic Dialect Flow",
+                    feature: "arabic-dialect-analysis"
+                }
+            }
+        });
         const content = result.text.trim();
 
         let jsonString = content;
