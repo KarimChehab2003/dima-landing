@@ -267,15 +267,15 @@
       "form": {
         "firstName": {
           "title": "First Name",
-          "placeholder": "Mohy"
+          "placeholder": "Mohamed"
         },
         "lastName": {
           "title": "Last Name",
-          "placeholder": "Aboualam"
+          "placeholder": "Soliman"
         },
         "email": {
           "title": "Email",
-          "placeholder": "maboualam@darwinz.ai"
+          "placeholder": "soliman@company.com"
         },
         "phoneNumber": {
           "title": "Phone Number",

@@ -309,15 +309,15 @@
       "form": {
         "firstName": {
           "title": "الاسم الأول",
-          "placeholder": "محي  "
+          "placeholder": "محمد  "
         },
         "lastName": {
           "title": "اسم العائلة",
-          "placeholder": "ابو علم"
+          "placeholder": "سليمان"
         },
         "email": {
           "title": "البريد الإلكتروني",
-          "placeholder": "maboualam@darwinz.ai"
+          "placeholder": "soliman@company.com"
         },
         "phoneNumber": {
           "title": "رقم الهاتف",
