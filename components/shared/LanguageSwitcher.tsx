@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -33,6 +33,10 @@ export default function LanguageSwitcher() {
     LanguageLink | undefined
   >(languages.find((l) => l.locale === currentLocale));
 
+  // Sync state with current locale when it changes (bug fix)
+  useEffect(() => {
+    setCurrentLanguage(languages.find((l) => l.locale === currentLocale))
+  }, [currentLocale])
 
 
   return (
