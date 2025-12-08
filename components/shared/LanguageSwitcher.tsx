@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Check, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -15,7 +15,7 @@ import {
   CommandInput,
   CommandItem,
 } from "@/components/ui/command";
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -23,21 +23,15 @@ import { LanguageLink } from "@/types";
 import { languages } from "@/data/home-page";
 
 export default function LanguageSwitcher() {
-  const pathname = usePathname();
-  const currentLocale = useLocale();
-  const isRTL = currentLocale === "ar";
-  const t = useTranslations("LanguageSwitcher");
   const router = useRouter();
+  const pathname = usePathname();
+  const locale = useLocale();
+  const isRTL = locale === "ar";
+  const t = useTranslations("LanguageSwitcher");
   const [open, setOpen] = useState<boolean>(false);
   const [currentLanguage, setCurrentLanguage] = useState<
     LanguageLink | undefined
-  >(languages.find((l) => l.locale === currentLocale));
-
-  // Sync state with current locale when it changes (bug fix)
-  useEffect(() => {
-    setCurrentLanguage(languages.find((l) => l.locale === currentLocale))
-  }, [currentLocale])
-
+  >(languages.find((l) => l.locale === locale));
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -67,11 +61,12 @@ export default function LanguageSwitcher() {
               <CommandItem
                 key={lang.locale}
                 value={lang.label}
-                onSelect={(currentLabel) => {
+                onSelect={(selectedLabel) => {
                   const selected = languages.find(
-                    (l) => l.label === currentLabel
+                    (l) => l.label === selectedLabel
                   );
                   if (selected) {
+                    router.replace(pathname, { locale: selected.locale })
                     router.refresh();
                     setCurrentLanguage(selected);
                     setOpen(false);
@@ -80,9 +75,7 @@ export default function LanguageSwitcher() {
                 className="group px-0"
               >
 
-                <Link
-                  href={pathname}
-                  locale={lang.locale}
+                <div
                   className="flex items-center gap-2 flex-1 px-2 py-1.5"
                 >
                   <Check
@@ -100,7 +93,7 @@ export default function LanguageSwitcher() {
                     height={29}
                   />
                   {lang.label}
-                </Link>
+                </div>
               </CommandItem>
             ))}
           </CommandGroup>
