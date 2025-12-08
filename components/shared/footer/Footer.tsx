@@ -14,7 +14,6 @@ function Footer() {
   const locale = useLocale();
   const isRTL = locale === "ar";
 
-
   return (
     <footer className="bg-[#2C2C2C] text-white rounded-t-4xl" dir={isRTL ? "rtl" : "ltr"}>
       <div className="container mx-auto flex flex-col px-6 py-12 space-y-8">

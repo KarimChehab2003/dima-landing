@@ -7,11 +7,11 @@ export const footerResourcesLinks: NavLink[] = [
         href: "/case-studies",
         translationKey: "caseStudies"
     },
-    // {
-    //     title: "Blogs",
-    //     href: "/blogs",
-    //     translationKey: "blogs"
-    // },
+    {
+        title: "Blogs",
+        href: "/blogs",
+        translationKey: "blogs"
+    },
 ]
 
 export const dimaSolutions: SolutionLink[] = [
