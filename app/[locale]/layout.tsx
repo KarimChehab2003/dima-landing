@@ -74,7 +74,7 @@ export default async function RootLayout({
             <div className="min-h-dvh h-full flex flex-col justify-between">
               <Navbar />
               <div className="flex-1">
-                <PageLoader />
+                {/* <PageLoader /> */}
                 {children}
                 <Toaster richColors />
               </div>
