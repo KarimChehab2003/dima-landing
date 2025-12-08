@@ -4,7 +4,7 @@ import GroupedBlogs from "../components/GroupedBlogs";
 import VideosSection from "./VideosSection";
 import BlogCardSkeleton from "../components/BlogCardSkeleton";
 import BlogCard from "../components/BlogCard";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePaginatedBlogs } from "../hooks/usePaginatedBlogs";
 import PaginationWrapper from "../../case-studies/components/PaginationWrapper";
 
@@ -24,6 +24,8 @@ function AllArticlesSection() {
         totalPages,
         error
     } = usePaginatedBlogs(PAGE_SIZE);
+    const blogGridRef = useRef<HTMLDivElement>(null);
+    const [isInitialLoad, toggleInitialLoad] = useState<boolean>(true)
 
     const pages = data?.pages ?? [];
     const currentPage = pages[pageIndex]?.blogs ?? [];
@@ -76,14 +78,19 @@ function AllArticlesSection() {
 
     const shouldShowSkeletons = isLoading && pages.length === 0;
 
-    console.log(currentPage)
+    useEffect(() => {
+        if (isInitialLoad) {
+            toggleInitialLoad((prev) => !prev);
+            return;
+        }
+        blogGridRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+    }, [pageIndex])
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 w-full">
-            <div>
-                <GroupedBlogs title="All Articles" includeViewAll={false} className="sm:flex-col">
-
+            <div className="flex-1" ref={blogGridRef}>
+                <GroupedBlogs title="All Articles" includeViewAll={false} className="sm:flex-col" >
                     {/* First grid */}
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 w-full">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 w-full" >
                         {isError && <p>An error occurred: {error?.message}</p>}
                         {
                             shouldShowSkeletons
