@@ -67,6 +67,7 @@ function FilterSection() {
       currentPagesLength = nextLength;
     }
 
+    // Set the page we want to navigate to
     if (targetIndex < currentPagesLength) {
       setPageIndex(targetIndex);
     }

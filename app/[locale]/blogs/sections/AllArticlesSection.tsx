@@ -2,13 +2,81 @@
 import { useTranslations } from "next-intl";
 import GroupedBlogs from "../components/GroupedBlogs";
 import VideosSection from "./VideosSection";
-import useBlogs from "../hooks/useBlogs";
 import BlogCardSkeleton from "../components/BlogCardSkeleton";
 import BlogCard from "../components/BlogCard";
+import { useState } from "react";
+import { usePaginatedBlogs } from "../hooks/usePaginatedBlogs";
+import PaginationWrapper from "../../case-studies/components/PaginationWrapper";
+
+const PAGE_SIZE = 16;
 
 function AllArticlesSection() {
     const t = useTranslations("Blogs");
-    const { data: blogs, isLoading, isError } = useBlogs(16)
+    // const { data: blogs, isLoading, isError } = useBlogs(16)
+    const [pageIndex, setPageIndex] = useState(0);
+    const {
+        data,
+        isLoading,
+        isError,
+        fetchNextPage,
+        hasNextPage,
+        isFetchingNextPage,
+        totalPages,
+        error
+    } = usePaginatedBlogs(PAGE_SIZE);
+
+    const pages = data?.pages ?? [];
+    const currentPage = pages[pageIndex]?.blogs ?? [];
+
+    const handlePrevious = () => {
+        if (pageIndex === 0) return;
+        setPageIndex((prev) => Math.max(prev - 1, 0))
+    }
+
+    const handleSelectPage = async (pageNumber: number) => {
+        const targetIndex = pageNumber - 1;
+
+        // If I'm currently on the page, or negative page or out of bounds page
+        if (targetIndex === pageIndex || targetIndex < 0 || targetIndex >= totalPages) return;
+
+        // Get page from cache
+        if (targetIndex < pages.length) {
+            setPageIndex(targetIndex);
+            return;
+        }
+
+        if (!hasNextPage) return;
+
+        let currentPagesLength = pages.length;
+
+        // Fetch next pages until the target index is reached
+        while (targetIndex >= currentPagesLength) {
+            const result = await fetchNextPage();
+            const nextLength = result.data?.pages.length ?? currentPagesLength;
+
+            if (nextLength === currentPagesLength)
+                break;
+            currentPagesLength = nextLength;
+        }
+
+        // Set the page we want to navigate to
+        if (targetIndex < currentPagesLength)
+            setPageIndex(targetIndex)
+
+    }
+
+    const handleNext = async () => {
+        if (pageIndex + 1 >= totalPages) return;
+        await handleSelectPage(pageIndex + 2);
+    }
+
+    const canGoPrevious = pageIndex > 0;
+    const canGoNext = pageIndex + 1 < totalPages;
+    const currentPageNumber = Math.min(pageIndex + 1, totalPages);
+
+    const shouldShowSkeletons = isLoading && pages.length === 0;
+
+    console.log(currentPage)
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 w-full">
             <div>
@@ -16,15 +84,15 @@ function AllArticlesSection() {
 
                     {/* First grid */}
                     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 w-full">
-                        {isError && <p>Failed to load latest blogs</p>}
+                        {isError && <p>An error occurred: {error?.message}</p>}
                         {
-                            isLoading
-                                ? Array.from({ length: 6 }).map((_, i) => (
-                                    <li key={`skeleton-latest-${i}`}>
+                            shouldShowSkeletons
+                                ? Array.from({ length: 8 }).map((_, i) => (
+                                    <li key={`skeleton-grid1-${i}`}>
                                         <BlogCardSkeleton />
                                     </li>
                                 ))
-                                : blogs?.slice(0, 8).map((blog) => (
+                                : currentPage?.slice(0, 8).map((blog) => (
                                     <li key={`blogs/${blog.id}`}>
                                         <BlogCard blog={blog} />
                                     </li>
@@ -39,21 +107,33 @@ function AllArticlesSection() {
                         {isError && <p>Failed to load latest blogs</p>}
                         {
                             isLoading
-                                ? Array.from({ length: 6 }).map((_, i) => (
-                                    <li key={`skeleton-latest-${i}`}>
+                                ? Array.from({ length: 8 }).map((_, i) => (
+                                    <li key={`skeleton-grid2-${i}`}>
                                         <BlogCardSkeleton />
                                     </li>
                                 ))
-                                : blogs?.slice(8).map((blog) => (
+                                : currentPage?.slice(8).map((blog) => (
                                     <li key={`blogs/${blog.id}`}>
                                         <BlogCard blog={blog} />
                                     </li>
                                 ))
                         }
                     </ul>
-
-
                 </GroupedBlogs>
+
+                {/* Pagination Component */}
+                <div className="my-4">
+                    <PaginationWrapper
+                        currentPage={currentPageNumber}
+                        totalPages={totalPages}
+                        canGoPrevious={canGoPrevious}
+                        canGoNext={canGoNext}
+                        onPrevious={handlePrevious}
+                        onNext={handleNext}
+                        onSelectPage={handleSelectPage}
+                        isLoadingNext={isFetchingNextPage}
+                    />
+                </div>
             </div>
         </div>
     );

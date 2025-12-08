@@ -1,49 +1,37 @@
-"use client";
-
 import { db } from "@/lib/firebase";
-import { CaseStudy } from "@/types";
+import { Blog } from "@/types/blog"
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import {
-    collection,
-    DocumentData,
-    getCountFromServer,
-    getDocs,
-    limit,
-    orderBy,
-    query,
-    QueryConstraint,
-    QueryDocumentSnapshot,
-    startAfter,
-    where
-} from "firebase/firestore";
+import { collection, DocumentData, getCountFromServer, getDocs, limit, orderBy, query, QueryConstraint, QueryDocumentSnapshot, startAfter, where } from "firebase/firestore";
 import { useLocale } from "next-intl";
 
-type CaseStudiesPage = {
-    caseStudies: CaseStudy[];
+
+type BlogsPage = {
+    blogs: Blog[];
     lastVisible: QueryDocumentSnapshot<DocumentData> | null;
     hasMore: boolean;
-};
+}
 
-export const usePaginatedCaseStudies = (limitCount: number = 6) => {
+export const usePaginatedBlogs = (limitCount: number = 16) => {
     const locale = useLocale();
-    const collectionRef = collection(db, "case-studies");
-    const baseConstraints: QueryConstraint[] = [where("flags.active", "==", true)];
+    const collectionRef = collection(db, "blogs");
+    const baseConstraints: QueryConstraint[] = [where("active", "==", true)];
 
-    // Get total number of case studies
+    // Get total number of blogs
     const countQuery = useQuery({
-        queryKey: ["case-studies-count", locale, "active"],
+        queryKey: ["blogs-count", locale, "active"],
         queryFn: async () => {
             const countSnapshot = await getCountFromServer(query(collectionRef, ...baseConstraints));
             return countSnapshot.data().count;
         },
         staleTime: 1000 * 60
-    });
+    })
 
-    // Get case studies
+    // Get blogs
     const infiniteQuery = useInfiniteQuery({
-        queryKey: ["case-studies", locale, limitCount, "active"],
+        queryKey: ["blogs", locale, limitCount, "active"],
         initialPageParam: null as QueryDocumentSnapshot<DocumentData> | null,
         queryFn: async ({ pageParam }) => {
+            // Constraints
             const constraints: QueryConstraint[] = [
                 ...baseConstraints,
                 orderBy("dateCreated", "desc"),
@@ -52,28 +40,28 @@ export const usePaginatedCaseStudies = (limitCount: number = 6) => {
 
             // If page isn't 1, start after offset
             if (pageParam) {
-                constraints.push(startAfter(pageParam));
+                constraints.push(startAfter(pageParam))
             }
 
             const snapshot = await getDocs(query(collectionRef, ...constraints));
-            const caseStudies = snapshot.docs.map((doc) => {
+            const blogs = snapshot.docs.map((doc) => {
                 const data = doc.data();
-
                 return {
                     id: doc.id,
                     ...data,
-                    content: data.content[locale] || data.content["en"]
-                } as CaseStudy;
+                    content: data.content[locale] || data.content["en"],
+                    tags: data.tags[locale] || data.tags["en"]
+                } as Blog
             });
 
             // Get last document in page
             const lastVisible = snapshot.docs[snapshot.docs.length - 1] ?? null;
 
             return {
-                caseStudies,
+                blogs,
                 lastVisible,
                 hasMore: snapshot.size === limitCount
-            } as CaseStudiesPage;
+            } as BlogsPage
         },
         getNextPageParam: (lastPage) => (lastPage.hasMore ? lastPage.lastVisible : undefined),
         staleTime: 1000 * 60
@@ -89,5 +77,5 @@ export const usePaginatedCaseStudies = (limitCount: number = 6) => {
         isLoading: infiniteQuery.isLoading || countQuery.isLoading,
         isError: infiniteQuery.isError || countQuery.isError,
         error: infiniteQuery.error ?? countQuery.error
-    };
-};
+    }
+}
