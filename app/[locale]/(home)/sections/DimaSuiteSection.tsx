@@ -16,7 +16,7 @@ function DimaSuiteSection() {
 
                 <ul className="flex flex-wrap justify-center gap-12 mt-12">
                     {dimaSolutions.map((solution) => (
-                        <li key={solution.href} className="w-full md:w-[275px]">
+                        <li key={solution.href} className="w-full min-h-[246.5px] md:w-[275px] md:h-[279.5px]">
                             <SolutionCard
                                 {...solution}
                             />

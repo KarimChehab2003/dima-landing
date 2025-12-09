@@ -996,9 +996,10 @@
     }
   },
   "Blogs": {
+    "dimaBlogs": "مدونة ديما",
     "featuredCaseStudy": "دراسة حالة مميزة",
     "editorsPick": "اختيار المحرر",
-    "theLatest": "آخر المستجدات",
+    "allBlogs": "كل المدوّنات",
     "videosSection": {
       "title": "تعرّف أكثر على ديما عبر السوشيال",
       "follow": "تابعنا على منصات التواصل"

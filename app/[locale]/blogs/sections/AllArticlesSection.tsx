@@ -25,7 +25,6 @@ function AllArticlesSection() {
         error
     } = usePaginatedBlogs(PAGE_SIZE);
     const blogGridRef = useRef<HTMLDivElement>(null);
-    const [isInitialLoad, toggleInitialLoad] = useState<boolean>(true)
 
     const pages = data?.pages ?? [];
     const currentPage = pages[pageIndex]?.blogs ?? [];
@@ -33,6 +32,7 @@ function AllArticlesSection() {
     const handlePrevious = () => {
         if (pageIndex === 0) return;
         setPageIndex((prev) => Math.max(prev - 1, 0))
+        blogGridRef.current?.scrollIntoView({ behavior: "smooth" })
     }
 
     const handleSelectPage = async (pageNumber: number) => {
@@ -44,6 +44,7 @@ function AllArticlesSection() {
         // Get page from cache
         if (targetIndex < pages.length) {
             setPageIndex(targetIndex);
+            blogGridRef.current?.scrollIntoView({ behavior: "smooth" })
             return;
         }
 
@@ -62,8 +63,10 @@ function AllArticlesSection() {
         }
 
         // Set the page we want to navigate to
-        if (targetIndex < currentPagesLength)
+        if (targetIndex < currentPagesLength) {
             setPageIndex(targetIndex)
+            blogGridRef.current?.scrollIntoView({ behavior: "smooth" })
+        }
 
     }
 
@@ -78,17 +81,11 @@ function AllArticlesSection() {
 
     const shouldShowSkeletons = isLoading && pages.length === 0;
 
-    useEffect(() => {
-        if (isInitialLoad) {
-            toggleInitialLoad((prev) => !prev);
-            return;
-        }
-        blogGridRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
-    }, [pageIndex])
+
     return (
         <div className="container mx-auto flex justify-center items-center gap-8 w-full">
             <div className="flex-1" ref={blogGridRef}>
-                <GroupedBlogs title="All Articles" includeViewAll={false} className="sm:flex-col" >
+                <GroupedBlogs title={t("allBlogs")} includeViewAll={false} className="sm:flex-col" >
                     {/* First grid */}
                     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 w-full" >
                         {isError && <p>An error occurred: {error?.message}</p>}

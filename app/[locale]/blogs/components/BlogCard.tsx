@@ -42,11 +42,12 @@ function BlogCard({ orientation = "vertical", includeImage = true, blog }: BlogC
 
                 {/* Text content */}
                 <div className="flex flex-col gap-4 flex-1">
-                    <ul className="flex flex-wrap gap-2 w-full">
+                    {/* Tags */}
+                    {/* <ul className="flex flex-wrap gap-2 w-full">
                         {blog.tags.map((tag) => (
                             <Badge className="bg-muted text-black font-bold text-xs capitalize" key={tag}>{tag}</Badge>
                         ))}
-                    </ul>
+                    </ul> */}
 
                     <p className="font-bold group-hover:underline">
                         {blog.content.title}

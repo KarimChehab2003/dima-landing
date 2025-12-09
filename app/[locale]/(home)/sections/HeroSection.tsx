@@ -34,7 +34,7 @@ export default function HeroSection() {
   return (
     <SectionWrapper className="flex-col justify-between min-h-dvh my-12">
       <div
-        className={`container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow px-4 py-8 gap-4`}
+        className={`container mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden grow pb-8 gap-4`}
         id="hero-section"
       >
         {/* Left Side: Dynamic Text */}
@@ -73,7 +73,7 @@ export default function HeroSection() {
         </div> */}
 
         {/* Right Side: Image */}
-        <figure className="relative w-full lg:flex-1 aspect-2624/2144 h-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-auto">
+        <figure className="relative w-full lg:flex-1 aspect-1920/1793 h-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px]">
           <Image
             src={`/hero-bg-${locale}.png`}
             alt="Hero image"

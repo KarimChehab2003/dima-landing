@@ -14,7 +14,8 @@ function HeroSection() {
     const { data: blogs, isLoading, isError } = useBlogs(3, [t("editorsPick")]);
     const { data: caseStudy, isLoading: caseStudyLoading, isError: caseStudyError } = useCaseStudies(1, { featured: true })
     return (
-        <div className="container mx-auto flex flex-col justify-center items-start gap-8 ">
+        <div className="container mx-auto flex flex-col justify-center items-start gap-2">
+            <h2 className="bg-black text-white uppercase w-fit py-1 px-2 rounded-sm italic tracking-wide">{t("dimaBlogs")}</h2>
 
             {/* Content sections */}
             <div className="flex flex-col lg:flex-row gap-8 w-full">
