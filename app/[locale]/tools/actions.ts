@@ -1,6 +1,6 @@
 "use server";
-import { analyzeDialectFlow } from "@/lib/flows/analyzeArabicDialect";
-import { analyzeKeywordsFlow } from "@/lib/flows/analyzeArabicKeywords";
+import { analyzeDialectVertex } from "@/lib/flows/analyzeArabicDialectVertex";
+import { analyzeKeywordsVertex } from "@/lib/flows/analyzeArabicKeywordsVertex";
 
 // Arabic Dialect
 export async function analyzeDialect(text: string, dialect: string, language: "en" | "ar") {
@@ -9,7 +9,7 @@ export async function analyzeDialect(text: string, dialect: string, language: "e
     }
 
     try {
-        const analysis = await analyzeDialectFlow({ text, dialect, language });
+        const analysis = await analyzeDialectVertex({ text, dialect, language });
         return analysis;
     } catch (err) {
         console.error("Dialect analysis error:", err);
@@ -20,7 +20,7 @@ export async function analyzeDialect(text: string, dialect: string, language: "e
 // Arabic coverage
 export async function analyzeKeywords(keywords: string[], countries: string[]) {
     try {
-        const result = await analyzeKeywordsFlow({ keywords, countries });
+        const result = await analyzeKeywordsVertex({ keywords, countries });
         return result;
     } catch (err) {
         console.error("AI error:", err);

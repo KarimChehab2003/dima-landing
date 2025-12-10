@@ -81,7 +81,6 @@ export function timeAgo(date: Date, locale: string = "en") {
   return formatted;
 }
 
-
 // Function to format titles into slugs
 export function slugify(str: string) {
   return str
