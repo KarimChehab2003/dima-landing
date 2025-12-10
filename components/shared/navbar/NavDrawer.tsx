@@ -69,6 +69,7 @@ function NavDrawer() {
                             className="block text-base font-medium hover:text-primary transition"
                         >
                             {t("blogs")}
+                            {/*  */}
                         </Link>
 
                         {/* Case Studies */}
